@@ -8,9 +8,9 @@ export default function Header({ theme, onToggleTheme }: Props) {
     <header>
       <div>
         <div className="logo">
-          Lern<span>.</span>Seite
+          BWL<span>.</span>1
         </div>
-        <div className="subtitle">Dein Thema &mdash; Dein Untertitel</div>
+        <div className="subtitle">Allgemeine Betriebswirtschaftslehre I &mdash; Übungsfragen mit Lösungen</div>
       </div>
       <button
         type="button"
