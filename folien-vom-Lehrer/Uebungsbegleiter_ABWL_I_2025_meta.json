@@ -1,0 +1,608 @@
+{
+  "table_of_contents": [
+    {
+      "title": "\u00dcbungsbegleiter",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          241.32000732421875,
+          98.671875
+        ],
+        [
+          371.99249267578125,
+          97.02734375
+        ],
+        [
+          371.99249267578125,
+          117.31060791015625
+        ],
+        [
+          240.37890625,
+          117.31060791015625
+        ]
+      ]
+    },
+    {
+      "title": "Literaturliste:",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          84.9765625,
+          58.7919921875
+        ],
+        [
+          165.2172088623047,
+          57.1474609375
+        ],
+        [
+          165.2172088623047,
+          71.15081787109375
+        ],
+        [
+          83.8125,
+          71.15081787109375
+        ]
+      ]
+    },
+    {
+      "title": "Au\u00dferdem:",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          84.685546875,
+          521.7275390625
+        ],
+        [
+          148.47711181640625,
+          521.7275390625
+        ],
+        [
+          148.47711181640625,
+          534.7108154296875
+        ],
+        [
+          84.685546875,
+          534.7108154296875
+        ]
+      ]
+    },
+    {
+      "title": "Gliederung",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          280.20001220703125,
+          57.9697265625
+        ],
+        [
+          343.6920166015625,
+          56.3251953125
+        ],
+        [
+          343.6920166015625,
+          71.15081787109375
+        ],
+        [
+          280.20001220703125,
+          71.15081787109375
+        ]
+      ]
+    },
+    {
+      "title": "\u00dcbungsfragen zur Allgemeinen Betriebswirtschaftslehre I",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          85.08000183105469,
+          57.55859375
+        ],
+        [
+          412.951171875,
+          55.9140625
+        ],
+        [
+          412.5360107421875,
+          71.15081787109375
+        ],
+        [
+          84.103515625,
+          71.15081787109375
+        ]
+      ]
+    },
+    {
+      "title": "17. Die Lanz GmbH weist folgende Bilanz des Jahres 2024 auf:",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          85.08006286621094,
+          347.4072265625
+        ],
+        [
+          422.01611328125,
+          345.7626953125
+        ],
+        [
+          422.01611328125,
+          360.6571350097656
+        ],
+        [
+          84.103515625,
+          360.6571350097656
+        ]
+      ]
+    },
+    {
+      "title": "Zu Rechtsformen",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          261.623046875,
+          58.380859375
+        ],
+        [
+          362.314453125,
+          56.736328125
+        ],
+        [
+          361.3332214355469,
+          71.15081787109375
+        ],
+        [
+          260.458984375,
+          71.15081787109375
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          9
+        ],
+        [
+          "Line",
+          5
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          104
+        ],
+        [
+          "Line",
+          28
+        ],
+        [
+          "ListItem",
+          13
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          89
+        ],
+        [
+          "TableCell",
+          50
+        ],
+        [
+          "Line",
+          23
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "TableOfContents",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          58
+        ],
+        [
+          "Line",
+          22
+        ],
+        [
+          "ListItem",
+          8
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          118
+        ],
+        [
+          "TableCell",
+          36
+        ],
+        [
+          "Line",
+          32
+        ],
+        [
+          "ListItem",
+          9
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          94
+        ],
+        [
+          "TableCell",
+          42
+        ],
+        [
+          "Line",
+          30
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          95
+        ],
+        [
+          "Line",
+          30
+        ],
+        [
+          "TableCell",
+          14
+        ],
+        [
+          "ListItem",
+          9
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Table",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          43
+        ],
+        [
+          "Line",
+          15
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          437
+        ],
+        [
+          "Line",
+          233
+        ],
+        [
+          "TableCell",
+          70
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Table",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          126
+        ],
+        [
+          "Line",
+          69
+        ],
+        [
+          "TableCell",
+          14
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Text",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data\\Uebungsbegleiter_ABWL_I_2025"
+}
