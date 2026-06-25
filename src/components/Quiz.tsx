@@ -56,7 +56,7 @@ export default function Quiz() {
         ? 'Ausgezeichnet! Du hast das Thema gut verstanden.'
         : score >= Math.ceil(quizFragen.length * 0.5)
         ? 'Gut! Mit etwas mehr Übung schaffst du es.'
-        : 'Schau nochmal in die Referenz und die Aufgaben!'
+        : 'Schau nochmal in die Themen und die Aufgaben!'
     return (
       <div>
         {header}
