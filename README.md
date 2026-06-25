@@ -9,8 +9,10 @@ Ein wiederverwendbares React-Template für interaktive Lernseiten zu beliebigen 
 | **Übungsblätter** | Aufgaben nach Blatt geordnet, mit optionalem Tipp und aufklappbarer Musterlösung |
 | **Aufgaben** | Alle Aufgaben nach Schwierigkeit gefiltert, ebenfalls mit Tipp & Lösung |
 | **Quiz** | Multiple-Choice-Quiz mit Fortschrittsbalken, Feedback und Ergebnisauswertung |
-| **Referenz** | Cheatsheet-Karten als schnelle Nachschlagereferenz |
-| **Themen** | Strukturierte Übersicht der Lernthemen mit Stichpunkten |
+| **Themen** | Strukturierter Lernzettel: Kapitel mit aufklappbaren Abschnitten und Übungen |
+| **Formeln** | Alle Kennzahlen-Formeln mit Erklärung und aufklappbaren Rechenbeispielen |
+| **Drucken** | Druckbarer Lernzettel: A4-Seite mit 4 Formeln, zum Zerschneiden in Karteikarten |
+| **Moodle** | Dateibrowser über alle Kursordner; Markdown wird formatiert gerendert, PDFs eingebettet |
 
 ## Quickstart
 
@@ -28,8 +30,8 @@ Alle Inhalte befinden sich in `src/data/`. Ersetze die Platzhalterwerte mit dein
 | `src/data/aufgaben.ts` | Aufgaben mit Titel, Text, optionalem Tipp und Musterlösung |
 | `src/data/uebungsblaetter.ts` | Übungsblätter, die Aufgaben per ID referenzieren |
 | `src/data/quiz.ts` | Multiple-Choice-Fragen mit Antworten und Erklärungen |
-| `src/data/referenz.ts` | Cheatsheet-Karten (Titel + Inhalt) |
-| `src/data/themen.ts` | Lernthemen mit Beschreibung und Stichpunkten |
+| `src/data/themen.ts` | Lernthemen mit Beschreibung, Abschnitten und Stichpunkten |
+| `src/data/formeln.ts` | Formeln nach Gruppen, je mit Erklärung und Rechenbeispielen |
 
 ### Beispiel: Aufgabe hinzufügen
 
