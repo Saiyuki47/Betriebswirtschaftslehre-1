@@ -9,10 +9,10 @@ import Uebungsblaetter from './components/Uebungsblaetter'
 import Moodle from './components/Moodle'
 import { useTheme } from './hooks/useTheme'
 
-export type TabId = 'themen' | 'formeln' | 'drucken' | 'quiz' | 'aufgaben' | 'moodle'
+export type TabId = 'uebung' | 'themen' | 'formeln' | 'drucken' | 'moodle' | 'quiz'
 
 function App() {
-  const [activeTab, setActiveTab] = useState<TabId>('aufgaben')
+  const [activeTab, setActiveTab] = useState<TabId>('uebung')
   const { theme, toggle } = useTheme()
 
   return (
@@ -24,7 +24,7 @@ function App() {
         {activeTab === 'formeln' && <Formeln />}
         {activeTab === 'drucken' && <Drucken />}
         {activeTab === 'quiz' && <Quiz />}
-        {activeTab === 'aufgaben' && <Uebungsblaetter />}
+        {activeTab === 'uebung' && <Uebungsblaetter />}
         {activeTab === 'moodle' && <Moodle />}
       </div>
     </>
