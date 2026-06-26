@@ -1,16 +1,40 @@
 import { useState } from 'react'
+import type { Tipps } from '../types'
 import { uebungsblaetter } from '../data/uebungsblaetter'
 import { aufgaben } from '../data/aufgaben'
+import { altklausurAufgaben } from '../data/altklausuren'
+import { renderFormel } from './FormelText'
+
+// Übungsbegleiter-Aufgaben und Altklausur-Aufgaben für die Lösungssuche zusammenführen.
+const alleAufgaben = [...aufgaben, ...altklausurAufgaben]
+
+// Reihenfolge & Beschriftung der vier Tipp-Kategorien.
+const tippKategorien: { key: keyof Tipps; icon: string; label: string }[] = [
+  { key: 'konzept', icon: '💡', label: 'Konzept verstehen' },
+  { key: 'vorgehen', icon: '🔍', label: 'Vorgehensweise' },
+  { key: 'syntax', icon: '📝', label: 'Syntax / Beispiel' },
+  { key: 'fehler', icon: '⚠️', label: 'Häufige Fehler' },
+]
 
 export default function Uebungsblaetter() {
   const [selectedId, setSelectedId] = useState(uebungsblaetter[0]?.id ?? '')
   const [openIds, setOpenIds] = useState<Set<string>>(new Set())
   const [openTipps, setOpenTipps] = useState<Set<string>>(new Set())
+  const [openTippCats, setOpenTippCats] = useState<Set<string>>(new Set())
 
   const blatt = uebungsblaetter.find(b => b.id === selectedId)
 
   const toggleTipp = (key: string) => {
     setOpenTipps(prev => {
+      const next = new Set(prev)
+      if (next.has(key)) next.delete(key)
+      else next.add(key)
+      return next
+    })
+  }
+
+  const toggleTippCat = (key: string) => {
+    setOpenTippCats(prev => {
       const next = new Set(prev)
       if (next.has(key)) next.delete(key)
       else next.add(key)
@@ -43,7 +67,7 @@ export default function Uebungsblaetter() {
               className={`filter-btn${selectedId === b.id ? ' on' : ''}`}
               onClick={() => setSelectedId(b.id)}
             >
-              Blatt {b.nr}
+              {b.titel ?? `Blatt ${b.nr}`}
             </button>
           ))}
         </div>
@@ -55,14 +79,14 @@ export default function Uebungsblaetter() {
             <div className="ub-meta-row">
               <span className="ub-badge">{blatt.typ}</span>
             </div>
-            <h3 className="ub-title">Übungsblatt {blatt.nr}</h3>
+            <h3 className="ub-title">{blatt.titel ?? `Übungsblatt ${blatt.nr}`}</h3>
             {blatt.beschreibung && (
               <p className="ub-desc">{blatt.beschreibung}</p>
             )}
           </div>
 
           {blatt.aufgaben.map(task => {
-            const aufgabe = aufgaben.find(a => a.id === task.aufgabeId)
+            const aufgabe = alleAufgaben.find(a => a.id === task.aufgabeId)
             const key = `${blatt.id}-${task.nr}`
             const isOpen = openIds.has(key)
             const isTippOpen = openTipps.has(key)
@@ -70,16 +94,38 @@ export default function Uebungsblaetter() {
             return (
               <div key={key} className="card">
                 <p className="ub-task-nr">Aufgabe {task.nr}</p>
-                <p className="q-title">{task.text ?? aufgabe?.aufgabeText}</p>
+                <p className="q-title" style={{ whiteSpace: 'pre-line' }}>{task.text ?? aufgabe?.aufgabeText}</p>
                 {aufgabe && (
                   <>
                     {aufgabe.tipp && (
                       <>
                         <button type="button" className="toggle-btn" onClick={() => toggleTipp(key)}>
-                          {isTippOpen ? '▼ Tipp verbergen' : '▶ Tipp anzeigen'}
+                          {isTippOpen ? '▼ Tipps verbergen' : '▶ Tipps anzeigen'}
                         </button>
                         {isTippOpen && (
-                          <p className="tipp-block">{aufgabe.tipp}</p>
+                          <div className="tipp-block">
+                            {tippKategorien.map(kat => {
+                              const val = aufgabe.tipp?.[kat.key]
+                              if (!val) return null
+                              const catKey = `${key}::${kat.key}`
+                              const catOpen = openTippCats.has(catKey)
+                              return (
+                                <div key={kat.key} className={`tipp-cat${catOpen ? ' open' : ''}`}>
+                                  <button
+                                    type="button"
+                                    className="tipp-cat-head"
+                                    onClick={() => toggleTippCat(catKey)}
+                                    aria-expanded={catOpen}
+                                  >
+                                    <span className="tipp-cat-icon">{kat.icon}</span>
+                                    <span className="tipp-cat-label">{kat.label}</span>
+                                    <span className="tipp-cat-caret">{catOpen ? '▾' : '▸'}</span>
+                                  </button>
+                                  {catOpen && <p className="tipp-cat-text">{renderFormel(val)}</p>}
+                                </div>
+                              )
+                            })}
+                          </div>
                         )}
                       </>
                     )}

@@ -193,17 +193,56 @@ header > :first-child { flex: 1; }
   color: var(--text);
 }
 .kw { color: var(--blue); font-weight: 500; }
-.tipp-block {
-  margin-top: 10px;
-  background: var(--bg);
+.tipp-block { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+.tipp-cat {
   border: 1px solid var(--border);
   border-left: 3px solid #f59e0b;
   border-radius: var(--radius);
-  padding: .75rem 1rem;
+  background: var(--bg);
+  overflow: hidden;
+}
+.tipp-cat-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: left;
+  transition: background 0.15s;
+}
+.tipp-cat-head:hover { background: var(--bg3); }
+.tipp-cat-icon { font-size: 15px; line-height: 1; }
+.tipp-cat-label { flex: 1; }
+.tipp-cat-caret { color: var(--text2); font-size: 12px; }
+.tipp-cat.open .tipp-cat-head { border-bottom: 1px solid var(--border); }
+.tipp-cat-text {
+  margin: 0;
+  padding: 10px 12px;
   font-size: 14px;
   color: var(--text2);
-  line-height: 1.6;
+  line-height: 1.7;
+  white-space: pre-line;
 }
+
+/* Gestapelte Brüche (Zähler über Nenner mit Bruchstrich) */
+.frac {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  margin: 0 .28em;
+  text-align: center;
+  line-height: 1.15;
+}
+.frac-num { padding: 0 .45em; }
+.frac-den { padding: 0 .45em; border-top: 1.5px solid currentColor; }
 
 /* CHEATSHEET */
 .cheat-grid {

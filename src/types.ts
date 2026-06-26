@@ -7,11 +7,26 @@ export interface QuizFrage {
   erklaerung: string
 }
 
+/**
+ * Strukturierte Tipps – so ausführlich, dass die Aufgabe allein damit
+ * (ohne Vorwissen) lösbar ist. Vier Kategorien (wie im UI angezeigt).
+ */
+export interface Tipps {
+  /** 💡 Konzept verstehen – das nötige Grundwissen/die Theorie dahinter. */
+  konzept?: string
+  /** 🔍 Vorgehensweise – Schritt für Schritt zur Lösung. */
+  vorgehen?: string
+  /** 📝 Syntax / Beispiel – Formel, Aufbau oder Musterformulierung. */
+  syntax?: string
+  /** ⚠️ Häufige Fehler – worauf man achten muss. */
+  fehler?: string
+}
+
 export interface Aufgabe {
   id: string
   titel: string
   aufgabeText: string
-  tipp?: string
+  tipp?: Tipps
   loesung: string
   schwierigkeit: Schwierigkeit
   kategorie?: string
@@ -27,7 +42,9 @@ export interface UebungsblattAufgabe {
 export interface Uebungsblatt {
   id: string
   nr: string
-  typ: 'Hausaufgabe' | 'Präsenzaufgabe'
+  typ: 'Hausaufgabe' | 'Präsenzaufgabe' | 'Altklausur'
+  /** Optionaler Anzeigename für Filter-Button und Überschrift (statt "Blatt {nr}"). */
+  titel?: string
   beschreibung?: string
   aufgaben: UebungsblattAufgabe[]
 }
