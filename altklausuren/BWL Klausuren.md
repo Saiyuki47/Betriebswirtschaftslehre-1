@@ -1,178 +1,176 @@
 # BWL Klausur SS 2021
 
-Aufgabe 1\)
+## Aufgabe 1
 
-a) Erläutern Sie kurz vier Gründe für die abnehmende Zahl an gewerkschaftlich gebundenen Arbeitnehmern. (8 Punkte)
+**a)** Erläutern Sie kurz vier Gründe für die abnehmende Zahl an gewerkschaftlich gebundenen Arbeitnehmern. **(8 Punkte)**
 
-* *Den Arbeitnehmern geht es besser als damals, wo die Gewerkschaften gegründet wurden. Sie werden i.d.R nicht mehr schlecht behandelt*   
-* *Arbeitnehmer wollen es sich nicht mit Arbeitgeber durch Mitgliedschaft in einer Gewerkschaft verspaßen*  
-* *Mitgliedschaft einer Gewerkschaft kostet Geld*  
-* *Auch wenn man nicht Mitglied in einer Gewerkschaft ist profitieren alle Mitarbeiter sobald einer von ihnen es ist \-\>Trittbrettfahrer (Bequemlichkeit)*  
-* *Demografischer Wandel (immer weniger Kinder, immer mehr Rentner \=\> Fachkräftemangel)*  
-* *Akademisierung (viele Studieren und aus dem Grund fangen sie erst später mit der Arbeit an und es fehlen Arbeitnehmer)*  
-* *Trittbrett fahrer Problematik*  
+* *Den Arbeitnehmern geht es besser als damals, wo die Gewerkschaften gegründet wurden. Sie werden i.d.R nicht mehr schlecht behandelt*
+* *Arbeitnehmer wollen es sich nicht mit Arbeitgeber durch Mitgliedschaft in einer Gewerkschaft verspaßen*
+* *Mitgliedschaft einer Gewerkschaft kostet Geld*
+* *Auch wenn man nicht Mitglied in einer Gewerkschaft ist profitieren alle Mitarbeiter sobald einer von ihnen es ist \-\>Trittbrettfahrer (Bequemlichkeit)*
+* *Demografischer Wandel (immer weniger Kinder, immer mehr Rentner \=\> Fachkräftemangel)*
+* *Akademisierung (viele Studieren und aus dem Grund fangen sie erst später mit der Arbeit an und es fehlen Arbeitnehmer)*
+* *Trittbrett fahrer Problematik*
 * *schlechte Gewerkschaftspolitik*
 
-b) Was verstehen wir im Rahmen der Bilanzierung unter „Humanvermögen“? Warum ist deren HGB-Bilanzierung ein Problem? (4 Punkte)
+**b)** Was verstehen wir im Rahmen der Bilanzierung unter **„Humanvermögen“**? Warum ist deren HGB-Bilanzierung ein Problem? **(4 Punkte)**
 
-* *Humanvermögen ist das eingespielte Mitarbeiterteam*  
-* *Fähigkeiten, Wissen, Fertigkeiten, Motivationen der Mitarbeiter*  
+* *Humanvermögen ist das eingespielte Mitarbeiterteam*
+* *Fähigkeiten, Wissen, Fertigkeiten, Motivationen der Mitarbeiter*
 * *Es ist ein Problem der HGB-Bilanzierung, da man das Humanvermögen schlecht messbar ist.*
 
-c) Warum gibt es so wenig große Einzelunternehmen?In welche Rechtsform würden Sie Ihre Einzelunternehmen umwandeln, wenn ihr Unternehmen Erfolgreich wachsen würde, Sie aber der einzige Eigentümer bleiben wollen?   
-Nennen Sie einen Nachteil ihrer Entscheidung. (6 Punkte
+**c)** Warum gibt es so wenig große Einzelunternehmen?In welche Rechtsform würden Sie Ihre Einzelunternehmen umwandeln, wenn ihr Unternehmen Erfolgreich wachsen würde, Sie aber der einzige Eigentümer bleiben wollen?
 
-* *da man nicht nur betrieblich (Anlagevermögen) sondern mit kompletten privatvermögen haften muss*  
-* *GmbH da man nicht privat haftet, jedoch braucht man 25.000€ Einlage/Stammkapital, schwerer Ausstieg/Einstieg*  
+Nennen Sie einen Nachteil ihrer Entscheidung. **(6 Punkte)**
+
+* *da man nicht nur betrieblich (Anlagevermögen) sondern mit kompletten privatvermögen haften muss*
+* *GmbH da man nicht privat haftet, jedoch braucht man 25.000€ Einlage/Stammkapital, schwerer Ausstieg/Einstieg*
 * *AG weniger Mitbestimmung wegen Aktionären (eignen sich wenn man viel FK braucht zb bei großen Unternehmen), Mindestkapital 50.000 Euro*
 
-Aufgabe 2\)
+## Aufgabe 2
 
-a) Sammelfrage:  
-•Wofür ist der Goldpreis ein guter Indikator?
+**a)** Sammelfrage:
 
-* *Bei Inflation wird mehr Gold gekauft*  
+- Wofür ist der Goldpreis ein guter Indikator?
+
+* *Bei Inflation wird mehr Gold gekauft*
 * *Bei einer Krise steigt der Goldpreis, daher ein guter krisenindikator*
 
-•Was verstehen wir unter dem „Organprinzip“ (bei Betrieben)?
+- Was verstehen wir unter dem „Organprinzip“ (bei Betrieben)?
 
-* *Betrieb erfüllt zentrale Ziele für den Staat,* 
+* *Betrieb erfüllt zentrale Ziele für den Staat,*
 
-•Was ist mit dem „öffentlichen Glauben“ (beim Handelsregister) gemeint?
+- Was ist mit dem „öffentlichen Glauben“ (beim Handelsregister) gemeint?
 
 * *Alles was im HR steht ist korrekt und ehrlich*
 
-•Warum wird gerade in US-amerikanischen Unternehmen auf „kompromisslose Integrität“der Mitarbeiter so viel wert gelegt? (8 Punkte)
+- Warum wird gerade in US-amerikanischen Unternehmen auf „kompromisslose Integrität“der Mitarbeiter so viel wert gelegt? (8 Punkte)
 
-* *Amerikanische Unternehmen haften sehr hart für ihre Mitarbeiter*  
+* *Amerikanische Unternehmen haften sehr hart für ihre Mitarbeiter*
 * *Mitarbeiter haben viel weniger zu sagen weniger Mitbestimmung*
 
-b) Nennen Sie die fünf Ebenen der Zielpyramide. Welche prominente deutsche Persönlichkeit hat sich gegen die oberste Ebene ausgesprochen? (6 Punkte)
+**b)** Nennen Sie die fünf Ebenen der Zielpyramide. Welche prominente deutsche Persönlichkeit hat sich gegen die oberste Ebene ausgesprochen? **(6 Punkte)**
 
-1. *Vision*   
-   *Visionen sind qualitativ. Es sind Bilder der Zukunft und Brüche vom Denken zum Tun. Vorstellungen von Zwecken und Wegen zur Erreichung. Konkrete Szenen*  
-   *Helmut Schmidt hat sich gegen die oberste Ebene ausgesprochen*  
-     
-2. *Unternehmensleitbild*  
-   *Qualitative Beschreibungen in Sätzen: was möchte das UN? wie sehen sie sich?*  
-     
-3. *Unternehmensziel*  
-   *gelten für gesamtes Unternehmen und ist quantitativ*  
-     
-4. *Geschäftsbereichsziel*  
+1. *Vision*
+   *Visionen sind qualitativ. Es sind Bilder der Zukunft und Brüche vom Denken zum Tun. Vorstellungen von Zwecken und Wegen zur Erreichung. Konkrete Szenen*
+   *Helmut Schmidt hat sich gegen die oberste Ebene ausgesprochen*
+
+2. *Unternehmensleitbild*
+   *Qualitative Beschreibungen in Sätzen: was möchte das UN? wie sehen sie sich?*
+
+3. *Unternehmensziel*
+   *gelten für gesamtes Unternehmen und ist quantitativ*
+
+4. *Geschäftsbereichsziel*
    *gelten für Geschäftsbereich und ist qualitativ*
 
-5. *Funktionsbereichsziel*  
-   *gelten für Funktionsbereich und ist quantitativ*  
-     
-     
-     
-     
-     
-     
-     
-     
-     
-   
+5. *Funktionsbereichsziel*
+   *gelten für Funktionsbereich und ist quantitativ*
 
-c) Zeigen Sie in einer Tabelle auf, was der Unterschied zwischen Arbeitsverträgen „normaler“Angestellter und Manager ist, wie sich dieser Unterschied auf das jeweilige Streikrecht, die Möglichkeit der eigenen Kündigung sowie die „Waffe“„Bummelstreik“ auswirkt? (8 Punkte
+**c)** Zeigen Sie in einer Tabelle auf, was der Unterschied zwischen Arbeitsverträgen **„normaler“**Angestellter und Manager ist, wie sich dieser Unterschied auf das jeweilige Streikrecht, die Möglichkeit der eigenen Kündigung sowie die **„Waffe“„Bummelstreik“** auswirkt? **(8 Punkte)**
 
 | *Angestellter* | *Manager* |
 | :---- | :---- |
 | *kann streiken (nach Urabstimmung dh muss legitimiert werden), kündigen hat Bummelstreik nicht nötig Arbeitsvertrag i.d.R unbefristet oder festvertrag (bis zur Rente) können Gewerkschaften beitreten* | *befristeten Arbeitsvertrag kein streik möglich keine kündigung möglich kann nur Bummelstreik machen, um gekündigt zu werden* |
 |  |  |
 
-Aufgabe 3\)
+## Aufgabe 3
 
-a) Der Volkswagen-Konzern erzielte im bei einem **Umsatz** von 230 Mrd. € einen **Jahresüberschuss** von 14 Mrd. €. Das **Gesamtvermögen** bestand aus **Anlagevermögen** (262 Mrd. €) und **Umlaufvermögen** (160 Mrd. €). Auf der Passivseite der Bilanz finden sich **langfristige** (153 Mrd. €)und **kurzfristige** (160 Mrd. €) Schulden sowie (zu berechnendes) Eigenkapital. Ermitteln und beurteilen Sie die Eigenkapitalquote, die Umsatzrentabilität, die Eigenkapitalrendite, die Anlagenintensität sowie die Anlagendeckung II. (15Punkte)
+**a)** Der Volkswagen-Konzern erzielte im bei einem **Umsatz** von 230 Mrd. € einen **Jahresüberschuss** von 14 Mrd. €. Das **Gesamtvermögen** bestand aus **Anlagevermögen** (262 Mrd. €) und **Umlaufvermögen** (160 Mrd. €). Auf der Passivseite der Bilanz finden sich **langfristige** (153 Mrd. €)und **kurzfristige** (160 Mrd. €) Schulden sowie (zu berechnendes) Eigenkapital. Ermitteln und beurteilen Sie die Eigenkapitalquote, die Umsatzrentabilität, die Eigenkapitalrendite, die Anlagenintensität sowie die Anlagendeckung II. **(15 Punkte)**
 
-*GK/ Bilanzsumme= 262 \+ 160 \= 422 Mrd*  
-*FK= 153 \+ 160 Mrd \= 313 Mrd*    
-*EK= GK \- FK \= 109 Mrd*  
-*EKQ \= EK \* 100/  GK \= 109\*100/ 422 \= 26% \-\> Gut*  
-*UR \= JÜ/U \= 14Mrd / 230Mrd \* 100 \= 6% \-\> hoher Umsatz und niedriger Gewinn \= schlecht*  
-					  
-*EKR \= JÜ/ EK \= 14 Mrd /109 Mrd \= 12,8 %*  
+*GK/ Bilanzsumme= 262 \+ 160 \= 422 Mrd*
+*FK= 153 \+ 160 Mrd \= 313 Mrd*
+*EK= GK \- FK \= 109 Mrd*
+*EKQ \= EK \* 100/  GK \= 109\*100/ 422 \= 26% \-\> Gut*
+*UR \= JÜ/U \= 14Mrd / 230Mrd \* 100 \= 6% \-\> hoher Umsatz und niedriger Gewinn \= schlecht*
+
+*EKR \= JÜ/ EK \= 14 Mrd /109 Mrd \= 12,8 %*
 *Anlagenintensität \= Anlagevermögen / Gesamtvermögen \* 100 \= 262 Mrd / 422 Mrd \*100 \= 62%-\> schlecht sollte wenig sein*
 
 *Anlagendeckung II. \=  EK+langfrst. FK/Anlagevermögen \= 109 \+ 153 /262= 100% \-\> Gut*
 
-b) Was versteht man unter „Unternehmenskultur“? Nach welchen zwei Dimensionen haben Deal und Kennedy ihre „Kulturtypologie“ aufgebaut? Beschreiben Sie kurz eine der vier Kulturtypen nach Deal und Kennedy. (5 Punkte)
+**b)** Was versteht man unter **„Unternehmenskultur“**? Nach welchen zwei Dimensionen haben Deal und Kennedy ihre **„Kulturtypologie“** aufgebaut? Beschreiben Sie kurz eine der vier Kulturtypen nach Deal und Kennedy. **(5 Punkte)**
 
-* *Kulturen entwickeln sich spontan und verändern sich stetig. Sie zeigt wie es tatsächlich im Unternehmen ist. Sie enthält geteilte Überzeugungen Werte, Normen und prägen das Unternehmen*  
-* *nach hohen/niedrigen Risikobereitschaft und schnelles Feedback oder nicht*  
+* *Kulturen entwickeln sich spontan und verändern sich stetig. Sie zeigt wie es tatsächlich im Unternehmen ist. Sie enthält geteilte Überzeugungen Werte, Normen und prägen das Unternehmen*
+* *nach hohen/niedrigen Risikobereitschaft und schnelles Feedback oder nicht*
 * *Ein Kulturtyp ist zb die Risikokultur (hohes Risiko, langsames Feedback) Beispiel dafür wäre die Forschung, wenn ein Impfstoff erforscht wird, heißt es noch lange nicht, dass er wirkt, oder zugelassen wird. Wenn am Ende der Forschung kein Ergebnis resultiert, ist sowohl das Geld als auch die Zeit verloren.*
 
 # BWL Klausur SS 2020
 
-Aufgabe 1\)  
-a) Wovon hängt der Preis für Gold ab?   
-Warum wird Gold (im Vergleich zu anderen Rohstoffen) in vielen Medien eine so herausgehobene Stellung eingeräumt?   
-Nennen Sie (mindestens) zwei Gründe, warum eine Investition in Gold problematisch ist. (6 Punkte)
+## Aufgabe 1
 
-* *Der Goldpreis hängt wie alles andere auch von Angebot und Nachfrage ab*  
-* *Wenn es politische spannungen gibt und zb Krieg droht steigt der Goldpreis, weil die Bürger aus Angst Gold kaufen um es ggf auch als Fluchtwährung nutzen zu können (Krisenindikator)*  
-* *Bei einer Inflation steigt ebenfalls der Goldpreis*  
-* *Gold bekommt allerdings keine Kinde dh vermehrt sich nicht und muss auch gelagert werden in einem ggf teurem tresor oder Ähnlichem daher macht eine Investition wenig Sinn*  
-* *Dafür hat Gold aber einen hohen emotionalen wert*  
+**a)** Wovon hängt der Preis für Gold ab?
+
+Warum wird Gold (im Vergleich zu anderen Rohstoffen) in vielen Medien eine so herausgehobene Stellung eingeräumt?
+
+Nennen Sie (mindestens) zwei Gründe, warum eine Investition in Gold problematisch ist. **(6 Punkte)**
+
+* *Der Goldpreis hängt wie alles andere auch von Angebot und Nachfrage ab*
+* *Wenn es politische spannungen gibt und zb Krieg droht steigt der Goldpreis, weil die Bürger aus Angst Gold kaufen um es ggf auch als Fluchtwährung nutzen zu können (Krisenindikator)*
+* *Bei einer Inflation steigt ebenfalls der Goldpreis*
+* *Gold bekommt allerdings keine Kinde dh vermehrt sich nicht und muss auch gelagert werden in einem ggf teurem tresor oder Ähnlichem daher macht eine Investition wenig Sinn*
+* *Dafür hat Gold aber einen hohen emotionalen wert*
 * *Mittlerweile gibt es genügend alternativen für Gold in die man Anlegen könnte zb Krypto,Aktien oder Immobilien*
 
-b) Was verstehen wir unter Objekt-, und was unter Subjekt Subventionen? Aus welchen zwei Gründen ist Subjekt Subventionierung aus Steuerzahler Sicht die bessere   
-Variante. (6 Punkte)
+**b)** Was verstehen wir unter Objekt-, und was unter Subjekt Subventionen? Aus welchen zwei Gründen ist Subjekt Subventionierung aus Steuerzahler Sicht die bessere
 
-* *Eine Objektsubventionierung kann leichter ausgenutzt werden Bsp Die Landwirte, die viel zu viel produziert haben, da der Staat überflüssiges aufgekauft hat. Der Nachteil daran war, dass der Staat am ende nicht nur überflüssiges sondern auch die vernichtung davon zahlen musste, was am ende zu teuer war*  
-* *eine Subjekt Subventionierung hat in der Regel einen Festpreis, dh es wird nicht überflüssig produziert und die kosten bleiben gleich und es kann keine derartige Ausnutzung stattfinden* 
+Variante. **(6 Punkte)**
 
-c) Was unterscheidet „Produktionsgüter“ von „Konsumgütern“? Und was verstehen wir unter„Verbrauchsgütern? Nennen Sie zu letzteren ein Beispiel. (6 Punkte
+* *Eine Objektsubventionierung kann leichter ausgenutzt werden Bsp Die Landwirte, die viel zu viel produziert haben, da der Staat überflüssiges aufgekauft hat. Der Nachteil daran war, dass der Staat am ende nicht nur überflüssiges sondern auch die vernichtung davon zahlen musste, was am ende zu teuer war*
+* *eine Subjekt Subventionierung hat in der Regel einen Festpreis, dh es wird nicht überflüssig produziert und die kosten bleiben gleich und es kann keine derartige Ausnutzung stattfinden*
 
-* *Produktionsgut wird zu einem Produkt weiterverarbeiter ein beispiel hierfür wären zb Rohstoffe die im Endprodukt enthalten sind.*  
-* *Konsumgut ist die Übergruppe des Produktionsguts, es wird entweder langfristig oder kurzfristig konsumiert*  
+**c)** Was unterscheidet **„Produktionsgüter“** von **„Konsumgütern“**? Und was verstehen wir unter„Verbrauchsgütern? Nennen Sie zu letzteren ein Beispiel. **(6 Punkte)**
+
+* *Produktionsgut wird zu einem Produkt weiterverarbeiter ein beispiel hierfür wären zb Rohstoffe die im Endprodukt enthalten sind.*
+* *Konsumgut ist die Übergruppe des Produktionsguts, es wird entweder langfristig oder kurzfristig konsumiert*
 * *Verbrauchsgut ist neben Gebrauchsgut auch ein Konsumgut, das Verbrauchsgut wird allerdings verbraucht zb Kaffee wäre ein Verbrauchsgut von einer Software, da die Entwickler Kaffee saufen müssen um die Software zu erstellen.*
 
-Aufgabe 2\)  
-a) Was verstehen wir unter einem „konglomeraten“ (oder lateralen)Unternehmenszusammenschluss? Nennen Sie ein fiktives Beispiel. Für was für eine Eigentümerstruktur eignet sich ein solcher Zusammenschluss tendenziell, und bei was für einer Struktur eher weniger? (7 Punkte)
+## Aufgabe 2
 
-* *ein Konglomerat ist ein Zusammenschluss von verschiedenen Branchen*  
-* *dies dient zur Risikostreuung*  
-* *ein Friseur und Nagelstudio bilden ein Konglomerat, dadurch haben zb den Vorteil sich die Miete teilen zu können*  
+**a)** Was verstehen wir unter einem **„konglomeraten“** (oder lateralen)Unternehmenszusammenschluss? Nennen Sie ein fiktives Beispiel. Für was für eine Eigentümerstruktur eignet sich ein solcher Zusammenschluss tendenziell, und bei was für einer Struktur eher weniger? **(7 Punkte)**
+
+* *ein Konglomerat ist ein Zusammenschluss von verschiedenen Branchen*
+* *dies dient zur Risikostreuung*
+* *ein Friseur und Nagelstudio bilden ein Konglomerat, dadurch haben zb den Vorteil sich die Miete teilen zu können*
 * *Es macht Sinn bei Familienbetrieben oder wenn die Kundenzielgruppe ähnlich ist*
 
-b) Was verstehen wir unter einer Rechtsform? Welche Rechtsform würden Sie einem ausländischen Investor empfehlen, der weder unternehmerische Mitbestimmung noch eine Haftung mit seinem persönlichen Vermögen möchte? Welche notwendige Bedingung müsste er aber für die Wahl der von Ihnen genannten Rechtsform erfüllen? (6 Punkte)
+**b)** Was verstehen wir unter einer Rechtsform? Welche Rechtsform würden Sie einem ausländischen Investor empfehlen, der weder unternehmerische Mitbestimmung noch eine Haftung mit seinem persönlichen Vermögen möchte? Welche notwendige Bedingung müsste er aber für die Wahl der von Ihnen genannten Rechtsform erfüllen? **(6 Punkte)**
 
-* *empfehlenswert wäre eine KG, er bräuchte noch einen Komplementär und er würde dann als Kommanditist sein gewünschten Betrag investieren.*  
+* *empfehlenswert wäre eine KG, er bräuchte noch einen Komplementär und er würde dann als Kommanditist sein gewünschten Betrag investieren.*
 * *Rechtsform: allgemeiner rechtlicher Rahmen/Organisation*
 
-c) Erläutern Sie kurz die vier „Kennzeichen eines Zieles“ an einem Beispiel? (8 Punkte
+**c)** Erläutern Sie kurz die vier **„Kennzeichen eines Zieles“** an einem Beispiel? **(8 Punkte)**
 
-* *1\) Zielinhalt: was soll erreicht werden*  
-* *2\) Zielausmaß: Größe meist Extremierung(Minimierung, Maximierung)*  
-* *3\) zeitl. Bezug: wann soll es erreicht werden?*  
+* *1\) Zielinhalt: was soll erreicht werden*
+* *2\) Zielausmaß: Größe meist Extremierung(Minimierung, Maximierung)*
+* *3\) zeitl. Bezug: wann soll es erreicht werden?*
 * *4\) sachl. Geltungsbereich: für wen gilt das Ziel?*
 
-Aufgabe 3\)  
-a) Sammelfrage: Wofür war die „Deutsche Lufthansa AG“ ein geglücktes Beispiel? Was verstehen wir unter „Insolvenzverschleppung? Warum versteht sich die BWL als „Rationalitätslehre“(6 Punkte)
+## Aufgabe 3
 
-* *Die Lufthansa war ein geglücktes Beispiel für eine erfolgreiche Privatisierung, durch Corona und dem dadurch entstandenen Verlusts durch weniger Passagiere etc. musste der Staat wieder Miteigentümer der Lufthansa werden (20%). Die Lufthansa versucht jetzt jedoch wieder dem Staat die Anteile abzukaufen. MIttlerweile hält der Staat noch 14% an der Lufthansa AG*  
-* nicht melden einer (bevorstehenden) Zahlungsunfähigkeit und mögliches Geld auf private Konten übertragen  
+**a)** Sammelfrage: Wofür war die **„Deutsche Lufthansa AG“** ein geglücktes Beispiel? Was verstehen wir unter „Insolvenzverschleppung? Warum versteht sich die BWL als **„Rationalitätslehre“(6 Punkte)**
+
+* *Die Lufthansa war ein geglücktes Beispiel für eine erfolgreiche Privatisierung, durch Corona und dem dadurch entstandenen Verlusts durch weniger Passagiere etc. musste der Staat wieder Miteigentümer der Lufthansa werden (20%). Die Lufthansa versucht jetzt jedoch wieder dem Staat die Anteile abzukaufen. MIttlerweile hält der Staat noch 14% an der Lufthansa AG*
+* nicht melden einer (bevorstehenden) Zahlungsunfähigkeit und mögliches Geld auf private Konten übertragen
 * rational, weil man nicht mit eigenen Mitteln, sondern mit den eines Unternehmens verfügt und somit nicht emotional handelt
 
-b) 2019 hat die Eckkneipe „Pauls Bierschwemme“ folgende Daten (in €) erzielt: In der Kasse war am Jahresende ein (gesamtes) Guthaben von 5000, der Umsatz lag bei 0,5 Millionen. Das Unternehmen zahlte durchschnittlich 5% Zinsen auf sein Fremdkapital an einen Kredithai, wobei dieses Fremdkapital zu 70% langfristig geliehen war. Aus der Bilanz lässt sich weiterhin entnehmen, dass das Eigenkapital bei 50.000 lag, bei einer Anlagendeckung I von 100 %. Das Unternehmen hatte eine Gesamtkapitalrentabilität von 10% sowie eine Eigenkapitalrentabilität von 20%. Die eigenen kurzfristigen Forderungen (gegenüber Lieferanten und Trinkern) lagen bei 25.000 €. Berechnen Sie den Verschuldungsgrad und den Jahresüberschuss des Unternehmens.Ermitteln und beurteilen Sie sodann die Liquidität Zweiten Grades, die Anlagenintensität und die Umsatzrentabilität. Würden Sie den Verschuldungsgrad verändern (mit kurzer Begründung)?(15 Punkte)
+**b)** 2019 hat die Eckkneipe **„Pauls Bierschwemme“** folgende Daten (in €) erzielt: In der Kasse war am Jahresende ein (gesamtes) Guthaben von 5000, der Umsatz lag bei 0,5 Millionen. Das Unternehmen zahlte durchschnittlich 5% Zinsen auf sein Fremdkapital an einen Kredithai, wobei dieses Fremdkapital zu 70% langfristig geliehen war. Aus der Bilanz lässt sich weiterhin entnehmen, dass das Eigenkapital bei 50.000 lag, bei einer Anlagendeckung I von 100 %. Das Unternehmen hatte eine Gesamtkapitalrentabilität von 10% sowie eine Eigenkapitalrentabilität von 20%. Die eigenen kurzfristigen Forderungen (gegenüber Lieferanten und Trinkern) lagen bei 25.000 €. Berechnen Sie den Verschuldungsgrad und den Jahresüberschuss des Unternehmens.Ermitteln und beurteilen Sie sodann die Liquidität Zweiten Grades, die Anlagenintensität und die Umsatzrentabilität. Würden Sie den Verschuldungsgrad verändern (mit kurzer Begründung)?**(15 Punkte)**
 
-*Gesamtguthaben \= 5.000€*  
-*Umsatz \= 0,5 Millionen €*  
-*FKz \= 5%*  
-*FK langfr. \= 70%*  
-*EK \= 50.000€*  
-*GKR \= 10%*  
-*EKR \= 20%*  
+*Gesamtguthaben \= 5.000€*
+*Umsatz \= 0,5 Millionen €*
+*FKz \= 5%*
+*FK langfr. \= 70%*
+*EK \= 50.000€*
+*GKR \= 10%*
+*EKR \= 20%*
 *kurf. Ford. \= 25.000€*
 
-*100.000€ \= 100%*   
-*Langf. FK \= 70.000€*  
+*100.000€ \= 100%*
+*Langf. FK \= 70.000€*
 *kurzfr. FK \= 30.000€*
 
-*gesucht: VG, AnlagenInt., UR*  
-*JÜ \= EKR \* EK \= 0,2 \* 50.000€ \= 10.000€*  
+*gesucht: VG, AnlagenInt., UR*
+*JÜ \= EKR \* EK \= 0,2 \* 50.000€ \= 10.000€*
 *GK \= JÜ / GKR \= 10.000€ / 0,1 \= 100.000€*
 
 VG \= FK/EK: 100.000€/50.000€ \= 2
@@ -181,181 +179,215 @@ VG \= FK/EK: 100.000€/50.000€ \= 2
 
 # BWL Klausur SS 2019
 
-Aufgabe 1\)  
-a) Warum ermitteln Unternehmer in der Regel ihren Gewinn, und nicht ihre Produktivität oder ihre Wirtschaftlichkeit (mit kurzer Begründung). (6 Punkte) 
+## Aufgabe 1
 
-* Produktivität sagt nichts über Gewinn aus und Wirtschaftlichkeit schon, aber nicht wie viel. Rentabilität sagt viel über Gewinn aus.  
+**a)** Warum ermitteln Unternehmer in der Regel ihren Gewinn, und nicht ihre Produktivität oder ihre Wirtschaftlichkeit (mit kurzer Begründung). **(6 Punkte)**
+
+* Produktivität sagt nichts über Gewinn aus und Wirtschaftlichkeit schon, aber nicht wie viel. Rentabilität sagt viel über Gewinn aus.
 * Gewinn verschafft einen genauen Überblick über die finanzielle Situation ihrer Firma
 
-b) Erläutern Sie kurz die drei Kennzeichen öffentlicher Betriebe nach Gutenberg. (6 Punkte) 
+**b)** Erläutern Sie kurz die drei Kennzeichen öffentlicher Betriebe nach Gutenberg. **(6 Punkte)**
 
-*  *Organprinzip : \- beschreibt das mitbestimmen des Staates in Betrieblichen entscheidungen*  
-* *Prinzip der Zentralen Planerfüllung: unternehmerische Formalziel*    
+*  *Organprinzip : \- beschreibt das mitbestimmen des Staates in Betrieblichen entscheidungen*
+* *Prinzip der Zentralen Planerfüllung: unternehmerische Formalziel*
 * *Gemeineigentum:?*
 
-c) Was verstehen wir unter einer „Fusion“? Welche drei Formen von Fusionen kann es grundsätzlich geben? (5 Punkte)  
+**c)** Was verstehen wir unter einer **„Fusion“**? Welche drei Formen von Fusionen kann es grundsätzlich geben? **(5 Punkte)**
 
-* vollständiges Verschmelzen mehrerer Unternehmen  
+* vollständiges Verschmelzen mehrerer Unternehmen
 * horizontale/vertikale Fusion und Konglomerat
 
-Aufgabe 2\)  
-a) Nennen Sie jeweils zwei Aspekte, die für die Aufnahme eines weiteren Partners in Ihrer neugegründeten oHG sprechen, und zwei Gründe, die stattdessen für die Anstellung eines Mitarbeiters sprechen. (4 Punkte)   
-b) Erläutern Sie kurz zwei Vor- und einen Nachteil, den GmbHs gegenüber AGs haben. (6 Punkte)   
+## Aufgabe 2
+
+**a)** Nennen Sie jeweils zwei Aspekte, die für die Aufnahme eines weiteren Partners in Ihrer neugegründeten oHG sprechen, und zwei Gründe, die stattdessen für die Anstellung eines Mitarbeiters sprechen. **(4 Punkte)**
+
+**b)** Erläutern Sie kurz zwei Vor- und einen Nachteil, den GmbHs gegenüber AGs haben. **(6 Punkte)**
+
 Vorteile:
 
-* *Weniger Eigenkapital erforderlich (25 Tausend € statt 50 Tausend € )*  
+* *Weniger Eigenkapital erforderlich (25 Tausend € statt 50 Tausend € )*
 * *es wird nur ein Aufsichtsrat benötigt*
 
 *Nachteil:*
 
-* *Mitbestimmung via Vorstand*  
+* *Mitbestimmung via Vorstand*
 * *schwererer Ein- und Ausstieg*
 
-c) Was verstehen wir unter „Kapital“, und was unter „Liquidität“? (4 Punkte) d) Formulieren Sie allgemein: Wie wirkt eine Fremdfinanzierung auf die Rentabilität des Eigenkapitals? Warum ist dies so (mit Begründung)? (6 Punkte)
+**c)** Was verstehen wir unter **„Kapital“**, und was unter **„Liquidität“**? **(4 Punkte)**
 
-* *Liquidität beschreibt die Zahlungsfähigkeit*  
+**d)** Formulieren Sie allgemein: Wie wirkt eine Fremdfinanzierung auf die Rentabilität des Eigenkapitals? Warum ist dies so (mit Begründung)? **(6 Punkte)**
+
+* *Liquidität beschreibt die Zahlungsfähigkeit*
 * *Kapital ist das Geld, welches das Unternehmen zur Verfügung hat, hierbei wird zwischen Eigen- und Fremdkapital unterschieden (FK wird meist auch in langfristiges FK und kurzfristiges FK aufgeteilt)*
 
-Aufgabe 3\)  
-a) Der Volkswagen-Konzern erzielte im Jahr 2017 bei einem Umsatz von 230 Mrd. € einen Jahresüberschuss von 14 Mrd. €. Das Gesamtvermögen bestand aus Anlagevermögen (262 Mrd. €) und Umlaufvermögen (160 Mrd. €). Auf der Passivseite der Bilanz finden sich langfristige (153 Mrd. €) und kurzfristige (160 Mrd. €) Schulden sowie (zu berechnendes) Eigenkapital. Ermitteln und beurteilen Sie die Eigenkapitalquote, die Umsatzrentabilität, die Eigenkapitalrendite, die Anlagenintensität sowie die Anlagendeckung II. (15 Punkte) b) Was verstehen wir unter der „arbeitsrechtlichen“ Ebene der Mitbestimmung? In welchem Gesetz (mit Jahreszahl) ist diese aktuell geregelt? Welche (drei) Instanzen üben diese aus? Ist diese Form der Mitbestimmung international üblich? (8 Punkte) 
+## Aufgabe 3
 
-*ARM (Geregelt im BetrVG 1972\)*   
-*Mitwirkungsrechte*  
+**a)** Der Volkswagen-Konzern erzielte im Jahr 2017 bei einem Umsatz von 230 Mrd. € einen Jahresüberschuss von 14 Mrd. €. Das Gesamtvermögen bestand aus Anlagevermögen (262 Mrd. €) und Umlaufvermögen (160 Mrd. €). Auf der Passivseite der Bilanz finden sich langfristige (153 Mrd. €) und kurzfristige (160 Mrd. €) Schulden sowie (zu berechnendes) Eigenkapital. Ermitteln und beurteilen Sie die Eigenkapitalquote, die Umsatzrentabilität, die Eigenkapitalrendite, die Anlagenintensität sowie die Anlagendeckung II. **(15 Punkte)**
+
+**b)** Was verstehen wir unter der **„arbeitsrechtlichen“** Ebene der Mitbestimmung? In welchem Gesetz (mit Jahreszahl) ist diese aktuell geregelt? Welche (drei) Instanzen üben diese aus? Ist diese Form der Mitbestimmung international üblich? **(8 Punkte)**
+
+*ARM (Geregelt im BetrVG 1972\)*
+*Mitwirkungsrechte*
 *Recht auf Information, Anhörung, Beratung und Verhandlung, Widerspruch*
 
-*Mitbestimmungsrechte*  
-*Veto- und Zustimmungsrecht*  
-*Anspruch auf Anhörung*  
+*Mitbestimmungsrechte*
+*Veto- und Zustimmungsrecht*
+*Anspruch auf Anhörung*
 *Initiativrecht*
 
-*Instanzen:*  
+*Instanzen:*
 *Betriebsrat, Geschäftsführung, ?*
 
 # BWL Klausur SS 2018
 
-Aufgabe 1\)  
-a) Was bildet der DAX ab? (3 Punkte) 
+## Aufgabe 1
 
-* *Deutsche Aktienindex*  
-* *40 erfolgreichsten Unternehmen die an der Börse sind* 
+**a)** Was bildet der DAX ab? **(3 Punkte)**
 
-b) Was verstehen wir unter „Produktivität“? Geben Sie hierzu ein Beispiel an und erläutern Sie, warum die Produktivität nur eine eingeschränkte Bedeutung hat. (6 Punkte) 
+* *Deutsche Aktienindex*
+* *40 erfolgreichsten Unternehmen die an der Börse sind*
 
-* *Produktivität ist Output/ In*  
-*   
-* *put*  
+**b)** Was verstehen wir unter **„Produktivität“**? Geben Sie hierzu ein Beispiel an und erläutern Sie, warum die Produktivität nur eine eingeschränkte Bedeutung hat. **(6 Punkte)**
+
+* *Produktivität ist Output/ In*
+*
+* *put*
 * *Dies ist nicht aussagekräftig, da sie nicht viel mit dem Gewinn, Umsatzrentabilität oder  zutun hat*
 
-c) Was verstehen wir unter einem konglomeraten Unternehmenszusammenschluss? Nennen Sie ein Beispiel. Was spricht dafür, was dagegen? (8 Punkte)
+**c)** Was verstehen wir unter einem konglomeraten Unternehmenszusammenschluss? Nennen Sie ein Beispiel. Was spricht dafür, was dagegen? **(8 Punkte)**
 
-* *Zusammenschluss von zwei Unternehmen aus einer unterschiedlichen Branche z.B. Autohaus & Currywurststand*  
-* *Dagegen: keine Kernkompetenz mehr*  
-* *Dafür: geteiltes Kundenklientel* 
+* *Zusammenschluss von zwei Unternehmen aus einer unterschiedlichen Branche z.B. Autohaus & Currywurststand*
+* *Dagegen: keine Kernkompetenz mehr*
+* *Dafür: geteiltes Kundenklientel*
 
-Aufgabe 2\)  
-a) Nach welcher grundsätzlichen Logik ist die Aktivseite einer Bilanz gegliedert? Zudem: Warum befinden sich in der Bilanz die Rückstellungen auf der Passivseite? Wo dort genau? (6 Punkte)   
+## Aufgabe 2
+
+**a)** Nach welcher grundsätzlichen Logik ist die Aktivseite einer Bilanz gegliedert? Zudem: Warum befinden sich in der Bilanz die Rückstellungen auf der Passivseite? Wo dort genau? **(6 Punkte)**
+
 *Aktivseite: oben nach unten von langfristig zu kurzfristig*
 
-- *Anlagevermögen*  
-- *Umlaufvermögen*  
+- *Anlagevermögen*
+- *Umlaufvermögen*
 - *Rechnungsabgrenzungsposten*
 
-*Rückstellungen befinden sich zwischen dem Eigenkapital und dem Fremdkapital, sie werden oft als Fremdkapital behandelt.*  
-b) Welches sind die vier Existenzbedingungen für Unternehmen? Erläutern Sie eine dieser Bedingungen. (6 Punkte) 
+*Rückstellungen befinden sich zwischen dem Eigenkapital und dem Fremdkapital, sie werden oft als Fremdkapital behandelt.*
 
-* *1\) Rentabilität*  
-* *2\) Liquidität \= Zahlungsfähig, wenn ein Unternehmen nicht zahlungsfähig ist, dann ist es insolvent und ein insolventes Unternehmen existiert nicht mehr lange*  
-* *3\) Umsatz(wachstum)*  
+**b)** Welches sind die vier Existenzbedingungen für Unternehmen? Erläutern Sie eine dieser Bedingungen. **(6 Punkte)**
+
+* *1\) Rentabilität*
+* *2\) Liquidität \= Zahlungsfähig, wenn ein Unternehmen nicht zahlungsfähig ist, dann ist es insolvent und ein insolventes Unternehmen existiert nicht mehr lange*
+* *3\) Umsatz(wachstum)*
 * *4\) Planbarkeit*
 
-c) Diskutieren Sie drei grundsätzliche Möglichkeiten, wie ein Unternehmen seine Wertschätzung den Mitarbeitern gegenüber ausdrücken kann, um diese zu motivieren. (6 Punkte)
+**c)** Diskutieren Sie drei grundsätzliche Möglichkeiten, wie ein Unternehmen seine Wertschätzung den Mitarbeitern gegenüber ausdrücken kann, um diese zu motivieren. **(6 Punkte)**
 
-* *Lob*  
-* *Firmenwagen oder anderer Sachbonus*  
+* *Lob*
+* *Firmenwagen oder anderer Sachbonus*
 * *gehaltserhöhung wobei dies problematisch ist da man sich schnell an mehr Geld gewöhnt*
 
-Aufgabe 3\)  
-a) Das Unternehmen „Habenichts GmbH“ hatte im Jahr 2017 bei einem Gesamtvermögen von 120.000 € doppelt so viel Eigenkapital wie Schulden. Der Umsatz betrug 1 Million €, für Fremdkapital wurden 5.000 € Zinsen an einen Kredithai bezahlt. Der Kapitalgewinn belief sich auf 30.000 €. Beurteilen Sie die Rentabilität des Unternehmens. Ermitteln Sie hierzu zunächst vier verschiedene Kennziffern, und interpretieren Sie diese dann (im Vergleich und absolut). Erscheint Ihnen der Verschuldungsgrad als angemessen? (15 Punkte)   
-Gesamtvermögen: 120.000€  
-EK: 80.000€ FK 40.000€  
-Umsatz: 1.000.000€  
+## Aufgabe 3
+
+**a)** Das Unternehmen **„Habenichts GmbH“** hatte im Jahr 2017 bei einem Gesamtvermögen von 120.000 € doppelt so viel Eigenkapital wie Schulden. Der Umsatz betrug 1 Million €, für Fremdkapital wurden 5.000 € Zinsen an einen Kredithai bezahlt. Der Kapitalgewinn belief sich auf 30.000 €. Beurteilen Sie die Rentabilität des Unternehmens. Ermitteln Sie hierzu zunächst vier verschiedene Kennziffern, und interpretieren Sie diese dann (im Vergleich und absolut). Erscheint Ihnen der Verschuldungsgrad als angemessen? **(15 Punkte)**
+
+Gesamtvermögen: 120.000€
+
+EK: 80.000€ FK 40.000€
+
+Umsatz: 1.000.000€
+
 FKz: 5000€ bezahlt
 
-ROI:  
-VGQuote: 40.000/80.000 \* 100 \= 50%  
-EKR:  
-EKQ:  
- 
+ROI:
 
-b) Schildern Sie die arbeitsrechtliche und unternehmerische Mitbestimmung bei einer großen Kommanditgesellschaft des Lebensmitteleinzelhandels sowie deren Haftungsregeln. (10   
+VGQuote: 40.000/80.000 \* 100 \= 50%
+
+EKR:
+
+EKQ:
+
+**b)** Schildern Sie die arbeitsrechtliche und unternehmerische Mitbestimmung bei einer großen Kommanditgesellschaft des Lebensmitteleinzelhandels sowie deren Haftungsregeln. (10
+
 Punkte)
 
 # BWL Klausur SS 2017
 
-Aufgabe 1\)  
-a) Was unterscheidet Betriebe und Haushalte grundsätzlich voneinander? Ist diese Unterscheidung immer gegeben? (3 Punkte) 
+## Aufgabe 1
 
-- Betriebe ist ort der Leistungserstellung  
+**a)** Was unterscheidet Betriebe und Haushalte grundsätzlich voneinander? Ist diese Unterscheidung immer gegeben? **(3 Punkte)**
+
+- Betriebe ist ort der Leistungserstellung
 - Haushalte Konsumieren gemeinsam
 
+**b)** Was verstehen wir unter **„Stakeholdern“**? Nennen Sie vier besonders mächtige StakeholderGruppen in Deutschland (mit Begründung). **(10 Punkte)**
 
-b) Was verstehen wir unter „Stakeholdern“? Nennen Sie vier besonders mächtige StakeholderGruppen in Deutschland (mit Begründung). (10 Punkte) 
+- Stakeholder sind Menschen oder Organisation die wichtig fürs Unternehmen sind.
+- z.B Mitarbeiter, Kunden, Manger.
 
-- Stakeholder sind Menschen oder Organisation die wichtig fürs Unternehmen sind.  
-- z.B Mitarbeiter, Kunden, Manger. 
+**c)** Was verstehen wir unter **„Kammern“**? Nennen Sie eine ihrer Aufgaben. **(3 Punkte)**
 
-c) Was verstehen wir unter „Kammern“? Nennen Sie eine ihrer Aufgaben. (3 Punkte) 
+- Kammer sind eine Körperschaftliche Selbstverwaltung.
+- Sind sind ein Monopol.
+- sie verwalten sich selbst
+- sie bekommen ihre Aufgaben vom staat
+- Mitgliedschaft zwang
+- Normen festlegen
+- Berufsabschlüsse festlegen
 
-- Kammer sind eine Körperschaftliche Selbstverwaltung.  
-- Sind sind ein Monopol.   
-- sie verwalten sich selbst  
-- sie bekommen ihre Aufgaben vom staat  
-- Mitgliedschaft zwang  
-- Normen festlegen  
-- Berufsabschlüsse festlegen    
+## Aufgabe 2
 
-Aufgabe 2\)  
-a) Was ist ein Kaufmann „kraft Eintragung“, was ein Kaufmann „kraft Rechtsform“? (4 Punkte)   
-b) Was verstehen wir unter „Factoring“? Nennen Sie vier Kriterien, von denen die Kosten des Factorings abhängen. (6 Punkte)   
-c) Das Unternehmen „Bertha KG“ hat im Jahr 2011 eine Eigenkapitalrendite von 18% erwirtschaftet, wobei Eigenkapital und Fremdkapital sich die Waage hielten und das Unternehmen 2% Zinsen auf seine Schulden zahlen musste. Ermitteln Sie zunächst die Gesamtkapitalrendite. Nehmen wir an, das Unternehmen möchte nun seine Eigenkapitalrendite (bei unverändertem Fremdkapitalzinssatz und gegebener Gesamtkapitalrendite) auf 42% steigern – wie muss es hierfür seine Kapitalstruktur verändern? Was macht eine solche Rechnung allerdings unrealistisch? (12 Punkte)
+**a)** Was ist ein Kaufmann **„kraft Eintragung“**, was ein Kaufmann **„kraft Rechtsform“**? **(4 Punkte)**
 
-Aufgabe 3\)  
-a) Welche Arten von Subventionen kennen Sie? Warum ist Subjektsubventionierung (aus Sicht der Steuerzahler) besser als Objektsubventionierung? (4 Punkte) b) Grenzen Sie die Begriffe Unternehmensphilosophie, \-kultur und Corporate Identity voneinander ab. (6 Punkte) c) Schildern Sie eingehend das Mitbestimmungsgesetz von 1976\. Geben Sie hierbei auf die erfassten Unternehmen, das Sitzverhältnis sowie die Zahl und die Aufteilung der AufsichtsratsMitglieder ein. Was wird an diesem Gesetz besonders von Arbeitgeberseite kritisiert? (12 Punkte)
+**b)** Was verstehen wir unter **„Factoring“**? Nennen Sie vier Kriterien, von denen die Kosten des Factorings abhängen. **(6 Punkte)**
+
+**c)** Das Unternehmen **„Bertha KG“** hat im Jahr 2011 eine Eigenkapitalrendite von 18% erwirtschaftet, wobei Eigenkapital und Fremdkapital sich die Waage hielten und das Unternehmen 2% Zinsen auf seine Schulden zahlen musste. Ermitteln Sie zunächst die Gesamtkapitalrendite. Nehmen wir an, das Unternehmen möchte nun seine Eigenkapitalrendite (bei unverändertem Fremdkapitalzinssatz und gegebener Gesamtkapitalrendite) auf 42% steigern – wie muss es hierfür seine Kapitalstruktur verändern? Was macht eine solche Rechnung allerdings unrealistisch? **(12 Punkte)**
+
+## Aufgabe 3
+
+**a)** Welche Arten von Subventionen kennen Sie? Warum ist Subjektsubventionierung (aus Sicht der Steuerzahler) besser als Objektsubventionierung? **(4 Punkte)**
+
+**b)** Grenzen Sie die Begriffe Unternehmensphilosophie, \-kultur und Corporate Identity voneinander ab. **(6 Punkte)**
+
+**c)** Schildern Sie eingehend das Mitbestimmungsgesetz von 1976\. Geben Sie hierbei auf die erfassten Unternehmen, das Sitzverhältnis sowie die Zahl und die Aufteilung der AufsichtsratsMitglieder ein. Was wird an diesem Gesetz besonders von Arbeitgeberseite kritisiert? **(12 Punkte)**
 
 # BWL Klausur WS 2017/2018
 
-Aufgabe 1\)  
-a) Was verstehen wir unter Gebrauchs-, was unter Verbrauchsgütern? (4 Punkte) 
+## Aufgabe 1
 
-- Verbrauchs und GebrauchsGüter sind Konsumgüter  
-- Gebrauchter Güter sind güter sind güter die Längerfristig gebraucht werden. z.B Kühlschrank  
-- Verbrauchsgüter sind die Kurzfristig gebraucht werden. z.B Apfel   
-   
+**a)** Was verstehen wir unter Gebrauchs-, was unter Verbrauchsgütern? **(4 Punkte)**
 
-b) Warum stehen Liquidität und Rentabilität in einem gewissen Zielkonflikt zueinander? (2 Punkte) 
+- Verbrauchs und GebrauchsGüter sind Konsumgüter
+- Gebrauchter Güter sind güter sind güter die Längerfristig gebraucht werden. z.B Kühlschrank
+- Verbrauchsgüter sind die Kurzfristig gebraucht werden. z.B Apfel
 
-* *Wenn man möglichst rentabel sein möchte, muss man den Großteil des Kapitals investieren. Darunter leidet dann die Liquidität, das heißt man muss sich entscheiden, wie viel Geld man liegen lassen möchte und wie viel Geld man investieren kann.* 
+**b)** Warum stehen Liquidität und Rentabilität in einem gewissen Zielkonflikt zueinander? **(2 Punkte)**
 
-c) Was verstehen wir unter „Stakeholdern“? Nennen Sie sechs besonders mächtige StakeholderGruppen in Deutschland (mit kurzer Begründung). (14 Punkte
+* *Wenn man möglichst rentabel sein möchte, muss man den Großteil des Kapitals investieren. Darunter leidet dann die Liquidität, das heißt man muss sich entscheiden, wie viel Geld man liegen lassen möchte und wie viel Geld man investieren kann.*
+
+**c)** Was verstehen wir unter **„Stakeholdern“**? Nennen Sie sechs besonders mächtige StakeholderGruppen in Deutschland (mit kurzer Begründung). **(14 Punkte)**
 
 Bei einem Stakeholder entscheidet der Eigentümer und die Mitarbeiter
 
-Aufgabe 2\)  
-a) Auf welcher Seite der Bilanz befinden sich Rückstellungen? Wodurch unterscheiden sich diese von Verbindlichkeiten (Schulden)? (4 Punkte) 
+## Aufgabe 2
 
-* *Die Rückstellungen befinden sich auf der Passivseite der Bilanz*  
+**a)** Auf welcher Seite der Bilanz befinden sich Rückstellungen? Wodurch unterscheiden sich diese von Verbindlichkeiten (Schulden)? **(4 Punkte)**
+
+* *Die Rückstellungen befinden sich auf der Passivseite der Bilanz*
 * *Sie sind im Gegensatz zu Schulden zurückgelegtes Kapital, welches für eine spätere Rückzahlung von Forderungen verwendet wird. Somit wird eine Liquidität sichergestellt.*
 
-b) Was verstehen wir unter „Kammern“? Nennen Sie eine ihrer Aufgaben. (3 Punkte)   
-    \-  Kammer sind eine Körperschaftliche Selbstverwaltung.   
-    \- Sie sind ein Monopol.   
-    \- Die Mitgliedschaft ist zwang  
-    \- Setzten Normen, Berufsabschlüsse fest
+**b)** Was verstehen wir unter **„Kammern“**? Nennen Sie eine ihrer Aufgaben. **(3 Punkte)**
 
-c) Erläutern Sie kurz die Begriffe Unternehmensphilosophie, \-kultur und Corporate Identity. Was davon folgt normalerweise keinem menschlichen Plan? (7 Punkte) d) Nennen Sie die vier Existenzbedingungen von Unternehmen. Definieren Sie für zwei Existenzbedingungen (Ihrer Wahl) jeweils eine Kennzahl, mit der man diese messen kann. (6 Punkte) 
+- Kammer sind eine Körperschaftliche Selbstverwaltung.
+- Sie sind ein Monopol.
+- Die Mitgliedschaft ist zwang
+- Setzten Normen, Berufsabschlüsse fest
 
-Aufgabe 3\)  
-a) Das Handelsunternehmen „Gölti KG“ machte im Jahr 2017 einen Umsatz von 600.000€ bei einem Gesamtkapital von 100.000€. Es erwirtschaftete eine Eigenkapitalrendite von 18%, wobei Eigenkapital und Fremdkapital sich die Waage hielten und das Unternehmen 2% Zinsen auf seine Schulden zahlen musste. Ermitteln Sie den Jahresüberschuss, die Gesamtkapitalrendite sowie die Umsatzrendite – und beurteilen Sie die beiden Renditen. (8 Punkte) 
+**c)** Erläutern Sie kurz die Begriffe Unternehmensphilosophie, \-kultur und Corporate Identity. Was davon folgt normalerweise keinem menschlichen Plan? **(7 Punkte)**
+
+**d)** Nennen Sie die vier Existenzbedingungen von Unternehmen. Definieren Sie für zwei Existenzbedingungen (Ihrer Wahl) jeweils eine Kennzahl, mit der man diese messen kann. **(6 Punkte)**
+
+## Aufgabe 3
+
+**a)** Das Handelsunternehmen **„Gölti KG“** machte im Jahr 2017 einen Umsatz von 600.000€ bei einem Gesamtkapital von 100.000€. Es erwirtschaftete eine Eigenkapitalrendite von 18%, wobei Eigenkapital und Fremdkapital sich die Waage hielten und das Unternehmen 2% Zinsen auf seine Schulden zahlen musste. Ermitteln Sie den Jahresüberschuss, die Gesamtkapitalrendite sowie die Umsatzrendite – und beurteilen Sie die beiden Renditen. **(8 Punkte)**
 
 *Gegeben:*
 
@@ -365,73 +397,117 @@ a) Das Handelsunternehmen „Gölti KG“ machte im Jahr 2017 einen Umsatz von 6
 
 * *JÜ,GKR,UR*
 
-*EKR \= JÜ/EK: \*EK* 	  
-*\= EK \* EKR \= JÜ: 50.000€ \* 0,18 \= 9000€*  
-*JÜ \= 9000€* 
+*EKR \= JÜ/EK: \*EK*
+*\= EK \* EKR \= JÜ: 50.000€ \* 0,18 \= 9000€*
+*JÜ \= 9000€*
 
-*UR \= Gewinn/Umsatz*  
+*UR \= Gewinn/Umsatz*
 *UR \= 9000€/600.000€ \= 1,5%*
 
-*Kapitalgewinn= JÜ \+(FK \* FKz): 9000€ \+ (50.000€ \* 0.02) \= 10000€*  
+*Kapitalgewinn= JÜ \+(FK \* FKz): 9000€ \+ (50.000€ \* 0.02) \= 10000€*
 *GKR \= KapitalGewinn/Gesamtkapital: 10000/100.000 \= 0.10 \* 100 \= 10%*
 
 *FKZ(g) \= FK\*FKZ \= 50000€ \* 0,02 \= 1000€*
 
-*Beurteilung von beiden Rentabilität: (Rentabilität im Regelfall immer \>10%)*  
-*UR sollte über 5% sein um einen soliden Wert zu haben, am besten über 10% → Also bei 1,5% schlecht*  
-*bei GKR i.d.R \>10%, es gilt: EKR \> GKR \> FKZ → passt* 
+*Beurteilung von beiden Rentabilität: (Rentabilität im Regelfall immer \>10%)*
+*UR sollte über 5% sein um einen soliden Wert zu haben, am besten über 10% → Also bei 1,5% schlecht*
+*bei GKR i.d.R \>10%, es gilt: EKR \> GKR \> FKZ → passt*
 
-b) Nehmen wir anschließend an, die „Gölti KG“ möchte ihre Eigenkapitalrendite (bei unverändertem Fremdkapitalzinssatz und gegebener Gesamtkapitalrendite) auf 42% steigern – wie muss es hierfür seine Kapitalstruktur verändern? Was macht eine solche Rechnung allerdings unrealistisch? (4 Punkte)   
-c) Welche Bedingungen müssen erfüllt sein, damit ein Unternehmen das Montan-MitbestimmungsGesetz anwenden muss? Warum haben die Aufsichtsräte bei Unternehmen, die unter dieses Gesetz fallen, immer eine ungerade Zahl an Mitgliedern? (8 Punkte)
+**b)** Nehmen wir anschließend an, die **„Gölti KG“** möchte ihre Eigenkapitalrendite (bei unverändertem Fremdkapitalzinssatz und gegebener Gesamtkapitalrendite) auf 42% steigern – wie muss es hierfür seine Kapitalstruktur verändern? Was macht eine solche Rechnung allerdings unrealistisch? **(4 Punkte)**
+
+**c)** Welche Bedingungen müssen erfüllt sein, damit ein Unternehmen das Montan-MitbestimmungsGesetz anwenden muss? Warum haben die Aufsichtsräte bei Unternehmen, die unter dieses Gesetz fallen, immer eine ungerade Zahl an Mitgliedern? **(8 Punkte)**
 
 # BWL Klausur SS 2016
 
-Aufgabe 1\)  
-a) Was verstehen wir unter „der Wirtschaft“, was unter „wirtschaften“? Warum versteht sich die BWL als „Rationalitätslehre“? (6 Punkte) b) Erläutern Sie kurz die verschiedenen Formen von Kaufleuten laut HGB. (10 Punkte)   
-\-Istkaufmann  
-\-Kannkaufmann (§2 und 3 nach HGB)  
-\-Scheinkaufmann  
-\-Fiktivkaufmann
+## Aufgabe 1
 
-c) Was verstehen wir unter „Factoring“? (2 Punkte  
+**a)** Was verstehen wir unter **„der Wirtschaft“**, was unter **„wirtschaften“**? Warum versteht sich die BWL als **„Rationalitätslehre“**? **(6 Punkte)**
+
+**b)** Erläutern Sie kurz die verschiedenen Formen von Kaufleuten laut HGB. **(10 Punkte)**
+
+- Istkaufmann
+- Kannkaufmann (§2 und 3 nach HGB)
+- Scheinkaufmann
+- Fiktivkaufmann
+
+**c)** Was verstehen wir unter **„Factoring“**? **(2 Punkte)**
+
 Verkauf langfristiger Forderungen
 
-Aufgabe 2\)  
-a) Nennen Sie zwei Gründe, warum Autobauer Neuwagen selbst zulassen. (4 Punkte) c) Was verstehen wir unter einer „Unternehmenskultur“? Erläutern Sie, wie man sich anhand von Symbolen über eine solche informieren kann (mit mindestens drei Beispielen für Symbole). (5 Punkte) a) Bei der „Hase Gmbh“ liegen folgende Werte vor:  
-![][image1]  
-Welche Teilproduktivitäten lassen sich aus diesen Angaben ermitteln? Führen Sie die Berechnungen durch und interpretieren Sie die Ergebnisse. Wie ist die wirtschaftliche Situation des Unternehmens einzuschätzen? (10 Punkte
+## Aufgabe 2
 
-Aufgabe 3\)  
-a) Was verstehen wir unter Kennzahlen? Ein Einsatzgebiet von Kennzahlen ist der „Betriebsvergleich“. Wie ist der (englischsprachige) Fachbegriff hierfür? Erläutern Sie, warum der Betriebsvergleich in der Praxis so schlecht funktioniert. (8 Punkte) b) Das Unternehmen „Igel KG“, hat einen Verschuldungsgrad von 1,5, Anlagevermögen und Umlaufvermögen betrugen je 250.000 €. Auf seine Schulden zahlte das Unternehmen 5% Zinsen, der Jahresüberschuss betrug 50.000 € bei einem Umsatz von 1 Million €. Berechnen und beurteilen Sie Umsatzrentabilität, Eigenkapital- und Gesamtkapitalrentabilität. (9 Punkte) c) In was für Unternehmen gilt das Sprecherausschussgesetz? Wann wurde es erlassen? Handelt es sich um die unternehmerische oder die arbeitsrechtliche Ebene der Mitbestimmung (6 Punkte)
+**a)** Nennen Sie zwei Gründe, warum Autobauer Neuwagen selbst zulassen. **(4 Punkte)**
+
+**c)** Was verstehen wir unter einer **„Unternehmenskultur“**? Erläutern Sie, wie man sich anhand von Symbolen über eine solche informieren kann (mit mindestens drei Beispielen für Symbole). **(5 Punkte)**
+
+**a)** Bei der **„Hase Gmbh“** liegen folgende Werte vor:
+
+![][image1]
+
+Welche Teilproduktivitäten lassen sich aus diesen Angaben ermitteln? Führen Sie die Berechnungen durch und interpretieren Sie die Ergebnisse. Wie ist die wirtschaftliche Situation des Unternehmens einzuschätzen? **(10 Punkte)**
+
+## Aufgabe 3
+
+**a)** Was verstehen wir unter Kennzahlen? Ein Einsatzgebiet von Kennzahlen ist der **„Betriebsvergleich“**. Wie ist der (englischsprachige) Fachbegriff hierfür? Erläutern Sie, warum der Betriebsvergleich in der Praxis so schlecht funktioniert. **(8 Punkte)**
+
+**b)** Das Unternehmen **„Igel KG“**, hat einen Verschuldungsgrad von 1,5, Anlagevermögen und Umlaufvermögen betrugen je 250.000 €. Auf seine Schulden zahlte das Unternehmen 5% Zinsen, der Jahresüberschuss betrug 50.000 € bei einem Umsatz von 1 Million €. Berechnen und beurteilen Sie Umsatzrentabilität, Eigenkapital- und Gesamtkapitalrentabilität. **(9 Punkte)**
+
+**c)** In was für Unternehmen gilt das Sprecherausschussgesetz? Wann wurde es erlassen? Handelt es sich um die unternehmerische oder die arbeitsrechtliche Ebene der Mitbestimmung **(6 Punkte)**
 
 # BWL Klausur SS 2015
 
-Aufgabe 1\)  
-a) Der Kurs des Euros ist in letzter Zeit gegenüber dem Dollar klar gefallen. Nennen Sie einige Vor- und Nachteile eines schwächeren Euros. Profitiert Deutschland als Ganzes von einem schwächeren Euro (mit Begründung)? (6 Punkte) b) Was verstehen wir unter einem Kartell? Schildern Sie das Kartell der „Opec“ anhand der Kriterien „Richtung des Zusammenschlusses“ und „Bindungsintensität“. (5 Punkte) c) Was verstehen wir unter einer „übertragenen Sanierung“? Wann könnte eine solche erfolgversprechend (jeweils aus Sicht des übertragenen Unternehmens und aus Sicht der Eigentümer) sein? (6 Punkte)
+## Aufgabe 1
 
-Aufgabe 2\)  
-a) Nennen Sie die drei Bilanzzwecke, und geben Sie hierzu jeweils (mindestens) eine wesentliche Anspruchsgruppe (Stakeholder) an, für die der jeweilige Bilanzzweck eine besondere Bedeutung hat. (6 Punkte) b) Eine Möglichkeit, um Wertschätzung im Unternehmen auszudrücken, ist die Zahlung von Geld, z.B. über eine Lohnerhöhung. Ist dies immer eine gute Möglichkeit, Mitarbeiter zu motivieren? Was könnte (in welcher Situation) erfolgversprechender sein? (6 Punkte) c) Nennen Sie die vier Existenzbedingungen von Unternehmen. Geben Sie für zwei Existenzbedingungen (Ihrer Wahl) eine Kennzahl an, mit der man diese messen kann. (6 Punkte)
+**a)** Der Kurs des Euros ist in letzter Zeit gegenüber dem Dollar klar gefallen. Nennen Sie einige Vor- und Nachteile eines schwächeren Euros. Profitiert Deutschland als Ganzes von einem schwächeren Euro (mit Begründung)? **(6 Punkte)**
 
-Aufgabe 3\)  
-a) Das Unternehmen „Kerzengrade KG“ hatte im letzten Jahr einen Umsatz von 100.000 €, 20.000 € Eigenkapital, zahlte auf seine Schulden durchschnittlich 5% Zinsen und hatte eine Gesamtkapitalrentabilität von 7,5%. Wie viel Fremdkapital benötigt das Unternehmen, damit es eine Eigenkapitalrentabilität von 20% ausweisen kann? Wie hoch waren sein Gewinn, seine Umsatzrendite und sein ROI? Würden Sie in das Unternehmen investieren (mit Begründung)? Zudem: Wie viele Eigentümer muss das Unternehmen mindestens haben (16 Punkte) b) Schildern Sie das Montan-Mitbestimmungs-Gesetz. Wann wurde es erlassen, für welche Unternehmen gilt es? Welche Gruppen sind im Aufsichtsrat vertreten, und wie ist hier das Stimmenverhältnis zwischen Arbeitgebern und Arbeitnehmern? (9 Punkte)
+**b)** Was verstehen wir unter einem Kartell? Schildern Sie das Kartell der **„Opec“** anhand der Kriterien **„Richtung des Zusammenschlusses“** und **„Bindungsintensität“**. **(5 Punkte)**
+
+**c)** Was verstehen wir unter einer **„übertragenen Sanierung“**? Wann könnte eine solche erfolgversprechend (jeweils aus Sicht des übertragenen Unternehmens und aus Sicht der Eigentümer) sein? **(6 Punkte)**
+
+## Aufgabe 2
+
+**a)** Nennen Sie die drei Bilanzzwecke, und geben Sie hierzu jeweils (mindestens) eine wesentliche Anspruchsgruppe (Stakeholder) an, für die der jeweilige Bilanzzweck eine besondere Bedeutung hat. **(6 Punkte)**
+
+**b)** Eine Möglichkeit, um Wertschätzung im Unternehmen auszudrücken, ist die Zahlung von Geld, z.B. über eine Lohnerhöhung. Ist dies immer eine gute Möglichkeit, Mitarbeiter zu motivieren? Was könnte (in welcher Situation) erfolgversprechender sein? **(6 Punkte)**
+
+**c)** Nennen Sie die vier Existenzbedingungen von Unternehmen. Geben Sie für zwei Existenzbedingungen (Ihrer Wahl) eine Kennzahl an, mit der man diese messen kann. **(6 Punkte)**
+
+## Aufgabe 3
+
+**a)** Das Unternehmen **„Kerzengrade KG“** hatte im letzten Jahr einen Umsatz von 100.000 €, 20.000 € Eigenkapital, zahlte auf seine Schulden durchschnittlich 5% Zinsen und hatte eine Gesamtkapitalrentabilität von 7,5%. Wie viel Fremdkapital benötigt das Unternehmen, damit es eine Eigenkapitalrentabilität von 20% ausweisen kann? Wie hoch waren sein Gewinn, seine Umsatzrendite und sein ROI? Würden Sie in das Unternehmen investieren (mit Begründung)? Zudem: Wie viele Eigentümer muss das Unternehmen mindestens haben **(16 Punkte)**
+
+**b)** Schildern Sie das Montan-Mitbestimmungs-Gesetz. Wann wurde es erlassen, für welche Unternehmen gilt es? Welche Gruppen sind im Aufsichtsrat vertreten, und wie ist hier das Stimmenverhältnis zwischen Arbeitgebern und Arbeitnehmern? **(9 Punkte)**
 
 # BWL Klausur WS 2015/2016
 
-Aufgabe 1\)  
-a) Was verstehen wir unter Produktionsfaktoren? Wie würde eine moderne Lehre der betriebswirtschaftlichen Produktionsfaktoren aussehen? Zudem: Wann ist die Ermittlung von Produktivitäten sinnvoll? (7 Punkte) b) Was verstehen wir unter Kammern? Nennen Sie eine ihrer Aufgaben. (3 Punkte) c) Stellen Sie die „Zielpyramide“ kurz (schriftlich oder bildlich) dar. Was versteht man in diesem Zusammenhang unter „qualitativ“? (6 Punkte)
+## Aufgabe 1
 
-Aufgabe 2\)  
-a) Was verstehen wir unter einer bilanziellen „Aktivierung des Humanvermögens“? Wie wird dieses Problem bei der IFRS-Bilanzierung gelöst? (4 Punkte) b) Welchem Gesetz zur unternehmerischen Mitbestimmung unterliegt die Deutsche Bahn? Welche (fünf) Personengruppen sind in Ihrem Aufsichtsrat vertreten? Wie sollte aus ökonomischer Sicht eine Bahnprivatisierung erfolgen? Wer dürfte gegen eine solche Privatisierung sein? (10 Punkte) c) Unterscheiden Sie „Unternehmensphilosophie“ von „Unternehmenskultur“? Schildern Sie kurz (positive und negative) Wirkungen von Unternehmenskultur. Zudem: Wo hat sich die große Bedeutung von Unternehmenskultur gezeigt? (5 Punkte) 
+**a)** Was verstehen wir unter Produktionsfaktoren? Wie würde eine moderne Lehre der betriebswirtschaftlichen Produktionsfaktoren aussehen? Zudem: Wann ist die Ermittlung von Produktivitäten sinnvoll? **(7 Punkte)**
 
-Aufgabe 3\)  
-a) Was verstehen wir unter Stake- und was unter Shareholdern? Erläutern Sie, welche Anreize ein Unternehmen seinem „Stakeholder“ Staat zur Verfügung stellt, welche Beiträge es dafür erhält, und welche Sanktionsmöglichkeiten der Staat dem Unternehmen gegenüber hat. (8 Punkte)
+**b)** Was verstehen wir unter Kammern? Nennen Sie eine ihrer Aufgaben. **(3 Punkte)**
 
-- Shareholder sind Anteilseigner die gewisser Erwartungen am Unternehmen haben  
-- Stakeholder sind Personen oder Organisation die wichtig fürs Unternehmen sind. Wie. z.B Kunden 
+**c)** Stellen Sie die **„Zielpyramide“** kurz (schriftlich oder bildlich) dar. Was versteht man in diesem Zusammenhang unter **„qualitativ“**? **(6 Punkte)**
 
- b) Das Handelsunternehmen „Klausurglück GmbH“ weist folgende Bilanz für das Jahr 2015 aus:  
-![][image2]  
-Der Umsatz betrug 1 Million Euro, der durchschnittliche Fremdkapitalzinssatz lag bei 5%. Ermitteln und beurteilen Sie die Liquidität, die Eigenkapitalrentabilität (EKR), die Gesamtkapitalrentabilität (GKR) und die Umsatzrentabilität. Zudem: Sollte das Unternehmen mit Blick auf seine Eigenkapitalquote den Gewinn lieber als Dividende ausschütten oder im Unternehmen belassen (mit Begründung)? (17 Punkte)
+## Aufgabe 2
+
+**a)** Was verstehen wir unter einer bilanziellen **„Aktivierung des Humanvermögens“**? Wie wird dieses Problem bei der IFRS-Bilanzierung gelöst? **(4 Punkte)**
+
+**b)** Welchem Gesetz zur unternehmerischen Mitbestimmung unterliegt die Deutsche Bahn? Welche (fünf) Personengruppen sind in Ihrem Aufsichtsrat vertreten? Wie sollte aus ökonomischer Sicht eine Bahnprivatisierung erfolgen? Wer dürfte gegen eine solche Privatisierung sein? **(10 Punkte)**
+
+**c)** Unterscheiden Sie **„Unternehmensphilosophie“** von **„Unternehmenskultur“**? Schildern Sie kurz (positive und negative) Wirkungen von Unternehmenskultur. Zudem: Wo hat sich die große Bedeutung von Unternehmenskultur gezeigt? **(5 Punkte)**
+
+## Aufgabe 3
+
+**a)** Was verstehen wir unter Stake- und was unter Shareholdern? Erläutern Sie, welche Anreize ein Unternehmen seinem **„Stakeholder“** Staat zur Verfügung stellt, welche Beiträge es dafür erhält, und welche Sanktionsmöglichkeiten der Staat dem Unternehmen gegenüber hat. **(8 Punkte)**
+
+- Shareholder sind Anteilseigner die gewisser Erwartungen am Unternehmen haben
+- Stakeholder sind Personen oder Organisation die wichtig fürs Unternehmen sind. Wie. z.B Kunden
+
+**b)** Das Handelsunternehmen **„Klausurglück GmbH“** weist folgende Bilanz für das Jahr 2015 aus:
+
+![][image2]
+
+Der Umsatz betrug 1 Million Euro, der durchschnittliche Fremdkapitalzinssatz lag bei 5%. Ermitteln und beurteilen Sie die Liquidität, die Eigenkapitalrentabilität (EKR), die Gesamtkapitalrentabilität (GKR) und die Umsatzrentabilität. Zudem: Sollte das Unternehmen mit Blick auf seine Eigenkapitalquote den Gewinn lieber als Dividende ausschütten oder im Unternehmen belassen (mit Begründung)? **(17 Punkte)**
 
 [image1]: <data:image/png;base64,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>
 
