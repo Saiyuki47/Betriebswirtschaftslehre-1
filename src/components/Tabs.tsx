@@ -58,16 +58,6 @@ const tabs: { id: TabId; label: string; icon: ReactNode }[] = [
     ),
   },
   {
-    id: 'quiz',
-    label: 'Quiz',
-    icon: (
-      <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01" />
-      </svg>
-    ),
-  },
-  {
     id: 'moodle',
     label: 'Moodle',
     icon: (
@@ -75,6 +65,16 @@ const tabs: { id: TabId; label: string; icon: ReactNode }[] = [
         <path d="M22 10L12 5 2 10l10 5 10-5z" />
         <path d="M6 12v5c0 1.5 2.7 2.5 6 2.5s6-1 6-2.5v-5" />
         <line x1="22" y1="10" x2="22" y2="15" />
+      </svg>
+    ),
+  },
+  {
+    id: 'quiz',
+    label: 'Quiz',
+    icon: (
+      <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01" />
       </svg>
     ),
   },
