@@ -3,7 +3,7 @@ import type { Tipps } from '../types'
 import { uebungsblaetter } from '../data/uebungsblaetter'
 import { aufgaben } from '../data/aufgaben'
 import { altklausurAufgaben } from '../data/altklausuren'
-import { renderFormel } from './FormelText'
+import FormelText from './FormelText'
 
 // Übungsbegleiter-Aufgaben und Altklausur-Aufgaben für die Lösungssuche zusammenführen.
 const alleAufgaben = [...aufgaben, ...altklausurAufgaben]
@@ -100,7 +100,7 @@ export default function Uebungsblaetter() {
                     {aufgabe.tipp && (
                       <>
                         <button type="button" className="toggle-btn" onClick={() => toggleTipp(key)}>
-                          {isTippOpen ? '▼ Tipps verbergen' : '▶ Tipps anzeigen'}
+                          {isTippOpen ? '▼ Tipp verbergen' : '▶ Tipp anzeigen'}
                         </button>
                         {isTippOpen && (
                           <div className="tipp-block">
@@ -121,7 +121,7 @@ export default function Uebungsblaetter() {
                                     <span className="tipp-cat-label">{kat.label}</span>
                                     <span className="tipp-cat-caret">{catOpen ? '▾' : '▸'}</span>
                                   </button>
-                                  {catOpen && <p className="tipp-cat-text">{renderFormel(val)}</p>}
+                                  {catOpen && <p className="tipp-cat-text"><FormelText text={val} /></p>}
                                 </div>
                               )
                             })}

@@ -104,6 +104,7 @@ export default function Moodle() {
             className="moodle-search"
             type="search"
             placeholder="Datei suchen…"
+            aria-label="Datei suchen"
             value={suche}
             onChange={e => setSuche(e.target.value)}
           />
@@ -140,13 +141,19 @@ export default function Moodle() {
               </div>
               {laedt && <p className="moodle-empty">Lädt…</p>}
               {selected.type === 'md' && !laedt && (
+                // eslint-disable-next-line react-doctor/no-danger -- Markdown aus vertrauenswürdigen Kursdateien, via marked() gerendert
                 <div className="md-body" dangerouslySetInnerHTML={{ __html: html }} />
               )}
               {(selected.type === 'txt' || selected.type === 'json') && !laedt && (
                 <pre className="moodle-pre">{content}</pre>
               )}
               {selected.type === 'pdf' && (
-                <iframe className="moodle-pdf" src={selected.url} title={selected.name} />
+                <iframe
+                  className="moodle-pdf"
+                  src={selected.url}
+                  title={selected.name}
+                  sandbox="allow-same-origin allow-popups allow-downloads"
+                />
               )}
             </>
           )}

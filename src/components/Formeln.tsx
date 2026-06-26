@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { formelGruppen } from '../data/formeln'
-import { renderFormel } from './FormelText'
+import FormelText from './FormelText'
 
 const formelId = (gi: number, fi: number) => `formel-${gi}-${fi}`
 
@@ -92,14 +92,14 @@ export default function Formeln() {
                       {formel.kuerzel && <span className="formel-kuerzel">{formel.kuerzel}</span>}
                     </div>
 
-                    <div className="formel-main">{renderFormel(formel.formel)}</div>
+                    <div className="formel-main"><FormelText text={formel.formel} /></div>
 
                     <p className="formel-erklaerung">{formel.erklaerung}</p>
 
                     {formel.varianten && formel.varianten.length > 0 && (
                       <ul className="formel-varianten">
                         {formel.varianten.map(v => (
-                          <li key={v}>{renderFormel(v)}</li>
+                          <li key={v}><FormelText text={v} /></li>
                         ))}
                       </ul>
                     )}
@@ -116,7 +116,7 @@ export default function Formeln() {
                     {isOpen && (
                       <div className="formel-beispiele">
                         {formel.beispiele.map((bsp, i) => (
-                          <div key={`${id}-bsp-${i}`} className="formel-beispiel">
+                          <div key={`${id}-${bsp.gegeben}`} className="formel-beispiel">
                             <div className="formel-bsp-label">Beispiel {i + 1}</div>
                             <div className="formel-bsp-zeile">
                               <span className="formel-bsp-tag">Gegeben</span>
@@ -124,11 +124,11 @@ export default function Formeln() {
                             </div>
                             <div className="formel-bsp-zeile">
                               <span className="formel-bsp-tag">Rechnung</span>
-                              <span className="formel-bsp-rechnung">{renderFormel(bsp.rechnung)}</span>
+                              <FormelText className="formel-bsp-rechnung" text={bsp.rechnung} />
                             </div>
                             <div className="formel-bsp-zeile">
                               <span className="formel-bsp-tag formel-bsp-tag--erg">Ergebnis</span>
-                              <span className="formel-bsp-ergebnis">{renderFormel(bsp.ergebnis)}</span>
+                              <FormelText className="formel-bsp-ergebnis" text={bsp.ergebnis} />
                             </div>
                           </div>
                         ))}
