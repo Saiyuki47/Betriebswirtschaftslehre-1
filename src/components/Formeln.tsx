@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { formelGruppen } from '../data/formeln'
+import { renderFormel } from './FormelText'
 
 const formelId = (gi: number, fi: number) => `formel-${gi}-${fi}`
 
@@ -91,14 +92,14 @@ export default function Formeln() {
                       {formel.kuerzel && <span className="formel-kuerzel">{formel.kuerzel}</span>}
                     </div>
 
-                    <div className="formel-main">{formel.formel}</div>
+                    <div className="formel-main">{renderFormel(formel.formel)}</div>
 
                     <p className="formel-erklaerung">{formel.erklaerung}</p>
 
                     {formel.varianten && formel.varianten.length > 0 && (
                       <ul className="formel-varianten">
                         {formel.varianten.map(v => (
-                          <li key={v}>{v}</li>
+                          <li key={v}>{renderFormel(v)}</li>
                         ))}
                       </ul>
                     )}
@@ -123,11 +124,11 @@ export default function Formeln() {
                             </div>
                             <div className="formel-bsp-zeile">
                               <span className="formel-bsp-tag">Rechnung</span>
-                              <span className="formel-bsp-rechnung">{bsp.rechnung}</span>
+                              <span className="formel-bsp-rechnung">{renderFormel(bsp.rechnung)}</span>
                             </div>
                             <div className="formel-bsp-zeile">
                               <span className="formel-bsp-tag formel-bsp-tag--erg">Ergebnis</span>
-                              <span className="formel-bsp-ergebnis">{bsp.ergebnis}</span>
+                              <span className="formel-bsp-ergebnis">{renderFormel(bsp.ergebnis)}</span>
                             </div>
                           </div>
                         ))}
