@@ -287,6 +287,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.2 Wirtschaftliches Handeln',
     seite: 2,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 9',
   },
   {
     art: 'single',
@@ -303,6 +304,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.2 Wirtschaftliches Handeln',
     seite: 2,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 10',
   },
   {
     art: 'single',
@@ -319,6 +321,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.2 Wirtschaftliches Handeln',
     seite: 2,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 10',
   },
   {
     art: 'wahrfalsch',
@@ -334,6 +337,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.2 Wirtschaftliches Handeln',
     seite: 2,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 10',
   },
   {
     art: 'single',
@@ -350,6 +354,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.2 Wirtschaftliches Handeln',
     seite: 2,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 10',
   },
   {
     art: 'single',
@@ -366,6 +371,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.2 Wirtschaftliches Handeln',
     seite: 2,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 10',
   },
   {
     art: 'single',
@@ -382,6 +388,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.2 Wirtschaftliches Handeln',
     seite: 2,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 11',
   },
   {
     art: 'single',
@@ -398,6 +405,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.2 Wirtschaftliches Handeln',
     seite: 2,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 11',
   },
   {
     art: 'wahrfalsch',
@@ -413,6 +421,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.2 Wirtschaftliches Handeln',
     seite: 3,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 12',
   },
   {
     art: 'single',
@@ -429,6 +438,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.2 Wirtschaftliches Handeln',
     seite: 3,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 13',
   },
   {
     art: 'single',
@@ -445,6 +455,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.2 Wirtschaftliches Handeln',
     seite: 3,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 14',
   },
   {
     art: 'single',
@@ -461,6 +472,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.2 Wirtschaftliches Handeln',
     seite: 3,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 15',
   },
   {
     art: 'single',
@@ -477,6 +489,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.2 Wirtschaftliches Handeln',
     seite: 3,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 15',
   },
   {
     art: 'single',
@@ -493,6 +506,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.2 Wirtschaftliches Handeln',
     seite: 3,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 15',
   },
 
   // ===========================================================================
@@ -513,6 +527,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.3 Wirtschaftseinheiten',
     seite: 3,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 16',
     bild: wirtschaftseinheitenBaum,
   },
   {
@@ -535,6 +550,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.3 Wirtschaftseinheiten',
     seite: 3,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 17',
     bild: wirtschaftseinheitenBaum,
   },
   {
@@ -552,6 +568,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.3 Wirtschaftseinheiten',
     seite: 3,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 17',
   },
 
   // ===========================================================================
@@ -572,6 +589,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.4 Betriebstypologien',
     seite: 4,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 18',
   },
   {
     art: 'single',
@@ -588,6 +606,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.4 Betriebstypologien',
     seite: 4,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 18',
   },
   {
     art: 'kategorien',
@@ -603,6 +622,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.4 Betriebstypologien',
     seite: 4,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 18',
   },
   {
     art: 'single',
@@ -619,6 +639,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.4 Betriebstypologien',
     seite: 4,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 18',
   },
   {
     art: 'kategorien',
@@ -634,6 +655,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.4 Betriebstypologien',
     seite: 4,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 19',
   },
   {
     art: 'wahrfalsch',
@@ -649,6 +671,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.4 Betriebstypologien',
     seite: 4,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 19',
   },
 
   // ===========================================================================
@@ -669,6 +692,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.5 Gliederung der BWL',
     seite: 4,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 22',
   },
   {
     art: 'single',
@@ -685,6 +709,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '1.5 Gliederung der BWL',
     seite: 4,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 22',
   },
 
   // ===========================================================================
@@ -699,6 +724,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '2 Betrieblicher Lebenszyklus',
     seite: 5,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 23',
     bild: lebenszyklusKurve,
   },
   {
@@ -716,6 +742,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '2.1 Gründung',
     seite: 6,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 27',
     bild: lebenszyklusKurve,
   },
   {
@@ -733,6 +760,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '2.1 Gründung',
     seite: 5,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 25',
   },
   {
     art: 'wahrfalsch',
@@ -748,6 +776,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '2.1 Gründung',
     seite: 5,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 25',
   },
   {
     art: 'single',
@@ -764,6 +793,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '2.1 Gründung',
     seite: 5,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 26',
   },
   {
     art: 'single',
@@ -780,6 +810,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '2.1 Gründung',
     seite: 5,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 26',
   },
   {
     art: 'single',
@@ -796,6 +827,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '2.1 Gründung',
     seite: 6,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 26',
   },
   {
     art: 'single',
@@ -812,6 +844,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '2.2 Wachstum',
     seite: 6,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 28',
     bild: lebenszyklusKurve,
   },
   {
@@ -829,6 +862,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '2.3 Stagnation',
     seite: 6,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 29',
     bild: lebenszyklusKurve,
   },
   {
@@ -845,6 +879,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '2.3 Stagnation',
     seite: 6,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 29',
   },
   {
     art: 'kategorien',
@@ -861,6 +896,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '2.3 Stagnation',
     seite: 7,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 31',
   },
   {
     art: 'reihenfolge',
@@ -871,6 +907,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '2.3 Stagnation',
     seite: 7,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 31',
   },
   {
     art: 'single',
@@ -887,6 +924,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '2.3 Stagnation',
     seite: 7,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 32',
   },
   {
     art: 'wahrfalsch',
@@ -918,6 +956,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '2.4 Schrumpfung',
     seite: 7,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 34',
     bild: lebenszyklusKurve,
   },
   {
@@ -935,6 +974,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '2.4 Schrumpfung',
     seite: 7,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 34',
   },
   {
     art: 'single',
@@ -951,6 +991,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '2.4 Schrumpfung',
     seite: 7,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 34',
   },
   {
     art: 'single',
@@ -997,6 +1038,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '2.4 Schrumpfung',
     seite: 8,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 35',
   },
   {
     art: 'single',
@@ -1033,6 +1075,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '3.1 Jahresabschluss',
     seite: 8,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 38',
   },
   {
     art: 'wahrfalsch',
@@ -1048,6 +1091,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '3.1 Jahresabschluss',
     seite: 8,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 38',
   },
   {
     art: 'single',
@@ -1064,6 +1108,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '3.1 Jahresabschluss',
     seite: 8,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 40',
     bild: bilanzTKonto,
   },
   {
@@ -1084,6 +1129,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '3.1 Jahresabschluss',
     seite: 8,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 40',
     bild: bilanzTKonto,
   },
   {
@@ -1101,6 +1147,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '3.1 Jahresabschluss',
     seite: 8,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 40',
   },
   {
     art: 'wahrfalsch',
@@ -1116,6 +1163,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '3.1 Jahresabschluss',
     seite: 8,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 40',
   },
   {
     art: 'kategorien',
@@ -1131,6 +1179,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '3.1 Jahresabschluss',
     seite: 9,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 41',
   },
   {
     art: 'single',
@@ -1147,6 +1196,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '3.1 Jahresabschluss',
     seite: 9,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 41',
   },
   {
     art: 'single',
@@ -1163,6 +1213,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '3.1 Jahresabschluss',
     seite: 9,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 42',
   },
   {
     art: 'single',
@@ -1179,6 +1230,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '3.1 Jahresabschluss',
     seite: 9,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 42',
   },
   {
     art: 'wahrfalsch',
@@ -1194,6 +1246,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '3.1 Jahresabschluss',
     seite: 9,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 42',
   },
   {
     art: 'single',
@@ -1210,6 +1263,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '3.1 Jahresabschluss',
     seite: 9,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 42',
   },
 
   // ===========================================================================
@@ -1229,6 +1283,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '3.2 Betriebswirtschaftliche Kennzahlen',
     seite: 10,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 43',
   },
   {
     art: 'single',
@@ -1245,6 +1300,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '3.2 Betriebswirtschaftliche Kennzahlen',
     seite: 10,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 43',
   },
   {
     art: 'kategorien',
@@ -1261,6 +1317,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '3.2 Betriebswirtschaftliche Kennzahlen',
     seite: 10,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 44',
   },
 
   // ===========================================================================
@@ -1281,6 +1338,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '4 Rechtsformen und Mitbestimmung',
     seite: 10,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 45',
   },
   {
     art: 'wahrfalsch',
@@ -1296,6 +1354,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '4 Rechtsformen und Mitbestimmung',
     seite: 10,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 45',
   },
   {
     art: 'single',
@@ -1328,6 +1387,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '4 Rechtsformen und Mitbestimmung',
     seite: 10,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 45',
   },
   {
     art: 'single',
@@ -1394,6 +1454,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '4 Rechtsformen und Mitbestimmung',
     seite: 10,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 45',
   },
   {
     art: 'single',
@@ -1410,6 +1471,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '4 Rechtsformen und Mitbestimmung',
     seite: 12,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 47',
   },
   {
     art: 'single',
@@ -1426,6 +1488,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '4 Rechtsformen und Mitbestimmung',
     seite: 12,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 47',
   },
   {
     art: 'kategorien',
@@ -1441,6 +1504,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '4 Rechtsformen und Mitbestimmung',
     seite: 12,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 51',
     bild: mitbestimmungOrgane,
   },
   {
@@ -1457,6 +1521,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '4 Rechtsformen und Mitbestimmung',
     seite: 12,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 51',
     bild: mitbestimmungOrgane,
   },
 
@@ -1478,6 +1543,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '5.1 Grundlagen',
     seite: 13,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 54',
   },
   {
     art: 'kategorien',
@@ -1495,6 +1561,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '5.1 Grundlagen',
     seite: 13,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 54',
   },
   {
     art: 'kategorien',
@@ -1511,6 +1578,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '5.1 Grundlagen',
     seite: 13,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 55',
   },
   {
     art: 'reihenfolge',
@@ -1521,6 +1589,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '5.1 Grundlagen',
     seite: 13,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 56',
     bild: zielpyramide,
   },
   {
@@ -1538,6 +1607,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '5.1 Grundlagen',
     seite: 13,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 56',
     bild: zielpyramide,
   },
   {
@@ -1555,6 +1625,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '5.1 Grundlagen',
     seite: 13,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 56',
   },
   {
     art: 'wahrfalsch',
@@ -1570,6 +1641,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '5.2 Empirische Thesen',
     seite: 14,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 59',
   },
   {
     art: 'single',
@@ -1586,6 +1658,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '5.2 Empirische Thesen',
     seite: 14,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 59',
   },
   {
     art: 'single',
@@ -1602,6 +1675,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '5.3 Ein Entstehungsmodell',
     seite: 15,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 61',
   },
   {
     art: 'kategorien',
@@ -1618,6 +1692,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '5.3 Ein Entstehungsmodell',
     seite: 16,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 61',
   },
   {
     art: 'single',
@@ -1634,6 +1709,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '5.3 Ein Entstehungsmodell',
     seite: 16,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 63',
   },
   {
     art: 'kategorien',
@@ -1650,6 +1726,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '5.3 Ein Entstehungsmodell',
     seite: 16,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 63',
   },
   {
     art: 'single',
@@ -1682,6 +1759,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '5.3 Ein Entstehungsmodell',
     seite: 16,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 65',
   },
   {
     art: 'kategorien',
@@ -1697,6 +1775,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '5.4 Zielkonflikte',
     seite: 17,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 67',
   },
   {
     art: 'wahrfalsch',
@@ -1712,6 +1791,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '5.4 Zielkonflikte',
     seite: 17,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 66',
   },
   {
     art: 'single',
@@ -1728,6 +1808,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '5.3 Ein Entstehungsmodell',
     seite: 15,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 60',
     bild: beduerfnisPyramide,
   },
   {
@@ -1745,6 +1826,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: '5.3 Ein Entstehungsmodell',
     seite: 15,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 60',
     bild: beduerfnisPyramide,
   },
 
@@ -1892,6 +1974,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: 'Wichtige Formeln zum Merken',
     seite: 19,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 70',
   },
   {
     art: 'single',
@@ -1908,6 +1991,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: 'Wichtige Formeln zum Merken',
     seite: 19,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 70',
   },
   {
     art: 'single',
@@ -1924,6 +2008,7 @@ export const leonFragen: QuizFrage[] = [
     quelle: 'Wichtige Formeln zum Merken',
     seite: 19,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 70',
   },
   {
     art: 'single',
@@ -1956,5 +2041,6 @@ export const leonFragen: QuizFrage[] = [
     quelle: 'Wichtige Formeln zum Merken',
     seite: 19,
     extra: true,
+    zusatzQuelle: 'Folien vom Lehrer, Seite 70',
   },
 ]
