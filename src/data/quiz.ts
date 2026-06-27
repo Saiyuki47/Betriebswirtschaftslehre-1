@@ -1,4 +1,4 @@
-import type { QuizFrage } from '../types'
+import type { QuizFrage } from 'lernseiten-ui'
 
 // Quizfragen zur Allgemeinen Betriebswirtschaftslehre I (WS 2025/2026).
 // Inhalte ausschließlich aus den Übungsblättern (Kapitel 1–5, siehe

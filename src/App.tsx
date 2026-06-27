@@ -4,10 +4,10 @@ import Tabs from './components/Tabs'
 import Schema from './components/Schema'
 import Formeln from './components/Formeln'
 import Drucken from './components/Drucken'
-import Quiz from './components/Quiz'
 import Uebungsblaetter from './components/Uebungsblaetter'
 import Moodle from './components/Moodle'
-import { useTheme } from './hooks/useTheme'
+import { Quiz, useTheme } from 'lernseiten-ui'
+import { quizFragen } from './data/quiz'
 
 export type TabId = 'uebung' | 'themen' | 'formeln' | 'drucken' | 'moodle' | 'quiz'
 
@@ -23,7 +23,7 @@ function App() {
         {activeTab === 'themen' && <Schema />}
         {activeTab === 'formeln' && <Formeln />}
         {activeTab === 'drucken' && <Drucken />}
-        {activeTab === 'quiz' && <Quiz />}
+        {activeTab === 'quiz' && <Quiz fragen={quizFragen} />}
         {activeTab === 'uebung' && <Uebungsblaetter />}
         {activeTab === 'moodle' && <Moodle />}
       </div>
