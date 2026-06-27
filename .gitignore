@@ -2,3 +2,6 @@ node_modules
 dist
 .env
 *.local
+
+# Auto-generiert vom Generator (scripts/generate-dateien.mjs)
+src/data/dateien.ts

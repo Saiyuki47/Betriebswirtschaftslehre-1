@@ -4,12 +4,12 @@ import Schema from './components/Schema'
 import Formeln from './components/Formeln'
 import Drucken from './components/Drucken'
 import Uebungsblaetter from './components/Uebungsblaetter'
-import Moodle from './components/Moodle'
 import FormelText from './components/FormelText'
-import { Quiz, Flashcards, GlobalSearch, useTheme, useHashTab } from 'lernseiten-ui'
+import { Quiz, Flashcards, GlobalSearch, Moodle, useTheme, useHashTab } from 'lernseiten-ui'
 import { quizFragen } from './data/quiz'
 import { karteikarten } from './data/karteikarten'
 import { searchIndex } from './data/searchIndex'
+import { dateienTree } from './data/dateien'
 
 export type TabId = 'uebung' | 'themen' | 'formeln' | 'drucken' | 'moodle' | 'quiz' | 'karten'
 
@@ -32,7 +32,7 @@ function App() {
         {activeTab === 'drucken' && <Drucken />}
         {activeTab === 'quiz' && <Quiz fragen={quizFragen} />}
         {activeTab === 'uebung' && <Uebungsblaetter />}
-        {activeTab === 'moodle' && <Moodle />}
+        {activeTab === 'moodle' && <Moodle tree={dateienTree} baseUrl={import.meta.env.BASE_URL} />}
         {activeTab === 'karten' && (
           <Flashcards cards={karteikarten} render={text => <FormelText text={text} />} />
         )}
