@@ -111,7 +111,7 @@ export default function Uebungsblaetter() {
             return (
               <div key={key} className="card">
                 <p className="ub-task-nr">Aufgabe {task.nr}</p>
-                <p className="q-title" style={{ whiteSpace: 'pre-line' }}>{task.text ?? aufgabe?.aufgabeText}</p>
+                <FormelText className="q-title" text={task.text ?? aufgabe?.aufgabeText ?? ''} />
                 {aufgabe && (
                   <>
                     {aufgabe.tipp && (

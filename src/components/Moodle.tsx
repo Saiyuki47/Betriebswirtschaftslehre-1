@@ -141,7 +141,7 @@ export default function Moodle() {
               </div>
               {laedt && <p className="moodle-empty">Lädt…</p>}
               {selected.type === 'md' && !laedt && (
-                // eslint-disable-next-line react-doctor/no-danger -- Markdown aus vertrauenswürdigen Kursdateien, via marked() gerendert
+                // react-doctor-disable-next-line react-doctor/dangerous-html-sink -- Markdown aus vertrauenswürdigen Kursdateien, via marked() gerendert
                 <div className="md-body" dangerouslySetInnerHTML={{ __html: html }} />
               )}
               {(selected.type === 'txt' || selected.type === 'json') && !laedt && (

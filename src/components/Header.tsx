@@ -1,3 +1,5 @@
+import { SiteNav } from 'lernseiten-ui'
+
 interface Props {
   theme: 'dark' | 'light'
   onToggleTheme: () => void
@@ -11,6 +13,7 @@ export default function Header({ theme, onToggleTheme }: Props) {
           BWL<span>.</span>1
         </div>
         <div className="subtitle">Allgemeine Betriebswirtschaftslehre I &mdash; Übungsfragen mit Lösungen</div>
+        <SiteNav current="bwl" />
       </div>
       <button
         type="button"

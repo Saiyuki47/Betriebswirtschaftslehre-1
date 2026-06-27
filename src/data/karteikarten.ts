@@ -9,10 +9,9 @@ import { quizFragen } from './quiz'
 // ergänzt aus den Übungs-/Altklausur-Aufgaben (Frage → Lösung) und aus den
 // Quizfragen (Frage → Erklärung). Bei Bedarf hier eigene Karten ergänzen.
 
-// Die Formeln nutzen die [[Zähler|Nenner]]-Schreibweise für Brüche. Auf der
-// Karteikarte (reiner Text) wandeln wir das in eine lesbare Form (Zähler / Nenner) um.
-const formelText = (text: string): string =>
-  text.replace(/\[\[([^|\]]+)\|([^\]]+)\]\]/g, '($1 / $2)')
+// Die Formeln nutzen die [[Zähler|Nenner]]-Schreibweise für Brüche. Diese
+// Original-Syntax wird beibehalten – der an <Flashcards render={…}> übergebene
+// Renderer (FormelText) stellt sie als gestapelten Bruch dar.
 
 export const karteikarten: FlashCard[] = [
   // 1) Formeln: Begriff (+ Kürzel) als Vorderseite, Formel & Erklärung als Rückseite.
@@ -20,7 +19,7 @@ export const karteikarten: FlashCard[] = [
     gruppe.formeln.map(formel => ({
       id: `f-${formel.name}`,
       front: formel.kuerzel ? `${formel.name} (${formel.kuerzel})` : formel.name,
-      back: `${formelText(formel.formel)}\n\n${formel.erklaerung}`,
+      back: `${formel.formel}\n\n${formel.erklaerung}`,
       tag: gruppe.titel,
     })),
   ),
