@@ -254,14 +254,14 @@ const mitbestimmungOrgane: ReactNode = (
       <path d="M300 70 L300 100" />
       <path d="M120 130 L120 150" />
     </g>
-    {svgBox(40, 20, 160, 50, 'Hauptversammlung', 'hv', '1× / Jahr · wählt AR-Seite')}
+    {svgBox(40, 20, 160, 50, 'Hauptversammlung', 'hv', '1× / Jahr · wählt AG-Seite')}
     {svgBox(220, 20, 160, 50, 'Aufsichtsrat (AR)', 'ar', 'kontrolliert den Vorstand')}
     {svgBox(40, 100, 160, 50, 'Vorstand (VO/GF)', 'vo', 'führt die Geschäfte, Personal')}
     <text x="300" y="115" textAnchor="middle" fontSize="10" fill="var(--text2)">
-      AR wählt
+      Vorstand wählt
     </text>
     <text x="300" y="130" textAnchor="middle" fontSize="10" fill="var(--text2)">
-      Arbeitnehmerseite mit
+      die AN-Vertretung im AR
     </text>
   </svg>
 )
@@ -778,7 +778,7 @@ export const leonFragen: QuizFrage[] = [
     erklaerung: 'Konstitutive Entscheidungen sind große Entscheidungen: Wahl der Rechtsform, Standortwahl, personaler Ausbau und Kapitalaufnahme.',
     gruppe: 'Leons Unterlagen',
     quelle: '2.1 Gründung',
-    seite: 6,
+    seite: 5,
     extra: true,
   },
   {
@@ -1519,7 +1519,7 @@ export const leonFragen: QuizFrage[] = [
     erklaerung: 'Zielpyramide von oben nach unten: Vision → Unternehmensleitbild → Unternehmensziele → Geschäftsziele → Funktionsbereichsziele.',
     gruppe: 'Leons Unterlagen',
     quelle: '5.1 Grundlagen',
-    seite: 14,
+    seite: 13,
     extra: true,
     bild: zielpyramide,
   },
@@ -1536,7 +1536,7 @@ export const leonFragen: QuizFrage[] = [
     erklaerung: 'Die Vision steht an der Spitze der Zielpyramide: qualitative, konkrete Bilder der Zukunft.',
     gruppe: 'Leons Unterlagen',
     quelle: '5.1 Grundlagen',
-    seite: 14,
+    seite: 13,
     extra: true,
     bild: zielpyramide,
   },
@@ -1553,7 +1553,7 @@ export const leonFragen: QuizFrage[] = [
     erklaerung: 'Unternehmensziele gelten für den gesamten Konzern, sind Kompromisse zwischen Gruppen (z.B. Betriebsklima für Mitarbeiter, Gewinn für Eigentümer) und sollen klar und messbar formuliert sein.',
     gruppe: 'Leons Unterlagen',
     quelle: '5.1 Grundlagen',
-    seite: 14,
+    seite: 13,
     extra: true,
   },
   {
