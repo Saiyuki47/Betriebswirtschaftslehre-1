@@ -198,46 +198,59 @@ const gliederungBWL: ReactNode = (
   </svg>
 )
 
-/** Bilanz als T-Konto / Handelsbilanz (Folie 40). */
-const bilanzTKonto: ReactNode = (
-  <svg
-    viewBox="0 0 460 240"
-    width="100%"
-    style={{ maxWidth: 500 }}
-    role="img"
-    aria-label="Handelsbilanz als T-Konto: links die Aktivseite mit Anlagevermögen, Umlaufvermögen und Rechnungsabgrenzungsposten, rechts die Passivseite mit Eigenkapital, Rückstellungen, Verbindlichkeiten und Rechnungsabgrenzungsposten"
+/** Handelsbilanz als Tabelle – HGB-Gliederung Aktiv-/Passivseite (Folie 40). */
+const bilanzListenStyle = { margin: '0.25rem 0 0.6rem', paddingLeft: '1.1rem' } as const
+const handelsbilanz: ReactNode = (
+  <table
+    style={{ borderCollapse: 'collapse', width: '100%', fontSize: '0.85rem', color: 'var(--text)' }}
   >
-    <rect x="20" y="44" width="420" height="184" rx="6" fill="var(--bg2)" stroke="var(--border2)" strokeWidth="1.5" />
-    <g stroke="var(--border2)" strokeWidth="1.5">
-      <path d="M230 44 L230 228" />
-      <path d="M20 74 L440 74" />
-    </g>
-    <text x="230" y="24" textAnchor="middle" fontSize="12" fontWeight="600" fill="var(--text)">
-      Die Handelsbilanz
-    </text>
-    <g fontSize="11.5" fontWeight="600" fill="var(--text)">
-      <text x="125" y="64" textAnchor="middle">Aktivseite (Mittelverwendung)</text>
-      <text x="335" y="64" textAnchor="middle">Passivseite (Mittelherkunft)</text>
-    </g>
-    <g fontSize="10" fill="var(--text2)">
-      <text x="32" y="98">A. Anlagevermögen</text>
-      <text x="42" y="114">• Immaterielle VG</text>
-      <text x="42" y="130">• Sachanlagen</text>
-      <text x="42" y="146">• Finanzanlagen</text>
-      <text x="32" y="170">B. Umlaufvermögen</text>
-      <text x="42" y="186">• Vorräte, Forderungen</text>
-      <text x="42" y="202">• Wertpapiere, flüssige Mittel</text>
-      <text x="32" y="222">C. Rechnungsabgrenzungsposten</text>
-    </g>
-    <g fontSize="10" fill="var(--text2)">
-      <text x="242" y="98">A. Eigenkapital</text>
-      <text x="252" y="114">• inkl. Gewinn-/Verlustvortrag</text>
-      <text x="252" y="130">• inkl. Jahresüberschuss/-fehlbetrag</text>
-      <text x="242" y="154">B. Rückstellungen</text>
-      <text x="242" y="178">C. Verbindlichkeiten (FK)</text>
-      <text x="242" y="202">D. Rechnungsabgrenzungsposten</text>
-    </g>
-  </svg>
+    <caption style={{ captionSide: 'top', textAlign: 'left', color: 'var(--text2)', paddingBottom: '0.4rem', fontSize: '0.85rem' }}>
+      Die Handelsbilanz – Aufbau nach HGB
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col" style={thStyle}>Aktivseite (Mittelverwendung)</th>
+        <th scope="col" style={thStyle}>Passivseite (Mittelherkunft)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ ...tdStyle, verticalAlign: 'top' }}>
+          <strong>A. Anlagevermögen</strong>
+          <ul style={bilanzListenStyle}>
+            <li>I. Immaterielle Vermögensgegenstände</li>
+            <li>II. Sachanlagen</li>
+            <li>III. Finanzanlagen</li>
+          </ul>
+          <strong>B. Umlaufvermögen</strong>
+          <ul style={bilanzListenStyle}>
+            <li>I. Vorräte</li>
+            <li>II. Forderungen und sonstige Vermögensgegenstände</li>
+            <li>III. Wertpapiere</li>
+            <li>IV. Kassenbestand, Bankguthaben</li>
+          </ul>
+          <strong>C. Rechnungsabgrenzungsposten</strong>
+        </td>
+        <td style={{ ...tdStyle, verticalAlign: 'top' }}>
+          <strong>A. Eigenkapital</strong>
+          <ul style={bilanzListenStyle}>
+            <li>Gezeichnetes Kapital, Rücklagen</li>
+            <li>Gewinn-/Verlustvortrag</li>
+            <li>Jahresüberschuss / Jahresfehlbetrag (aus GuV)</li>
+          </ul>
+          <strong>B. Rückstellungen</strong>
+          <ul style={bilanzListenStyle}>
+            <li>z. B. Pensions-, Steuerrückstellungen</li>
+          </ul>
+          <strong>C. Verbindlichkeiten (Fremdkapital)</strong>
+          <ul style={bilanzListenStyle}>
+            <li>z. B. Bankkredite, Lieferantenverbindlichkeiten</li>
+          </ul>
+          <strong>D. Rechnungsabgrenzungsposten</strong>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 )
 
 /** Organe der unternehmerischen Mitbestimmung (Folie 51). */
@@ -347,7 +360,7 @@ export const themenBilder: Record<string, { bild: ReactNode; seite: number }> = 
   '1.3 Wirtschaftseinheiten': { bild: wirtschaftseinheiten, seite: 16 },
   '1.4 Betriebstypologien': { bild: betriebstypologien, seite: 18 },
   '1.5 Gliederung der BWL': { bild: gliederungBWL, seite: 22 },
-  '3.1 Jahresabschluss': { bild: bilanzTKonto, seite: 40 },
+  '3.1 Jahresabschluss': { bild: handelsbilanz, seite: 40 },
   'Mitbestimmung – die deutsche „Spielart"': { bild: mitbestimmungOrgane, seite: 51 },
   '5.1 Grundlagen': { bild: zielpyramide, seite: 56 },
   '5.3 Ein Entstehungsmodell': { bild: beduerfnisPyramide, seite: 60 },
