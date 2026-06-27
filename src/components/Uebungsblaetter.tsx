@@ -1,5 +1,5 @@
 import { useState, type CSSProperties } from 'react'
-import { useDoneTracker } from 'lernseiten-ui'
+import { useDoneTracker, useTaskDeepLink, getHashDetail } from 'lernseiten-ui'
 import type { Tipps } from '../types'
 import { uebungsblaetter } from '../data/uebungsblaetter'
 import { aufgaben } from '../data/aufgaben'
@@ -18,11 +18,15 @@ const tippKategorien: { key: keyof Tipps; icon: string; label: string }[] = [
 ]
 
 export default function Uebungsblaetter() {
-  const [selectedId, setSelectedId] = useState(uebungsblaetter[0]?.id ?? '')
+  const [selectedId, setSelectedId] = useState(() => {
+    const b = getHashDetail().blatt
+    return b && uebungsblaetter.some(x => x.id === b) ? b : (uebungsblaetter[0]?.id ?? '')
+  })
   const [openIds, setOpenIds] = useState<Set<string>>(new Set())
   const [openTipps, setOpenTipps] = useState<Set<string>>(new Set())
   const [openTippCats, setOpenTippCats] = useState<Set<string>>(new Set())
   const { done, toggle: toggleDone, ratio } = useDoneTracker()
+  const listRef = useTaskDeepLink<HTMLDivElement>(selectedId)
 
   const blatt = uebungsblaetter.find(b => b.id === selectedId)
 
@@ -101,15 +105,16 @@ export default function Uebungsblaetter() {
             )}
           </div>
 
-          {blatt.aufgaben.map(task => {
-            const aufgabe = alleAufgaben.find(a => a.id === task.aufgabeId)
-            const key = `${blatt.id}-${task.nr}`
-            const isOpen = openIds.has(key)
-            const isTippOpen = openTipps.has(key)
-            const isDone = done.has(key)
+          <div ref={listRef}>
+            {blatt.aufgaben.map(task => {
+              const aufgabe = alleAufgaben.find(a => a.id === task.aufgabeId)
+              const key = `${blatt.id}-${task.nr}`
+              const isOpen = openIds.has(key)
+              const isTippOpen = openTipps.has(key)
+              const isDone = done.has(key)
 
-            return (
-              <div key={key} className="card">
+              return (
+                <div key={key} className="card" data-aufgabe={String(task.nr)}>
                 <p className="ub-task-nr">Aufgabe {task.nr}</p>
                 <FormelText className="q-title" text={task.text ?? aufgabe?.aufgabeText ?? ''} />
                 {aufgabe && (
@@ -162,9 +167,10 @@ export default function Uebungsblaetter() {
                 >
                   {isDone ? '✓ Verstanden' : '○ Als verstanden markieren'}
                 </button>
-              </div>
-            )
-          })}
+                </div>
+              )
+            })}
+          </div>
         </>
       )}
     </div>
