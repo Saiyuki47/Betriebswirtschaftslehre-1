@@ -31,6 +31,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Wirtschaften = Disposition über knappe Güter. Weil Bedürfnisse (nahezu) unbegrenzt, die Mittel aber knapp sind, entsteht ein Wahl-/Entscheidungszwang.',
     quelle: 'Übungsblatt 1, Aufgabe 3',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 10',
   },
   {
     art: 'single',
@@ -56,6 +57,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Aus der Knappheit der Mittel bei (nahezu) unbegrenzten Bedürfnissen folgt der Wahl- und Entscheidungszwang (Allokation) – also die Notwendigkeit zu wirtschaften.',
     quelle: 'Übungsblatt 1, Aufgabe 3',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 10',
   },
   {
     art: 'reihenfolge',
@@ -77,6 +79,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Maximalprinzip: Mittel fix (2000 €), Ertrag (Entfernung) max. Minimalprinzip: Ziel fix (Badeurlaub), Kosten min. Extremumprinzip: beide Größen variabel → ökonomisch nicht eindeutig.',
     quelle: 'Übungsblatt 1, Aufgabe 5',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 14',
   },
   {
     art: 'single',
@@ -100,6 +103,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Der Mitteleinsatz (Budget 2000 €) ist fix, der Ertrag (Entfernung) wird maximiert → Maximalprinzip: „mit gegebenen Mitteln maximalen Erfolg".',
     quelle: 'Übungsblatt 1, Aufgabe 5',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 13',
   },
   {
     art: 'wahrfalsch',
@@ -125,6 +129,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Produktivität ist rein mengenmäßig (z. B. Stück/Std.), Wirtschaftlichkeit wertmäßig (> 1 = wirtschaftlich), Rentabilität bezieht den Gewinn auf das eingesetzte Kapital. Höhere Produktivität → bessere Wirtschaftlichkeit → höhere Rentabilität.',
     quelle: 'Übungsblatt 1, Aufgabe 6',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 15',
   },
   {
     art: 'single',
@@ -148,6 +153,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Produktivität = Output/Input in MENGENeinheiten. Sie ist eine rein technische Ergiebigkeit ohne Geldgrößen.',
     quelle: 'Übungsblatt 1, Aufgabe 6',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 15',
   },
   {
     art: 'kategorien',
@@ -163,6 +169,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Entscheidend ist die Trägerschaft, nicht die Rechtsform: Die DB ist eine AG, gehört aber zu 100 % dem Bund → öffentlich. Die HS Fulda ist eine Körperschaft öffentlichen Rechts. VW ist trotz Landesbeteiligung erwerbswirtschaftlich → privat.',
     quelle: 'Übungsblatt 1, Aufgabe 8',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 16',
   },
   {
     art: 'single',
@@ -214,6 +221,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Die SBWL wird funktional (nach betrieblichen Funktionen/Tätigkeiten) oder institutionell (nach Branchen/Wirtschaftszweigen) gegliedert. Die ABWL ist demgegenüber funktions- und branchenübergreifend.',
     quelle: 'Übungsblatt 1, Aufgabe 11',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 22',
   },
   {
     art: 'zuordnung',
@@ -306,6 +314,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Sanierung = alle planvollen Maßnahmen, um ein notleidendes Unternehmen vor dem Zusammenbruch zu bewahren und seine Leistungsfähigkeit wiederherzustellen.',
     quelle: 'Übungsblatt 2, Aufgabe 14',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 35',
   },
   {
     art: 'reihenfolge',
@@ -361,6 +370,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Wirtschaftlichkeit = Verhältnis von Ertrag zu Aufwand (im Aufgabenbeispiel Umsatz/Istkosten). Ein Wert > 1 bedeutet wirtschaftliches Arbeiten.',
     quelle: 'Übungsblatt 3, Aufgabe 7',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 15',
   },
   {
     art: 'eingabe',
@@ -425,6 +435,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'EKR = Jahresüberschuss / Eigenkapital × 100. Sie misst die Verzinsung des von den Eigentümern eingesetzten Kapitals.',
     quelle: 'Übungsblatt 3, Aufgabe 15',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 70',
   },
   {
     art: 'zuordnung',
@@ -468,6 +479,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Kennzahlen sind quantitative, verdichtete Größen (absolut oder als Verhältniszahl). Einsatzgebiete: Zeit-/Periodenvergleich, Bereichsvergleich, Betriebsvergleich (Benchmarking) und Soll-Ist-Vergleich.',
     quelle: 'Übungsblatt 3, Aufgabe 16',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 44',
   },
   {
     art: 'eingabe',
@@ -522,6 +534,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Der Kapitalgewinn ist der Gewinn, den das gesamte Kapital erwirtschaftet hat – VOR den FK-Zinsen (Kapitalgewinn = GKR × Gesamtkapital). Erst nach Abzug der FK-Zinsen ergibt sich der Jahresüberschuss.',
     quelle: 'Übungsblatt 3, Aufgabe 18',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 70',
   },
   {
     art: 'single',
@@ -619,6 +632,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Personengesellschaften (GbR, OHG, KG) beruhen auf der persönlichen Mitarbeit/Haftung der Gesellschafter. Kapitalgesellschaften (GmbH, UG, AG) sind juristische Personen mit beschränkter Haftung auf das Gesellschaftsvermögen.',
     quelle: 'Übungsblatt 4, Aufgabe 22',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 45',
   },
   {
     art: 'zuordnung',
@@ -757,6 +771,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Betriebsebene → Betriebsrat (BetrVG). Unternehmensebene → Aufsichtsrat, der den Vorstand bestellt. Ab > 2.000 Beschäftigten gilt das MitbestG 1976 mit paritätischer Besetzung des Aufsichtsrats.',
     quelle: 'Übungsblatt 4, Aufgabe 24',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 51',
   },
 
   // =========================================================================
@@ -777,6 +792,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Leistungsziele (Sachziele) betreffen das „Was" (Marktanteil, Qualität). Finanzziele sichern Zahlungsfähigkeit/Finanzierung (Liquidität, EK-Quote). Erfolgsziele (Formalziele) betreffen den wertmäßigen Erfolg (Gewinn, Rentabilität).',
     quelle: 'Übungsblatt 5, Aufgabe 28',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 67',
   },
   {
     art: 'single',
@@ -800,6 +816,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Erfolgsziele (Formalziele) betreffen den wertmäßigen Erfolg: Gewinn, Rentabilität (EKR/GKR), Umsatzrendite, Wirtschaftlichkeit. Liquidität ist ein Finanzziel, Absatzmenge/Kundenzufriedenheit sind Leistungsziele.',
     quelle: 'Übungsblatt 5, Aufgabe 28',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 67',
   },
   {
     art: 'zuordnung',
@@ -813,6 +830,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Nach der Anreiz-Beitrags-Theorie (March/Simon) leistet jede Gruppe ihre Beiträge nur, solange die Anreize sie aufwiegen. Reichen die Anreize nicht, entzieht sie die Beiträge (Sanktion): Eigentümer → Kapitalabzug, Mitarbeiter → Streik, Banken → Kreditkündigung, Kunden → Boykott.',
     quelle: 'Übungsblatt 5, Aufgabe 25',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 71',
   },
   {
     art: 'single',
@@ -836,6 +854,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Kernidee: Beitrag nur gegen ausreichenden Anreiz. Das Management muss die Ziele so austarieren, dass alle wichtigen Stakeholder genügend Anreize erhalten – sonst entziehen sie ihre Beiträge und gefährden den Fortbestand.',
     quelle: 'Übungsblatt 5, Aufgabe 25',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 71',
   },
   {
     art: 'single',
@@ -859,6 +878,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Die Unternehmensphilosophie ist das Wertesystem/Selbstbild eines Unternehmens, oft im Leitbild (Mission Statement) verschriftlicht. Sie ist von der tatsächlich gelebten Kultur zu unterscheiden.',
     quelle: 'Übungsblatt 5, Aufgabe 26',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 62',
   },
   {
     art: 'multi',
@@ -888,6 +908,7 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Klassische Zielkonflikte im Drei-Säulen-Modell der Nachhaltigkeit („magisches Dreieck"). Es gibt aber auch komplementäre Beziehungen, z. B. senkt Energieeffizienz zugleich Kosten und Umweltbelastung.',
     quelle: 'Übungsblatt 5, Aufgabe 27',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 66',
   },
   {
     art: 'wahrfalsch',
