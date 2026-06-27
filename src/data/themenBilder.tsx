@@ -253,37 +253,207 @@ const handelsbilanz: ReactNode = (
   </table>
 )
 
-/** Organe der unternehmerischen Mitbestimmung (Folie 51). */
+/** Übersicht der Rechtsformen nach Träger (Folie 45). */
+const rechtsformenUebersicht: ReactNode = (
+  <table
+    style={{ borderCollapse: 'collapse', width: '100%', fontSize: '0.85rem', color: 'var(--text)' }}
+  >
+    <caption style={{ captionSide: 'top', textAlign: 'left', color: 'var(--text2)', paddingBottom: '0.4rem', fontSize: '0.85rem' }}>
+      Rechtsform = rechtlicher Rahmen / „Rechtskleid" – gegliedert nach dem Träger
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col" style={thStyle}>Privatrechtlich</th>
+        <th scope="col" style={thStyle}>Öffentlich-rechtlich</th>
+        <th scope="col" style={thStyle}>Mischformen &amp; Sonstige</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={tdStyle}>
+          <strong>Einzelunternehmung</strong>
+          <div style={{ marginTop: '0.45rem' }}>
+            <strong>Personengesellschaften:</strong>
+            <ul style={bilanzListenStyle}>
+              <li>GbR (Gesellschaft bürgerl. Rechts)</li>
+              <li>oHG (Offene Handelsgesellschaft)</li>
+              <li>KG (Kommanditgesellschaft)</li>
+              <li>Stille Gesellschaft</li>
+            </ul>
+          </div>
+          <div style={{ marginTop: '0.2rem' }}>
+            <strong>Kapitalgesellschaften:</strong>
+            <ul style={bilanzListenStyle}>
+              <li>AG (Aktiengesellschaft)</li>
+              <li>GmbH (Ges. m. beschr. Haftung)</li>
+              <li>UG (haftungsbeschränkt)</li>
+              <li>KGaA (KG auf Aktien)</li>
+            </ul>
+          </div>
+          <div style={{ marginTop: '0.2rem' }}>eingetragene Genossenschaft (eG)</div>
+        </td>
+        <td style={tdStyle}>
+          <strong>Ohne eigene Rechtspersönlichkeit:</strong>
+          <ul style={bilanzListenStyle}>
+            <li>Regiebetriebe</li>
+            <li>Eigenbetriebe</li>
+            <li>Sondervermögen</li>
+          </ul>
+          <div style={{ marginTop: '0.2rem' }}>
+            <strong>Mit eigener Rechtspersönlichkeit:</strong>
+            <ul style={bilanzListenStyle}>
+              <li>Körperschaften des öffentl. Rechts</li>
+              <li>Anstalten des öffentl. Rechts</li>
+              <li>Stiftungen des öffentl. Rechts</li>
+            </ul>
+          </div>
+        </td>
+        <td style={tdStyle}>
+          <ul style={bilanzListenStyle}>
+            <li>GmbH &amp; Co. KG</li>
+            <li>Bergrechtliche Gewerkschaft</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+)
+
+/** Mitwirkungs- und Mitbestimmungsrechte des Betriebsrats (Folie 48). */
+const mitwirkungMitbestimmung: ReactNode = (
+  <table
+    style={{ borderCollapse: 'collapse', width: '100%', fontSize: '0.85rem', color: 'var(--text)' }}
+  >
+    <caption style={{ captionSide: 'top', textAlign: 'left', color: 'var(--text2)', paddingBottom: '0.4rem', fontSize: '0.85rem' }}>
+      Arbeitsrechtliche Mitbestimmung – geregelt im BetrVG (1952 / 1972). Betrifft Unternehmen ab
+      &gt; 500 (bzw. 5) Mitarbeitern; der Betriebsrat hat bei sozialen &amp; arbeitsrechtlichen
+      Angelegenheiten ein Mitspracherecht.
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col" style={thStyle}>Mitwirkungsrechte</th>
+        <th scope="col" style={thStyle}>Mitbestimmungsrechte</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={tdStyle}>
+          Recht
+          <ul style={bilanzListenStyle}>
+            <li>auf Information</li>
+            <li>auf Anhörung</li>
+            <li>auf Beratung u. Verhandlung</li>
+            <li>auf Widerspruch</li>
+          </ul>
+        </td>
+        <td style={tdStyle}>
+          <ul style={{ ...bilanzListenStyle, marginTop: 0 }}>
+            <li>Anspruch auf Aufhebung</li>
+            <li>Zustimmungs- und Vetorecht</li>
+            <li>Initiativrechte</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+)
+
+/**
+ * Organe einer Kapitalgesellschaft (Folie 51).
+ * Drei Organe nebeneinander, je als Dreieck/Pyramide mit Rechteck (Zusammensetzung)
+ * darunter. Beziehungen: „Bestellung" der Organe (oben) sowie „Wahl" – der Vorstand
+ * wählt die AN-Vertretung im AR, die HV wählt die AG-/Anteilseignerseite.
+ */
+const organDreieck = (
+  cx: number,
+  topY: number,
+  label: string,
+  rolle: string,
+  key: string,
+): ReactNode => (
+  <g key={key}>
+    <polygon
+      points={`${cx},${topY} ${cx - 42},${topY + 44} ${cx + 42},${topY + 44}`}
+      fill="var(--blue-dim)"
+      stroke="var(--blue)"
+      strokeWidth="1.5"
+    />
+    <text x={cx} y={topY + 34} textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">
+      {label}
+    </text>
+    <text x={cx} y={topY + 58} textAnchor="middle" fontSize="9.5" fill="var(--text3)">
+      {rolle}
+    </text>
+  </g>
+)
+
 const mitbestimmungOrgane: ReactNode = (
   <svg
-    viewBox="0 0 480 230"
+    viewBox="0 0 560 300"
     width="100%"
-    style={{ maxWidth: 520 }}
+    style={{ maxWidth: 600 }}
     role="img"
-    aria-label="Organe einer Kapitalgesellschaft: Der Aufsichtsrat bestellt den Vorstand (leitendes Organ) und überwacht ihn; die Hauptversammlung (beschließendes Organ) und die Belegschaft wählen die Mitglieder des Aufsichtsrats aus Arbeitgeber- und Arbeitnehmervertretern"
+    aria-label="Organe einer Kapitalgesellschaft, je als Dreieck mit Rechteck der Zusammensetzung: Vorstand/Geschäftsführung (VO/GF) führt mit dem Personal die Geschäfte; der Aufsichtsrat (AR) aus Arbeitnehmer- (plus Gewerkschafts-) und Arbeitgebervertretern kontrolliert den Vorstand; die Haupt- bzw. Gesellschafterversammlung (HV/GV) sind die Gesellschafter als Kapitalgeber. Oben werden die Organe bestellt; der Vorstand wählt die Arbeitnehmervertretung im Aufsichtsrat, die Hauptversammlung wählt die Arbeitgeber-/Anteilseignerseite"
   >
-    {svgBox(20, 80, 130, 56, 'VO/GF', 'vo', 'Leitendes Organ')}
-    {svgBox(175, 80, 130, 56, 'AR', 'ar', 'Überwachendes Organ')}
-    {svgBox(330, 80, 130, 56, 'HV/GV', 'hv', 'Beschließendes Organ')}
-    <g stroke="var(--text2)" strokeWidth="1.5" fill="none">
-      <path d="M175 96 L150 96" markerEnd="url(#pfeil)" />
-      <path d="M330 120 L305 120" markerEnd="url(#pfeil)" />
+    {/* „Bestellung" – Klammer über allen Organen */}
+    <g stroke="var(--text3)" strokeWidth="1.3" fill="none">
+      <path d="M90 26 L470 26" />
+      <path d="M90 26 L90 40" markerEnd="url(#pfeilDown)" />
+      <path d="M280 26 L280 40" markerEnd="url(#pfeilDown)" />
+      <path d="M470 26 L470 40" markerEnd="url(#pfeilDown)" />
     </g>
+    <text x="280" y="18" textAnchor="middle" fontSize="11" fontWeight="600" fill="var(--text2)">
+      Bestellung
+    </text>
+
+    {/* Drei Organe als Dreiecke */}
+    {organDreieck(90, 44, 'VO/GF', 'Leitendes Organ', 'vo')}
+    {organDreieck(280, 44, 'AR', 'Überwachendes Organ', 'ar')}
+    {organDreieck(470, 44, 'HV/GV', 'Beschließendes Organ', 'hv')}
+
+    {/* Rechtecke mit Zusammensetzung */}
+    {svgBox(20, 118, 140, 60, 'Personal', 'voBox', 'führt die Geschäfte')}
+    {svgBox(195, 118, 170, 60, 'Aufsichtsrat', 'arBox', 'AN-Vertreter (+ Gew.) · AG-Vertreter')}
+    {svgBox(400, 118, 140, 60, 'Gesellschafter', 'hvBox', 'als Kapitalgeber')}
+
+    {/* AR kontrolliert VO */}
+    <g stroke="var(--text2)" strokeWidth="1.5" fill="none">
+      <path d="M195 138 L160 138" markerEnd="url(#pfeil)" />
+    </g>
+    <text x="178" y="130" textAnchor="middle" fontSize="9" fill="var(--text3)">
+      kontrolliert
+    </text>
+
+    {/* Wahl: Vorstand → AN-Vertreter im AR */}
+    <g stroke="var(--green)" strokeWidth="1.5" fill="none">
+      <path d="M90 178 L90 220 L255 220 L255 180" markerEnd="url(#pfeilGreen)" />
+    </g>
+    <text x="150" y="236" textAnchor="middle" fontSize="9.5" fill="var(--green)">
+      Wahl: Vorstand wählt AN-Vertretung
+    </text>
+
+    {/* Wahl: HV → AG-/Anteilseignerseite im AR */}
+    <g stroke="var(--amber)" strokeWidth="1.5" fill="none">
+      <path d="M470 178 L470 262 L305 262 L305 180" markerEnd="url(#pfeilAmber)" />
+    </g>
+    <text x="388" y="278" textAnchor="middle" fontSize="9.5" fill="var(--amber)">
+      Wahl: HV wählt AG-/Anteilseignerseite
+    </text>
+
     <defs>
       <marker id="pfeil" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
         <path d="M0 0 L6 3 L0 6 z" fill="var(--text2)" />
       </marker>
+      <marker id="pfeilDown" markerWidth="8" markerHeight="8" refX="3" refY="6" orient="auto">
+        <path d="M0 0 L6 0 L3 6 z" fill="var(--text3)" />
+      </marker>
+      <marker id="pfeilGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0 0 L6 3 L0 6 z" fill="var(--green)" />
+      </marker>
+      <marker id="pfeilAmber" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0 0 L6 3 L0 6 z" fill="var(--amber)" />
+      </marker>
     </defs>
-    <g fontSize="9.5" fill="var(--text3)">
-      <text x="162" y="88">Bestellung</text>
-      <text x="100" y="160">Personal (Belegschaft)</text>
-      <text x="318" y="160">Aktionäre / Gesellschafter</text>
-      <text x="100" y="173">→ wählen AN-Vertreter</text>
-      <text x="318" y="173">→ wählen AG-Vertreter</text>
-    </g>
-    <text x="240" y="200" textAnchor="middle" fontSize="9.5" fill="var(--text3)">
-      Aufsichtsrat = Arbeitnehmer- (+ Gewerkschafts-) und Arbeitgebervertreter
-    </text>
   </svg>
 )
 
@@ -322,46 +492,161 @@ const zielpyramide: ReactNode = (
   </svg>
 )
 
-/** Maslow-Bedürfnispyramide als Entstehungsmodell (Folie 60). */
+/** Ökonomische Zielkonzeption – Leistungs-, Erfolgs- und Finanzziele (Folie 67). */
+const oekonomischeZiele: ReactNode = (
+  <table
+    style={{ borderCollapse: 'collapse', width: '100%', fontSize: '0.85rem', color: 'var(--text)' }}
+  >
+    <caption style={{ captionSide: 'top', textAlign: 'left', color: 'var(--text2)', paddingBottom: '0.4rem', fontSize: '0.85rem' }}>
+      Ökonomische Zielkonzeption = Gesamtheit der ökonomischen Ziele einer Unternehmung
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col" style={thStyle}>Leistungsziele</th>
+        <th scope="col" style={thStyle}>Erfolgsziele</th>
+        <th scope="col" style={thStyle}>Finanzziele</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={tdStyle}>
+          <ul style={{ ...bilanzListenStyle, marginTop: 0 }}>
+            <li>Produktions- und Absatzmengen</li>
+            <li>Absatzwege</li>
+            <li>Marktanteil</li>
+            <li>Produktions- und Lagerkapazitäten</li>
+            <li>Sortimentsziele</li>
+          </ul>
+        </td>
+        <td style={tdStyle}>
+          <ul style={{ ...bilanzListenStyle, marginTop: 0 }}>
+            <li>Gewinn / Rentabilität</li>
+            <li>Dividenden</li>
+            <li>Kostenstruktur</li>
+            <li>Umsatzvolumen</li>
+          </ul>
+        </td>
+        <td style={tdStyle}>
+          <ul style={{ ...bilanzListenStyle, marginTop: 0 }}>
+            <li>Zahlungsfähigkeit / Liquidität</li>
+            <li>Liquiditätsreserve</li>
+            <li>Finanzielle Struktur</li>
+            <li>Investitionsprogramm</li>
+            <li>Finanzierungsprogramm</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+)
+
+/** Nachhaltigkeits-/Zieldreieck Ökonomie · Ökologie · soziale Bedürfnisse (Folie 66). */
+const zieldreieck: ReactNode = (
+  <svg
+    viewBox="0 0 360 250"
+    width="100%"
+    style={{ maxWidth: 420 }}
+    role="img"
+    aria-label="Zieldreieck der Nachhaltigkeit mit den drei Dimensionen Ökonomie an der Spitze sowie Ökologie und soziale Bedürfnisse an der Basis; zwischen ihnen können Zielkonflikte entstehen"
+  >
+    <polygon
+      points="180,30 330,210 30,210"
+      fill="var(--green-dim)"
+      stroke="var(--green)"
+      strokeWidth="2"
+    />
+    <text x="180" y="22" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">
+      Ökonomie
+    </text>
+    <text x="22" y="232" textAnchor="start" fontSize="14" fontWeight="700" fill="var(--text)">
+      Ökologie
+    </text>
+    <text x="338" y="232" textAnchor="end" fontSize="14" fontWeight="700" fill="var(--text)">
+      Soziale Bedürfnisse
+    </text>
+    <text x="180" y="135" textAnchor="middle" fontSize="10.5" fill="var(--text2)">
+      Zielkonflikte
+    </text>
+  </svg>
+)
+
+/**
+ * Entstehungsmodell der Unternehmensziele (Folie 60).
+ * Maslow-Motive-Pyramide PLUS die Kästchen-Kette: Motive → Werthaltungen →
+ * Existenzbedingungen der Unternehmung → Unternehmensphilosophie u. -kultur →
+ * Unternehmensziele.
+ */
 const beduerfnisPyramide: ReactNode = (
   <svg
-    viewBox="0 0 350 280"
+    viewBox="0 0 420 470"
     width="100%"
-    style={{ maxWidth: 400 }}
+    style={{ maxWidth: 470 }}
     role="img"
-    aria-label="Bedürfnispyramide nach Maslow als Motive menschlichen Verhaltens: von physiologischen Bedürfnissen an der Basis über Sicherheit, soziale Bedürfnisse und Wertschätzung bis zur Selbstverwirklichung an der Spitze"
+    aria-label="Entstehungsmodell der Unternehmensziele: Die Motive menschlichen Verhaltens nach Maslow (von physiologischen Bedürfnissen über Sicherheit, soziale Bedürfnisse und Wertschätzung bis zur Selbstverwirklichung) führen über die Werthaltungen der Unternehmensträger zu den Existenzbedingungen der Unternehmung als Institution, daraus folgen Unternehmensphilosophie und -kultur und schließlich die Unternehmensziele"
   >
+    {/* Maslow-Pyramide (oben) */}
     {pyramide(
       [
-        { y: 30, w: 70, label: 'Selbstverwirklichung' },
-        { y: 78, w: 130, label: 'Wertschätzung' },
-        { y: 126, w: 190, label: 'Soziale Bedürfnisse' },
-        { y: 174, w: 250, label: 'Sicherheit' },
-        { y: 222, w: 310, label: 'Physiologische Bedürfnisse' },
+        { y: 20, w: 70, label: 'Selbstverwirklichung' },
+        { y: 56, w: 124, label: 'Wertschätzung' },
+        { y: 92, w: 178, label: 'Soziale Bedürfnisse' },
+        { y: 128, w: 232, label: 'Sicherheit' },
+        { y: 164, w: 286, label: 'Physiologische Bedürfnisse' },
       ],
-      40,
+      36,
       'var(--blue-dim)',
       'var(--blue)',
     )}
-    <g fontSize="11" fill="var(--text)" textAnchor="middle">
-      <text x={PYRAMID_CX} y="58">Selbst-</text>
-      <text x={PYRAMID_CX} y="70">verwirklichung</text>
-      <text x={PYRAMID_CX} y="102">Wertschätzung</text>
-      <text x={PYRAMID_CX} y="150">Soziale Bedürfnisse</text>
-      <text x={PYRAMID_CX} y="198">Sicherheit</text>
-      <text x={PYRAMID_CX} y="246">Physiologische Bedürfnisse</text>
+    <g fontSize="10.5" fill="var(--text)" textAnchor="middle">
+      <text x={PYRAMID_CX} y="46">Selbstverwirkl.</text>
+      <text x={PYRAMID_CX} y="82">Wertschätzung</text>
+      <text x={PYRAMID_CX} y="118">Soziale Bedürfnisse</text>
+      <text x={PYRAMID_CX} y="154">Sicherheit</text>
+      <text x={PYRAMID_CX} y="190">Physiolog. Bedürfnisse</text>
     </g>
+    <g fontSize="9.5" fill="var(--text3)">
+      <text x="330" y="40">Motive</text>
+      <text x="330" y="53">menschlichen</text>
+      <text x="330" y="66">Verhaltens</text>
+      <text x="330" y="79">(nach Maslow)</text>
+    </g>
+
+    {/* Kästchen-Kette mit Pfeilen */}
+    {svgBox(60, 222, 300, 30, 'Werthaltungen der Unternehmensträger', 'wert')}
+    {svgBox(40, 280, 340, 36, 'Existenzbedingungen der Unternehmung', 'exist', 'als Institution')}
+    {svgBox(60, 344, 300, 30, 'Unternehmensphilosophie u. -kultur', 'phil')}
+    {svgBox(90, 402, 240, 36, 'Unternehmensziele', 'ziele')}
+
+    <g stroke="var(--text2)" strokeWidth="1.5" fill="none">
+      <path d="M210 202 L210 220" markerEnd="url(#pfeilDown60)" />
+      <path d="M210 252 L210 278" markerEnd="url(#pfeilDown60)" />
+      <path d="M210 316 L210 342" markerEnd="url(#pfeilDown60)" />
+      <path d="M210 374 L210 400" markerEnd="url(#pfeilDown60)" />
+    </g>
+    <defs>
+      <marker id="pfeilDown60" markerWidth="9" markerHeight="9" refX="4" refY="7" orient="auto">
+        <path d="M0 0 L8 0 L4 7 z" fill="var(--text2)" />
+      </marker>
+    </defs>
   </svg>
 )
 
 // --- Export -----------------------------------------------------------------
 
-export const themenBilder: Record<string, { bild: ReactNode; seite: number }> = {
-  '1.3 Wirtschaftseinheiten': { bild: wirtschaftseinheiten, seite: 16 },
-  '1.4 Betriebstypologien': { bild: betriebstypologien, seite: 18 },
-  '1.5 Gliederung der BWL': { bild: gliederungBWL, seite: 22 },
-  '3.1 Jahresabschluss': { bild: handelsbilanz, seite: 40 },
-  'Mitbestimmung – die deutsche „Spielart"': { bild: mitbestimmungOrgane, seite: 51 },
-  '5.1 Grundlagen': { bild: zielpyramide, seite: 56 },
-  '5.3 Ein Entstehungsmodell': { bild: beduerfnisPyramide, seite: 60 },
+export const themenBilder: Record<string, { bild: ReactNode; seite: number }[]> = {
+  '1.3 Wirtschaftseinheiten': [{ bild: wirtschaftseinheiten, seite: 16 }],
+  '1.4 Betriebstypologien': [{ bild: betriebstypologien, seite: 18 }],
+  '1.5 Gliederung der BWL': [{ bild: gliederungBWL, seite: 22 }],
+  '3.1 Jahresabschluss': [{ bild: handelsbilanz, seite: 40 }],
+  'Privatrechtliche Rechtsformen': [{ bild: rechtsformenUebersicht, seite: 45 }],
+  'Mitbestimmung – die deutsche „Spielart"': [
+    { bild: mitwirkungMitbestimmung, seite: 48 },
+    { bild: mitbestimmungOrgane, seite: 51 },
+  ],
+  '5.1 Grundlagen': [
+    { bild: zielpyramide, seite: 56 },
+    { bild: oekonomischeZiele, seite: 67 },
+  ],
+  '5.3 Ein Entstehungsmodell': [{ bild: beduerfnisPyramide, seite: 60 }],
+  '5.4 Zielkonflikte': [{ bild: zieldreieck, seite: 66 }],
 }

@@ -47,7 +47,7 @@ export default function Schema() {
                 )}
 
                 {thema.abschnitte?.map(abschnitt => {
-                  const figur = themenBilder[abschnitt.titel]
+                  const figuren = themenBilder[abschnitt.titel]
                   return (
                     <div key={abschnitt.titel} className="thema-abschnitt">
                       <h4 className="thema-abschnitt-titel">{abschnitt.titel}</h4>
@@ -61,8 +61,12 @@ export default function Schema() {
                           ))}
                         </ul>
                       )}
-                      {figur && (
-                        <figure className="thema-abschnitt-bild" style={{ marginTop: '.6rem' }}>
+                      {figuren?.map((figur, i) => (
+                        <figure
+                          key={`${abschnitt.titel}-fig-${figur.seite}-${i}`}
+                          className="thema-abschnitt-bild"
+                          style={{ marginTop: '.6rem' }}
+                        >
                           {figur.bild}
                           <figcaption
                             style={{
@@ -75,7 +79,7 @@ export default function Schema() {
                             📄 Folien vom Lehrer, Seite {figur.seite}
                           </figcaption>
                         </figure>
-                      )}
+                      ))}
                     </div>
                   )
                 })}
