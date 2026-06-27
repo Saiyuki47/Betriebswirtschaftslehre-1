@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { themen } from '../data/themen'
+import { themenBilder } from '../data/themenBilder'
 
 export default function Schema() {
   const [openIds, setOpenIds] = useState<Set<string>>(new Set())
@@ -45,21 +46,39 @@ export default function Schema() {
                   </ul>
                 )}
 
-                {thema.abschnitte?.map(abschnitt => (
-                  <div key={abschnitt.titel} className="thema-abschnitt">
-                    <h4 className="thema-abschnitt-titel">{abschnitt.titel}</h4>
-                    {abschnitt.beschreibung && (
-                      <p className="thema-abschnitt-text">{abschnitt.beschreibung}</p>
-                    )}
-                    {abschnitt.punkte && abschnitt.punkte.length > 0 && (
-                      <ul className="thema-punkte">
-                        {abschnitt.punkte.map(p => (
-                          <li key={`${abschnitt.titel}-${p}`}>{p}</li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                ))}
+                {thema.abschnitte?.map(abschnitt => {
+                  const figur = themenBilder[abschnitt.titel]
+                  return (
+                    <div key={abschnitt.titel} className="thema-abschnitt">
+                      <h4 className="thema-abschnitt-titel">{abschnitt.titel}</h4>
+                      {abschnitt.beschreibung && (
+                        <p className="thema-abschnitt-text">{abschnitt.beschreibung}</p>
+                      )}
+                      {abschnitt.punkte && abschnitt.punkte.length > 0 && (
+                        <ul className="thema-punkte">
+                          {abschnitt.punkte.map(p => (
+                            <li key={`${abschnitt.titel}-${p}`}>{p}</li>
+                          ))}
+                        </ul>
+                      )}
+                      {figur && (
+                        <figure className="thema-abschnitt-bild" style={{ marginTop: '.6rem' }}>
+                          {figur.bild}
+                          <figcaption
+                            style={{
+                              fontSize: '0.78rem',
+                              color: 'var(--text2)',
+                              opacity: 0.85,
+                              marginTop: '.4rem',
+                            }}
+                          >
+                            📄 Folien vom Lehrer, Seite {figur.seite}
+                          </figcaption>
+                        </figure>
+                      )}
+                    </div>
+                  )
+                })}
               </div>
             )}
           </div>
