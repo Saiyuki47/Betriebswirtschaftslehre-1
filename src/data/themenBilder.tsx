@@ -633,15 +633,22 @@ const beduerfnisPyramide: ReactNode = (
 
     {/* Verbindungen / Pfeile */}
     <g stroke="var(--text2)" strokeWidth="1.5" fill="none">
+      {/* Pyramide nach unten in die Kette */}
       <path d="M340 248 L340 266" markerEnd="url(#pf60)" />
+      {/* linke Spine: A hinunter bis zu den Unternehmenszielen, B/C speisen sie */}
       <path d="M78 283 L78 463" />
-      <path d="M78 283 L95 283" />
-      <path d="M78 327 L150 327" markerEnd="url(#pf60)" />
-      <path d="M78 371 L150 371" markerEnd="url(#pf60)" />
+      <path d="M95 283 L78 283" />
+      <path d="M150 327 L82 327" markerEnd="url(#pf60)" />
+      <path d="M150 371 L82 371" markerEnd="url(#pf60)" />
       <path d="M78 463 L93 463" markerEnd="url(#pf60)" />
+      {/* Ansprüche/Existenzbedingungen nach rechts ... */}
       <path d="M585 283 L648 283" markerEnd="url(#pf60)" />
       <path d="M580 327 L648 327" markerEnd="url(#pf60)" />
       <path d="M530 371 L648 371" markerEnd="url(#pf60)" />
+      {/* ... rechte Sammel-Linie hinunter in die Unternehmensphilosophie */}
+      <path d="M650 283 L650 415" />
+      <path d="M650 415 L582 415" markerEnd="url(#pf60)" />
+      {/* Unternehmensphilosophie nach links in die Unternehmensziele */}
       <path d="M330 415 L292 415 L292 463 L277 463" markerEnd="url(#pf60)" />
     </g>
   </svg>
