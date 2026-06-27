@@ -578,56 +578,72 @@ const zieldreieck: ReactNode = (
  */
 const beduerfnisPyramide: ReactNode = (
   <svg
-    viewBox="0 0 420 470"
+    viewBox="0 0 680 500"
     width="100%"
-    style={{ maxWidth: 470 }}
+    style={{ maxWidth: 660 }}
     role="img"
-    aria-label="Entstehungsmodell der Unternehmensziele: Die Motive menschlichen Verhaltens nach Maslow (von physiologischen Bedürfnissen über Sicherheit, soziale Bedürfnisse und Wertschätzung bis zur Selbstverwirklichung) führen über die Werthaltungen der Unternehmensträger zu den Existenzbedingungen der Unternehmung als Institution, daraus folgen Unternehmensphilosophie und -kultur und schließlich die Unternehmensziele"
+    aria-label="Entstehungsmodell der Unternehmensziele: Die Motive menschlichen Verhaltens nach Maslow (Pyramide von physiologischen Bedürfnissen über Sicherheit, soziale Bedürfnisse und Wertschätzung bis zur Selbstverwirklichung) und die Werthaltungen der maßgeblichen Unternehmensträger führen zu den Ansprüchen der unmittelbaren Unternehmensträger und der Marktpartner an die Unternehmung, zu den Existenzbedingungen der Unternehmung als Institution und zur Unternehmensphilosophie und -kultur und schließlich zu den Unternehmenszielen"
   >
-    {/* Maslow-Pyramide (oben) */}
-    {pyramide(
-      [
-        { y: 20, w: 70, label: 'Selbstverwirklichung' },
-        { y: 56, w: 124, label: 'Wertschätzung' },
-        { y: 92, w: 178, label: 'Soziale Bedürfnisse' },
-        { y: 128, w: 232, label: 'Sicherheit' },
-        { y: 164, w: 286, label: 'Physiologische Bedürfnisse' },
-      ],
-      36,
-      'var(--blue-dim)',
-      'var(--blue)',
-    )}
-    <g fontSize="10.5" fill="var(--text)" textAnchor="middle">
-      <text x={PYRAMID_CX} y="46">Selbstverwirkl.</text>
-      <text x={PYRAMID_CX} y="82">Wertschätzung</text>
-      <text x={PYRAMID_CX} y="118">Soziale Bedürfnisse</text>
-      <text x={PYRAMID_CX} y="154">Sicherheit</text>
-      <text x={PYRAMID_CX} y="190">Physiolog. Bedürfnisse</text>
-    </g>
-    <g fontSize="9.5" fill="var(--text3)">
-      <text x="330" y="40">Motive</text>
-      <text x="330" y="53">menschlichen</text>
-      <text x="330" y="66">Verhaltens</text>
-      <text x="330" y="79">(nach Maslow)</text>
-    </g>
-
-    {/* Kästchen-Kette mit Pfeilen */}
-    {svgBox(60, 222, 300, 30, 'Werthaltungen der Unternehmensträger', 'wert')}
-    {svgBox(40, 280, 340, 36, 'Existenzbedingungen der Unternehmung', 'exist', 'als Institution')}
-    {svgBox(60, 344, 300, 30, 'Unternehmensphilosophie u. -kultur', 'phil')}
-    {svgBox(90, 402, 240, 36, 'Unternehmensziele', 'ziele')}
-
-    <g stroke="var(--text2)" strokeWidth="1.5" fill="none">
-      <path d="M210 202 L210 220" markerEnd="url(#pfeilDown60)" />
-      <path d="M210 252 L210 278" markerEnd="url(#pfeilDown60)" />
-      <path d="M210 316 L210 342" markerEnd="url(#pfeilDown60)" />
-      <path d="M210 374 L210 400" markerEnd="url(#pfeilDown60)" />
-    </g>
     <defs>
-      <marker id="pfeilDown60" markerWidth="9" markerHeight="9" refX="4" refY="7" orient="auto">
-        <path d="M0 0 L8 0 L4 7 z" fill="var(--text2)" />
+      <marker id="pf60" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+        <path d="M0 0 L8 4 L0 8 z" fill="var(--text2)" />
       </marker>
     </defs>
+
+    {/* Maslow-Pyramide (Motive) */}
+    <polygon points="340,26 500,246 180,246" fill="var(--blue-dim)" stroke="var(--blue)" strokeWidth="1.5" />
+    <g stroke="var(--blue)" strokeWidth="1">
+      <line x1="308" y1="70" x2="372" y2="70" />
+      <line x1="276" y1="114" x2="404" y2="114" />
+      <line x1="244" y1="158" x2="436" y2="158" />
+      <line x1="212" y1="202" x2="468" y2="202" />
+    </g>
+    <g fontSize="11" fill="var(--text)" textAnchor="middle">
+      <text x="340" y="58">Selbstverwirklichung</text>
+      <text x="340" y="96">Wertschätzung</text>
+      <text x="340" y="140">Soziale Bedürfnisse</text>
+      <text x="340" y="184">Sicherheit</text>
+      <text x="340" y="228">Physiologische Bedürfnisse</text>
+    </g>
+
+    {/* Seitliche Kästen */}
+    <rect x="8" y="44" width="150" height="82" rx="5" fill="var(--bg2)" stroke="var(--red)" strokeWidth="1.5" />
+    <g fontSize="11" fill="var(--text)">
+      <text x="18" y="66">Motive</text>
+      <text x="18" y="82">menschlichen</text>
+      <text x="18" y="98">Verhaltens</text>
+      <text x="18" y="114">(nach Maslow)</text>
+    </g>
+    <rect x="512" y="46" width="160" height="72" rx="5" fill="var(--bg2)" stroke="var(--text2)" strokeWidth="1.5" />
+    <g fontSize="11" fill="var(--text)">
+      <text x="522" y="68">Werthaltungen der</text>
+      <text x="522" y="86">maßgeblichen</text>
+      <text x="522" y="104">Unternehmensträger</text>
+    </g>
+
+    {/* Anspruchs-/Existenz-Kette */}
+    {svgBox(95, 268, 490, 30, 'Ansprüche der – unmittelbaren – Unternehmensträger an die Unternehmung', 'a')}
+    {svgBox(150, 312, 430, 30, 'Ansprüche der Marktpartner, sozialer Gruppen, der Gesellschaft', 'b')}
+    {svgBox(150, 356, 380, 30, 'Existenzbedingungen der Unternehmung als Institution', 'c')}
+    {svgBox(330, 400, 250, 30, 'Unternehmensphilosophie u. -kultur', 'd')}
+    <rect x="95" y="446" width="180" height="34" rx="5" fill="var(--bg2)" stroke="var(--blue)" strokeWidth="2" />
+    <text x="185" y="468" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">
+      Unternehmensziele
+    </text>
+
+    {/* Verbindungen / Pfeile */}
+    <g stroke="var(--text2)" strokeWidth="1.5" fill="none">
+      <path d="M340 248 L340 266" markerEnd="url(#pf60)" />
+      <path d="M78 283 L78 463" />
+      <path d="M78 283 L95 283" />
+      <path d="M78 327 L150 327" markerEnd="url(#pf60)" />
+      <path d="M78 371 L150 371" markerEnd="url(#pf60)" />
+      <path d="M78 463 L93 463" markerEnd="url(#pf60)" />
+      <path d="M585 283 L648 283" markerEnd="url(#pf60)" />
+      <path d="M580 327 L648 327" markerEnd="url(#pf60)" />
+      <path d="M530 371 L648 371" markerEnd="url(#pf60)" />
+      <path d="M330 415 L292 415 L292 463 L277 463" markerEnd="url(#pf60)" />
+    </g>
   </svg>
 )
 
