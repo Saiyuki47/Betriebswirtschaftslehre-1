@@ -73,21 +73,6 @@ function LernzettelView() {
 
   return (
     <div ref={rootRef}>
-      <div className="print-toolbar no-print">
-        <div className="section-header">
-          <h2>Lernzettel drucken</h2>
-          <p>
-            Jede Seite enthält 4 Karten. Ausdrucken, an den gestrichelten Linien in vier Karten
-            schneiden. Erst die Formel-Karten (Formel senkrecht, zentriert), danach die
-            Themen-Abbildungen (eine Abbildung je Viertel). Tipp: im Druckdialog die Ränder auf
-            „Keine", die Skalierung auf 100 % und „Hintergrundgrafiken" aktiviert lassen.
-          </p>
-        </div>
-        <button type="button" className="nav-btn" onClick={() => window.print()}>
-          Drucken
-        </button>
-      </div>
-
       <div className="print-sheets">
         {seiten.map((seite, si) => (
           <div className="print-page" key={si}>
@@ -142,19 +127,6 @@ function SpickzettelView() {
   useEffect(() => injectSpickCss(), [])
   return (
     <div>
-      <div className="print-toolbar no-print">
-        <div className="section-header">
-          <h2>Spickzettel drucken</h2>
-          <p>
-            Kompakte Formelsammlung mit allen BWL-Kennzahlen auf einem Blatt – ideal als Spickzettel
-            zum Ausdrucken. Tipp: im Druckdialog „Hintergrundgrafiken" aktivieren.
-          </p>
-        </div>
-        <button type="button" className="nav-btn" onClick={() => window.print()}>
-          Drucken
-        </button>
-      </div>
-
       <div className="spick-print">
         <div className="spick-head">
           <span>BWL 1 — Kennzahlen-Spickzettel</span>
@@ -184,21 +156,36 @@ export default function Drucken() {
   const [modus, setModus] = useState<'lernzettel' | 'spickzettel'>('lernzettel')
   return (
     <div>
-      <div className="filter-row no-print" style={{ marginBottom: '1.25rem' }}>
-        <button
-          type="button"
-          className={`filter-btn${modus === 'lernzettel' ? ' on' : ''}`}
-          onClick={() => setModus('lernzettel')}
-        >
-          📇 Lernzettel (Schneide-Karten)
-        </button>
-        <button
-          type="button"
-          className={`filter-btn${modus === 'spickzettel' ? ' on' : ''}`}
-          onClick={() => setModus('spickzettel')}
-        >
-          📄 Spickzettel (Formelsammlung)
-        </button>
+      <div className="hilf-bar">
+        <div className="hilf-bar-text">
+          <h2>Hilfsmittel</h2>
+          <p>
+            {modus === 'lernzettel'
+              ? 'Schneide-Karten: 4 Karten je A4-Seite, an den gestrichelten Linien schneiden (erst Formeln, dann Themen-Abbildungen). Im Druckdialog Ränder „Keine", Skalierung 100 % und „Hintergrundgrafiken" aktiviert lassen.'
+              : 'Spickzettel: alle BWL-Kennzahlen kompakt auf einem A4-Blatt. Im Druckdialog „Hintergrundgrafiken" aktivieren.'}
+          </p>
+        </div>
+        <div className="hilf-bar-actions">
+          <div className="filter-row">
+            <button
+              type="button"
+              className={`filter-btn${modus === 'lernzettel' ? ' on' : ''}`}
+              onClick={() => setModus('lernzettel')}
+            >
+              📇 Lernzettel
+            </button>
+            <button
+              type="button"
+              className={`filter-btn${modus === 'spickzettel' ? ' on' : ''}`}
+              onClick={() => setModus('spickzettel')}
+            >
+              📄 Spickzettel
+            </button>
+          </div>
+          <button type="button" className="hilf-print-btn" onClick={() => window.print()}>
+            🖨 Drucken / als PDF
+          </button>
+        </div>
       </div>
       {modus === 'lernzettel' ? <LernzettelView /> : <SpickzettelView />}
     </div>

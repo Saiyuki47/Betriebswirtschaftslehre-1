@@ -36,7 +36,7 @@ const tabs: { id: TabId; label: string; icon: ReactNode }[] = [
   },
   {
     id: 'drucken',
-    label: 'Drucken',
+    label: 'Hilfsmittel',
     icon: (
       <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
         <polyline points="6 9 6 2 18 2 18 9" />
