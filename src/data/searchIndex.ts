@@ -46,18 +46,18 @@ export const searchIndex: SearchItem[] = [
       keywords: `${gruppe.titel} ${formel.kuerzel ?? ''}`.trim(),
     })),
   ),
-  // Themen / Schema → Tab "themen". Kapitel und Unterabschnitte einzeln auffindbar.
+  // Themen (jetzt im Referenz-Tab) → Tab "formeln". Kapitel und Unterabschnitte einzeln auffindbar.
   ...themen.flatMap(thema => [
     {
       label: thema.titel,
       snippet: thema.beschreibung,
-      tab: 'themen',
+      tab: 'formeln',
       keywords: 'Thema Kapitel Schema',
     },
     ...(thema.abschnitte ?? []).map(abschnitt => ({
       label: abschnitt.titel,
       snippet: abschnitt.beschreibung ?? abschnitt.punkte?.[0],
-      tab: 'themen',
+      tab: 'formeln',
       keywords: thema.titel,
     })),
   ]),

@@ -1,5 +1,4 @@
 import Tabs from './components/Tabs'
-import Schema from './components/Schema'
 import Formeln from './components/Formeln'
 import Drucken from './components/Drucken'
 import Uebungsblaetter from './components/Uebungsblaetter'
@@ -10,9 +9,9 @@ import { karteikarten } from './data/karteikarten'
 import { searchIndex } from './data/searchIndex'
 import { dateienTree } from './data/dateien'
 
-export type TabId = 'uebung' | 'themen' | 'formeln' | 'drucken' | 'moodle' | 'quiz' | 'karten'
+export type TabId = 'uebung' | 'formeln' | 'drucken' | 'moodle' | 'quiz' | 'karten'
 
-const TABS: readonly TabId[] = ['uebung', 'themen', 'formeln', 'drucken', 'moodle', 'quiz', 'karten']
+const TABS: readonly TabId[] = ['uebung', 'formeln', 'drucken', 'moodle', 'quiz', 'karten']
 
 function App() {
   const [activeTab, setActiveTab] = useHashTab(TABS, 'uebung')
@@ -32,7 +31,6 @@ function App() {
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '0.75rem' }}>
           <GlobalSearch index={searchIndex} onNavigate={t => setActiveTab(t as TabId)} />
         </div>
-        {activeTab === 'themen' && <Schema />}
         {activeTab === 'formeln' && <Formeln />}
         {activeTab === 'drucken' && <Drucken />}
         {activeTab === 'quiz' && <Quiz fragen={quizFragen} />}
