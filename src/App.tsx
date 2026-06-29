@@ -1,13 +1,18 @@
+import { lazy, Suspense } from 'react'
 import Tabs from './components/Tabs'
-import Formeln from './components/Formeln'
-import Drucken from './components/Drucken'
-import Uebungsblaetter from './components/Uebungsblaetter'
 import FormelText from './components/FormelText'
-import { Header, Quiz, Flashcards, GlobalSearch, Moodle, useTheme, useHashTab } from 'lernseiten-ui'
+import { Header, GlobalSearch, useTheme, useHashTab } from 'lernseiten-ui'
 import { quizFragen } from './data/quiz'
 import { karteikarten } from './data/karteikarten'
 import { searchIndex } from './data/searchIndex'
 import { dateienTree } from './data/dateien'
+
+const Uebungsblaetter = lazy(() => import('./components/Uebungsblaetter'))
+const Formeln = lazy(() => import('./components/Formeln'))
+const Drucken = lazy(() => import('./components/Drucken'))
+const Quiz = lazy(() => import('lernseiten-ui').then(m => ({ default: m.Quiz })))
+const Flashcards = lazy(() => import('lernseiten-ui').then(m => ({ default: m.Flashcards })))
+const Moodle = lazy(() => import('lernseiten-ui').then(m => ({ default: m.Moodle })))
 
 export type TabId = 'uebung' | 'formeln' | 'drucken' | 'moodle' | 'quiz' | 'karten'
 
@@ -31,14 +36,16 @@ function App() {
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '0.75rem' }}>
           <GlobalSearch index={searchIndex} onNavigate={t => setActiveTab(t as TabId)} />
         </div>
-        {activeTab === 'formeln' && <Formeln />}
-        {activeTab === 'drucken' && <Drucken />}
-        {activeTab === 'quiz' && <Quiz fragen={quizFragen} />}
-        {activeTab === 'uebung' && <Uebungsblaetter />}
-        {activeTab === 'moodle' && <Moodle tree={dateienTree} baseUrl={import.meta.env.BASE_URL} />}
-        {activeTab === 'karten' && (
-          <Flashcards cards={karteikarten} render={text => <FormelText text={text} />} />
-        )}
+        <Suspense fallback={<div className="card"><p className="quiz-hint">Lädt …</p></div>}>
+          {activeTab === 'formeln' && <Formeln />}
+          {activeTab === 'drucken' && <Drucken />}
+          {activeTab === 'quiz' && <Quiz fragen={quizFragen} />}
+          {activeTab === 'uebung' && <Uebungsblaetter />}
+          {activeTab === 'moodle' && <Moodle tree={dateienTree} baseUrl={import.meta.env.BASE_URL} />}
+          {activeTab === 'karten' && (
+            <Flashcards cards={karteikarten} render={text => <FormelText text={text} />} />
+          )}
+        </Suspense>
       </div>
     </>
   )

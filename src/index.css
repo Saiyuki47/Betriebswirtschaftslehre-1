@@ -167,24 +167,6 @@
 
 /* SCHEMA DATA BROWSER */
 .schema-data-card { padding: 12px 16px !important; }
-.schema-data-toggle {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  text-align: left;
-}
-.schema-data-arrow { font-size: 11px; color: var(--text3); min-width: 12px; }
-.schema-data-name {
-  font-family: var(--font-mono);
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text);
-}
 .schema-db-badge {
   font-size: 10px;
   font-weight: 700;
@@ -196,7 +178,6 @@
 .schema-db-badge--pv { background: var(--green-dim); color: var(--green); border: 1px solid rgba(80,200,120,0.25); }
 .schema-db-badge--nw { background: var(--blue-dim); color: var(--blue); border: 1px solid rgba(77,159,255,0.25); }
 .schema-db-badge--uni { background: var(--amber-dim); color: var(--amber); border: 1px solid rgba(245,166,35,0.25); }
-.schema-data-meta { font-size: 12px; color: var(--text3); font-family: var(--font-mono); margin-left: auto; }
 .schema-data-table-wrap { margin-top: 12px; }
 .schema-no-data {
   margin-top: 10px;
@@ -215,7 +196,6 @@
 .schema-no-data-hint { font-size: 11px; color: var(--text3); }
 
 /* THEMEN */
-.thema-detail { margin-top: 0.75rem; }
 .thema-punkte { padding-left: 1.25rem; display: flex; flex-direction: column; gap: 4px; }
 .thema-punkte li { font-size: 13px; color: var(--text2); line-height: 1.7; margin: 0; }
 
@@ -370,16 +350,6 @@
 .formel-bsp-ergebnis { font-weight: 600; color: var(--text) !important; }
 
 /* DRUCKEN / LERNZETTEL */
-.print-toolbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-.print-toolbar .section-header { margin-bottom: 0; }
-.print-toolbar .nav-btn { flex-shrink: 0; }
-
 .print-sheets {
   display: flex;
   flex-direction: column;
