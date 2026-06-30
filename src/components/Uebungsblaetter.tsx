@@ -1,5 +1,7 @@
-import { useState, type CSSProperties } from 'react'
-import { useDoneTracker, useTaskDeepLink, getHashDetail } from 'lernseiten-ui'
+import { useState, useMemo, useReducer, type CSSProperties } from 'react'
+// eslint-disable-next-line react-doctor/no-flush-sync -- offizielles React-Muster: flushSync + scrollIntoView, um nach dem Ansichtswechsel sofort zur Ziel-Aufgabe zu scrollen
+import { flushSync } from 'react-dom'
+import { useDoneTracker, useTaskDeepLink, getHashDetail, setHashDetail, OffeneAufgaben, type OffenItem } from 'lernseiten-ui'
 import type { Tipps } from '../types'
 import { uebungsblaetter } from '../data/uebungsblaetter'
 import { aufgaben } from '../data/aufgaben'
@@ -17,45 +19,60 @@ const tippKategorien: { key: keyof Tipps; icon: string; label: string }[] = [
   { key: 'fehler', icon: '⚠️', label: 'Häufige Fehler' },
 ]
 
+// Die drei Aufklapp-Zustände (Lösungen, Tipps, Tipp-Kategorien) teilen sich
+// dieselbe Toggle-Logik und werden in einem Reducer gebündelt.
+type OpenGroup = 'sol' | 'tipp' | 'tippCat'
+type OpenState = Record<OpenGroup, Set<string>>
+
+function openReducer(state: OpenState, action: { group: OpenGroup; key: string }): OpenState {
+  const next = new Set(state[action.group])
+  if (next.has(action.key)) next.delete(action.key)
+  else next.add(action.key)
+  return { ...state, [action.group]: next }
+}
+
 export default function Uebungsblaetter() {
   const [selectedId, setSelectedId] = useState(() => {
     const b = getHashDetail().blatt
     return b && uebungsblaetter.some(x => x.id === b) ? b : (uebungsblaetter[0]?.id ?? '')
   })
-  const [openIds, setOpenIds] = useState<Set<string>>(new Set())
-  const [openTipps, setOpenTipps] = useState<Set<string>>(new Set())
-  const [openTippCats, setOpenTippCats] = useState<Set<string>>(new Set())
+  const [openState, toggleOpen] = useReducer(openReducer, { sol: new Set<string>(), tipp: new Set<string>(), tippCat: new Set<string>() })
+  const openIds = openState.sol
+  const openTipps = openState.tipp
+  const openTippCats = openState.tippCat
+  const [view, setView] = useState<'blatt' | 'offen'>('blatt')
   const { done, toggle: toggleDone, ratio } = useDoneTracker()
   const listRef = useTaskDeepLink<HTMLDivElement>(selectedId)
 
   const blatt = uebungsblaetter.find(b => b.id === selectedId)
 
-  const toggleTipp = (key: string) => {
-    setOpenTipps(prev => {
-      const next = new Set(prev)
-      if (next.has(key)) next.delete(key)
-      else next.add(key)
-      return next
+  // Alle noch nicht als „verstanden" markierten Aufgaben (über alle Blätter).
+  const offen = useMemo<OffenItem[]>(() => {
+    const out: OffenItem[] = []
+    for (const b of uebungsblaetter)
+      for (const t of b.aufgaben) {
+        const key = `${b.id}-${t.nr}`
+        if (!done.has(key)) {
+          out.push({ key, blattId: b.id, blattLabel: b.titel ?? `Blatt ${b.nr}`, aufgabeNr: String(t.nr), label: `Aufgabe ${t.nr}` })
+        }
+      }
+    return out
+  }, [done])
+
+  // Aus der „Noch offen"-Liste zur Aufgabe zurückspringen: Blatt wählen + Ansicht
+  // synchron umschalten (flushSync), dann steht die Karte im DOM → direkt scrollen.
+  const goToTask = (blattId: string, aufgabeNr: string) => {
+    flushSync(() => {
+      setSelectedId(blattId)
+      setView('blatt')
     })
+    setHashDetail(blattId, aufgabeNr, 'uebung')
+    listRef.current?.querySelector(`[data-aufgabe="${aufgabeNr}"]`)?.scrollIntoView({ block: 'start' })
   }
 
-  const toggleTippCat = (key: string) => {
-    setOpenTippCats(prev => {
-      const next = new Set(prev)
-      if (next.has(key)) next.delete(key)
-      else next.add(key)
-      return next
-    })
-  }
-
-  const toggleSolution = (key: string) => {
-    setOpenIds(prev => {
-      const next = new Set(prev)
-      if (next.has(key)) next.delete(key)
-      else next.add(key)
-      return next
-    })
-  }
+  const toggleTipp = (key: string) => toggleOpen({ group: 'tipp', key })
+  const toggleTippCat = (key: string) => toggleOpen({ group: 'tippCat', key })
+  const toggleSolution = (key: string) => toggleOpen({ group: 'sol', key })
 
   const taskKeys = blatt ? blatt.aufgaben.map(t => `${blatt.id}-${t.nr}`) : []
   const verstanden = taskKeys.filter(k => done.has(k)).length
@@ -68,7 +85,28 @@ export default function Uebungsblaetter() {
         <p>Aufgaben und Musterlösungen nach Übungsblatt geordnet.</p>
       </div>
 
-      {uebungsblaetter.length > 1 && (
+      <div className="filter-row" style={{ marginBottom: '0.6rem' }}>
+        <button
+          type="button"
+          className={`filter-btn${view === 'blatt' ? ' on' : ''}`}
+          onClick={() => setView('blatt')}
+        >
+          📚 Nach Blatt
+        </button>
+        <button
+          type="button"
+          className={`filter-btn${view === 'offen' ? ' on' : ''}`}
+          onClick={() => setView('offen')}
+        >
+          📌 Noch offen{offen.length ? ` (${offen.length})` : ''}
+        </button>
+      </div>
+
+      {view === 'offen' ? (
+        <OffeneAufgaben items={offen} onGo={goToTask} />
+      ) : (
+        <>
+          {uebungsblaetter.length > 1 && (
         <div className="filter-row">
           {uebungsblaetter.map(b => (
             <button
@@ -170,6 +208,8 @@ export default function Uebungsblaetter() {
               )
             })}
           </div>
+        </>
+      )}
         </>
       )}
     </div>
