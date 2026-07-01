@@ -169,6 +169,34 @@ export const formelGruppen: FormelGruppe[] = [
           },
         ],
       },
+      {
+        name: 'EK & FK aus Verschuldungsgrad',
+        formel: 'EK = [[GK|1 + VG]]   und   FK = GK − EK',
+        erklaerung:
+          'Standard-Trick vieler Klausuraufgaben: Gegeben sind nur die Bilanzsumme (GK) und der Verschuldungsgrad VG = FK / EK, gesucht sind EK und FK. Weil GK = EK + FK = EK + VG × EK = EK × (1 + VG) gilt, folgt EK = GK / (1 + VG). Anschließend ist FK = GK − EK. Grundlage für fast alle Rentabilitäts- und Liquiditätsrechnungen, wenn EK/FK nicht direkt angegeben sind.',
+        varianten: [
+          'EK = [[GK|1 + VG]]',
+          'FK = GK − EK = GK × [[VG|1 + VG]]',
+          'Kontrolle: EK + FK muss wieder GK ergeben',
+        ],
+        beispiele: [
+          {
+            gegeben: 'GK = 120.000 €, VG = 2 („Unglück AG", Übung 21)',
+            rechnung: 'EK = [[120.000|1 + 2]] = 40.000 €; FK = 120.000 − 40.000',
+            ergebnis: '= 80.000 € FK → auf 1 € EK kommen 2 € FK',
+          },
+          {
+            gegeben: 'GK = 120.000 €, „doppelt so viel EK wie Schulden" → VG = 0,5 („Habenichts GmbH")',
+            rechnung: 'EK = [[120.000|1 + 0,5]] = 80.000 €; FK = 120.000 − 80.000',
+            ergebnis: '= 40.000 € FK → gering verschuldet',
+          },
+          {
+            gegeben: 'GK = 10.000 €, VG = 3 („Lauscher", Übung 18)',
+            rechnung: 'EK = [[10.000|1 + 3]] = 2.500 €; FK = 10.000 − 2.500',
+            ergebnis: '= 7.500 € FK → hoch verschuldet',
+          },
+        ],
+      },
     ],
   },
   {

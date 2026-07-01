@@ -16,7 +16,7 @@ import type { ReactNode } from 'react'
 
 // --- Wiederverwendbare SVG-Helfer (Modulebene, reine Funktionen) ------------
 
-const PYRAMID_CX = 175
+export const PYRAMID_CX = 175
 
 interface PyramidStufe {
   y: number
@@ -25,7 +25,7 @@ interface PyramidStufe {
 }
 
 /** Eine Pyramide aus trapezförmigen Stufen (von oben nach unten). */
-function pyramide(
+export function pyramide(
   stufen: PyramidStufe[],
   stufenHoehe: number,
   fill: string,
@@ -41,7 +41,7 @@ function pyramide(
 }
 
 /** Eine beschriftete Box (Rechteck + Text) für Strukturbäume/Organigramme. */
-function svgBox(
+export function svgBox(
   x: number,
   y: number,
   w: number,
@@ -74,14 +74,14 @@ function svgBox(
 
 // --- Gemeinsamer Tabellen-Stil (Betriebstypologien, Folie 18) ---------------
 
-const tdStyle: React.CSSProperties = {
+export const tdStyle: React.CSSProperties = {
   border: '1px solid var(--border2)',
   padding: '0.4rem 0.6rem',
   verticalAlign: 'top',
   textAlign: 'left',
 }
 
-const thStyle: React.CSSProperties = {
+export const thStyle: React.CSSProperties = {
   ...tdStyle,
   background: 'var(--bg3)',
   color: 'var(--text)',
@@ -199,7 +199,7 @@ const gliederungBWL: ReactNode = (
 )
 
 /** Handelsbilanz als Tabelle – HGB-Gliederung Aktiv-/Passivseite (Folie 40). */
-const bilanzListenStyle = { margin: '0.25rem 0 0.6rem', paddingLeft: '1.1rem' } as const
+export const bilanzListenStyle = { margin: '0.25rem 0 0.6rem', paddingLeft: '1.1rem' } as const
 const handelsbilanz: ReactNode = (
   <table
     style={{ borderCollapse: 'collapse', width: '100%', fontSize: '0.85rem', color: 'var(--text)' }}
@@ -656,7 +656,7 @@ const beduerfnisPyramide: ReactNode = (
 
 // --- Export -----------------------------------------------------------------
 
-export const themenBilder: Record<string, { bild: ReactNode; seite: number }[]> = {
+export const baseBilder: Record<string, { bild: ReactNode; seite: number }[]> = {
   '1.3 Wirtschaftseinheiten': [{ bild: wirtschaftseinheiten, seite: 16 }],
   '1.4 Betriebstypologien': [{ bild: betriebstypologien, seite: 18 }],
   '1.5 Gliederung der BWL': [{ bild: gliederungBWL, seite: 22 }],

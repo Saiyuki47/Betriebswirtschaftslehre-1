@@ -59,7 +59,7 @@ export default function FormelText({ text, className }: { text: string; classNam
           </span>
         ) : (
           <Fragment key={seg.key}>
-            {/* react-doctor-disable-next-line react-doctor/dangerous-html-sink -- Markdown aus eigenen Kursinhalten, via marked() gerendert */}
+            {/* react-doctor-disable-next-line react-doctor/dangerous-html-sink, react-doctor/no-danger -- Markdown aus eigenen Kursinhalten, via marked() gerendert */}
             <span dangerouslySetInnerHTML={{ __html: md(seg.value) }} />
           </Fragment>
         ),

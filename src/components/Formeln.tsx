@@ -21,11 +21,11 @@ const themenKarten: ReferenzKarte[] = themen.map((thema, ti) => ({
   titel: thema.titel,
   inhaltNode: (
     <>
-      {thema.beschreibung && <p className="q-text">{thema.beschreibung}</p>}
+      {thema.beschreibung && <p className="q-text"><FormelText text={thema.beschreibung} /></p>}
       {thema.punkte && thema.punkte.length > 0 && (
         <ul className="thema-punkte">
           {thema.punkte.map(p => (
-            <li key={p}>{p}</li>
+            <li key={p}><FormelText text={p} /></li>
           ))}
         </ul>
       )}
@@ -34,11 +34,11 @@ const themenKarten: ReferenzKarte[] = themen.map((thema, ti) => ({
         return (
           <div key={abschnitt.titel} className="thema-abschnitt">
             <h4 className="thema-abschnitt-titel">{abschnitt.titel}</h4>
-            {abschnitt.beschreibung && <p className="thema-abschnitt-text">{abschnitt.beschreibung}</p>}
+            {abschnitt.beschreibung && <p className="thema-abschnitt-text"><FormelText text={abschnitt.beschreibung} /></p>}
             {abschnitt.punkte && abschnitt.punkte.length > 0 && (
               <ul className="thema-punkte">
                 {abschnitt.punkte.map(p => (
-                  <li key={p}>{p}</li>
+                  <li key={p}><FormelText text={p} /></li>
                 ))}
               </ul>
             )}
