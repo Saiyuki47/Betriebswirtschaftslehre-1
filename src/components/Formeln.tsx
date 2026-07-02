@@ -6,6 +6,7 @@ import { themenBilder } from '../data/themenBilder'
 import { formelGruppen } from '../data/formeln'
 import { slug } from '../data/referenzIndex'
 import FormelText from './FormelText'
+import LazyTopic from './LazyTopic'
 
 // Der Referenz-Tab vereint zwei Quellen in EINEM Inhaltsverzeichnis:
 //  1. Themen-Karten (Kapitel mit Beschreibung, Stichpunkten, Abschnitten und den
@@ -16,52 +17,60 @@ import FormelText from './FormelText'
 // Inhaltsverzeichnis, Scroll-Spy und Deep-Links kommen aus der gemeinsamen
 // Referenz-Komponente.
 
-const themenKarten: ReferenzKarte[] = themen.map((thema, ti) => ({
-  id: `thema-${slug(thema.titel) || ti}`,
-  titel: thema.titel,
-  inhaltNode: (
-    <>
-      {thema.beschreibung && <p className="q-text"><FormelText text={thema.beschreibung} /></p>}
-      {thema.punkte && thema.punkte.length > 0 && (
-        <ul className="thema-punkte">
-          {thema.punkte.map(p => (
-            <li key={p}><FormelText text={p} /></li>
-          ))}
-        </ul>
-      )}
-      {thema.abschnitte?.map(abschnitt => {
-        const figuren = themenBilder[abschnitt.titel]
-        return (
-          <div key={abschnitt.titel} className="thema-abschnitt">
-            <h4 className="thema-abschnitt-titel">{abschnitt.titel}</h4>
-            {abschnitt.beschreibung && <p className="thema-abschnitt-text"><FormelText text={abschnitt.beschreibung} /></p>}
-            {abschnitt.punkte && abschnitt.punkte.length > 0 && (
-              <ul className="thema-punkte">
-                {abschnitt.punkte.map(p => (
-                  <li key={p}><FormelText text={p} /></li>
-                ))}
-              </ul>
-            )}
-            {figuren?.map((figur, i) => (
-              <figure
-                key={`${abschnitt.titel}-fig-${figur.seite}-${i}`}
-                className="thema-abschnitt-bild"
-                style={{ marginTop: '.6rem' }}
-              >
-                {figur.bild}
-                <figcaption
-                  style={{ fontSize: '0.78rem', color: 'var(--text2)', opacity: 0.85, marginTop: '.4rem' }}
-                >
-                  📄 Folien vom Lehrer, Seite {figur.seite}
-                </figcaption>
-              </figure>
+const themenKarten: ReferenzKarte[] = themen.map((thema, ti) => {
+  const id = `thema-${slug(thema.titel) || ti}`
+  return {
+    id,
+    titel: thema.titel,
+    inhaltNode: (
+      <>
+        {thema.beschreibung && <p className="q-text"><FormelText text={thema.beschreibung} /></p>}
+        {thema.punkte && thema.punkte.length > 0 && (
+          <ul className="thema-punkte">
+            {thema.punkte.map(p => (
+              <li key={p}><FormelText text={p} /></li>
             ))}
-          </div>
-        )
-      })}
-    </>
-  ),
-}))
+          </ul>
+        )}
+        {/* Abschnitte + Abbildungen sind schwer → erst auf Klick/Deep-Link laden. */}
+        {thema.abschnitte && thema.abschnitte.length > 0 && (
+          <LazyTopic id={id}>
+            {thema.abschnitte.map(abschnitt => {
+              const figuren = themenBilder[abschnitt.titel]
+              return (
+                <div key={abschnitt.titel} className="thema-abschnitt">
+                  <h4 className="thema-abschnitt-titel">{abschnitt.titel}</h4>
+                  {abschnitt.beschreibung && <p className="thema-abschnitt-text"><FormelText text={abschnitt.beschreibung} /></p>}
+                  {abschnitt.punkte && abschnitt.punkte.length > 0 && (
+                    <ul className="thema-punkte">
+                      {abschnitt.punkte.map(p => (
+                        <li key={p}><FormelText text={p} /></li>
+                      ))}
+                    </ul>
+                  )}
+                  {figuren?.map((figur, i) => (
+                    <figure
+                      key={`${abschnitt.titel}-fig-${figur.seite}-${i}`}
+                      className="thema-abschnitt-bild"
+                      style={{ marginTop: '.6rem' }}
+                    >
+                      {figur.bild}
+                      <figcaption
+                        style={{ fontSize: '0.78rem', color: 'var(--text2)', opacity: 0.85, marginTop: '.4rem' }}
+                      >
+                        📄 Folien vom Lehrer, Seite {figur.seite}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              )
+            })}
+          </LazyTopic>
+        )}
+      </>
+    ),
+  }
+})
 
 const formelKarten: ReferenzKarte[] = formelGruppen.flatMap((gruppe, gi) =>
   gruppe.formeln.map((formel, fi) => ({
