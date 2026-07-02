@@ -4,6 +4,7 @@ import { themen } from '../data/themen'
 import { themenKurz } from '../data/themenKurz'
 import { themenBilder } from '../data/themenBilder'
 import { formelGruppen } from '../data/formeln'
+import { slug } from '../data/referenzIndex'
 import FormelText from './FormelText'
 
 // Der Referenz-Tab vereint zwei Quellen in EINEM Inhaltsverzeichnis:
@@ -14,9 +15,6 @@ import FormelText from './FormelText'
 // Inhalt wird als fertige Node geliefert (BWL nutzt FormelText statt KaTeX);
 // Inhaltsverzeichnis, Scroll-Spy und Deep-Links kommen aus der gemeinsamen
 // Referenz-Komponente.
-
-const slug = (s: string) =>
-  s.toLowerCase().replace(/[^a-z0-9äöü]+/g, '-').replace(/^-+|-+$/g, '')
 
 const themenKarten: ReferenzKarte[] = themen.map((thema, ti) => ({
   id: `thema-${slug(thema.titel) || ti}`,

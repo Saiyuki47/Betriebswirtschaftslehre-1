@@ -6,7 +6,25 @@ import type { Tipps } from '../types'
 import { uebungsblaetter } from '../data/uebungsblaetter'
 import { aufgaben } from '../data/aufgaben'
 import { altklausurAufgaben } from '../data/altklausuren'
+import { aufgabeReferenz } from '../data/aufgabeReferenz'
+import { referenzTitelById } from '../data/referenzIndex'
 import FormelText from './FormelText'
+
+// Chip-Reihe unter der Aufgabenstellung, die per Deep-Link (#formeln/<id>) zum
+// passenden Referenzthema springt (der Referenz-Tab öffnet + scrollt via useHashTab).
+const refLinksRow: CSSProperties = { display: 'flex', flexWrap: 'wrap', gap: '0.4rem', margin: '0.6rem 0 0' }
+const refLinkStyle: CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: '0.3rem',
+  fontSize: '0.8rem',
+  padding: '0.2rem 0.6rem',
+  border: '1px solid var(--blue, #2563eb)',
+  borderRadius: '999px',
+  color: 'var(--blue, #2563eb)',
+  textDecoration: 'none',
+  lineHeight: 1.3,
+}
 
 // Übungsbegleiter-Aufgaben und Altklausur-Aufgaben für die Lösungssuche zusammenführen.
 const alleAufgaben = [...aufgaben, ...altklausurAufgaben]
@@ -150,11 +168,21 @@ export default function Uebungsblaetter() {
               const isOpen = openIds.has(key)
               const isTippOpen = openTipps.has(key)
               const isDone = done.has(key)
+              const refs = aufgabeReferenz[task.aufgabeId] ?? []
 
               return (
                 <div key={key} className="card" data-aufgabe={String(task.nr)}>
                 <p className="ub-task-nr">Aufgabe {task.nr}</p>
                 <FormelText className="q-title" text={task.text ?? aufgabe?.aufgabeText ?? ''} />
+                {refs.length > 0 && (
+                  <div style={refLinksRow}>
+                    {refs.map(rid => (
+                      <a key={rid} href={`#formeln/${rid}`} style={refLinkStyle}>
+                        📘 {referenzTitelById[rid] ?? rid}
+                      </a>
+                    ))}
+                  </div>
+                )}
                 {aufgabe && (
                   <>
                     {aufgabe.tipp && (
