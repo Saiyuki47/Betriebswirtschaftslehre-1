@@ -60,11 +60,50 @@ function LernzettelView() {
       tbl.style.transformOrigin = 'center center'
       tbl.style.transform = scale < 1 ? `scale(${scale.toFixed(3)})` : 'none'
     }
+    // Querformatige Abbildungen (breiter als hoch) verschenken im Hochformat-
+    // Viertel viel Platz. Wenn eine 90°-Drehung das Bild größer macht (das Blatt
+    // besser ausnutzt), drehen wir die ganze Karte (Bild + Beschriftung) und
+    // sizen sie mit vertauschten Maßen passgenau ins Viertel.
+    const orientFig = (fig: HTMLElement) => {
+      // Erst zurücksetzen, damit die Messung bei erneutem Lauf sauber ist.
+      fig.classList.remove('cut-fig--quer')
+      fig.style.removeProperty('--qw')
+      fig.style.removeProperty('--qh')
+      const bild = fig.querySelector('.cut-fig-bild') as HTMLElement | null
+      if (!bild) return
+      const svg = bild.querySelector('svg') as SVGSVGElement | null
+      const tbl = bild.querySelector('table') as HTMLElement | null
+      let iw = 0
+      let ih = 0
+      if (svg?.viewBox?.baseVal?.width) {
+        iw = svg.viewBox.baseVal.width
+        ih = svg.viewBox.baseVal.height
+      } else if (tbl) {
+        tbl.style.transform = 'none'
+        iw = tbl.offsetWidth
+        ih = tbl.offsetHeight
+      }
+      if (!iw || !ih) return
+      const availW = bild.clientWidth
+      const availH = bild.clientHeight
+      if (!availW || !availH) return
+      // Erreichbarer Maßstab ohne / mit 90°-Drehung (verfügbare Box vertauscht).
+      const sOhne = Math.min(availW / iw, availH / ih)
+      const sQuer = Math.min(availH / iw, availW / ih)
+      // Nur drehen, wenn es spürbar (>5 %) mehr Platz bringt.
+      if (sQuer > sOhne * 1.05) {
+        fig.style.setProperty('--qw', `${fig.clientHeight}px`)
+        fig.style.setProperty('--qh', `${fig.clientWidth}px`)
+        fig.classList.add('cut-fig--quer')
+      }
+    }
     const run = () => {
       const root = rootRef.current
       if (!root) return
       root.querySelectorAll<HTMLElement>('.cut-name').forEach(el => fit(el, 16, 9))
       root.querySelectorAll<HTMLElement>('.cut-formel').forEach(el => fit(el, 15, 6))
+      // Erst Drehung entscheiden/anwenden, dann Tabellen in die (ggf. gedrehte) Box fitten.
+      root.querySelectorAll<HTMLElement>('.cut-fig').forEach(orientFig)
       root.querySelectorAll<HTMLElement>('.cut-fig-bild').forEach(fitTable)
     }
     run()
@@ -99,8 +138,8 @@ function LernzettelView() {
 
         {abbSeiten.map((seite, si) => (
           <div className="print-page" key={`abb-${si}`}>
-            {seite.map(item => (
-              <div className="cut-cell" key={`${item.titel}-${item.seite}`}>
+            {seite.map((item, ii) => (
+              <div className="cut-cell" key={`abb-${si}-${ii}-${item.titel}-${item.seite}`}>
                 <div className="cut-card-frame">
                   <div className="cut-fig">
                     <div className="cut-fig-bild">{item.bild}</div>
@@ -237,6 +276,10 @@ const FIG_CSS = `
 .cut-fig-cap{display:flex;flex-direction:column;align-items:center;gap:1mm;text-align:center;flex-shrink:0}
 .cut-fig-titel{font-family:var(--font-sans);font-weight:700;font-size:10pt;color:#111;line-height:1.2}
 .cut-fig-quelle{font-family:var(--font-sans);font-size:8pt;color:#666}
+/* Querformatige Abbildungen um 90° gedreht, passgenau ins Hochformat-Viertel.
+   --qw/--qh werden per JS auf die vertauschten Rahmenmaße gesetzt. */
+.cut-card-frame{position:relative}
+.cut-fig--quer{position:absolute;top:50%;left:50%;width:var(--qw);height:var(--qh);transform:translate(-50%,-50%) rotate(90deg);transform-origin:center center}
 `
 
 function injectFigCss() {
