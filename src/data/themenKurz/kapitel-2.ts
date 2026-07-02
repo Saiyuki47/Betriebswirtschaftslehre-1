@@ -1,0 +1,71 @@
+import type { Thema } from '../../types'
+
+export const kapitel: Thema = {
+  titel: '2 Betrieblicher Lebenszyklus',
+  abschnitte: [
+    {
+      titel: '2.1 Gründung',
+      punkte: [
+        'Phase = Beginn des Lebenszyklus, Gründung durch einen **Kaufmann**; meist zunächst **Verluste** (Aufbaukosten, Umsatz läuft erst an).',
+        'Zentrale Begriffe: **Gründer**, **Firma**, **Kaufmann**.',
+        '**Firma** (§ 17 HGB): Name/„Handelsname", unter dem der Kaufmann Geschäfte betreibt und zeichnet – nicht das Unternehmen selbst.',
+        '**Kaufmann** = zentrale Figur des Handelsrechts; seit Gesetz v. 22.6.1998 einheitlicher Kaufmannsbegriff.',
+        '**Istkaufmann (§ 1 HGB, kraft Gesetz):** wer ein Handelsgewerbe betreibt; Ausnahme ohne kaufm. Geschäftsbetrieb = **Kleingewerbe**.',
+        '**Kannkaufmann (§ 2 HGB, kraft Eintragung):** Kleingewerbetreibender wird durch freiwillige **HR-Eintragung** zum Kaufmann.',
+        '**Kannkaufmann (§ 3 HGB, kraft „Branche"):** Land-/Forstwirtschaft mit **Wahlrecht** zur Eintragung.',
+        '**Kaufmann kraft Rechtsform (§ 6 HGB):** Handelsgesellschaften (OHG, KG, GmbH, AG) sind allein durch die Rechtsform Kaufleute.',
+        '**Handelsregister:** Verzeichnis rechtlich bedeutsamer Tatsachen (Firma, Rechtsform, Vertretung), geführt beim **Amtsgericht** (§ 8 HGB).',
+        '**„Öffentlicher Glaube":** Man darf sich auf die Richtigkeit der Eintragung verlassen; Vertrauen auf den Registerinhalt wird geschützt.',
+        '**Konstitutive Entscheidungen** = grundlegende, langfristige Weichenstellungen der Gründung:',
+        '– **Rechtsformwahl** (rechtlicher Rahmen)',
+        '– **Standortwahl** (Standortfaktoren: Absatzmarkt, Arbeitskräfte, Infrastruktur, Kosten, Steuern)',
+        '– **Personaler Ausbau** (Partner, Mitarbeiter)',
+        '– **Kapitalaufnahme** (Eigen-, Fremdkapital, Subventionen)',
+        '– **Kooperationen** mit anderen Unternehmen',
+        '**Ziele:** **Überleben** und **(Umsatz-)Wachstum**; **Gewinn noch nicht wichtig** (Etablierung hat Vorrang).',
+      ],
+    },
+    {
+      titel: '2.2 Wachstum',
+      punkte: [
+        'Kennzeichen: **jährlich positive Zuwachsrate bei Umsatz und Absatz** (steiler Anstieg der Kurve).',
+        '**Verluste gehen zurück** (steigende Umsätze decken zunehmend die Fixkosten).',
+        'Im Verlauf **erste Gewinne**, sobald Erlöse > Gesamtkosten.',
+      ],
+    },
+    {
+      titel: '2.3 Stagnation',
+      punkte: [
+        'Kennzeichen: **kein Umsatzwachstum mehr** (Marktsättigung), flache Kurve.',
+        'Bei **gutem Kostenmanagement oft gewinnträchtigste Phase** – die reifen „Cash Cows".',
+        'Strategie **Abschöpfung:** kaum noch investieren, Produkt „melken", laufende Gewinne abschöpfen.',
+        'Strategie **Desinvestment/Ausstieg auf hohem Niveau:** Verkauf/Rückzug, solange hoher Preis erzielbar.',
+        'Strategie **Unternehmenszusammenschluss:** neue Wachstumsimpulse, Marktmacht, Synergien.',
+        '**Unternehmenszusammenschluss** = Vereinigung bestehender Unternehmen zur gemeinschaftlichen Aufgabenerfüllung.',
+        'Zwei Unterscheidungsmerkmale: **Bindungsintensität** und **Richtung**.',
+        '**Bindungsintensität:** lose (**Kartell**) → **Teilintegration** (Kooperation, **Joint Venture**) → **Fusion** (rechtliche Verschmelzung).',
+        '**Kartell:** loser vertraglicher Zusammenschluss rechtlich selbständiger Unternehmen (Preis-/Mengenabstimmung); Beispiel **OPEC**.',
+        '**Richtung horizontal:** gleiche Produktions-/Handelsstufe, gleiche Branche (z. B. zwei Autohersteller).',
+        '**Richtung vertikal:** vor-/nachgelagerte Stufen – **Vorwärtsintegration** (Richtung Kunde), **Rückwärtsintegration** (Richtung Lieferant).',
+        '**Richtung konglomerat (lateral):** verschiedene, nicht verwandte Branchen (Autohaus + Currywurststand); Motiv **Risikostreuung**; pro: geteiltes Kundenklientel, contra: Verlust klarer Kernkompetenz.',
+        'Beispiel **dt. Energiewirtschaft** (Liberalisierung 4/1998): horizontal VEBA/VIAG, RWE/VEW (Marktmacht); vertikal EnBW/Neckarwerke (Vorwärtsint., Absatzsicherung); konglomerat Expansion in Telekom/Entsorgung/Verkehr (Risikostreuung, „Multi Utility").',
+        'Fusionsbeispiel **Vodafone/Mannesmann** – „Ende der Deutschland AG".',
+      ],
+    },
+    {
+      titel: '2.4 Schrumpfung',
+      punkte: [
+        'Umsatz/Absatz gehen zurück; Schrumpfung → **Krise** → ggf. **Insolvenz**.',
+        '**Krise** = zugespitzte Situation, die den Fortbestand gefährdet.',
+        'Ursachen **endogen** (intern: Managementfehler, falsche Produktpolitik, zu hohe Kosten).',
+        'Ursachen **exogen** (extern: Konjunktureinbruch, neue Wettbewerber, techn. Wandel, Nachfrageverschiebung).',
+        '**Insolvenz:** seit 1999 einheitliches **Insolvenzverfahren** (löste **Konkursordnung** + **Vergleichsordnung** ab).',
+        'Drei Bewältigungswege: **Sanierung**, **übertragene Sanierung**, **Liquidation**.',
+        '**1) Sanierung:** planvolle Maßnahmen zur Rettung + Wiederherstellung der Leistungsfähigkeit; Unternehmen selbst wird fortgeführt.',
+        '**2) Übertragene Sanierung:** gesunde Teile auf **neuen Rechtsträger** übertragen und fortführen, „Altlasten"/Schulden bleiben beim alten; lohnt, wenn der Betriebskern ohne Schuldenlast überlebt und mehr erlöst als bei Liquidation.',
+        '**3) Liquidation:** Auflösung durch Verkauf der einzelnen Vermögensgegenstände – Zerschlagung, Unternehmen hört auf zu existieren.',
+        '**Schritte der Sanierung** (Übungsbegleiter Frage 14): Analyse/Feststellung der Ursachen, **Sanierungskonzept**, leistungswirtschaftliche (Kosten senken, Programm bereinigen), finanzwirtschaftliche (Kapital zuführen, Schulden reduzieren) und personelle Maßnahmen.',
+      ],
+    },
+  ],
+}

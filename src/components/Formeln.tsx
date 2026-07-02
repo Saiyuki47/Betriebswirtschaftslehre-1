@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import { Referenz, type ReferenzKarte } from 'lernseiten-ui'
 import { themen } from '../data/themen'
+import { themenKurz } from '../data/themenKurz'
 import { themenBilder } from '../data/themenBilder'
 import { formelGruppen } from '../data/formeln'
 import FormelText from './FormelText'
@@ -108,12 +110,86 @@ const formelKarten: ReferenzKarte[] = formelGruppen.flatMap((gruppe, gi) =>
 
 const karten: ReferenzKarte[] = [...themenKarten, ...formelKarten]
 
+// Kompakte („Stichpunkt")-Fassung derselben Themen: nur die verdichteten
+// Stichpunkte, ohne Erklär-Absätze und ohne Abbildungen. Formeln nur mit
+// Name + Formel + Kurzerklärung (ohne Rechenbeispiele) – zum schnellen Lernen.
+const themenKartenKurz: ReferenzKarte[] = themenKurz.map((thema, ti) => ({
+  id: `kurz-thema-${slug(thema.titel) || ti}`,
+  titel: thema.titel,
+  inhaltNode: (
+    <>
+      {thema.punkte && thema.punkte.length > 0 && (
+        <ul className="thema-punkte">
+          {thema.punkte.map(p => (
+            <li key={p}><FormelText text={p} /></li>
+          ))}
+        </ul>
+      )}
+      {thema.abschnitte?.map(abschnitt => (
+        <div key={abschnitt.titel} className="thema-abschnitt">
+          <h4 className="thema-abschnitt-titel">{abschnitt.titel}</h4>
+          {abschnitt.punkte && abschnitt.punkte.length > 0 && (
+            <ul className="thema-punkte">
+              {abschnitt.punkte.map(p => (
+                <li key={p}><FormelText text={p} /></li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))}
+    </>
+  ),
+}))
+
+const formelKartenKurz: ReferenzKarte[] = formelGruppen.flatMap((gruppe, gi) =>
+  gruppe.formeln.map((formel, fi) => ({
+    id: `kurz-formel-${gi}-${fi}`,
+    titel: formel.kuerzel ? `${formel.name} (${formel.kuerzel})` : formel.name,
+    inhaltNode: (
+      <>
+        <p className="formel-gruppe-titel">{gruppe.titel}</p>
+        <div className="formel-main"><FormelText text={formel.formel} /></div>
+        <p className="formel-erklaerung">{formel.erklaerung}</p>
+      </>
+    ),
+  })),
+)
+
+const kartenKurz: ReferenzKarte[] = [...themenKartenKurz, ...formelKartenKurz]
+
 export default function Formeln() {
+  const [modus, setModus] = useState<'voll' | 'kurz'>('voll')
   return (
-    <Referenz
-      karten={karten}
-      tab="formeln"
-      intro="Themen mit Abbildungen und alle Kennzahlen-Formeln – von Grund auf erklärt."
-    />
+    <div>
+      <div className="filter-row no-print" style={{ marginBottom: '0.9rem' }}>
+        <button
+          type="button"
+          className={`filter-btn${modus === 'voll' ? ' on' : ''}`}
+          onClick={() => setModus('voll')}
+        >
+          📖 Ausführlich
+        </button>
+        <button
+          type="button"
+          className={`filter-btn${modus === 'kurz' ? ' on' : ''}`}
+          onClick={() => setModus('kurz')}
+        >
+          ⚡ Stichpunkte
+        </button>
+      </div>
+      {modus === 'voll' ? (
+        <Referenz
+          karten={karten}
+          tab="formeln"
+          intro="Themen mit Abbildungen und alle Kennzahlen-Formeln – von Grund auf erklärt."
+        />
+      ) : (
+        <Referenz
+          karten={kartenKurz}
+          tab="formeln"
+          intro="Der ganze Stoff auf den Punkt gebracht – knappe Stichpunkte zum schnellen Durchlesen und Auswendiglernen."
+        />
+      )}
+    </div>
   )
 }
