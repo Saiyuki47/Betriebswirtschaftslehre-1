@@ -21,7 +21,7 @@ const tabs: TabDef<TabId>[] = [
     ),
   },
   {
-    id: 'formeln',
+    id: 'referenz',
     label: 'Referenz',
     icon: (
       <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -35,7 +35,7 @@ const tabs: TabDef<TabId>[] = [
     ),
   },
   {
-    id: 'drucken',
+    id: 'hilfsmittel',
     label: 'Hilfsmittel',
     icon: (
       <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">

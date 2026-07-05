@@ -1,6 +1,6 @@
 // Ordnet jeder Übungsaufgabe (Übungsbegleiter a* + Altklausuren k*) das/die
 // passende(n) Referenzthema(en) zu. Die Werte sind Referenz-Karten-IDs; die
-// Aufgaben-Chips verlinken per #formeln/<id> auf die passende Karte im
+// Aufgaben-Chips verlinken per #referenz/<id> auf die passende Karte im
 // Referenz-Tab. Titel der Karten kommen aus referenzIndex.referenzTitelById.
 export const aufgabeReferenz: Record<string, string[]> = {
   // — Übungsbegleiter —

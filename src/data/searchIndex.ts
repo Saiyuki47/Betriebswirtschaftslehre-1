@@ -37,27 +37,27 @@ export const searchIndex: SearchItem[] = [
     tab: 'quiz',
     keywords: q.quelle ?? '',
   })),
-  // Formeln → Tab "formeln".
+  // Formeln → Tab "referenz".
   ...formelGruppen.flatMap(gruppe =>
     gruppe.formeln.map(formel => ({
       label: formel.kuerzel ? `${formel.name} (${formel.kuerzel})` : formel.name,
       snippet: formelText(formel.formel),
-      tab: 'formeln',
+      tab: 'referenz',
       keywords: `${gruppe.titel} ${formel.kuerzel ?? ''}`.trim(),
     })),
   ),
-  // Themen (jetzt im Referenz-Tab) → Tab "formeln". Kapitel und Unterabschnitte einzeln auffindbar.
+  // Themen (jetzt im Referenz-Tab) → Tab "referenz". Kapitel und Unterabschnitte einzeln auffindbar.
   ...themen.flatMap(thema => [
     {
       label: thema.titel,
       snippet: thema.beschreibung,
-      tab: 'formeln',
+      tab: 'referenz',
       keywords: 'Thema Kapitel Schema',
     },
     ...(thema.abschnitte ?? []).map(abschnitt => ({
       label: abschnitt.titel,
       snippet: abschnitt.beschreibung ?? abschnitt.punkte?.[0],
-      tab: 'formeln',
+      tab: 'referenz',
       keywords: thema.titel,
     })),
   ]),

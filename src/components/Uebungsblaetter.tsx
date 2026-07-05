@@ -10,7 +10,7 @@ import { aufgabeReferenz } from '../data/aufgabeReferenz'
 import { referenzTitelById } from '../data/referenzIndex'
 import FormelText from './FormelText'
 
-// Chip-Reihe unter der Aufgabenstellung, die per Deep-Link (#formeln/<id>) zum
+// Chip-Reihe unter der Aufgabenstellung, die per Deep-Link (#referenz/<id>) zum
 // passenden Referenzthema springt (der Referenz-Tab öffnet + scrollt via useHashTab).
 const refLinksRow: CSSProperties = { display: 'flex', flexWrap: 'wrap', gap: '0.4rem', margin: '0.6rem 0 0' }
 const refLinkStyle: CSSProperties = {
@@ -177,7 +177,7 @@ export default function Uebungsblaetter() {
                 {refs.length > 0 && (
                   <div style={refLinksRow}>
                     {refs.map(rid => (
-                      <a key={rid} href={`#formeln/${rid}`} style={refLinkStyle}>
+                      <a key={rid} href={`#referenz/${rid}`} style={refLinkStyle}>
                         📘 {referenzTitelById[rid] ?? rid}
                       </a>
                     ))}

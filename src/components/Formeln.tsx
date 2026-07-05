@@ -187,13 +187,13 @@ export default function Formeln() {
       {modus === 'voll' ? (
         <Referenz
           karten={karten}
-          tab="formeln"
+          tab="referenz"
           intro="Themen mit Abbildungen und alle Kennzahlen-Formeln – von Grund auf erklärt."
         />
       ) : (
         <Referenz
           karten={kartenKurz}
-          tab="formeln"
+          tab="referenz"
           intro="Der ganze Stoff auf den Punkt gebracht – knappe Stichpunkte zum schnellen Durchlesen und Auswendiglernen."
         />
       )}

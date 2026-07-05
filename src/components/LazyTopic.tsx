@@ -8,7 +8,7 @@ import { useState, useEffect, type ReactNode } from 'react'
 // Abbildungen.
 export default function LazyTopic({
   id,
-  tab = 'formeln',
+  tab = 'referenz',
   children,
 }: {
   id: string

@@ -2,7 +2,7 @@ import { themen } from './themen'
 import { formelGruppen } from './formeln'
 
 // Slug identisch zur ID-Bildung der Referenz-Karten in Formeln.tsx, damit die
-// Deep-Links der Aufgaben-Chips (#formeln/<id>) exakt auf die Karten zeigen.
+// Deep-Links der Aufgaben-Chips (#referenz/<id>) exakt auf die Karten zeigen.
 export const slug = (s: string) =>
   s.toLowerCase().replace(/[^a-z0-9äöü]+/g, '-').replace(/^-+|-+$/g, '')
 
