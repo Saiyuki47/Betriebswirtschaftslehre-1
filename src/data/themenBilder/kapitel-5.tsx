@@ -1,11 +1,23 @@
 import type { ReactNode } from 'react'
-import { baseBilder, svgBox, tdStyle, thStyle } from './_base'
+import type { BeschriftungSlot } from 'lernseiten-ui'
+import {
+  baseBilder,
+  svgBox,
+  quizBoxen,
+  boxSlots,
+  tdStyle,
+  thStyle,
+  LEER_ARIA,
+  type QuizBoxDef,
+  type BeschriftungsBild,
+} from './_base'
 
 // Abbildungen für Kapitel 5 (Ziele im Unternehmen). Schlüssel = exakter
 // `abschnitt.titel` aus themen/kapitel-5.ts. Nachgebaut aus dem Foliensatz
 // PP-Folien_BWL_2025.pdf (Seiten 55–72) – reines Inline-SVG bzw. schlichte
 // HTML-Tabellen, KEINE Screenshots. Figuren sind statische ReactNode-Konstanten
-// auf Modulebene (keine React-Komponenten).
+// auf Modulebene (keine React-Komponenten); SVG-Figuren als Builder
+// `(leer: boolean) => ReactNode` mit voller + leerer Quiz-Variante (siehe _base.tsx).
 //
 // Wichtig: Die Basis-Datei (_base.tsx) liefert bereits Figuren für die
 // Schlüssel '5.1 Grundlagen', '5.3 Ein Entstehungsmodell' und
@@ -17,13 +29,23 @@ import { baseBilder, svgBox, tdStyle, thStyle } from './_base'
 // --- 5.1: Kennzeichen eines Zieles / Zieldimensionen (Folie 55) -------------
 
 /** Die vier Kennzeichen eines Zieles + Attraktivität/Realismus → SMART. */
-const zieldimensionen: ReactNode = (
+const dimensionBoxen: QuizBoxDef[] = [
+  { x: 12, y: 70, w: 116, h: 58, label: 'Zielinhalt', key: 'k1', sub: 'Was?' },
+  { x: 140, y: 70, w: 86, h: 58, label: 'Zielausmaß', key: 'k2', sub: 'Wie viel?' },
+  { x: 238, y: 70, w: 118, h: 58, label: 'Zeitl. Bezug', key: 'k3', sub: 'Bis wann?' },
+  { x: 368, y: 70, w: 100, h: 58, label: 'Sachl. Bereich', key: 'k4', sub: 'Für wen?' },
+]
+const zieldimensionenBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 480 250"
     width="100%"
-    style={{ maxWidth: 520 }}
+    style={leer ? undefined : { maxWidth: 520 }}
     role="img"
-    aria-label="Kennzeichen eines Zieles: die vier Dimensionen Zielinhalt (was), Zielausmaß (wie viel), zeitlicher Bezug (bis wann) und sachlicher Geltungsbereich (für wen), ergänzt um Attraktivität und Realismus, führen zur Merkregel SMART"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Kennzeichen eines Zieles: die vier Dimensionen Zielinhalt (was), Zielausmaß (wie viel), zeitlicher Bezug (bis wann) und sachlicher Geltungsbereich (für wen), ergänzt um Attraktivität und Realismus, führen zur Merkregel SMART'
+    }
   >
     {svgBox(160, 8, 160, 30, 'Kennzeichen eines Zieles', 'root')}
     <g stroke="var(--text2)" strokeWidth="1.5" fill="none">
@@ -32,10 +54,7 @@ const zieldimensionen: ReactNode = (
       <path d="M240 52 L297 52 L297 70" />
       <path d="M240 52 L410 52 L410 70" />
     </g>
-    {svgBox(12, 70, 116, 58, 'Zielinhalt', 'k1', 'Was?')}
-    {svgBox(140, 70, 86, 58, 'Zielausmaß', 'k2', 'Wie viel?')}
-    {svgBox(238, 70, 118, 58, 'Zeitl. Bezug', 'k3', 'Bis wann?')}
-    {svgBox(368, 70, 100, 58, 'Sachl. Bereich', 'k4', 'Für wen?')}
+    {quizBoxen(dimensionBoxen, leer)}
     <g stroke="var(--text2)" strokeWidth="1.5" fill="none">
       <path d="M70 128 L70 150 L240 150 L240 164" />
       <path d="M410 128 L410 150 L240 150" />
@@ -48,9 +67,11 @@ const zieldimensionen: ReactNode = (
       <path d="M240 198 L240 214" markerEnd="url(#pf55)" />
     </g>
     <rect x="185" y="214" width="110" height="30" rx="6" fill="var(--green-dim)" stroke="var(--green)" strokeWidth="2" />
-    <text x="240" y="234" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">
-      SMART
-    </text>
+    {!leer && (
+      <text x="240" y="234" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">
+        SMART
+      </text>
+    )}
     <defs>
       <marker id="pf55" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
         <path d="M0 0 L6 3 L0 6 z" fill="var(--green)" />
@@ -58,22 +79,39 @@ const zieldimensionen: ReactNode = (
     </defs>
   </svg>
 )
+const zieldimensionen = zieldimensionenBau(false)
+const zieldimensionenLeer = zieldimensionenBau(true)
+const zieldimensionenSlots: BeschriftungSlot[] = [
+  ...boxSlots(dimensionBoxen),
+  { label: 'SMART', x: 188, y: 217, w: 104, h: 24 },
+]
 
 /** Zielsystem / Zielhierarchie: Ober-, Zwischen-, Unterziele (Zweck-Mittel). */
-const zielhierarchie: ReactNode = (
+const hierarchieEbenen = [
+  { y: 42, label: 'Oberziel' },
+  { y: 122, label: 'Zwischenziele' },
+  { y: 202, label: 'Unterziele' },
+]
+const zielhierarchieBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 480 250"
     width="100%"
-    style={{ maxWidth: 520 }}
+    style={leer ? undefined : { maxWidth: 520 }}
     role="img"
-    aria-label="Zielhierarchie eines Zielsystems: ein Oberziel (z. B. Gewinn) wird über Zwischenziele (Umsatz steigern, Kosten senken) zu konkreten Unterzielen heruntergebrochen; von unten nach oben besteht eine Zweck-Mittel-Beziehung, die Unterziele sind Mittel zum Oberziel"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Zielhierarchie eines Zielsystems: ein Oberziel (z. B. Gewinn) wird über Zwischenziele (Umsatz steigern, Kosten senken) zu konkreten Unterzielen heruntergebrochen; von unten nach oben besteht eine Zweck-Mittel-Beziehung, die Unterziele sind Mittel zum Oberziel'
+    }
   >
     {/* Ober-/Zwischen-/Unterziel-Etiketten links */}
-    <g fontSize="10" fill="var(--text3)" textAnchor="start">
-      <text x="6" y="42">Oberziel</text>
-      <text x="6" y="122">Zwischenziele</text>
-      <text x="6" y="202">Unterziele</text>
-    </g>
+    {!leer && (
+      <g fontSize="10" fill="var(--text3)" textAnchor="start">
+        {hierarchieEbenen.map(e => (
+          <text key={e.label} x="6" y={e.y}>{e.label}</text>
+        ))}
+      </g>
+    )}
     {/* Verbindungen */}
     <g stroke="var(--text2)" strokeWidth="1.5" fill="none">
       <path d="M240 54 L150 92" />
@@ -102,24 +140,40 @@ const zielhierarchie: ReactNode = (
     </defs>
   </svg>
 )
+const zielhierarchie = zielhierarchieBau(false)
+const zielhierarchieLeer = zielhierarchieBau(true)
+const zielhierarchieSlots: BeschriftungSlot[] = hierarchieEbenen.map(e => ({
+  label: e.label,
+  x: 2,
+  y: e.y - 13,
+  w: 88,
+  h: 18,
+}))
 
 // --- 5.2: Empirische Thesen – Zielbildung als Prozess + Anreiz-Beitrag ------
 
 /** Zielbildung als multipersoneller Aushandelprozess (Thesen 1–3, Folie 59). */
-const zielbildungProzess: ReactNode = (
+const anspruchsgruppenBoxen: QuizBoxDef[] = [
+  { x: 8, y: 14, w: 120, h: 26, label: 'Eigentümer', key: 'g1' },
+  { x: 8, y: 48, w: 120, h: 26, label: 'Management', key: 'g2' },
+  { x: 8, y: 82, w: 120, h: 26, label: 'Arbeitnehmer', key: 'g3' },
+  { x: 8, y: 116, w: 120, h: 26, label: 'Staat', key: 'g4' },
+  { x: 8, y: 150, w: 120, h: 26, label: 'weitere …', key: 'g5' },
+]
+const zielbildungProzessBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 500 210"
     width="100%"
-    style={{ maxWidth: 540 }}
+    style={leer ? undefined : { maxWidth: 540 }}
     role="img"
-    aria-label="Zielbildung als Aushandelprozess: Anspruchsgruppen mit unterschiedlicher Macht (Eigentümer, Management, Arbeitnehmer, Staat, weitere) bringen Interessen in einen Entscheidungs- und Aushandelprozess ein; Ergebnis ist ein abgestimmtes Zielsystem, Zielkonflikte werden durch Priorisierung geklärt"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Zielbildung als Aushandelprozess: Anspruchsgruppen mit unterschiedlicher Macht (Eigentümer, Management, Arbeitnehmer, Staat, weitere) bringen Interessen in einen Entscheidungs- und Aushandelprozess ein; Ergebnis ist ein abgestimmtes Zielsystem, Zielkonflikte werden durch Priorisierung geklärt'
+    }
   >
     {/* Anspruchsgruppen links */}
-    {svgBox(8, 14, 120, 26, 'Eigentümer', 'g1')}
-    {svgBox(8, 48, 120, 26, 'Management', 'g2')}
-    {svgBox(8, 82, 120, 26, 'Arbeitnehmer', 'g3')}
-    {svgBox(8, 116, 120, 26, 'Staat', 'g4')}
-    {svgBox(8, 150, 120, 26, 'weitere …', 'g5')}
+    {quizBoxen(anspruchsgruppenBoxen, leer)}
     <text x="68" y="196" textAnchor="middle" fontSize="9.5" fill="var(--text3)">
       unterschiedliche Macht
     </text>
@@ -145,7 +199,9 @@ const zielbildungProzess: ReactNode = (
     {/* Ergebnis */}
     <rect x="392" y="64" width="100" height="64" rx="6" fill="var(--bg2)" stroke="var(--green)" strokeWidth="2" />
     <g fontSize="11" fill="var(--text)" textAnchor="middle">
-      <text x="442" y="88" fontWeight="700">Zielsystem</text>
+      {!leer && (
+        <text x="442" y="88" fontWeight="700">Zielsystem</text>
+      )}
       <text x="442" y="106" fontSize="9.5" fill="var(--text2)">abgestimmte</text>
       <text x="442" y="119" fontSize="9.5" fill="var(--text2)">Ziele</text>
     </g>
@@ -159,6 +215,13 @@ const zielbildungProzess: ReactNode = (
     </defs>
   </svg>
 )
+const zielbildungProzess = zielbildungProzessBau(false)
+const zielbildungProzessLeer = zielbildungProzessBau(true)
+const zielbildungProzessSlots: BeschriftungSlot[] = [
+  // Die fünf Anspruchsgruppen sind gleichwertig – jede Verteilung zählt.
+  ...boxSlots(anspruchsgruppenBoxen, 'gruppen'),
+  { label: 'Zielsystem', x: 396, y: 74, w: 92, h: 20 },
+]
 
 /** Anreiz-Beitrags-Theorie – Koalitionspartner (Folie 71). */
 const anreizBeitrag: ReactNode = (
@@ -221,13 +284,17 @@ const anreizBeitrag: ReactNode = (
 // --- 5.3: Kulturtypologie nach Deal/Kennedy (Folie 65) ----------------------
 
 /** 2×2-Matrix der Kulturtypen (Risikobereitschaft × Feedback-Geschwindigkeit). */
-const dealKennedy: ReactNode = (
+const dealKennedyBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 460 300"
     width="100%"
-    style={{ maxWidth: 500 }}
+    style={leer ? undefined : { maxWidth: 500 }}
     role="img"
-    aria-label="Kulturtypologie nach Deal und Kennedy als Vier-Felder-Matrix: Achsen sind Risikobereitschaft (hoch/niedrig) und Feedback-Geschwindigkeit (langsam/schnell). Hohes Risiko und langsames Feedback ergibt die Risiko-Kultur, hohes Risiko und schnelles Feedback die Macho-Kultur, niedriges Risiko und langsames Feedback die Prozess-Kultur (Bürokratie), niedriges Risiko und schnelles Feedback die Brot-und-Spiele-Kultur"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Kulturtypologie nach Deal und Kennedy als Vier-Felder-Matrix: Achsen sind Risikobereitschaft (hoch/niedrig) und Feedback-Geschwindigkeit (langsam/schnell). Hohes Risiko und langsames Feedback ergibt die Risiko-Kultur, hohes Risiko und schnelles Feedback die Macho-Kultur, niedriges Risiko und langsames Feedback die Prozess-Kultur (Bürokratie), niedriges Risiko und schnelles Feedback die Brot-und-Spiele-Kultur'
+    }
   >
     {/* Achsentitel */}
     <text x="18" y="150" textAnchor="middle" fontSize="11" fontWeight="600" fill="var(--text2)" transform="rotate(-90 18 150)">
@@ -252,42 +319,76 @@ const dealKennedy: ReactNode = (
     <rect x="270" y="168" width="180" height="110" rx="6" fill="var(--bg2)" stroke="var(--blue)" strokeWidth="1.5" />
     {/* Feldinhalte */}
     <g textAnchor="middle" fill="var(--text)">
-      <text x="160" y="100" fontSize="13" fontWeight="700">Risiko-Kultur</text>
+      {!leer && (
+        <text x="160" y="100" fontSize="13" fontWeight="700">Risiko-Kultur</text>
+      )}
       <text x="160" y="122" fontSize="9.5" fill="var(--text2)">hohes Risiko,</text>
       <text x="160" y="136" fontSize="9.5" fill="var(--text2)">langsames Feedback</text>
       <text x="160" y="150" fontSize="9" fill="var(--text3)" fontStyle="italic">z. B. Forschung</text>
 
-      <text x="360" y="100" fontSize="13" fontWeight="700">Macho-Kultur</text>
+      {!leer && (
+        <text x="360" y="100" fontSize="13" fontWeight="700">Macho-Kultur</text>
+      )}
       <text x="360" y="122" fontSize="9.5" fill="var(--text2)">hohes Risiko,</text>
       <text x="360" y="136" fontSize="9.5" fill="var(--text2)">schnelles Feedback</text>
 
-      <text x="160" y="214" fontSize="13" fontWeight="700">Prozess-Kultur</text>
+      {!leer && (
+        <text x="160" y="214" fontSize="13" fontWeight="700">Prozess-Kultur</text>
+      )}
       <text x="160" y="236" fontSize="9.5" fill="var(--text2)">niedriges Risiko,</text>
       <text x="160" y="250" fontSize="9.5" fill="var(--text2)">langsames Feedback</text>
       <text x="160" y="264" fontSize="9" fill="var(--text3)" fontStyle="italic">(Bürokratie)</text>
 
-      <text x="360" y="208" fontSize="12.5" fontWeight="700">Brot-und-Spiele-</text>
-      <text x="360" y="224" fontSize="12.5" fontWeight="700">Kultur</text>
+      {!leer && (
+        <>
+          <text x="360" y="208" fontSize="12.5" fontWeight="700">Brot-und-Spiele-</text>
+          <text x="360" y="224" fontSize="12.5" fontWeight="700">Kultur</text>
+        </>
+      )}
       <text x="360" y="246" fontSize="9.5" fill="var(--text2)">niedriges Risiko,</text>
       <text x="360" y="260" fontSize="9.5" fill="var(--text2)">schnelles Feedback</text>
     </g>
   </svg>
 )
+const dealKennedy = dealKennedyBau(false)
+const dealKennedyLeer = dealKennedyBau(true)
+const dealKennedySlots: BeschriftungSlot[] = [
+  { label: 'Risiko-Kultur', x: 85, y: 84, w: 150, h: 22 },
+  { label: 'Macho-Kultur', x: 285, y: 84, w: 150, h: 22 },
+  { label: 'Prozess-Kultur', x: 85, y: 198, w: 150, h: 22 },
+  { label: 'Brot-und-Spiele-Kultur', x: 275, y: 192, w: 170, h: 38 },
+]
 
 // --- 5.4: Zielbeziehungen komplementär / konkurrierend / indifferent --------
 
 /** Drei Grundtypen der Zielbeziehung als Mini-Diagramme (Ziel A ↑ vs. Ziel B). */
-const zielbeziehungen: ReactNode = (
+const beziehungTitel = [
+  { x: 80, label: 'komplementär' },
+  { x: 250, label: 'konkurrierend' },
+  { x: 420, label: 'indifferent' },
+]
+const zielbeziehungenBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 500 220"
     width="100%"
-    style={{ maxWidth: 540 }}
+    style={leer ? undefined : { maxWidth: 540 }}
     role="img"
-    aria-label="Die drei Grundtypen der Zielbeziehung, jeweils als Diagramm Erfüllung Ziel A gegen Erfüllung Ziel B: komplementär (beide steigen gemeinsam, steigende Gerade), konkurrierend bzw. konfliktär (mehr von A bedeutet weniger von B, fallende Gerade, hier liegt der Zielkonflikt) und indifferent bzw. neutral (B bleibt gleich, waagerechte Linie)"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Die drei Grundtypen der Zielbeziehung, jeweils als Diagramm Erfüllung Ziel A gegen Erfüllung Ziel B: komplementär (beide steigen gemeinsam, steigende Gerade), konkurrierend bzw. konfliktär (mehr von A bedeutet weniger von B, fallende Gerade, hier liegt der Zielkonflikt) und indifferent bzw. neutral (B bleibt gleich, waagerechte Linie)'
+    }
   >
+    {/* Panel-Titel */}
+    {!leer && (
+      <g fontSize="12" fontWeight="700" fill="var(--text)" textAnchor="middle">
+        {beziehungTitel.map(t => (
+          <text key={t.label} x={t.x} y="18">{t.label}</text>
+        ))}
+      </g>
+    )}
     {/* Panel 1: komplementär */}
     <g>
-      <text x="80" y="18" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">komplementär</text>
       <line x1="30" y1="150" x2="150" y2="150" stroke="var(--text2)" strokeWidth="1.3" />
       <line x1="30" y1="150" x2="30" y2="40" stroke="var(--text2)" strokeWidth="1.3" />
       <line x1="30" y1="150" x2="140" y2="55" stroke="var(--green)" strokeWidth="2.5" />
@@ -296,7 +397,6 @@ const zielbeziehungen: ReactNode = (
     </g>
     {/* Panel 2: konkurrierend */}
     <g>
-      <text x="250" y="18" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">konkurrierend</text>
       <line x1="200" y1="150" x2="320" y2="150" stroke="var(--text2)" strokeWidth="1.3" />
       <line x1="200" y1="150" x2="200" y2="40" stroke="var(--text2)" strokeWidth="1.3" />
       <line x1="200" y1="55" x2="310" y2="150" stroke="var(--red)" strokeWidth="2.5" />
@@ -305,7 +405,6 @@ const zielbeziehungen: ReactNode = (
     </g>
     {/* Panel 3: indifferent */}
     <g>
-      <text x="420" y="18" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">indifferent</text>
       <line x1="370" y1="150" x2="490" y2="150" stroke="var(--text2)" strokeWidth="1.3" />
       <line x1="370" y1="150" x2="370" y2="40" stroke="var(--text2)" strokeWidth="1.3" />
       <line x1="370" y1="95" x2="480" y2="95" stroke="var(--blue)" strokeWidth="2.5" />
@@ -319,6 +418,15 @@ const zielbeziehungen: ReactNode = (
     </g>
   </svg>
 )
+const zielbeziehungen = zielbeziehungenBau(false)
+const zielbeziehungenLeer = zielbeziehungenBau(true)
+const zielbeziehungenSlots: BeschriftungSlot[] = beziehungTitel.map(t => ({
+  label: t.label,
+  x: t.x - 70,
+  y: 2,
+  w: 140,
+  h: 22,
+}))
 
 // --- Export -----------------------------------------------------------------
 // Basis-Figuren gleicher Schlüssel voranstellen (nicht überschreiben!),
@@ -342,3 +450,71 @@ export const bilder: Record<string, { bild: ReactNode; seite: number }[]> = {
     { bild: zielbeziehungen, seite: 66 },
   ],
 }
+
+export const beschriftungen: BeschriftungsBild[] = [
+  {
+    name: 'Kennzeichen eines Zieles (Zieldimensionen)',
+    abschnitt: '5.1 Grundlagen',
+    seite: 55,
+    erklaerung:
+      'Die vier Dimensionen: Zielinhalt (Was?), Zielausmaß (Wie viel?), zeitlicher Bezug (Bis wann?) und sachlicher Geltungsbereich (Für wen?). Ergänzt um Attraktivität und Realismus ergibt sich die Merkregel SMART.',
+    bild: zieldimensionen,
+    bildLeer: zieldimensionenLeer,
+    viewBoxW: 480,
+    viewBoxH: 250,
+    maxWidth: 520,
+    slots: zieldimensionenSlots,
+  },
+  {
+    name: 'Zielhierarchie (Ober-, Zwischen-, Unterziele)',
+    abschnitt: '5.1 Grundlagen',
+    seite: 56,
+    erklaerung:
+      'Das Oberziel (z. B. Gewinn) wird über Zwischenziele (Umsatz steigern, Kosten senken) zu konkreten Unterzielen heruntergebrochen; von unten nach oben gilt die Zweck-Mittel-Beziehung.',
+    bild: zielhierarchie,
+    bildLeer: zielhierarchieLeer,
+    viewBoxW: 480,
+    viewBoxH: 250,
+    maxWidth: 520,
+    slots: zielhierarchieSlots,
+  },
+  {
+    name: 'Zielbildung als Aushandelprozess',
+    abschnitt: '5.2 Empirische Thesen',
+    seite: 59,
+    erklaerung:
+      'Anspruchsgruppen mit unterschiedlicher Macht (Eigentümer, Management, Arbeitnehmer, Staat, weitere) bringen ihre Interessen in den Entscheidungs- und Aushandelprozess ein; das Ergebnis ist ein abgestimmtes Zielsystem. Die Reihenfolge der Gruppen ist beliebig.',
+    bild: zielbildungProzess,
+    bildLeer: zielbildungProzessLeer,
+    viewBoxW: 500,
+    viewBoxH: 210,
+    maxWidth: 540,
+    slots: zielbildungProzessSlots,
+  },
+  {
+    name: 'Kulturtypologie nach Deal/Kennedy',
+    abschnitt: '5.3 Ein Entstehungsmodell',
+    seite: 65,
+    erklaerung:
+      'Hohes Risiko + langsames Feedback = Risiko-Kultur (z. B. Forschung); hohes Risiko + schnelles Feedback = Macho-Kultur; niedriges Risiko + langsames Feedback = Prozess-Kultur (Bürokratie); niedriges Risiko + schnelles Feedback = Brot-und-Spiele-Kultur.',
+    bild: dealKennedy,
+    bildLeer: dealKennedyLeer,
+    viewBoxW: 460,
+    viewBoxH: 300,
+    maxWidth: 500,
+    slots: dealKennedySlots,
+  },
+  {
+    name: 'Die drei Zielbeziehungen',
+    abschnitt: '5.4 Zielkonflikte',
+    seite: 66,
+    erklaerung:
+      'Komplementär: A und B fördern sich (steigende Gerade). Konkurrierend: mehr A bedeutet weniger B (fallende Gerade, Zielkonflikt). Indifferent: B bleibt von A unberührt (waagerechte Linie).',
+    bild: zielbeziehungen,
+    bildLeer: zielbeziehungenLeer,
+    viewBoxW: 500,
+    viewBoxH: 220,
+    maxWidth: 540,
+    slots: zielbeziehungenSlots,
+  },
+]

@@ -1,11 +1,23 @@
 import type { ReactNode } from 'react'
-import { svgBox, tdStyle, thStyle, bilanzListenStyle } from './_base'
+import type { BeschriftungSlot } from 'lernseiten-ui'
+import {
+  svgBox,
+  quizBoxen,
+  boxSlots,
+  tdStyle,
+  thStyle,
+  bilanzListenStyle,
+  LEER_ARIA,
+  type QuizBoxDef,
+  type BeschriftungsBild,
+} from './_base'
 
 // Abbildungen für Kapitel 2 (Betrieblicher Lebenszyklus). Schlüssel = exakter
 // `abschnitt.titel` aus themen/kapitel-2.ts. Alle Figuren sind theme-fähiges
 // Inline-SVG bzw. schlichte HTML-Tabellen (keine Screenshots) und als statische
-// ReactNode-Konstanten auf Modulebene definiert (keine React-Komponenten).
-// Quelle: PP-Folien_BWL_2025.pdf, Folien 23–37.
+// ReactNode-Konstanten auf Modulebene definiert (keine React-Komponenten);
+// SVG-Figuren als Builder `(leer: boolean) => ReactNode` mit voller + leerer
+// Quiz-Variante (siehe _base.tsx). Quelle: PP-Folien_BWL_2025.pdf, Folien 23–37.
 
 // --- 2.1 Gründung -----------------------------------------------------------
 
@@ -14,13 +26,23 @@ import { svgBox, tdStyle, thStyle, bilanzListenStyle } from './_base'
  * markierten Phasen Gründung → Wachstum → Stagnation → Schrumpfung. Zentrale
  * Abbildung des Kapitels; unter 2.1 einsortiert, da hier der Zyklus beginnt.
  */
-const lebenszyklusKurve: ReactNode = (
+const lebenszyklusPhasen = [
+  { x: 115, label: 'Gründung' },
+  { x: 235, label: 'Wachstum' },
+  { x: 355, label: 'Stagnation' },
+  { x: 465, label: 'Schrumpfung' },
+]
+const lebenszyklusKurveBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 560 320"
     width="100%"
-    style={{ maxWidth: 620 }}
+    style={leer ? undefined : { maxWidth: 620 }}
     role="img"
-    aria-label="Betrieblicher Lebenszyklus als S-Kurve des Umsatzes über die Zeit: In der Gründungsphase steigt der Umsatz nur langsam an, in der Wachstumsphase steil, in der Stagnationsphase verläuft die Kurve flach auf hohem Niveau, in der Schrumpfungsphase fällt sie wieder ab"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Betrieblicher Lebenszyklus als S-Kurve des Umsatzes über die Zeit: In der Gründungsphase steigt der Umsatz nur langsam an, in der Wachstumsphase steil, in der Stagnationsphase verläuft die Kurve flach auf hohem Niveau, in der Schrumpfungsphase fällt sie wieder ab'
+    }
   >
     <defs>
       <marker id="k2ax" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
@@ -56,12 +78,13 @@ const lebenszyklusKurve: ReactNode = (
     />
 
     {/* Phasenbeschriftung */}
-    <g fontSize="11" fontWeight="600" fill="var(--text)" textAnchor="middle">
-      <text x="115" y="52">Gründung</text>
-      <text x="235" y="52">Wachstum</text>
-      <text x="355" y="52">Stagnation</text>
-      <text x="465" y="52">Schrumpfung</text>
-    </g>
+    {!leer && (
+      <g fontSize="11" fontWeight="600" fill="var(--text)" textAnchor="middle">
+        {lebenszyklusPhasen.map(p => (
+          <text key={p.label} x={p.x} y="52">{p.label}</text>
+        ))}
+      </g>
+    )}
 
     {/* Kurz-Kennzeichnung je Phase */}
     <g fontSize="9" fill="var(--text3)" textAnchor="middle">
@@ -72,19 +95,38 @@ const lebenszyklusKurve: ReactNode = (
     </g>
   </svg>
 )
+const lebenszyklusKurve = lebenszyklusKurveBau(false)
+const lebenszyklusKurveLeer = lebenszyklusKurveBau(true)
+const lebenszyklusSlots: BeschriftungSlot[] = lebenszyklusPhasen.map(p => ({
+  label: p.label,
+  x: p.x - 55,
+  y: 38,
+  w: 110,
+  h: 20,
+}))
 
 /**
  * Kaufmann im HGB – Systematik der Kaufmannsarten nach dem Entstehungsgrund
  * (Folie 25): kraft Gesetz (§ 1, Istkaufmann), kraft Eintragung (§ 2, Kannk.),
  * kraft „Branche" (§ 3, Wahlrecht Land-/Forstwirtschaft), kraft Rechtsform (§ 6).
  */
-const kaufmannArten: ReactNode = (
+const kaufmannBoxen: QuizBoxDef[] = [
+  { x: 20, y: 78, w: 120, h: 48, label: 'kraft Gesetz', key: 'g', sub: '§ 1 · Istkaufmann' },
+  { x: 155, y: 78, w: 120, h: 48, label: 'kraft Eintragung', key: 'e', sub: '§ 2 · Kannkaufmann' },
+  { x: 290, y: 78, w: 120, h: 48, label: 'kraft „Branche"', key: 'b', sub: '§ 3 · Wahlrecht' },
+  { x: 425, y: 78, w: 120, h: 48, label: 'kraft Rechtsform', key: 'r', sub: '§ 6' },
+]
+const kaufmannArtenBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 560 250"
     width="100%"
-    style={{ maxWidth: 620 }}
+    style={leer ? undefined : { maxWidth: 620 }}
     role="img"
-    aria-label="Systematik des Kaufmanns nach HGB: Kaufmann kraft Gesetz nach Paragraf 1 (Istkaufmann, betreibt ein Handelsgewerbe), kraft Eintragung nach Paragraf 2 (Kannkaufmann, Kleingewerbe im Handelsregister), kraft Branche nach Paragraf 3 (Wahlrecht der Land- und Forstwirtschaft) und kraft Rechtsform nach Paragraf 6 (Handelsgesellschaften wie OHG, KG, GmbH, AG)"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Systematik des Kaufmanns nach HGB: Kaufmann kraft Gesetz nach Paragraf 1 (Istkaufmann, betreibt ein Handelsgewerbe), kraft Eintragung nach Paragraf 2 (Kannkaufmann, Kleingewerbe im Handelsregister), kraft Branche nach Paragraf 3 (Wahlrecht der Land- und Forstwirtschaft) und kraft Rechtsform nach Paragraf 6 (Handelsgesellschaften wie OHG, KG, GmbH, AG)'
+    }
   >
     <g stroke="var(--text2)" strokeWidth="1.5" fill="none">
       <path d="M280 46 L80 78" />
@@ -93,10 +135,7 @@ const kaufmannArten: ReactNode = (
       <path d="M280 46 L480 78" />
     </g>
     {svgBox(200, 14, 160, 32, 'Kaufmann (HGB)', 'root')}
-    {svgBox(20, 78, 120, 48, 'kraft Gesetz', 'g', '§ 1 · Istkaufmann')}
-    {svgBox(155, 78, 120, 48, 'kraft Eintragung', 'e', '§ 2 · Kannkaufmann')}
-    {svgBox(290, 78, 120, 48, 'kraft „Branche"', 'b', '§ 3 · Wahlrecht')}
-    {svgBox(425, 78, 120, 48, 'kraft Rechtsform', 'r', '§ 6')}
+    {quizBoxen(kaufmannBoxen, leer)}
     <g fontSize="9" fill="var(--text3)">
       <text x="80" y="150" textAnchor="middle">betreibt ein</text>
       <text x="80" y="162" textAnchor="middle">Handelsgewerbe</text>
@@ -109,18 +148,31 @@ const kaufmannArten: ReactNode = (
     </g>
   </svg>
 )
+const kaufmannArten = kaufmannArtenBau(false)
+const kaufmannArtenLeer = kaufmannArtenBau(true)
 
 /**
  * Konstitutive Entscheidungen der Gründung (Folie 26): grundlegende,
  * langfristig bindende Weichenstellungen rund um die neue Unternehmung.
  */
-const konstitutiveEntscheidungen: ReactNode = (
+const konstitutivBoxen: QuizBoxDef[] = [
+  { x: 60, y: 14, w: 130, h: 34, label: 'Wahl der Rechtsform', key: 'rf' },
+  { x: 215, y: 8, w: 130, h: 32, label: 'Standortwahl', key: 'so', sub: 'Faktoren' },
+  { x: 380, y: 14, w: 150, h: 34, label: 'Personaler Ausbau', key: 'pa', sub: 'Partner, Mitarbeiter' },
+  { x: 70, y: 174, w: 160, h: 40, label: 'Kapitalaufnahme', key: 'ka', sub: 'Eigen-, Fremdkapital, Subv.' },
+  { x: 340, y: 176, w: 130, h: 34, label: 'Kooperationen', key: 'ko' },
+]
+const konstitutiveEntscheidungenBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 560 220"
     width="100%"
-    style={{ maxWidth: 620 }}
+    style={leer ? undefined : { maxWidth: 620 }}
     role="img"
-    aria-label="Konstitutive Entscheidungen der Gründung als grundlegende Weichenstellungen rund um die neue Unternehmung: Wahl der Rechtsform, Standortwahl, personaler Ausbau (Partner, Mitarbeiter), Kapitalaufnahme (Eigen-, Fremdkapital, Subventionen) und Kooperationen"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Konstitutive Entscheidungen der Gründung als grundlegende Weichenstellungen rund um die neue Unternehmung: Wahl der Rechtsform, Standortwahl, personaler Ausbau (Partner, Mitarbeiter), Kapitalaufnahme (Eigen-, Fremdkapital, Subventionen) und Kooperationen'
+    }
   >
     <g stroke="var(--text2)" strokeWidth="1.3" fill="none">
       <path d="M280 96 L120 46" />
@@ -136,13 +188,11 @@ const konstitutiveEntscheidungen: ReactNode = (
     <text x="280" y="120" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text)">
       Entscheidungen
     </text>
-    {svgBox(60, 14, 130, 34, 'Wahl der Rechtsform', 'rf')}
-    {svgBox(215, 8, 130, 32, 'Standortwahl', 'so', 'Faktoren')}
-    {svgBox(380, 14, 150, 34, 'Personaler Ausbau', 'pa', 'Partner, Mitarbeiter')}
-    {svgBox(70, 174, 160, 40, 'Kapitalaufnahme', 'ka', 'Eigen-, Fremdkapital, Subv.')}
-    {svgBox(340, 176, 130, 34, 'Kooperationen', 'ko')}
+    {quizBoxen(konstitutivBoxen, leer)}
   </svg>
 )
+const konstitutiveEntscheidungen = konstitutiveEntscheidungenBau(false)
+const konstitutiveEntscheidungenLeer = konstitutiveEntscheidungenBau(true)
 
 // --- 2.3 Stagnation ---------------------------------------------------------
 
@@ -151,13 +201,22 @@ const konstitutiveEntscheidungen: ReactNode = (
  * lose (Kartell) über Teilintegration (Kooperation / Joint Venture) bis zur
  * vollständigen Fusion.
  */
-const bindungsintensitaet: ReactNode = (
+const bindungBoxen: QuizBoxDef[] = [
+  { x: 60, y: 40, w: 120, h: 42, label: 'Kartell', key: 'k', sub: 'z. B. OPEC' },
+  { x: 220, y: 40, w: 130, h: 42, label: 'Kooperation', key: 'ko', sub: 'z. B. Joint Venture' },
+  { x: 390, y: 40, w: 120, h: 42, label: 'Fusion', key: 'f', sub: 'Verschmelzung' },
+]
+const bindungsintensitaetBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 560 170"
     width="100%"
-    style={{ maxWidth: 620 }}
+    style={leer ? undefined : { maxWidth: 620 }}
     role="img"
-    aria-label="Bindungsintensität von Unternehmenszusammenschlüssen als Skala von links nach rechts zunehmend: lose (Kartell), Teilintegration bzw. Kooperation (Joint Venture) und Fusion"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Bindungsintensität von Unternehmenszusammenschlüssen als Skala von links nach rechts zunehmend: lose (Kartell), Teilintegration bzw. Kooperation (Joint Venture) und Fusion'
+    }
   >
     <defs>
       <marker id="k2bi" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
@@ -174,24 +233,33 @@ const bindungsintensitaet: ReactNode = (
     <text x="280" y="150" textAnchor="middle" fontSize="10.5" fontWeight="600" fill="var(--text2)">
       Bindungsintensität →
     </text>
-    {svgBox(60, 40, 120, 42, 'Kartell', 'k', 'z. B. OPEC')}
-    {svgBox(220, 40, 130, 42, 'Kooperation', 'ko', 'z. B. Joint Venture')}
-    {svgBox(390, 40, 120, 42, 'Fusion', 'f', 'Verschmelzung')}
+    {quizBoxen(bindungBoxen, leer)}
   </svg>
 )
+const bindungsintensitaet = bindungsintensitaetBau(false)
+const bindungsintensitaetLeer = bindungsintensitaetBau(true)
 
 /**
  * Richtung des Zusammenschlusses (Folie 31): horizontal (gleiche Stufe),
  * vertikal (vor-/rückwärts entlang der Wertschöpfungskette) und konglomerat
  * (verschiedene, nicht verwandte Branchen).
  */
-const richtungZusammenschluss: ReactNode = (
+const richtungTitel = [
+  { y: 34, label: 'Horizontal' },
+  { y: 112, label: 'Vertikal' },
+  { y: 212, label: 'Konglomerat' },
+]
+const richtungZusammenschlussBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 560 250"
     width="100%"
-    style={{ maxWidth: 620 }}
+    style={leer ? undefined : { maxWidth: 620 }}
     role="img"
-    aria-label="Richtung von Unternehmenszusammenschlüssen: horizontal auf gleicher Produktionsstufe derselben Branche, vertikal entlang der Wertschöpfungskette durch Vorwärts- oder Rückwärtsintegration, und konglomerat als Zusammenschluss verschiedener, nicht verwandter Branchen"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Richtung von Unternehmenszusammenschlüssen: horizontal auf gleicher Produktionsstufe derselben Branche, vertikal entlang der Wertschöpfungskette durch Vorwärts- oder Rückwärtsintegration, und konglomerat als Zusammenschluss verschiedener, nicht verwandter Branchen'
+    }
   >
     <defs>
       <marker id="k2rz" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
@@ -199,15 +267,22 @@ const richtungZusammenschluss: ReactNode = (
       </marker>
     </defs>
 
+    {/* Zeilen-Titel */}
+    {!leer && (
+      <g fontSize="11" fontWeight="700" fill="var(--text)">
+        {richtungTitel.map(t => (
+          <text key={t.label} x="20" y={t.y}>{t.label}</text>
+        ))}
+      </g>
+    )}
+
     {/* Horizontal */}
-    <text x="20" y="34" fontSize="11" fontWeight="700" fill="var(--text)">Horizontal</text>
     {svgBox(150, 18, 90, 30, 'Firma A', 'ha')}
     {svgBox(250, 18, 90, 30, 'Firma B', 'hb')}
     <path d="M240 33 L250 33" stroke="var(--text2)" strokeWidth="1.5" markerEnd="url(#k2rz)" />
     <text x="360" y="37" fontSize="9" fill="var(--text3)">gleiche Stufe / Branche</text>
 
     {/* Vertikal */}
-    <text x="20" y="112" fontSize="11" fontWeight="700" fill="var(--text)">Vertikal</text>
     {svgBox(150, 84, 110, 30, 'Lieferant', 'vl')}
     {svgBox(150, 128, 110, 30, 'Hersteller', 'vh')}
     <path d="M205 114 L205 128" stroke="var(--green)" strokeWidth="1.5" markerEnd="url(#k2rz)" />
@@ -217,12 +292,20 @@ const richtungZusammenschluss: ReactNode = (
     </g>
 
     {/* Konglomerat */}
-    <text x="20" y="212" fontSize="11" fontWeight="700" fill="var(--text)">Konglomerat</text>
     {svgBox(150, 196, 110, 30, 'Autohaus', 'ka')}
     {svgBox(280, 196, 130, 30, 'Currywurststand', 'kc')}
     <text x="420" y="215" fontSize="9" fill="var(--text3)">fremde Branchen</text>
   </svg>
 )
+const richtungZusammenschluss = richtungZusammenschlussBau(false)
+const richtungZusammenschlussLeer = richtungZusammenschlussBau(true)
+const richtungSlots: BeschriftungSlot[] = richtungTitel.map(t => ({
+  label: t.label,
+  x: 14,
+  y: t.y - 15,
+  w: 120,
+  h: 21,
+}))
 
 /**
  * Unternehmenszusammenschlüsse in der deutschen Energiewirtschaft nach der
@@ -286,13 +369,17 @@ const energiewirtschaft: ReactNode = (
  * Krisenursachen (Folie 34): empirisch werden endogene (im Unternehmen
  * begründete) und exogene (von außen kommende) Ursachen unterschieden.
  */
-const krisenursachen: ReactNode = (
+const krisenursachenBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 560 210"
     width="100%"
-    style={{ maxWidth: 620 }}
+    style={leer ? undefined : { maxWidth: 620 }}
     role="img"
-    aria-label="Ursachen für Krisen: endogene Ursachen entstehen im Unternehmen selbst (z. B. Managementfehler, falsche Produktpolitik, zu hohe Kosten), exogene Ursachen kommen von außen (z. B. Konjunktureinbruch, neue Wettbewerber, technologischer Wandel)"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Ursachen für Krisen: endogene Ursachen entstehen im Unternehmen selbst (z. B. Managementfehler, falsche Produktpolitik, zu hohe Kosten), exogene Ursachen kommen von außen (z. B. Konjunktureinbruch, neue Wettbewerber, technologischer Wandel)'
+    }
   >
     <g stroke="var(--text2)" strokeWidth="1.5" fill="none">
       <path d="M280 52 L150 92" />
@@ -300,9 +387,11 @@ const krisenursachen: ReactNode = (
     </g>
     {svgBox(190, 20, 180, 32, 'Krise', 'kr', 'zugespitzte Situation')}
     <rect x="40" y="92" width="220" height="98" rx="6" fill="var(--bg2)" stroke="var(--red)" strokeWidth="1.5" />
-    <text x="150" y="112" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text)">
-      endogen
-    </text>
+    {!leer && (
+      <text x="150" y="112" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text)">
+        endogen
+      </text>
+    )}
     <text x="150" y="128" textAnchor="middle" fontSize="9" fill="var(--text3)">
       (im Unternehmen begründet)
     </text>
@@ -312,9 +401,11 @@ const krisenursachen: ReactNode = (
       <text x="52" y="180">• zu hohe Kosten</text>
     </g>
     <rect x="300" y="92" width="220" height="98" rx="6" fill="var(--bg2)" stroke="var(--amber)" strokeWidth="1.5" />
-    <text x="410" y="112" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text)">
-      exogen
-    </text>
+    {!leer && (
+      <text x="410" y="112" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text)">
+        exogen
+      </text>
+    )}
     <text x="410" y="128" textAnchor="middle" fontSize="9" fill="var(--text3)">
       (von außen kommend)
     </text>
@@ -325,19 +416,34 @@ const krisenursachen: ReactNode = (
     </g>
   </svg>
 )
+const krisenursachen = krisenursachenBau(false)
+const krisenursachenLeer = krisenursachenBau(true)
+const krisenursachenSlots: BeschriftungSlot[] = [
+  { label: 'endogen', x: 90, y: 97, w: 120, h: 19 },
+  { label: 'exogen', x: 350, y: 97, w: 120, h: 19 },
+]
 
 /**
  * Krisenfolgen und Alternativen der Insolvenz (Folie 35): Aus der Krise kann
  * die Insolvenz folgen; als Alternativen zum Zusammenbruch stehen Sanierung,
  * übertragene Sanierung und Liquidation offen.
  */
-const krisenfolgenSanierung: ReactNode = (
+const krisenAltBoxen: QuizBoxDef[] = [
+  { x: 20, y: 168, w: 140, h: 40, label: '1) Sanierung', key: 's1' },
+  { x: 210, y: 168, w: 140, h: 40, label: '2) Übertragene', key: 's2', sub: 'Sanierung' },
+  { x: 400, y: 168, w: 140, h: 40, label: '3) Liquidation', key: 's3' },
+]
+const krisenfolgenSanierungBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 560 320"
     width="100%"
-    style={{ maxWidth: 620 }}
+    style={leer ? undefined : { maxWidth: 620 }}
     role="img"
-    aria-label="Krisenfolgen: Aus der Krise kann die Insolvenz folgen (seit 1999 einheitliches Insolvenzverfahren, das Konkurs- und Vergleichsordnung ablöste). Als Alternativen zum Zusammenbruch gibt es drei Wege: die Sanierung (Rettung und Fortführung des Unternehmens), die übertragene Sanierung (Übertragung des gesunden Kerns auf einen neuen Rechtsträger) und die Liquidation (Auflösung durch Verkauf der einzelnen Vermögensgegenstände)"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Krisenfolgen: Aus der Krise kann die Insolvenz folgen (seit 1999 einheitliches Insolvenzverfahren, das Konkurs- und Vergleichsordnung ablöste). Als Alternativen zum Zusammenbruch gibt es drei Wege: die Sanierung (Rettung und Fortführung des Unternehmens), die übertragene Sanierung (Übertragung des gesunden Kerns auf einen neuen Rechtsträger) und die Liquidation (Auflösung durch Verkauf der einzelnen Vermögensgegenstände)'
+    }
   >
     <defs>
       <marker id="k2sf" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
@@ -349,9 +455,11 @@ const krisenfolgenSanierung: ReactNode = (
     {svgBox(200, 14, 160, 32, 'Krise', 'kr')}
     <path d="M280 46 L280 70" stroke="var(--text2)" strokeWidth="1.5" fill="none" markerEnd="url(#k2sf)" />
     <rect x="180" y="70" width="200" height="46" rx="6" fill="var(--bg2)" stroke="var(--red)" strokeWidth="2" />
-    <text x="280" y="90" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">
-      Insolvenz
-    </text>
+    {!leer && (
+      <text x="280" y="90" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">
+        Insolvenz
+      </text>
+    )}
     <text x="280" y="106" textAnchor="middle" fontSize="8.5" fill="var(--text3)">
       seit 1999 · löst Konkurs- u. Vergleichsordnung ab
     </text>
@@ -366,9 +474,7 @@ const krisenfolgenSanierung: ReactNode = (
     </g>
     <text x="280" y="134" textAnchor="middle" fontSize="9" fill="var(--text3)">Alternativen</text>
 
-    {svgBox(20, 168, 140, 40, '1) Sanierung', 's1')}
-    {svgBox(210, 168, 140, 40, '2) Übertragene', 's2', 'Sanierung')}
-    {svgBox(400, 168, 140, 40, '3) Liquidation', 's3')}
+    {quizBoxen(krisenAltBoxen, leer)}
 
     <g fontSize="9" fill="var(--text2)">
       <text x="26" y="228">Notleidendes Unter-</text>
@@ -388,6 +494,8 @@ const krisenfolgenSanierung: ReactNode = (
     </g>
   </svg>
 )
+const krisenfolgenSanierung = krisenfolgenSanierungBau(false)
+const krisenfolgenSanierungLeer = krisenfolgenSanierungBau(true)
 
 /**
  * Schritte der Sanierung (Übungsbegleiter Frage 14) – typischer Ablauf von der
@@ -462,3 +570,101 @@ export const bilder: Record<string, { bild: ReactNode; seite: number }[]> = {
     { bild: sanierungSchritte, seite: 35 },
   ],
 }
+
+export const beschriftungen: BeschriftungsBild[] = [
+  {
+    name: 'Betrieblicher Lebenszyklus (S-Kurve)',
+    abschnitt: '2.1 Gründung',
+    seite: 23,
+    erklaerung:
+      'Die vier Phasen entlang der Umsatz-S-Kurve: Gründung (Verluste, langsamer Anstieg) → Wachstum (steiler Anstieg, Gewinne) → Stagnation (Plateau, gewinnträchtig) → Schrumpfung (Umsatz fällt).',
+    bild: lebenszyklusKurve,
+    bildLeer: lebenszyklusKurveLeer,
+    viewBoxW: 560,
+    viewBoxH: 320,
+    maxWidth: 620,
+    slots: lebenszyklusSlots,
+  },
+  {
+    name: 'Kaufmannsarten nach HGB',
+    abschnitt: '2.1 Gründung',
+    seite: 25,
+    erklaerung:
+      'Kaufmann kraft Gesetz (§ 1, Istkaufmann: betreibt ein Handelsgewerbe), kraft Eintragung (§ 2, Kannkaufmann: Kleingewerbe im Handelsregister), kraft „Branche" (§ 3, Wahlrecht Land-/Forstwirtschaft) und kraft Rechtsform (§ 6, z. B. OHG, KG, GmbH, AG).',
+    bild: kaufmannArten,
+    bildLeer: kaufmannArtenLeer,
+    viewBoxW: 560,
+    viewBoxH: 250,
+    maxWidth: 620,
+    slots: boxSlots(kaufmannBoxen),
+  },
+  {
+    name: 'Konstitutive Entscheidungen der Gründung',
+    abschnitt: '2.1 Gründung',
+    seite: 26,
+    erklaerung:
+      'Die fünf grundlegenden Weichenstellungen der Gründung: Wahl der Rechtsform, Standortwahl, personaler Ausbau (Partner, Mitarbeiter), Kapitalaufnahme (Eigen-, Fremdkapital, Subventionen) und Kooperationen. Die Anordnung um den Kreis ist beliebig.',
+    bild: konstitutiveEntscheidungen,
+    bildLeer: konstitutiveEntscheidungenLeer,
+    viewBoxW: 560,
+    viewBoxH: 220,
+    maxWidth: 620,
+    // Die fünf Satelliten sind gleichwertig – jede Verteilung zählt als richtig.
+    slots: boxSlots(konstitutivBoxen, 'satellit'),
+  },
+  {
+    name: 'Bindungsintensität von Zusammenschlüssen',
+    abschnitt: '2.3 Stagnation',
+    seite: 31,
+    erklaerung:
+      'Auf der Skala der Bindungsintensität von lose nach fest: Kartell (z. B. OPEC) → Kooperation (z. B. Joint Venture) → Fusion (Verschmelzung).',
+    bild: bindungsintensitaet,
+    bildLeer: bindungsintensitaetLeer,
+    viewBoxW: 560,
+    viewBoxH: 170,
+    maxWidth: 620,
+    slots: boxSlots(bindungBoxen),
+  },
+  {
+    name: 'Richtung des Zusammenschlusses',
+    abschnitt: '2.3 Stagnation',
+    seite: 31,
+    erklaerung:
+      'Horizontal = gleiche Produktionsstufe/Branche (Firma A + B), vertikal = entlang der Wertschöpfungskette (Lieferant/Hersteller, Vorwärts-/Rückwärtsintegration), konglomerat = fremde Branchen (Autohaus + Currywurststand).',
+    bild: richtungZusammenschluss,
+    bildLeer: richtungZusammenschlussLeer,
+    viewBoxW: 560,
+    viewBoxH: 250,
+    maxWidth: 620,
+    slots: richtungSlots,
+  },
+  {
+    name: 'Krisenursachen (endogen/exogen)',
+    abschnitt: '2.4 Schrumpfung',
+    seite: 34,
+    erklaerung:
+      'Endogene Ursachen entstehen im Unternehmen selbst (Managementfehler, falsche Produktpolitik, zu hohe Kosten); exogene Ursachen kommen von außen (Konjunktureinbruch, neue Wettbewerber, technologischer Wandel).',
+    bild: krisenursachen,
+    bildLeer: krisenursachenLeer,
+    viewBoxW: 560,
+    viewBoxH: 210,
+    maxWidth: 620,
+    slots: krisenursachenSlots,
+  },
+  {
+    name: 'Krisenfolgen und Alternativen der Insolvenz',
+    abschnitt: '2.4 Schrumpfung',
+    seite: 35,
+    erklaerung:
+      'Aus der Krise kann die Insolvenz folgen. Alternativen zum Zusammenbruch: 1) Sanierung (Unternehmen retten), 2) übertragene Sanierung (gesunder Kern geht auf neuen Rechtsträger über), 3) Liquidation (Auflösung durch Einzelverkauf).',
+    bild: krisenfolgenSanierung,
+    bildLeer: krisenfolgenSanierungLeer,
+    viewBoxW: 560,
+    viewBoxH: 320,
+    maxWidth: 620,
+    slots: [
+      { label: 'Insolvenz', x: 210, y: 74, w: 140, h: 20 },
+      ...boxSlots(krisenAltBoxen),
+    ],
+  },
+]

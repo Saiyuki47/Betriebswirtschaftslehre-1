@@ -1,10 +1,22 @@
 import type { ReactNode } from 'react'
-import { svgBox, tdStyle, thStyle, baseBilder } from './_base'
+import {
+  svgBox,
+  quizBoxen,
+  boxSlots,
+  tdStyle,
+  thStyle,
+  baseBilder,
+  LEER_ARIA,
+  type QuizBoxDef,
+  type BeschriftungsBild,
+} from './_base'
 
 // Abbildungen für Kapitel 4 (Rechtsformen und Mitbestimmung). Schlüssel = exakter
 // `abschnitt.titel` aus themen/kapitel-4.ts. Helfer bei Bedarf aus './_base':
 // svgBox, pyramide, tdStyle, thStyle, bilanzListenStyle, PYRAMID_CX.
-// Figuren als statische ReactNode-Konstanten auf Modulebene (keine Komponenten).
+// Figuren als statische ReactNode-Konstanten auf Modulebene (keine Komponenten);
+// SVG-Figuren als Builder `(leer: boolean) => ReactNode` mit voller + leerer
+// Quiz-Variante (siehe _base.tsx).
 //
 // Hinweis zur Zusammenführung: In themenBilder/index.ts werden die Maps per
 // Spread gemergt (…baseBilder, …b4). Für die beiden Schlüssel, die bereits in
@@ -90,21 +102,28 @@ const rechtsformVergleich: ReactNode = (
 
 // --- Neue Figur: Struktur der öffentlich-rechtlichen Rechtsformen ------------
 /** Baum der öffentlich-rechtlichen Formen nach Rechtspersönlichkeit (Folie 45). */
-const oeffentlichRechtlich: ReactNode = (
+const oeffRechtBoxen: QuizBoxDef[] = [
+  { x: 20, y: 82, w: 200, h: 40, label: 'Ohne eigene', key: 'ohne', sub: 'Rechtspersönlichkeit' },
+  { x: 260, y: 82, w: 200, h: 40, label: 'Mit eigener', key: 'mit', sub: 'Rechtspersönlichkeit' },
+]
+const oeffentlichRechtlichBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 480 250"
     width="100%"
-    style={{ maxWidth: 520 }}
+    style={leer ? undefined : { maxWidth: 520 }}
     role="img"
-    aria-label="Öffentlich-rechtliche Rechtsformen gegliedert nach Rechtspersönlichkeit: ohne eigene Rechtspersönlichkeit sind Regiebetrieb, Eigenbetrieb und Sondervermögen; mit eigener Rechtspersönlichkeit sind Körperschaft, Anstalt und Stiftung des öffentlichen Rechts"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Öffentlich-rechtliche Rechtsformen gegliedert nach Rechtspersönlichkeit: ohne eigene Rechtspersönlichkeit sind Regiebetrieb, Eigenbetrieb und Sondervermögen; mit eigener Rechtspersönlichkeit sind Körperschaft, Anstalt und Stiftung des öffentlichen Rechts'
+    }
   >
     <g stroke="var(--text2)" strokeWidth="1.5" fill="none">
       <path d="M240 44 L120 82" />
       <path d="M240 44 L360 82" />
     </g>
     {svgBox(150, 12, 180, 32, 'Öffentlich-rechtlich', 'root')}
-    {svgBox(20, 82, 200, 40, 'Ohne eigene', 'ohne', 'Rechtspersönlichkeit')}
-    {svgBox(260, 82, 200, 40, 'Mit eigener', 'mit', 'Rechtspersönlichkeit')}
+    {quizBoxen(oeffRechtBoxen, leer)}
     <g fontSize="10.5" fill="var(--text2)">
       <text x="30" y="150">• Regiebetrieb</text>
       <text x="30" y="168">• Eigenbetrieb</text>
@@ -118,24 +137,33 @@ const oeffentlichRechtlich: ReactNode = (
     </text>
   </svg>
 )
+const oeffentlichRechtlich = oeffentlichRechtlichBau(false)
+const oeffentlichRechtlichLeer = oeffentlichRechtlichBau(true)
 
 // --- Neue Figur: Ebenen der Mitbestimmung (ARM vs. UMB) ----------------------
 /** Überblick der zwei Mitbestimmungsebenen (Folien 47/48/51). */
-const mitbestimmungEbenen: ReactNode = (
+const mbEbenenBoxen: QuizBoxDef[] = [
+  { x: 20, y: 84, w: 210, h: 42, label: 'Arbeitsrechtlich (ARM)', key: 'arm', sub: 'Betriebsebene' },
+  { x: 270, y: 84, w: 210, h: 42, label: 'Unternehmerisch (UMB)', key: 'umb', sub: 'Aufsichtsrat' },
+]
+const mitbestimmungEbenenBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 500 260"
     width="100%"
-    style={{ maxWidth: 540 }}
+    style={leer ? undefined : { maxWidth: 540 }}
     role="img"
-    aria-label="Die Mitbestimmung teilt sich in zwei Ebenen: die arbeitsrechtliche Mitbestimmung (ARM) auf Betriebsebene über den Betriebsrat nach dem Betriebsverfassungsgesetz, und die unternehmerische Mitbestimmung (UMB) im Aufsichtsrat der Kapitalgesellschaft nach MontanMitbestG, MitbestG und Drittelbeteiligungsgesetz"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Die Mitbestimmung teilt sich in zwei Ebenen: die arbeitsrechtliche Mitbestimmung (ARM) auf Betriebsebene über den Betriebsrat nach dem Betriebsverfassungsgesetz, und die unternehmerische Mitbestimmung (UMB) im Aufsichtsrat der Kapitalgesellschaft nach MontanMitbestG, MitbestG und Drittelbeteiligungsgesetz'
+    }
   >
     <g stroke="var(--text2)" strokeWidth="1.5" fill="none">
       <path d="M250 46 L130 84" />
       <path d="M250 46 L370 84" />
     </g>
     {svgBox(160, 14, 180, 32, 'Mitbestimmung', 'root')}
-    {svgBox(20, 84, 210, 42, 'Arbeitsrechtlich (ARM)', 'arm', 'Betriebsebene')}
-    {svgBox(270, 84, 210, 42, 'Unternehmerisch (UMB)', 'umb', 'Aufsichtsrat')}
+    {quizBoxen(mbEbenenBoxen, leer)}
     <g fontSize="10" fill="var(--text2)">
       <text x="30" y="152">Organ: Betriebsrat</text>
       <text x="30" y="170">Gesetz: BetrVG (1952/1972)</text>
@@ -151,6 +179,8 @@ const mitbestimmungEbenen: ReactNode = (
     </text>
   </svg>
 )
+const mitbestimmungEbenen = mitbestimmungEbenenBau(false)
+const mitbestimmungEbenenLeer = mitbestimmungEbenenBau(true)
 
 // --- Neue Figur: Gesetze der unternehmerischen Mitbestimmung -----------------
 /** Vergleich der drei UMB-Gesetze im Aufsichtsrat (Folie 52). */
@@ -213,3 +243,32 @@ export const bilder: Record<string, { bild: ReactNode; seite: number }[]> = {
     { bild: umbGesetze, seite: 52 },
   ],
 }
+
+export const beschriftungen: BeschriftungsBild[] = [
+  {
+    name: 'Öffentlich-rechtliche Rechtsformen',
+    abschnitt: 'Öffentlich-rechtliche Rechtsformen',
+    seite: 45,
+    erklaerung:
+      'Ohne eigene Rechtspersönlichkeit: Regiebetrieb, Eigenbetrieb, Sondervermögen. Mit eigener Rechtspersönlichkeit: Körperschaft, Anstalt und Stiftung des öffentlichen Rechts.',
+    bild: oeffentlichRechtlich,
+    bildLeer: oeffentlichRechtlichLeer,
+    viewBoxW: 480,
+    viewBoxH: 250,
+    maxWidth: 520,
+    slots: boxSlots(oeffRechtBoxen),
+  },
+  {
+    name: 'Ebenen der Mitbestimmung',
+    abschnitt: 'Mitbestimmung – die deutsche „Spielart"',
+    seite: 47,
+    erklaerung:
+      'Arbeitsrechtliche Mitbestimmung (ARM): Betriebsebene, Organ Betriebsrat, Gesetz BetrVG. Unternehmerische Mitbestimmung (UMB): Aufsichtsrat, Gesetze MontanMitbestG, MitbestG, DrittelbG.',
+    bild: mitbestimmungEbenen,
+    bildLeer: mitbestimmungEbenenLeer,
+    viewBoxW: 500,
+    viewBoxH: 260,
+    maxWidth: 540,
+    slots: boxSlots(mbEbenenBoxen),
+  },
+]

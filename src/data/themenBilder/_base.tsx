@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import type { BeschriftungSlot } from 'lernseiten-ui'
 
 // =============================================================================
 // Nachgebaute Abbildungen aus dem Lehrer-Foliensatz
@@ -12,6 +13,13 @@ import type { ReactNode } from 'react'
 // (keine React-Komponenten) auf Modulebene definiert – so entstehen keine
 // per-Render neu gebauten Komponenten/Werte und die Datei bleibt eine reine
 // Datendatei.
+//
+// Beschriftungs-Quiz: SVG-Figuren existieren zusätzlich als „leere" Variante
+// (Kästen ohne die gesuchten Begriffe) fürs Quiz („Abbildung beschriften").
+// Dazu ist jede Figur ein Builder `(leer: boolean) => ReactNode`, der auf
+// Modulebene zweimal aufgerufen wird – beide Varianten bleiben statische
+// Konstanten mit einer einzigen Koordinaten-Quelle. Die Slot-Rechtecke fürs
+// Overlay werden aus denselben Box-Definitionen abgeleitet (boxSlots).
 // =============================================================================
 
 // --- Wiederverwendbare SVG-Helfer (Modulebene, reine Funktionen) ------------
@@ -40,7 +48,11 @@ export function pyramide(
   })
 }
 
-/** Eine beschriftete Box (Rechteck + Text) für Strukturbäume/Organigramme. */
+/**
+ * Eine beschriftete Box (Rechteck + Text) für Strukturbäume/Organigramme.
+ * Mit `ohneLabel` bleibt der Haupt-Label weg (Kasten + Sub bleiben) – für die
+ * leere Quiz-Variante einer Figur.
+ */
 export function svgBox(
   x: number,
   y: number,
@@ -49,20 +61,23 @@ export function svgBox(
   label: string,
   key: string,
   sub?: string,
+  ohneLabel?: boolean,
 ): ReactNode {
   return (
     <g key={key}>
       <rect x={x} y={y} width={w} height={h} rx="6" fill="var(--bg2)" stroke="var(--blue)" strokeWidth="1.5" />
-      <text
-        x={x + w / 2}
-        y={sub ? y + 18 : y + h / 2 + 4}
-        textAnchor="middle"
-        fontSize="11"
-        fontWeight={sub ? '600' : undefined}
-        fill="var(--text)"
-      >
-        {label}
-      </text>
+      {!ohneLabel && (
+        <text
+          x={x + w / 2}
+          y={sub ? y + 18 : y + h / 2 + 4}
+          textAnchor="middle"
+          fontSize="11"
+          fontWeight={sub ? '600' : undefined}
+          fill="var(--text)"
+        >
+          {label}
+        </text>
+      )}
       {sub ? (
         <text x={x + w / 2} y={y + 34} textAnchor="middle" fontSize="9.5" fill="var(--text2)">
           {sub}
@@ -71,6 +86,61 @@ export function svgBox(
     </g>
   )
 }
+
+// --- Beschriftungs-Quiz: Box-Definitionen und Slot-Ableitung -----------------
+
+/** Eine im Quiz zu beschriftende svgBox (Koordinaten + Begriff als Daten). */
+export interface QuizBoxDef {
+  x: number
+  y: number
+  w: number
+  h: number
+  label: string
+  key: string
+  sub?: string
+}
+
+/** Rendert die Quiz-Boxen einer Figur; bei `leer` ohne die Haupt-Labels. */
+export function quizBoxen(defs: QuizBoxDef[], leer: boolean): ReactNode[] {
+  return defs.map(d => svgBox(d.x, d.y, d.w, d.h, d.label, d.key, d.sub, leer))
+}
+
+/**
+ * Slots (Drop-Zonen) aus Quiz-Box-Definitionen ableiten: bei Boxen mit Sub-
+ * Zeile nur der obere Haupt-Label-Bereich (die Sub-Zeile bleibt als Hinweis
+ * sichtbar), sonst die ganze Box.
+ */
+export function boxSlots(defs: QuizBoxDef[], gruppe?: string): BeschriftungSlot[] {
+  return defs.map(d => ({
+    label: d.label,
+    x: d.x + 3,
+    y: d.y + 3,
+    w: d.w - 6,
+    h: d.sub ? 22 : d.h - 6,
+    gruppe,
+  }))
+}
+
+/** Eine beschriftbare Abbildung: volle + leere Variante + Slots fürs Quiz. */
+export interface BeschriftungsBild {
+  /** Kurzname der Abbildung (für den Fragetext). */
+  name: string
+  /** Abschnitt-Titel (= Schlüssel in themenBilder) für die Quellenangabe. */
+  abschnitt: string
+  seite: number
+  erklaerung: string
+  /** Vollständige Abbildung (Lösung nach dem Beantworten). */
+  bild: ReactNode
+  /** Leere Variante (Kästen ohne die gesuchten Begriffe). */
+  bildLeer: ReactNode
+  viewBoxW: number
+  viewBoxH: number
+  maxWidth?: number
+  slots: BeschriftungSlot[]
+}
+
+/** Neutrales aria-Label der leeren Quiz-Variante (verrät die Lösung nicht). */
+export const LEER_ARIA = 'Abbildung mit leeren Kästen zum Beschriften'
 
 // --- Gemeinsamer Tabellen-Stil (Betriebstypologien, Folie 18) ---------------
 
@@ -91,13 +161,23 @@ export const thStyle: React.CSSProperties = {
 // --- Abbildungen als statische ReactNode-Konstanten -------------------------
 
 /** Baum der Wirtschaftseinheiten (Folie 16). */
-const wirtschaftseinheiten: ReactNode = (
+const weBoxen: QuizBoxDef[] = [
+  { x: 40, y: 80, w: 160, h: 36, label: 'Betriebe', key: 'be', sub: 'Fremdbedarfsdeckung' },
+  { x: 280, y: 80, w: 160, h: 36, label: 'Haushalte', key: 'hh', sub: 'privat / staatlich' },
+  { x: 10, y: 156, w: 110, h: 40, label: 'Unternehmungen', key: 'un' },
+  { x: 140, y: 156, w: 150, h: 40, label: 'Öffentliche Betriebe', key: 'ob', sub: 'und Verwaltungen' },
+]
+const wirtschaftseinheitenBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 460 240"
     width="100%"
-    style={{ maxWidth: 500 }}
+    style={leer ? undefined : { maxWidth: 500 }}
     role="img"
-    aria-label="Baum der Wirtschaftseinheiten: Betriebe (Fremdbedarfsdeckung, Orte der Leistungserstellung) gliedern sich in Unternehmungen sowie öffentliche Betriebe und Verwaltungen; Haushalte sind privat oder staatlich"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Baum der Wirtschaftseinheiten: Betriebe (Fremdbedarfsdeckung, Orte der Leistungserstellung) gliedern sich in Unternehmungen sowie öffentliche Betriebe und Verwaltungen; Haushalte sind privat oder staatlich'
+    }
   >
     <g stroke="var(--text2)" strokeWidth="1.5" fill="none">
       <path d="M230 40 L120 80" />
@@ -106,10 +186,7 @@ const wirtschaftseinheiten: ReactNode = (
       <path d="M120 116 L200 156" />
     </g>
     {svgBox(150, 10, 160, 30, 'Wirtschaftseinheiten', 'root')}
-    {svgBox(40, 80, 160, 36, 'Betriebe', 'be', 'Fremdbedarfsdeckung')}
-    {svgBox(280, 80, 160, 36, 'Haushalte', 'hh', 'privat / staatlich')}
-    {svgBox(10, 156, 110, 40, 'Unternehmungen', 'un')}
-    {svgBox(140, 156, 150, 40, 'Öffentliche Betriebe', 'ob', 'und Verwaltungen')}
+    {quizBoxen(weBoxen, leer)}
     <text x="455" y="180" textAnchor="end" fontSize="9.5" fill="var(--text3)" fontStyle="italic">
       * Betriebe =
     </text>
@@ -118,6 +195,8 @@ const wirtschaftseinheiten: ReactNode = (
     </text>
   </svg>
 )
+const wirtschaftseinheiten = wirtschaftseinheitenBau(false)
+const wirtschaftseinheitenLeer = wirtschaftseinheitenBau(true)
 
 /** Tabelle der Betriebstypologien (Folie 18). */
 const betriebstypologien: ReactNode = (
@@ -170,13 +249,21 @@ const betriebstypologien: ReactNode = (
 )
 
 /** Baum der Gliederung der BWL (Folie 22). */
-const gliederungBWL: ReactNode = (
+const bwlBoxen: QuizBoxDef[] = [
+  { x: 160, y: 32, w: 110, h: 36, label: 'ABWL', key: 'abwl', sub: 'nach Funktion' },
+  { x: 160, y: 112, w: 110, h: 36, label: 'Spez. BWL', key: 'spez', sub: 'nach Objekt' },
+]
+const gliederungBWLBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 480 230"
     width="100%"
-    style={{ maxWidth: 520 }}
+    style={leer ? undefined : { maxWidth: 520 }}
     role="img"
-    aria-label="Gliederung der BWL: Die BWL teilt sich in ABWL (nach Funktion: Beschaffung, Produktion, Absatz, Finanzierung, Personal) und Spezielle BWL (nach Objekt: Industrie, Handel, Banken, Versicherungen)"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Gliederung der BWL: Die BWL teilt sich in ABWL (nach Funktion: Beschaffung, Produktion, Absatz, Finanzierung, Personal) und Spezielle BWL (nach Objekt: Industrie, Handel, Banken, Versicherungen)'
+    }
   >
     <g stroke="var(--text2)" strokeWidth="1.5" fill="none">
       <path d="M70 70 L70 50 L160 50" />
@@ -185,8 +272,7 @@ const gliederungBWL: ReactNode = (
       <path d="M270 130 L320 130" />
     </g>
     {svgBox(20, 56, 50, 36, 'BWL', 'bwl')}
-    {svgBox(160, 32, 110, 36, 'ABWL', 'abwl', 'nach Funktion')}
-    {svgBox(160, 112, 110, 36, 'Spez. BWL', 'spez', 'nach Objekt')}
+    {quizBoxen(bwlBoxen, leer)}
     <g fontSize="10" fill="var(--text2)">
       <text x="328" y="40">Beschaffung, Produktion,</text>
       <text x="328" y="55">Absatz, Finanzierung,</text>
@@ -197,6 +283,8 @@ const gliederungBWL: ReactNode = (
     </g>
   </svg>
 )
+const gliederungBWL = gliederungBWLBau(false)
+const gliederungBWLLeer = gliederungBWLBau(true)
 
 /** Handelsbilanz als Tabelle – HGB-Gliederung Aktiv-/Passivseite (Folie 40). */
 export const bilanzListenStyle = { margin: '0.25rem 0 0.6rem', paddingLeft: '1.1rem' } as const
@@ -370,6 +458,7 @@ const organDreieck = (
   label: string,
   rolle: string,
   key: string,
+  ohneLabel?: boolean,
 ): ReactNode => (
   <g key={key}>
     <polygon
@@ -378,22 +467,38 @@ const organDreieck = (
       stroke="var(--blue)"
       strokeWidth="1.5"
     />
-    <text x={cx} y={topY + 34} textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">
-      {label}
-    </text>
+    {!ohneLabel && (
+      <text x={cx} y={topY + 34} textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">
+        {label}
+      </text>
+    )}
     <text x={cx} y={topY + 58} textAnchor="middle" fontSize="9.5" fill="var(--text3)">
       {rolle}
     </text>
   </g>
 )
 
-const mitbestimmungOrgane: ReactNode = (
+const organeBoxen: QuizBoxDef[] = [
+  { x: 20, y: 118, w: 140, h: 60, label: 'Personal', key: 'voBox', sub: 'führt die Geschäfte' },
+  { x: 195, y: 118, w: 170, h: 60, label: 'Aufsichtsrat', key: 'arBox', sub: 'AN-Vertreter (+ Gew.) · AG-Vertreter' },
+  { x: 400, y: 118, w: 140, h: 60, label: 'Gesellschafter', key: 'hvBox', sub: 'als Kapitalgeber' },
+]
+const organeDreiecke = [
+  { cx: 90, label: 'VO/GF', rolle: 'Leitendes Organ', key: 'vo' },
+  { cx: 280, label: 'AR', rolle: 'Überwachendes Organ', key: 'ar' },
+  { cx: 470, label: 'HV/GV', rolle: 'Beschließendes Organ', key: 'hv' },
+]
+const mitbestimmungOrganeBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 560 300"
     width="100%"
-    style={{ maxWidth: 600 }}
+    style={leer ? undefined : { maxWidth: 600 }}
     role="img"
-    aria-label="Organe einer Kapitalgesellschaft, je als Dreieck mit Rechteck der Zusammensetzung: Vorstand/Geschäftsführung (VO/GF) führt mit dem Personal die Geschäfte; der Aufsichtsrat (AR) aus Arbeitnehmer- (plus Gewerkschafts-) und Arbeitgebervertretern kontrolliert den Vorstand; die Haupt- bzw. Gesellschafterversammlung (HV/GV) sind die Gesellschafter als Kapitalgeber. Oben werden die Organe bestellt; der Vorstand wählt die Arbeitnehmervertretung im Aufsichtsrat, die Hauptversammlung wählt die Arbeitgeber-/Anteilseignerseite"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Organe einer Kapitalgesellschaft, je als Dreieck mit Rechteck der Zusammensetzung: Vorstand/Geschäftsführung (VO/GF) führt mit dem Personal die Geschäfte; der Aufsichtsrat (AR) aus Arbeitnehmer- (plus Gewerkschafts-) und Arbeitgebervertretern kontrolliert den Vorstand; die Haupt- bzw. Gesellschafterversammlung (HV/GV) sind die Gesellschafter als Kapitalgeber. Oben werden die Organe bestellt; der Vorstand wählt die Arbeitnehmervertretung im Aufsichtsrat, die Hauptversammlung wählt die Arbeitgeber-/Anteilseignerseite'
+    }
   >
     {/* „Bestellung" – Klammer über allen Organen */}
     <g stroke="var(--text3)" strokeWidth="1.3" fill="none">
@@ -407,14 +512,10 @@ const mitbestimmungOrgane: ReactNode = (
     </text>
 
     {/* Drei Organe als Dreiecke */}
-    {organDreieck(90, 44, 'VO/GF', 'Leitendes Organ', 'vo')}
-    {organDreieck(280, 44, 'AR', 'Überwachendes Organ', 'ar')}
-    {organDreieck(470, 44, 'HV/GV', 'Beschließendes Organ', 'hv')}
+    {organeDreiecke.map(d => organDreieck(d.cx, 44, d.label, d.rolle, d.key, leer))}
 
     {/* Rechtecke mit Zusammensetzung */}
-    {svgBox(20, 118, 140, 60, 'Personal', 'voBox', 'führt die Geschäfte')}
-    {svgBox(195, 118, 170, 60, 'Aufsichtsrat', 'arBox', 'AN-Vertreter (+ Gew.) · AG-Vertreter')}
-    {svgBox(400, 118, 140, 60, 'Gesellschafter', 'hvBox', 'als Kapitalgeber')}
+    {quizBoxen(organeBoxen, leer)}
 
     {/* AR kontrolliert VO */}
     <g stroke="var(--text2)" strokeWidth="1.5" fill="none">
@@ -456,41 +557,49 @@ const mitbestimmungOrgane: ReactNode = (
     </defs>
   </svg>
 )
+const mitbestimmungOrgane = mitbestimmungOrganeBau(false)
+const mitbestimmungOrganeLeer = mitbestimmungOrganeBau(true)
 
 /** Zielpyramide (Folie 56). */
-const zielpyramide: ReactNode = (
+const zielpyramideStufen = [
+  { y: 20, w: 70, label: 'Vision / Mission' },
+  { y: 60, w: 130, label: 'Unternehmensleitbild' },
+  { y: 100, w: 190, label: 'Unternehmensziele' },
+  { y: 140, w: 250, label: 'Geschäftsbereichsziele' },
+  { y: 180, w: 310, label: 'Funktionsbereichsziele' },
+]
+const zielpyramideBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 350 250"
     width="100%"
-    style={{ maxWidth: 400 }}
+    style={leer ? undefined : { maxWidth: 400 }}
     role="img"
-    aria-label="Zielpyramide: von der Vision bzw. Mission an der Spitze (qualitativ) über Unternehmensleitbild, Unternehmensziele und Geschäftsbereichsziele bis zu den Funktionsbereichszielen an der Basis (zunehmend quantitativ)"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Zielpyramide: von der Vision bzw. Mission an der Spitze (qualitativ) über Unternehmensleitbild, Unternehmensziele und Geschäftsbereichsziele bis zu den Funktionsbereichszielen an der Basis (zunehmend quantitativ)'
+    }
   >
-    {pyramide(
-      [
-        { y: 20, w: 70, label: 'Vision' },
-        { y: 60, w: 130, label: 'Unternehmensleitbild' },
-        { y: 100, w: 190, label: 'Unternehmensziele' },
-        { y: 140, w: 250, label: 'Geschäftsbereichsziele' },
-        { y: 180, w: 310, label: 'Funktionsbereichsziele' },
-      ],
-      36,
-      'var(--green-dim)',
-      'var(--green)',
+    {pyramide(zielpyramideStufen, 36, 'var(--green-dim)', 'var(--green)')}
+    {!leer && (
+      <g fontSize="11" fill="var(--text)" textAnchor="middle">
+        {zielpyramideStufen.map(s => (
+          <text key={s.label} x={PYRAMID_CX} y={s.y + 24}>{s.label}</text>
+        ))}
+      </g>
     )}
-    <g fontSize="11" fill="var(--text)" textAnchor="middle">
-      <text x={PYRAMID_CX} y="44">Vision / Mission</text>
-      <text x={PYRAMID_CX} y="84">Unternehmensleitbild</text>
-      <text x={PYRAMID_CX} y="124">Unternehmensziele</text>
-      <text x={PYRAMID_CX} y="164">Geschäftsbereichsziele</text>
-      <text x={PYRAMID_CX} y="204">Funktionsbereichsziele</text>
-    </g>
     <g fontSize="9.5" fill="var(--text3)">
       <text x="6" y="34">qualitativ</text>
       <text x="262" y="224">quantitativ</text>
     </g>
   </svg>
 )
+const zielpyramide = zielpyramideBau(false)
+const zielpyramideLeer = zielpyramideBau(true)
+const zielpyramideSlots: BeschriftungSlot[] = zielpyramideStufen.map(s => {
+  const w = Math.max(s.w - 4, 150)
+  return { label: s.label, x: PYRAMID_CX - w / 2, y: s.y + 8, w, h: 24 }
+})
 
 /** Ökonomische Zielkonzeption – Leistungs-, Erfolgs- und Finanzziele (Folie 67). */
 const oekonomischeZiele: ReactNode = (
@@ -541,13 +650,17 @@ const oekonomischeZiele: ReactNode = (
 )
 
 /** Nachhaltigkeits-/Zieldreieck Ökonomie · Ökologie · soziale Bedürfnisse (Folie 66). */
-const zieldreieck: ReactNode = (
+const zieldreieckBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 360 250"
     width="100%"
-    style={{ maxWidth: 420 }}
+    style={leer ? undefined : { maxWidth: 420 }}
     role="img"
-    aria-label="Zieldreieck der Nachhaltigkeit mit den drei Dimensionen Ökonomie an der Spitze sowie Ökologie und soziale Bedürfnisse an der Basis; zwischen ihnen können Zielkonflikte entstehen"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Zieldreieck der Nachhaltigkeit mit den drei Dimensionen Ökonomie an der Spitze sowie Ökologie und soziale Bedürfnisse an der Basis; zwischen ihnen können Zielkonflikte entstehen'
+    }
   >
     <polygon
       points="180,30 330,210 30,210"
@@ -555,20 +668,31 @@ const zieldreieck: ReactNode = (
       stroke="var(--green)"
       strokeWidth="2"
     />
-    <text x="180" y="22" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">
-      Ökonomie
-    </text>
-    <text x="22" y="232" textAnchor="start" fontSize="14" fontWeight="700" fill="var(--text)">
-      Ökologie
-    </text>
-    <text x="338" y="232" textAnchor="end" fontSize="14" fontWeight="700" fill="var(--text)">
-      Soziale Bedürfnisse
-    </text>
+    {!leer && (
+      <>
+        <text x="180" y="22" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">
+          Ökonomie
+        </text>
+        <text x="22" y="232" textAnchor="start" fontSize="14" fontWeight="700" fill="var(--text)">
+          Ökologie
+        </text>
+        <text x="338" y="232" textAnchor="end" fontSize="14" fontWeight="700" fill="var(--text)">
+          Soziale Bedürfnisse
+        </text>
+      </>
+    )}
     <text x="180" y="135" textAnchor="middle" fontSize="10.5" fill="var(--text2)">
       Zielkonflikte
     </text>
   </svg>
 )
+const zieldreieck = zieldreieckBau(false)
+const zieldreieckLeer = zieldreieckBau(true)
+const zieldreieckSlots: BeschriftungSlot[] = [
+  { label: 'Ökonomie', x: 125, y: 4, w: 110, h: 24, gruppe: 'dim' },
+  { label: 'Ökologie', x: 12, y: 216, w: 100, h: 26, gruppe: 'dim' },
+  { label: 'Soziale Bedürfnisse', x: 200, y: 216, w: 148, h: 26, gruppe: 'dim' },
+]
 
 /**
  * Entstehungsmodell der Unternehmensziele (Folie 60).
@@ -576,13 +700,24 @@ const zieldreieck: ReactNode = (
  * Existenzbedingungen der Unternehmung → Unternehmensphilosophie u. -kultur →
  * Unternehmensziele.
  */
-const beduerfnisPyramide: ReactNode = (
+const maslowStufen = [
+  { y: 58, label: 'Selbstverwirklichung' },
+  { y: 96, label: 'Wertschätzung' },
+  { y: 140, label: 'Soziale Bedürfnisse' },
+  { y: 184, label: 'Sicherheit' },
+  { y: 228, label: 'Physiologische Bedürfnisse' },
+]
+const beduerfnisPyramideBau = (leer: boolean): ReactNode => (
   <svg
     viewBox="0 0 680 500"
     width="100%"
-    style={{ maxWidth: 660 }}
+    style={leer ? undefined : { maxWidth: 660 }}
     role="img"
-    aria-label="Entstehungsmodell der Unternehmensziele: Die Motive menschlichen Verhaltens nach Maslow (Pyramide von physiologischen Bedürfnissen über Sicherheit, soziale Bedürfnisse und Wertschätzung bis zur Selbstverwirklichung) und die Werthaltungen der maßgeblichen Unternehmensträger führen zu den Ansprüchen der unmittelbaren Unternehmensträger und der Marktpartner an die Unternehmung, zu den Existenzbedingungen der Unternehmung als Institution und zur Unternehmensphilosophie und -kultur und schließlich zu den Unternehmenszielen"
+    aria-label={
+      leer
+        ? LEER_ARIA
+        : 'Entstehungsmodell der Unternehmensziele: Die Motive menschlichen Verhaltens nach Maslow (Pyramide von physiologischen Bedürfnissen über Sicherheit, soziale Bedürfnisse und Wertschätzung bis zur Selbstverwirklichung) und die Werthaltungen der maßgeblichen Unternehmensträger führen zu den Ansprüchen der unmittelbaren Unternehmensträger und der Marktpartner an die Unternehmung, zu den Existenzbedingungen der Unternehmung als Institution und zur Unternehmensphilosophie und -kultur und schließlich zu den Unternehmenszielen'
+    }
   >
     <defs>
       <marker id="pf60" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
@@ -598,13 +733,13 @@ const beduerfnisPyramide: ReactNode = (
       <line x1="244" y1="158" x2="436" y2="158" />
       <line x1="212" y1="202" x2="468" y2="202" />
     </g>
-    <g fontSize="11" fill="var(--text)" textAnchor="middle">
-      <text x="340" y="58">Selbstverwirklichung</text>
-      <text x="340" y="96">Wertschätzung</text>
-      <text x="340" y="140">Soziale Bedürfnisse</text>
-      <text x="340" y="184">Sicherheit</text>
-      <text x="340" y="228">Physiologische Bedürfnisse</text>
-    </g>
+    {!leer && (
+      <g fontSize="11" fill="var(--text)" textAnchor="middle">
+        {maslowStufen.map(s => (
+          <text key={s.label} x="340" y={s.y}>{s.label}</text>
+        ))}
+      </g>
+    )}
 
     {/* Seitliche Kästen */}
     <rect x="8" y="44" width="150" height="82" rx="5" fill="var(--bg2)" stroke="var(--red)" strokeWidth="1.5" />
@@ -653,6 +788,15 @@ const beduerfnisPyramide: ReactNode = (
     </g>
   </svg>
 )
+const beduerfnisPyramide = beduerfnisPyramideBau(false)
+const beduerfnisPyramideLeer = beduerfnisPyramideBau(true)
+const beduerfnisPyramideSlots: BeschriftungSlot[] = maslowStufen.map(s => ({
+  label: s.label,
+  x: 255,
+  y: s.y - 15,
+  w: 170,
+  h: 21,
+}))
 
 // --- Export -----------------------------------------------------------------
 
@@ -673,3 +817,88 @@ export const baseBilder: Record<string, { bild: ReactNode; seite: number }[]> = 
   '5.3 Ein Entstehungsmodell': [{ bild: beduerfnisPyramide, seite: 60 }],
   '5.4 Zielkonflikte': [{ bild: zieldreieck, seite: 66 }],
 }
+
+// Beschriftungs-Quiz-Daten der Basis-Figuren (SVGs; Tabellen sind ungeeignet).
+export const baseBeschriftungen: BeschriftungsBild[] = [
+  {
+    name: 'Baum der Wirtschaftseinheiten',
+    abschnitt: '1.3 Wirtschaftseinheiten',
+    seite: 16,
+    erklaerung:
+      'Wirtschaftseinheiten gliedern sich in Betriebe (Fremdbedarfsdeckung) und Haushalte (privat/staatlich); Betriebe wiederum in Unternehmungen sowie öffentliche Betriebe und Verwaltungen.',
+    bild: wirtschaftseinheiten,
+    bildLeer: wirtschaftseinheitenLeer,
+    viewBoxW: 460,
+    viewBoxH: 240,
+    maxWidth: 500,
+    slots: boxSlots(weBoxen),
+  },
+  {
+    name: 'Gliederung der BWL',
+    abschnitt: '1.5 Gliederung der BWL',
+    seite: 22,
+    erklaerung:
+      'Die BWL teilt sich in die ABWL (nach Funktionen wie Beschaffung, Produktion, Absatz) und die Spezielle BWL (nach Objekten wie Industrie, Handel, Banken).',
+    bild: gliederungBWL,
+    bildLeer: gliederungBWLLeer,
+    viewBoxW: 480,
+    viewBoxH: 230,
+    maxWidth: 520,
+    slots: boxSlots(bwlBoxen),
+  },
+  {
+    name: 'Organe einer Kapitalgesellschaft',
+    abschnitt: 'Mitbestimmung – die deutsche „Spielart"',
+    seite: 51,
+    erklaerung:
+      'VO/GF (leitendes Organ) führt mit dem Personal die Geschäfte, der AR (überwachendes Organ) aus AN- und AG-Vertretern kontrolliert den Vorstand, die HV/GV (beschließendes Organ) sind die Gesellschafter als Kapitalgeber.',
+    bild: mitbestimmungOrgane,
+    bildLeer: mitbestimmungOrganeLeer,
+    viewBoxW: 560,
+    viewBoxH: 300,
+    maxWidth: 600,
+    slots: [
+      ...organeDreiecke.map(d => ({ label: d.label, x: d.cx - 45, y: 60, w: 90, h: 22 })),
+      ...boxSlots(organeBoxen),
+    ],
+  },
+  {
+    name: 'Zielpyramide',
+    abschnitt: '5.1 Grundlagen',
+    seite: 56,
+    erklaerung:
+      'Von oben (qualitativ) nach unten (quantitativ): Vision/Mission → Unternehmensleitbild → Unternehmensziele → Geschäftsbereichsziele → Funktionsbereichsziele.',
+    bild: zielpyramide,
+    bildLeer: zielpyramideLeer,
+    viewBoxW: 350,
+    viewBoxH: 250,
+    maxWidth: 400,
+    slots: zielpyramideSlots,
+  },
+  {
+    name: 'Zieldreieck der Nachhaltigkeit',
+    abschnitt: '5.4 Zielkonflikte',
+    seite: 66,
+    erklaerung:
+      'Die drei Dimensionen der Nachhaltigkeit – Ökonomie, Ökologie und soziale Bedürfnisse – stehen in einem Spannungsverhältnis; zwischen ihnen können Zielkonflikte entstehen.',
+    bild: zieldreieck,
+    bildLeer: zieldreieckLeer,
+    viewBoxW: 360,
+    viewBoxH: 250,
+    maxWidth: 420,
+    slots: zieldreieckSlots,
+  },
+  {
+    name: 'Bedürfnispyramide nach Maslow (Entstehungsmodell)',
+    abschnitt: '5.3 Ein Entstehungsmodell',
+    seite: 60,
+    erklaerung:
+      'Die Maslow-Pyramide von unten nach oben: Physiologische Bedürfnisse → Sicherheit → Soziale Bedürfnisse → Wertschätzung → Selbstverwirklichung. Sie bildet die Motive menschlichen Verhaltens im Entstehungsmodell der Unternehmensziele.',
+    bild: beduerfnisPyramide,
+    bildLeer: beduerfnisPyramideLeer,
+    viewBoxW: 680,
+    viewBoxH: 500,
+    maxWidth: 660,
+    slots: beduerfnisPyramideSlots,
+  },
+]
