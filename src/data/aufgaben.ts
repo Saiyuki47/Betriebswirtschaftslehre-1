@@ -133,8 +133,11 @@ Zwei Formen der Rationalität:
   {
     id: 'a5',
     titel: '5. Reisebüro – ökonomisches Prinzip',
-    aufgabeText:
-      'In einem Reisebüro äußert ein Kunde folgende Wünsche. a) „Für 2000 € möchte ich das regnerische deutsche Novemberwetter möglichst weit hinter mir lassen." b) „Im November möchte ich einen Badeurlaub machen. Haben Sie für diese Zeit ein möglichst billiges Angebot?" c) „Ich möchte für möglichst wenig Geld möglichst lange im Süden Urlaub machen." Welche Varianten des ökonomischen Prinzips sind angesprochen?',
+    aufgabeText: `In einem Reisebüro äußert ein Kunde folgende Wünsche.
+a) „Für 2000 € möchte ich das regnerische deutsche Novemberwetter möglichst weit hinter mir lassen."
+b) „Im November möchte ich einen Badeurlaub machen. Haben Sie für diese Zeit ein möglichst billiges Angebot?"
+c) „Ich möchte für möglichst wenig Geld möglichst lange im Süden Urlaub machen."
+Welche Varianten des ökonomischen Prinzips sind angesprochen?`,
     tipp: {
       konzept:
         'Das ökonomische Prinzip verlangt ein vernünftiges Verhältnis von Mitteleinsatz und Ertrag. Drei Varianten: Maximalprinzip (Mittel fix, Ertrag maximieren), Minimalprinzip (Ziel fix, Mittel minimieren), Extremumprinzip (beides variabel – ökonomisch nicht eindeutig).',
@@ -202,8 +205,11 @@ Wirtschaftlichkeit (Werteebene) → höhere Rentabilität
   {
     id: 'a7',
     titel: '7. Automobilindustrie – Kennzahlen',
-    aufgabeText:
-      'Zum Markt der Automobilindustrie gehören drei Unternehmen. Umsatz (Mrd. €): A 76, B 27, C 22. PKW-Produktion (Stck.): A 3 Mio., B 1 Mio., C 880.000. Beschäftigte: A 270.000, B 56.000, C 48.000. Marktanteil: A 23 %, B 17 %, C 11 %. Gewinn (Mrd. €): A 1,8, B 1,7, C 0,2. Sollkosten (Mrd. €): A 73, B 26, C 21. Istkosten (Mrd. €): A 74,2, B 25,3, C 21,8. a) Was ist der Marktanteil – ist er zweifelsfrei definierbar? b) Ermitteln Sie Wirtschaftlichkeit, Arbeitsproduktivität und Umsatzrentabilität und interpretieren Sie. c) Welche weiteren Kennzahlen könnte man ermitteln? d) Welche weiteren Daten bräuchten Sie für eine Investitionsentscheidung?',
+    aufgabeText: `Zum Markt der Automobilindustrie gehören drei Unternehmen. Umsatz (Mrd. €): A 76, B 27, C 22. PKW-Produktion (Stck.): A 3 Mio., B 1 Mio., C 880.000. Beschäftigte: A 270.000, B 56.000, C 48.000. Marktanteil: A 23 %, B 17 %, C 11 %. Gewinn (Mrd. €): A 1,8, B 1,7, C 0,2. Sollkosten (Mrd. €): A 73, B 26, C 21. Istkosten (Mrd. €): A 74,2, B 25,3, C 21,8.
+a) Was ist der Marktanteil – ist er zweifelsfrei definierbar?
+b) Ermitteln Sie Wirtschaftlichkeit, Arbeitsproduktivität und Umsatzrentabilität und interpretieren Sie.
+c) Welche weiteren Kennzahlen könnte man ermitteln?
+d) Welche weiteren Daten bräuchten Sie für eine Investitionsentscheidung?`,
     tipp: {
       konzept:
         'Drei Kennzahlen vergleichen die Unternehmen: Wirtschaftlichkeit (Wertebene), Arbeitsproduktivität (Mengenebene) und Umsatzrentabilität (Erfolg). Der Marktanteil ist nicht eindeutig definierbar, weil man Verschiedenes zählen kann.',
@@ -688,8 +694,9 @@ Gesamtkapitalrentabilität (GKR) = (JÜ + FK-Zinsen) / GK × 100
   {
     id: 'a18',
     titel: '18. Lauscher – Kapitalgewinn & Jahresüberschuss',
-    aufgabeText:
-      'Über ein Konkurrenzunternehmen liegen vor: Bilanzsumme (= Gesamtkapital) 10.000 €, durchschnittlicher Fremdkapitalzins 10 %, Verschuldungsgrad (FK zu EK) 3, Gesamtkapitalrentabilität 12,5 %. Ermitteln Sie a) den Kapitalgewinn und b) den Jahresüberschuss.',
+    aufgabeText: `Über ein Konkurrenzunternehmen liegen vor: Bilanzsumme (= Gesamtkapital) 10.000 €, durchschnittlicher Fremdkapitalzins 10 %, Verschuldungsgrad (FK zu EK) 3, Gesamtkapitalrentabilität 12,5 %. Ermitteln Sie
+a) den Kapitalgewinn und
+b) den Jahresüberschuss.`,
     tipp: {
       konzept:
         'Aus dem Verschuldungsgrad und der Bilanzsumme lässt sich die Kapitalstruktur (EK, FK) bestimmen. Der Kapitalgewinn ist der Gewinn VOR Fremdkapitalzinsen.',
@@ -893,8 +900,12 @@ Publizität, Besteuerung.`,
   {
     id: 'a23',
     titel: '23. Rechtsformen im Vergleich (EU–AG)',
-    aufgabeText:
-      'Beantworten Sie für EU (Einzelunternehmen), OHG, KG, UG, GmbH und AG: a) Wie viele Personen sind zur Gründung mindestens erforderlich? b) Wie ist die Haftung geregelt? c) Bei welchen Rechtsformen ist ein Mindestkapital vorgeschrieben? d) Wie erfolgt die Gewinnverteilung ohne Regelung im Gesellschaftsvertrag? e) Welche Bedeutung haben die Rechtsformen in der BRD?',
+    aufgabeText: `Beantworten Sie für EU (Einzelunternehmen), OHG, KG, UG, GmbH und AG:
+a) Wie viele Personen sind zur Gründung mindestens erforderlich?
+b) Wie ist die Haftung geregelt?
+c) Bei welchen Rechtsformen ist ein Mindestkapital vorgeschrieben?
+d) Wie erfolgt die Gewinnverteilung ohne Regelung im Gesellschaftsvertrag?
+e) Welche Bedeutung haben die Rechtsformen in der BRD?`,
     tipp: {
       konzept:
         'Für jede Rechtsform werden fünf Aspekte verglichen: Mindest-Personenzahl, Haftung, Mindestkapital, Gewinnverteilung ohne Vertrag und wirtschaftliche Bedeutung.',
