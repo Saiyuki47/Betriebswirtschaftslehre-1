@@ -23,20 +23,19 @@ export const karteikarten: FlashCard[] = [
       tag: gruppe.titel,
     })),
   ),
-  // 2) Übungs-Aufgaben: Frage → Musterlösung.
-  ...aufgaben.map(a => ({
-    id: `a-${a.id}`,
-    front: a.aufgabeText,
-    back: a.loesung,
-    tag: a.kategorie ?? a.titel,
-  })),
+  // 2) Übungs-Aufgaben: Frage → Musterlösung. Nur Aufgaben mit (offizieller)
+  //    Lösung liefern eine Karte – ohne Lösung gäbe es keine Rückseite.
+  ...aufgaben.flatMap(a =>
+    a.loesung
+      ? [{ id: `a-${a.id}`, front: a.aufgabeText, back: a.loesung, tag: a.kategorie ?? a.titel }]
+      : [],
+  ),
   // 3) Altklausur-Aufgaben: Frage → Musterlösung.
-  ...altklausurAufgaben.map(a => ({
-    id: `k-${a.id}`,
-    front: a.aufgabeText,
-    back: a.loesung,
-    tag: a.kategorie ?? a.titel,
-  })),
+  ...altklausurAufgaben.flatMap(a =>
+    a.loesung
+      ? [{ id: `k-${a.id}`, front: a.aufgabeText, back: a.loesung, tag: a.kategorie ?? a.titel }]
+      : [],
+  ),
   // 4) Quizfragen: Frage → Erklärung.
   ...quizFragen.map((q, i) => ({
     id: `q-${i}`,

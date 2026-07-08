@@ -20,7 +20,7 @@ export interface Aufgabe {
   titel: string
   aufgabeText: string
   tipp?: Tipps
-  loesung: string
+  loesung?: string
   schwierigkeit: Schwierigkeit
   kategorie?: string
 }
