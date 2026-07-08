@@ -1,4 +1,5 @@
-import { useLayoutEffect, useRef, useState, useEffect } from 'react'
+import { useLayoutEffect, useRef, useEffect } from 'react'
+import { useHashSubTab } from 'lernseiten-ui'
 import { formelGruppen } from '../data/formeln'
 import { themenBilder } from '../data/themenBilder'
 import FormelText from './FormelText'
@@ -192,7 +193,8 @@ function SpickzettelView() {
 }
 
 export default function Drucken() {
-  const [modus, setModus] = useState<'lernzettel' | 'spickzettel'>('lernzettel')
+  // Offene Ansicht steckt im Hash (#hilfsmittel/<id>) → teilbar und reload-fest.
+  const [modus, setModus] = useHashSubTab(['lernzettel', 'spickzettel'] as const, 'lernzettel')
   return (
     <div>
       <div className="hilf-bar">
@@ -205,26 +207,30 @@ export default function Drucken() {
           </p>
         </div>
         <div className="hilf-bar-actions">
-          <div className="filter-row">
-            <button
-              type="button"
-              className={`filter-btn${modus === 'lernzettel' ? ' on' : ''}`}
-              onClick={() => setModus('lernzettel')}
-            >
-              📇 Lernzettel
-            </button>
-            <button
-              type="button"
-              className={`filter-btn${modus === 'spickzettel' ? ' on' : ''}`}
-              onClick={() => setModus('spickzettel')}
-            >
-              📄 Spickzettel
-            </button>
-          </div>
           <button type="button" className="hilf-print-btn" onClick={() => window.print()}>
             🖨 Drucken / als PDF
           </button>
         </div>
+      </div>
+      <div className="hilf-fs-switch" role="tablist" aria-label="Ansicht wählen">
+        <button
+          type="button"
+          role="tab"
+          aria-selected={modus === 'lernzettel'}
+          className={`hilf-fs-tab${modus === 'lernzettel' ? ' active' : ''}`}
+          onClick={() => setModus('lernzettel')}
+        >
+          📇 Lernzettel
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={modus === 'spickzettel'}
+          className={`hilf-fs-tab${modus === 'spickzettel' ? ' active' : ''}`}
+          onClick={() => setModus('spickzettel')}
+        >
+          📄 Spickzettel
+        </button>
       </div>
       {modus === 'lernzettel' ? <LernzettelView /> : <SpickzettelView />}
     </div>
