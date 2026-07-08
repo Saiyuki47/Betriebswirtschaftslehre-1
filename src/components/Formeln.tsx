@@ -115,8 +115,6 @@ const formelKarten: ReferenzKarte[] = formelGruppen.flatMap((gruppe, gi) =>
   })),
 )
 
-const karten: ReferenzKarte[] = [...themenKarten, ...formelKarten]
-
 // Kompakte („Stichpunkt")-Fassung derselben Themen: nur die verdichteten
 // Stichpunkte, ohne Erklär-Absätze und ohne Abbildungen. Formeln nur mit
 // Name + Formel + Kurzerklärung (ohne Rechenbeispiele) – zum schnellen Lernen.
@@ -165,7 +163,7 @@ const formelKartenKurz: ReferenzKarte[] = formelGruppen.flatMap((gruppe, gi) =>
 const kartenKurz: ReferenzKarte[] = [...themenKartenKurz, ...formelKartenKurz]
 
 export default function Formeln() {
-  const [modus, setModus] = useState<'voll' | 'kurz'>('voll')
+  const [modus, setModus] = useState<'voll' | 'kurz' | 'formeln'>('voll')
   return (
     <div>
       <div className="filter-row no-print" style={{ marginBottom: '0.9rem' }}>
@@ -183,18 +181,33 @@ export default function Formeln() {
         >
           ⚡ Stichpunkte
         </button>
+        <button
+          type="button"
+          className={`filter-btn${modus === 'formeln' ? ' on' : ''}`}
+          onClick={() => setModus('formeln')}
+        >
+          🧮 Formeln
+        </button>
       </div>
-      {modus === 'voll' ? (
+      {modus === 'voll' && (
         <Referenz
-          karten={karten}
+          karten={themenKarten}
           tab="referenz"
-          intro="Themen mit Abbildungen und alle Kennzahlen-Formeln – von Grund auf erklärt."
+          intro="Themen mit Abbildungen – von Grund auf erklärt."
         />
-      ) : (
+      )}
+      {modus === 'kurz' && (
         <Referenz
           karten={kartenKurz}
           tab="referenz"
           intro="Der ganze Stoff auf den Punkt gebracht – knappe Stichpunkte zum schnellen Durchlesen und Auswendiglernen."
+        />
+      )}
+      {modus === 'formeln' && (
+        <Referenz
+          karten={formelKarten}
+          tab="referenz"
+          intro="Alle Kennzahlen-Formeln mit Erklärung und aufklappbaren Rechenbeispielen."
         />
       )}
     </div>
