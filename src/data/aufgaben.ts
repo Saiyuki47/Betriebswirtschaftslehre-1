@@ -151,6 +151,25 @@ c) (Generelles) Extremumprinzip – ökonomisch NICHT eindeutig:
     titel: '6. Produktivität, Wirtschaftlichkeit, Rentabilität',
     aufgabeText:
       'Wie stehen die folgenden Begriffe zueinander: Produktivität, Wirtschaftlichkeit und Rentabilität?',
+    loesung: `Die drei Kennzahlen messen die Ergiebigkeit auf verschiedenen Ebenen.
+
+Produktivität = Output / Input (rein mengenmäßig, ME/ME); verschiedene
+Produktivitäten lassen sich nicht verrechnen (unterschiedliche Einheiten).
+Beispiel (Output 10 ME):
+  • Arbeitsproduktivität   = 10 ME / 0,5 h   = 20 ME/h
+  • Energieproduktivität   = 10 ME / 5 kWh   = 2 ME/kWh
+  • Rohstoffproduktivität  = 10 ME / 7,2 kg  = 1,39 ME/kg
+
+Wirtschaftlichkeit = Ertrag / Aufwand (wertmäßig, in €).
+Beispiel: Ertrag = 10 ME × 5 €/ME = 50 €; Aufwand = 20 € (Arbeit) +
+0,80 € (Energie) + 3,60 € (Rohstoff) = 24,40 €.
+  Wirtschaftlichkeit = 50 € / 24,40 € = 2,05;  Gewinn = 50 − 24,40 = 25,60 €.
+
+Rentabilität = Gewinn bezogen auf das eingesetzte Kapital (EKR, GKR, ROI)
+– die wertmäßige Verzinsung des Kapitals.
+
+Aufbau: Produktivität (Menge) → Wirtschaftlichkeit (Wert) → Rentabilität
+(Kapital); jede höhere Ebene baut auf der darunterliegenden auf.`,
     schwierigkeit: 'mittel',
     kategorie: 'Grundlagen',
   },
@@ -225,6 +244,23 @@ d) Für eine Investitionsentscheidung zusätzlich nötig: Bilanz-/
     titel: '8. Öffentliche Betriebe vs. Unternehmen',
     aufgabeText:
       'Erklären Sie einem Nichtkaufmann den Unterschied zwischen öffentlichen Betrieben und Unternehmen. Analysieren Sie anhand von Kriterien, welcher Betriebsform folgende Betriebe zugehörig sind: Bauernhof, Deutsche Bahn, HS Fulda, Lufthansa, Volkswagen.',
+    loesung: `Unternehmen verfolgen erwerbswirtschaftliche Ziele (Gewinn), öffentliche
+Betriebe den öffentlichen Auftrag / die Bedarfsdeckung. Entscheidend ist die
+Trägerschaft, nicht die Rechtsform.
+
+Einordnung (Kriterien: Rechtsform, Ziel, Haftung, Eigentümer, Finanzierung):
+  • Bauernhof – privat (teils staatlich über Subventionen).
+  • Deutsche Bahn – privatrechtliche AG, aber der Bund hält alle Aktien →
+    faktisch staatlich (Infrastruktur = Monopol; nur der Wettbewerbsbereich
+    ließe sich sinnvoll privatisieren, damit echter Wettbewerb entsteht).
+  • Hochschule Fulda – staatlich (öffentlicher Träger).
+  • Lufthansa – privat; 1962–1997 privatisiert, seit Corona Staat ~20 %.
+  • Volkswagen – privat; Stammaktien u. a. 53,3 % Porsche Holding, 20 % Land
+    Niedersachsen (VW-Gesetz), 17 % Katar.
+
+Hinweis: Unternehmen mit Staatsbeteiligung haben meist viel FK und wenig EK;
+der Staat als (Mit-)Eigentümer ist wegen möglicher Interessenkonflikte
+(Kosten senken vs. Arbeitsplätze halten) schwierig.`,
     schwierigkeit: 'mittel',
     kategorie: 'Grundlagen',
   },
@@ -233,6 +269,12 @@ d) Für eine Investitionsentscheidung zusätzlich nötig: Bilanz-/
     titel: '9. Kriterien der Betriebseinteilung',
     aufgabeText:
       'Nennen Sie fünf Hauptkriterien, nach denen sich Betriebe einteilen lassen. Zeigen Sie anhand von Beispielen praktische Anwendungen auf.',
+    loesung: `Fünf Hauptkriterien der Betriebseinteilung:
+  • Eigentümer.
+  • Rechtsform (bestimmt Haftung, Gewinnverteilung, Führung).
+  • Branche (bestimmt u. a. die Interessenvertretung).
+  • Größe (klein, mittelständisch, groß – bestimmt z. B. die Mitbestimmung).
+  • Ziel (Gewinnmaximierung, angemessener Gewinn, Kostendeckung).`,
     schwierigkeit: 'mittel',
     kategorie: 'Grundlagen',
   },
@@ -241,6 +283,17 @@ d) Für eine Investitionsentscheidung zusätzlich nötig: Bilanz-/
     titel: '10. Rückgang der Gewerkschaftsbindung',
     aufgabeText:
       'Erläutern Sie Gründe für die langfristig abnehmende Zahl gewerkschaftlich gebundener Arbeitnehmer in Deutschland.',
+    loesung: `Gründe für die langfristig sinkende Zahl gewerkschaftlich gebundener
+Arbeitnehmer:
+  • Stabiler Arbeitsmarkt – geringere Angst vor Arbeitslosigkeit als früher.
+  • Trittbrettfahrer-Problem: Auch Nichtmitglieder profitieren von den
+    Tarifabschlüssen.
+  • Trend zur Individualisierung – weniger langfristiges Engagement (auch bei
+    Kirchen, Parteien, Vereinen).
+  • Wandel der Arbeitswelt (prekärer, häufigere Job- und Branchenwechsel).
+  • Akademisierung – Gewerkschaften vertreten eher einfache Arbeiter.
+  • Trend zur Dienstleistungsgesellschaft – weniger Industrie (klassische
+    Gewerkschaftsbasis); Ausnahme öffentlicher Dienst (Verdi).`,
     schwierigkeit: 'mittel',
     kategorie: 'Rechtsformen & Mitbestimmung',
   },
@@ -249,6 +302,14 @@ d) Für eine Investitionsentscheidung zusätzlich nötig: Bilanz-/
     titel: '11. Gliederung der BWL',
     aufgabeText:
       'Wie lässt sich die BWL untergliedern? Erläutern Sie zudem anhand von 3 Beispielen, wie die BWL von anderen Wissenschaftszweigen profitiert.',
+    loesung: `Untergliederung der BWL:
+  • nach Allgemeiner und Spezieller BWL,
+  • nach Funktion (z. B. Marketing, Absatz) und nach Objekt/Branche.
+
+Die BWL profitiert von anderen Wissenschaften, z. B.:
+  • Informatik – automatische Auswertung von Daten,
+  • Psychologie – z. B. für das Marketing,
+  • Mathematik – Rechenverfahren/Grundrechenarten.`,
     schwierigkeit: 'mittel',
     kategorie: 'Grundlagen',
   },
@@ -257,6 +318,13 @@ d) Für eine Investitionsentscheidung zusätzlich nötig: Bilanz-/
     titel: '12. Unternehmensmodell & Außenbeziehungen',
     aufgabeText:
       'Entwickeln Sie das Modell eines Unternehmens mit besonderem Schwerpunkt auf seinen Außenbeziehungen.',
+    loesung: `Modell des Unternehmens als offenes System mit Außenbeziehungen:
+  • Beschaffungsmarkt: Das Unternehmen kauft Waren, Dienstleistungen und
+    Personal ein.
+  • Absatzmarkt: Es bietet Waren an, um Umsatz zu erzielen.
+  • Kapitalmarkt: Es erhält Fremdkapital und schüttet Gewinnanteile aus.
+  • Staat: Es erhält ggf. staatliche Aufträge oder Subventionen und zahlt
+    Steuern.`,
     schwierigkeit: 'mittel',
     kategorie: 'Grundlagen',
   },
@@ -265,6 +333,26 @@ d) Für eine Investitionsentscheidung zusätzlich nötig: Bilanz-/
     titel: '13. Kartell & Monopol',
     aufgabeText:
       'Was verstehen wir unter einem Kartell, was unter einem Monopol? Warum sind beide nicht so problematisch, wie sie in der öffentlichen Diskussion manchmal gemacht werden?',
+    loesung: `Kartell: Zusammenschluss selbstständiger Unternehmen zu Lasten Dritter
+(z. B. Preisabsprache), meist lose und horizontal (gleiche Branche). In
+Deutschland bei marktbeherrschender Stellung (ca. 40 %) verboten, niedrig-
+schwellig erlaubt. Beispiele: OPEC (Fördermengen), Bauindustrie, Drogenhandel.
+Kartell-Problematik: nützt allen, aber nur, wenn sich alle daran halten – wer
+ausschert, ist im Vorteil, deshalb zerfallen Kartelle leicht.
+
+Monopol:
+  • Nachfragemonopol – nur ein Nachfrager (oft der Staat, z. B. Militär); er
+    ist im Verhandlungsvorteil.
+  • Angebotsmonopole:
+      – Natürliche Monopole (Netze für Strom, Gas, Bahn): Trennung von
+        Monopol- und Wettbewerbsbereich („Unbundling").
+      – Rechtliche Monopole (Patente, Markenrechte): befristet, zur Förderung
+        von Innovation.
+      – Wirtschaftliche Monopole / „Quasi-Monopole" (z. B. Facebook):
+        Kartellamt macht Auflagen, Wettbewerb zulassen.
+
+Beide sind oft weniger problematisch als dargestellt, weil sie durch
+Wettbewerb bzw. Aufsicht diszipliniert werden.`,
     schwierigkeit: 'mittel',
     kategorie: 'Grundlagen',
   },
@@ -272,6 +360,20 @@ d) Für eine Investitionsentscheidung zusätzlich nötig: Bilanz-/
     id: 'a14',
     titel: '14. Schritte der Sanierung',
     aufgabeText: 'Erläutern Sie Schritte der Sanierung.',
+    loesung: `Schritte einer Sanierung (bei drohender Insolvenz):
+  • Kurzfristig („Crash-Programm"): finanziellen Überblick über Aktiva/
+    Passiva verschaffen (Gläubiger/Schuldner), Management austauschen
+    (verhindert das Beiseiteschaffen von Vermögen).
+  • Mittelfristig („Restrukturierung"): nicht notwendiges Vermögen verkaufen,
+    Personalabbau (aufgeweichter Kündigungsschutz als Chance).
+  • Langfristig („strategische Neustrukturierung"): neue Märkte erschließen.
+
+Entscheidend ist die Erschließung von neuem Eigenkapital (davon hängen Fremd-
+kapital und Subventionen ab) – die Geldgeber müssen wieder an das Unternehmen
+glauben. Geeignete Eigentümer: Staat (Steuermittel) oder Familien (emotional
+verbunden); geeignete Rechtsform: Kapitalgesellschaft (keiner haftet privat).
+Alle Beteiligten (Eigentümer, Gläubiger, Mitarbeiter) müssen einen Beitrag
+leisten.`,
     schwierigkeit: 'mittel',
     kategorie: 'Betrieblicher Lebenszyklus',
   },
@@ -280,6 +382,39 @@ d) Für eine Investitionsentscheidung zusätzlich nötig: Bilanz-/
     titel: '15. Bilanzkennzahlen erklären',
     aufgabeText:
       'Erklären Sie folgende Kennzahlen: Eigenkapitalquote, Verschuldungsgrad und Verschuldungsquote, Anlagenquote, Anlagendeckung I und II, Liquidität, Gesamtkapital- und Eigenkapitalrentabilität. (Grundlage: PP-Folie „Bsp. Bilanz".)',
+    loesung: `Grundlage: Beispiel-Bilanz mit EK 2,9 / GK 10 / FK 7,1 / AV 4 / langfr. FK
+3,5 / Guthaben 1 / kurzfr. Forderungen 2 / Vorräte 2,5 / kurzfr. FK 3,2 /
+pass. RAP 0,4 / JÜ 0,4 (alles Mio €).
+
+Kapitalstruktur (Passivseite):
+  • Eigenkapitalquote = EK / GK = 2,9 / 10 = 29 % (gut sind 20–30 %; wichtig
+    für Fremdkapitalgeber).
+  • Verschuldungsgrad = FK / EK = 7,1 / 2,9 = 2,45 (zentral für den Leverage).
+  • Verschuldungsquote = FK / GK = 7,1 / 10 = 71 % (Gegenstück zur EK-Quote).
+
+Vermögensstruktur (Aktivseite):
+  • Anlagenintensität = AV / GK = 4 / 10 = 40 % (branchenabhängig; niedriger =
+    flexibler).
+
+Fristenkongruenz (goldene Bilanzregel: langfristiges Vermögen langfristig
+finanzieren):
+  • Anlagendeckung I  = EK / AV = 2,9 / 4 = 72,5 %.
+  • Anlagendeckung II = (EK + langfr. FK) / AV = (2,9 + 3,5) / 4 = 160 %
+    (soll ≥ 100 %).
+
+Liquidität (Nenner = kurzfr. FK + pass. RAP = 3,6):
+  • 1. Grades = Guthaben / 3,6 = 1 / 3,6 = 28 % (darf < 100 %).
+  • 2. Grades = (Guthaben + kurzfr. Ford.) / 3,6 = 3 / 3,6 = 83 % (~100 %).
+  • 3. Grades = (Guthaben + kurzfr. Ford. + Vorräte) / 3,6 = 5,5 / 3,6 = 153 %
+    (muss > 100 %).
+
+Rentabilität (JÜ = 0,4; GK bzw. EK jeweils ohne JÜ):
+  • ROI = JÜ / (GK − JÜ) = 0,4 / 9,6 = 4,2 % (wenig aussagekräftig).
+  • Eigenkapitalrentabilität = JÜ / (EK − JÜ) = 0,4 / 2,5 = 16 %.
+  • Gesamtkapitalrentabilität = (JÜ + FK-Zinsen) / (GK − JÜ)
+    = (0,4 + 7,1 × 0,06) / 9,6 = 8,6 %.
+Langfristig gilt EKR > GKR > FK-Zins (hier 16 % > 8,6 % > 6 %); die GKR liegt
+immer zwischen EKR und FK-Zins – sonst wurde falsch gerechnet.`,
     schwierigkeit: 'mittel',
     kategorie: 'Mengen, Werte & Kennzahlen',
   },
@@ -288,6 +423,15 @@ d) Für eine Investitionsentscheidung zusätzlich nötig: Bilanz-/
     titel: '16. Kennzahlen & Einsatzgebiete',
     aufgabeText:
       'Was versteht man unter betriebswirtschaftlichen Kennzahlen? Beschreiben Sie vier Einsatzgebiete.',
+    loesung: `Betriebswirtschaftliche Kennzahlen sind quantitative, verdichtete Größen,
+die man für Entscheidungen benötigt.
+
+Vier Einsatzgebiete:
+  • Zeit- und Periodenvergleich (vorsichtig bei Zukunftsprognosen).
+  • Vergleich von Abteilungen einer Firma (nur sinnvoll, wenn vergleichbar).
+  • Externer Betriebsvergleich = Benchmarking (nur möglich, wenn kein direkter
+    Wettbewerb besteht).
+  • Soll-Ist-Vergleich (für Motivation, Orientierung, Kontrolle).`,
     schwierigkeit: 'einfach',
     kategorie: 'Mengen, Werte & Kennzahlen',
   },
@@ -313,6 +457,16 @@ b) den Jahresüberschuss.`,
     titel: '19. Leverage-Effekt',
     aufgabeText:
       'Erläutern und interpretieren Sie den Leverage-Effekt an einem Zahlenbeispiel.',
+    loesung: `Leverage-Formel: EKR = GKR + (GKR − FK-Zins) × (FK / EK),
+also EKR = GKR + Zinsdifferenz × Verschuldungsgrad.
+
+Leverage-Effekt: Solange die GKR über dem FK-Zins liegt, hebt ein steigender
+Verschuldungsgrad die EKR nach oben. Fällt die GKR jedoch unter den FK-Zins,
+drückt der Hebel die EKR stark ins Minus. → Ein hoher Verschuldungsgrad
+erhöht Chance UND Risiko.
+
+Anmerkung: Real steigen mit wachsender Verschuldung auch die FK-Zinsen; ein
+üblicher Verschuldungsgrad liegt bei etwa 4 (EK-Quote ~20–30 %).`,
     schwierigkeit: 'mittel',
     kategorie: 'Mengen, Werte & Kennzahlen',
   },
@@ -349,6 +503,30 @@ b) Wie ist die Haftung geregelt?
 c) Bei welchen Rechtsformen ist ein Mindestkapital vorgeschrieben?
 d) Wie erfolgt die Gewinnverteilung ohne Regelung im Gesellschaftsvertrag?
 e) Welche Bedeutung haben die Rechtsformen in der BRD?`,
+    loesung: `a) Personenzahl zur Gründung:
+   • EU: genau 1 Person.
+   • OHG: mind. 2 (in der Praxis nur ~4–5 wegen voller, solidarischer Haftung).
+   • KG: mind. 1 Komplementär + 1 Kommanditist (meist viele Kommanditisten/
+     Einleger, wenige Komplementäre/Eigentümer).
+   • UG/GmbH/AG: mind. 1 (z. B. gehört die DB nur dem Bund).
+
+b) Haftung:
+   • EU: voll. OHG: voll und solidarisch.
+   • KG: Komplementär voll und solidarisch, Kommanditist nur bis zur Höhe der
+     Einlage („KomplemenTÄR haftet MÄHR").
+   • UG/GmbH/AG: beschränkt auf das Gesellschaftsvermögen.
+
+c) Mindest-/Startkapital: AG 50.000 €, GmbH 25.000 €, UG 1 €; EU/OHG/KG keines.
+
+d) Gewinnverteilung ohne Regelung im Gesellschaftsvertrag:
+   • EU: alles an den Inhaber.  OHG: gleiche Aufteilung unter den Gesellschaftern.
+   • KG: nach Personen (Lösung: Gesellschaftsvertrag, Komplementär als
+     Geschäftsführer oder Vorabgewinn).
+   • Kapitalgesellschaften: nach Kapitalanteil.
+
+e) Bedeutung in Deutschland: Einzelunternehmen bedeutend (sehr zahlreich); OHG
+   verliert an Bedeutung (volle, solidarische Haftung); Kapitalgesellschaften
+   wichtig (viel Umsatz, viele Arbeitsplätze).`,
     schwierigkeit: 'schwer',
     kategorie: 'Rechtsformen & Mitbestimmung',
   },
@@ -357,6 +535,20 @@ e) Welche Bedeutung haben die Rechtsformen in der BRD?`,
     titel: '24. Mitbestimmung bei der Volkswagen AG',
     aufgabeText:
       'Schildern Sie die betriebliche und unternehmerische Mitbestimmung am Beispiel der Volkswagen AG.',
+    loesung: `Betriebliche Mitbestimmung bei VW:
+  • Betriebsrat – ja (mehr als 5 Mitarbeiter).
+  • Jugend-/Auszubildendenvertretung – ja (mehr als 5 Jugendliche).
+  • Sprecherausschuss – ja (mehr als 10 leitende Angestellte).
+
+Unternehmerische Mitbestimmung (im Aufsichtsrat):
+  • VW ist eine Kapitalgesellschaft (AG).
+  • Montan-MitbestG – nein (keine Kohle/Stahl).
+  • MitbestG 1976 – ja (mehr als 2.000 Beschäftigte) → paritätischer AR.
+  • DrittelbG – nein (MitbestG geht vor).
+  • Aufsichtsrat: 20 Mitglieder, davon 10 Anteilseigner- und 10 Arbeitnehmer-
+    vertreter (Arbeiter, Angestellte, 1 leit. Angestellter, Gewerkschafts-
+    vertreter). Anteilseignerseite: Porsche/Piech, Land Niedersachsen, Katar,
+    Streubesitz.`,
     schwierigkeit: 'mittel',
     kategorie: 'Rechtsformen & Mitbestimmung',
   },
@@ -365,6 +557,29 @@ e) Welche Bedeutung haben die Rechtsformen in der BRD?`,
     titel: '25. Stakeholder & Sanktionsmöglichkeiten',
     aufgabeText:
       'Welche unternehmensinternen und -externen Gruppen (Stakeholder) nehmen auf die Zielbildung Einfluss? Beschreiben Sie ihre Sanktionsmöglichkeiten, um das Management zur Rücksichtnahme zu zwingen. (Siehe PP-Folie „Anreiz-Beitrags-Theorie".)',
+    loesung: `Anreiz-Beitrags-Theorie: Jede Gruppe leistet ihre Beiträge nur, solange die
+Anreize sie aufwiegen; sonst sanktioniert sie.
+
+  • Eigentümer – Anreiz: Einfluss, Gewinn/Dividende, Kurssteigerung; Beitrag:
+    Eigenkapital, Haftung; Sanktion: Kapital entziehen, Management austauschen,
+    verkaufen (++).
+  • Gläubiger/Banken – Zins, Tilgung / Fremdkapital, Beratung / keine neuen
+    Kredite (+).
+  • Lieferanten – Abnahme + Bezahlung / Lieferung in Zeit/Ort/Qualität / keine
+    neuen Verträge (−/0).
+  • Arbeitnehmer – Gehalt, Sicherheit, Entwicklung / Arbeitskraft, Loyalität /
+    kündigen, streiken, Dienst nach Vorschrift (+/++).
+  • Management – wie AN, nur mehr / provozierter Rauswurf mit fachlich
+    unanfechtbaren Entscheidungen (++).
+  • Kunden – Waren/Dienstleistungen / kaufen, bezahlen, weiterempfehlen / nicht
+    kaufen, negativ reden (+++).
+  • Staat – Arbeitsplätze, Steuern / Infrastruktur, Bildung, Rechtsschutz /
+    Genehmigungen verschleppen, Prüfungen (++).
+
+Gläubiger sind in Deutschland besonders wichtig (viel FK/geringe EK-Quote,
+Hausbankensystem, hoher Gläubigerschutz im HGB). Die stärkste Position hat,
+wer direkt am Endkunden ist (Hersteller/Vertrieb vor Zulieferer) – der Kunde
+bezahlt am Ende alles.`,
     schwierigkeit: 'mittel',
     kategorie: 'Ziele im Unternehmen',
   },
@@ -373,6 +588,10 @@ e) Welche Bedeutung haben die Rechtsformen in der BRD?`,
     titel: '26. Unternehmensphilosophie',
     aufgabeText:
       'Was versteht man unter einer Unternehmensphilosophie? Welche Zwecke verfolgt die Leitung mit ihrer Offenlegung?',
+    loesung: `Die Unternehmensphilosophie ist, wie ein Unternehmen sich selbst und seine
+Umwelt sieht. Sie wird in einem Leitbild verschriftlicht, um aktuelle und
+potenzielle Mitarbeiter (sowie die Öffentlichkeit) zu informieren und zu
+orientieren.`,
     schwierigkeit: 'einfach',
     kategorie: 'Ziele im Unternehmen',
   },
@@ -381,6 +600,13 @@ e) Welche Bedeutung haben die Rechtsformen in der BRD?`,
     titel: '27. Zielkonflikte (ökonomisch/sozial/ökologisch)',
     aufgabeText:
       'Nennen Sie Beispiele für Zielkonflikte zwischen ökonomischen, sozialen und ökologischen Zielen.',
+    loesung: `Beispiele für Zielkonflikte:
+  • ökonomisch vs. sozial: höhere Löhne/Benefits (z. B. Betriebskindergarten)
+    gegen den Gewinn.
+  • ökonomisch vs. ökologisch: Umweltschutz (Recycling, Filter) gegen den
+    Gewinn.
+  • ökologisch vs. sozial: z. B. Mitarbeiterparkplätze bzw. Firmenwagen
+    (Bequemlichkeit gegen Umwelt).`,
     schwierigkeit: 'einfach',
     kategorie: 'Ziele im Unternehmen',
   },
@@ -389,6 +615,12 @@ e) Welche Bedeutung haben die Rechtsformen in der BRD?`,
     titel: '28. Leistungs-, Finanz- und Erfolgsziele',
     aufgabeText:
       'Nennen Sie Beispiele für die Zielkategorien Leistungs-, Finanz- und Erfolgsziele.',
+    loesung: `Beispiele je Zielkategorie:
+  • Leistungsziel (Sachziel): „Wir wollen den Absatz um 5 % steigern." /
+    „Ein Mitarbeiter soll pro Tag 10 Kunden die Haare schneiden."
+  • Erfolgsziel (Formalziel): „Wir wollen den Gewinn 2021 im Vergleich zum
+    Vorjahr halten."
+  • Finanzziel: „Wir wollen 2022 eine Liquidität von 80 % erreichen."`,
     schwierigkeit: 'einfach',
     kategorie: 'Ziele im Unternehmen',
   },
