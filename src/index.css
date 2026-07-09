@@ -344,3 +344,76 @@
   background: var(--green-dim);
   color: var(--green);
 }
+
+/* VORLESUNGSFOLIEN-VIEWER (Referenz-Untertab) */
+.fv-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+.filter-btn:disabled { opacity: 0.4; cursor: default; }
+.fv-count {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text3);
+  white-space: nowrap;
+}
+.fv-select {
+  flex: 1 1 240px;
+  max-width: 460px;
+  padding: 5px 10px;
+  font-size: 12.5px;
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  background: var(--bg2);
+  color: var(--text);
+}
+.fv-titel {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 0.9rem;
+}
+.fv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+.fv-card {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg2);
+  overflow: hidden;
+}
+.fv-card--haupt { border-color: var(--blue); }
+.fv-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text2);
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.fv-card--haupt .fv-label { color: var(--blue); }
+.fv-imglink { display: block; }
+.fv-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+.fv-missing {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text3);
+  font-style: italic;
+}
+@media print {
+  .fv-bar, .fv-select { display: none !important; }
+}

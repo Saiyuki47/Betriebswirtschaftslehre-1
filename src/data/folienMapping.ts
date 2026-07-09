@@ -1,0 +1,88 @@
+// Folien-Mapping: pro 2025-Lehrerfolie (nr, 1–72) die entsprechende Seite in den
+// Aufzeichnungen David 2023 / Leon 2023 / Leon 2021 – oder null, wenn die Folie in
+// dem Jahr fehlt. Bilder liegen in public/folien/<quelle>/<seite:3-stellig>.jpg.
+// Zuordnung von Hand aus den Foliensätzen abgeglichen; bei Fehlern einfach die
+// betreffende Seitenzahl hier korrigieren.
+export interface Folie {
+  /** 2025-Foliennummer (1–72) = Seite in public/folien/2025/ */
+  nr: number
+  titel: string
+  david2023: number | null
+  leon2023: number | null
+  leon2021: number | null
+}
+
+export const folien: Folie[] = [
+  { nr: 1, titel: 'PP-Folien zum Modul', david2023: 1, leon2023: 1, leon2021: 1 },
+  { nr: 2, titel: 'Herzlich willkommen zu BWL I', david2023: 2, leon2023: 2, leon2021: 2 },
+  { nr: 3, titel: 'Vorstellung – Prof. Dr. Markus Göltenboth', david2023: 3, leon2023: 3, leon2021: 3 },
+  { nr: 4, titel: '„Spielregeln“ für die Präsenzlehre', david2023: 4, leon2023: 4, leon2021: 4 },
+  { nr: 5, titel: 'Literaturliste', david2023: 5, leon2023: 5, leon2021: 5 },
+  { nr: 6, titel: 'Literaturliste (Fortsetzung)', david2023: null, leon2023: null, leon2021: null },
+  { nr: 7, titel: 'Einführung – Überblick', david2023: 6, leon2023: 6, leon2021: 6 },
+  { nr: 8, titel: 'Gliederung', david2023: 7, leon2023: 7, leon2021: 7 },
+  { nr: 9, titel: '1. Grundlagen – 1.1 Erkenntnisobjekt', david2023: 8, leon2023: 8, leon2021: 8 },
+  { nr: 10, titel: '1.2 Wirtschaftliches Handeln', david2023: 9, leon2023: 9, leon2021: 9 },
+  { nr: 11, titel: 'Güterarten (Input/Output, Real/Nominal)', david2023: 10, leon2023: 11, leon2021: 10 },
+  { nr: 12, titel: 'Wirtschaftsgüter', david2023: 11, leon2023: 13, leon2021: 11 },
+  { nr: 13, titel: 'Ökonomisches Prinzip (Min-/Maximum)', david2023: 12, leon2023: 14, leon2021: 12 },
+  { nr: 14, titel: 'Extremumprinzip', david2023: 13, leon2023: 15, leon2021: 13 },
+  { nr: 15, titel: 'Kennziffern (Wirtschaftlichkeit/Produktivität/Rentabilität)', david2023: 14, leon2023: 16, leon2021: 14 },
+  { nr: 16, titel: '1.3 Wirtschaftseinheiten', david2023: 15, leon2023: 17, leon2021: 15 },
+  { nr: 17, titel: 'Zu 1.3 – nach Gutenberg', david2023: 16, leon2023: 18, leon2021: 16 },
+  { nr: 18, titel: '1.4 Betriebstypologien', david2023: 17, leon2023: 19, leon2021: 17 },
+  { nr: 19, titel: 'Zu 1.4 – Verbände/Gewerkschaften', david2023: 18, leon2023: 20, leon2021: 18 },
+  { nr: 20, titel: 'Gewerkschaften (Statistik)', david2023: 19, leon2023: 21, leon2021: 19 },
+  { nr: 21, titel: 'Streiks (Statistik)', david2023: 20, leon2023: 22, leon2021: 20 },
+  { nr: 22, titel: '1.5 Gliederung der BWL', david2023: 21, leon2023: 23, leon2021: 21 },
+  { nr: 23, titel: '2 Betrieblicher Lebenszyklus – Gründung', david2023: 22, leon2023: 24, leon2021: 22 },
+  { nr: 24, titel: 'Zentrale Begriffe der Gründungsphase', david2023: 23, leon2023: 25, leon2021: 23 },
+  { nr: 25, titel: 'Kaufleute im HGB', david2023: 24, leon2023: 26, leon2021: 24 },
+  { nr: 26, titel: 'Handelsregister', david2023: 25, leon2023: 27, leon2021: 25 },
+  { nr: 27, titel: 'Ziele der Gründungsphase', david2023: 26, leon2023: 29, leon2021: 26 },
+  { nr: 28, titel: '2.2 Wachstum', david2023: 27, leon2023: 30, leon2021: 27 },
+  { nr: 29, titel: '2.3 Stagnation', david2023: 28, leon2023: 31, leon2021: 28 },
+  { nr: 30, titel: 'Unternehmenszusammenschlüsse', david2023: 29, leon2023: 33, leon2021: 29 },
+  { nr: 31, titel: 'Bindungsintensität', david2023: 30, leon2023: 34, leon2021: 30 },
+  { nr: 32, titel: 'Zusammenschlüsse – Energiewirtschaft', david2023: 31, leon2023: 35, leon2021: 31 },
+  { nr: 33, titel: 'Vodafone/Mannesmann', david2023: 32, leon2023: 36, leon2021: null },
+  { nr: 34, titel: '2.4 Schrumpfung', david2023: 33, leon2023: 37, leon2021: 32 },
+  { nr: 35, titel: 'Krisenfolgen / Sanierung', david2023: 34, leon2023: 38, leon2021: 33 },
+  { nr: 36, titel: 'Zu Unternehmensinsolvenzen', david2023: 35, leon2023: 39, leon2021: 34 },
+  { nr: 37, titel: 'Zu Privatinsolvenzen', david2023: 36, leon2023: 40, leon2021: 35 },
+  { nr: 38, titel: '3. Mengen und Werte', david2023: 37, leon2023: 41, leon2021: 36 },
+  { nr: 39, titel: 'Die Bilanz', david2023: 38, leon2023: 42, leon2021: 37 },
+  { nr: 40, titel: 'Die Handelsbilanz', david2023: 40, leon2023: 44, leon2021: 38 },
+  { nr: 41, titel: 'Bilanzzwecke', david2023: 41, leon2023: 45, leon2021: 40 },
+  { nr: 42, titel: 'Bilanzierung seit 2005 (HGB/IFRS)', david2023: 42, leon2023: 46, leon2021: 41 },
+  { nr: 43, titel: '3.2 Betriebswirtschaftliche Kennzahlen', david2023: 43, leon2023: 48, leon2021: 43 },
+  { nr: 44, titel: 'Einsatzgebiete von Kennzahlen', david2023: 44, leon2023: 49, leon2021: 44 },
+  { nr: 45, titel: '4. Rechtsformen und Mitbestimmung', david2023: 45, leon2023: 51, leon2021: 45 },
+  { nr: 46, titel: 'Mitbestimmung: Die deutsche „Spielart“', david2023: 49, leon2023: 53, leon2021: 50 },
+  { nr: 47, titel: 'Mitwirkung/Mitbestimmung im Betrieb', david2023: 50, leon2023: 54, leon2021: 51 },
+  { nr: 48, titel: 'Mitwirkung/Mitbestimmung (arbeitsrechtlich)', david2023: 51, leon2023: 55, leon2021: 52 },
+  { nr: 49, titel: 'Betriebliche Mitbestimmung (Statistik)', david2023: 52, leon2023: 56, leon2021: 53 },
+  { nr: 50, titel: 'Außerdem auf arbeitsrechtlicher Ebene', david2023: 53, leon2023: 57, leon2021: 54 },
+  { nr: 51, titel: 'Unternehmerische Mitbestimmung (Organe)', david2023: 54, leon2023: 58, leon2021: 55 },
+  { nr: 52, titel: 'Gesetze zur unternehmerischen Mitbestimmung', david2023: 55, leon2023: 59, leon2021: 56 },
+  { nr: 53, titel: 'Was will der Gesetzgeber?', david2023: 56, leon2023: 61, leon2021: 57 },
+  { nr: 54, titel: '5. Ziele im Unternehmen', david2023: 57, leon2023: 62, leon2021: 58 },
+  { nr: 55, titel: 'Kennzeichen eines Zieles', david2023: 58, leon2023: 64, leon2021: 60 },
+  { nr: 56, titel: 'Zielpyramide', david2023: 59, leon2023: 65, leon2021: 61 },
+  { nr: 57, titel: 'Visionen', david2023: 60, leon2023: 66, leon2021: 62 },
+  { nr: 58, titel: 'Unternehmensmission (Microsoft/HP)', david2023: 61, leon2023: 67, leon2021: 63 },
+  { nr: 59, titel: '5.2 Empirische Thesen', david2023: 62, leon2023: 68, leon2021: 64 },
+  { nr: 60, titel: '5.3 Ein Entstehungsmodell (Maslow)', david2023: 63, leon2023: 69, leon2021: 65 },
+  { nr: 61, titel: 'Ansprüche von Gruppen (Shareholder/Stakeholder)', david2023: 64, leon2023: 70, leon2021: 66 },
+  { nr: 62, titel: 'Zu Unternehmensphilosophie und -kultur', david2023: 65, leon2023: 71, leon2021: 67 },
+  { nr: 63, titel: 'Unternehmenskultur', david2023: 66, leon2023: 72, leon2021: 68 },
+  { nr: 64, titel: 'Dimensionen der Unternehmenskultur', david2023: 67, leon2023: 73, leon2021: 69 },
+  { nr: 65, titel: 'Kulturtypen nach Deal/Kennedy', david2023: 68, leon2023: 74, leon2021: 70 },
+  { nr: 66, titel: '5.4 Zielkonflikte', david2023: 69, leon2023: 75, leon2021: 71 },
+  { nr: 67, titel: 'Ökonomische Zielkonzeption', david2023: 70, leon2023: 76, leon2021: 72 },
+  { nr: 68, titel: 'Anhang: Folien zur Übung', david2023: 71, leon2023: 77, leon2021: 73 },
+  { nr: 69, titel: 'Bsp. Bilanz (Übung Frage 15)', david2023: 72, leon2023: 78, leon2021: 74 },
+  { nr: 70, titel: 'Alternative Erfolgsbegriffe (Übung Frage 21)', david2023: 73, leon2023: 79, leon2021: 75 },
+  { nr: 71, titel: 'Anreiz-Beitrags-Theorie (Übung Frage 26)', david2023: 74, leon2023: 80, leon2021: 76 },
+  { nr: 72, titel: 'Vielen Dank / Abschluss', david2023: 75, leon2023: 81, leon2021: 77 },
+]

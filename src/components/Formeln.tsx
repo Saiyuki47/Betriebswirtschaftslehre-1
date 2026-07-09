@@ -7,6 +7,7 @@ import { formelGruppen } from '../data/formeln'
 import { slug } from '../data/referenzIndex'
 import FormelText from './FormelText'
 import LazyTopic from './LazyTopic'
+import Foliensicht from './Foliensicht'
 
 // Der Referenz-Tab vereint zwei Quellen in EINEM Inhaltsverzeichnis:
 //  1. Themen-Karten (Kapitel mit Beschreibung, Stichpunkten, Abschnitten und den
@@ -163,7 +164,7 @@ const formelKartenKurz: ReferenzKarte[] = formelGruppen.flatMap((gruppe, gi) =>
 const kartenKurz: ReferenzKarte[] = [...themenKartenKurz, ...formelKartenKurz]
 
 export default function Formeln() {
-  const [modus, setModus] = useState<'voll' | 'kurz' | 'formeln'>('voll')
+  const [modus, setModus] = useState<'voll' | 'kurz' | 'formeln' | 'folien'>('voll')
   return (
     <div>
       <div className="filter-row no-print" style={{ marginBottom: '0.9rem' }}>
@@ -188,6 +189,13 @@ export default function Formeln() {
         >
           🧮 Formeln
         </button>
+        <button
+          type="button"
+          className={`filter-btn${modus === 'folien' ? ' on' : ''}`}
+          onClick={() => setModus('folien')}
+        >
+          🖼 Vorlesungsfolien
+        </button>
       </div>
       {modus === 'voll' && (
         <Referenz
@@ -210,6 +218,7 @@ export default function Formeln() {
           intro="Alle Kennzahlen-Formeln mit Erklärung und aufklappbaren Rechenbeispielen."
         />
       )}
+      {modus === 'folien' && <Foliensicht />}
     </div>
   )
 }
