@@ -1,6 +1,7 @@
 import type { QuizFrage } from 'lernseiten-ui'
 import { leonFragen } from './quizLeon'
 import { abbildungsFragen } from './quizAbbildungen'
+import { openSourceFragen } from './quizOpenSource'
 
 // Quizfragen zur Allgemeinen Betriebswirtschaftslehre I (WS 2025/2026).
 // Inhalte ausschließlich aus den Übungsblättern (Kapitel 1–5, siehe
@@ -702,4 +703,4 @@ const basisFragen: QuizFrage[] = [
 
 // Bestehende Übungsblatt-Fragen + Abbildungs-Beschriftungen (Referenz-Tab)
 // + Zusatzfragen aus Leons Unterlagen (extra: true).
-export const quizFragen: QuizFrage[] = [...basisFragen, ...abbildungsFragen, ...leonFragen]
+export const quizFragen: QuizFrage[] = [...basisFragen, ...abbildungsFragen, ...leonFragen, ...openSourceFragen]
