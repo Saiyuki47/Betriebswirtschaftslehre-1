@@ -201,7 +201,7 @@ const basisFragen: QuizFrage[] = [
     optionen: [
       { text: 'Wirtschaftszweig / Branche (primär, sekundär, tertiär)' },
       { text: 'Betriebsgröße (Beschäftigte, Umsatz, Bilanzsumme)' },
-      { text: 'Vorherrschender Produktionsfaktor / Faktorintensität' },
+      { text: 'Rechtsform (öffentliches oder privates Recht)' },
       {
         text: 'Lieblingsfarbe des Inhabers',
         warumFalsch: 'Das ist kein betriebswirtschaftliches Typologisierungskriterium.',
@@ -209,8 +209,9 @@ const basisFragen: QuizFrage[] = [
     ],
     richtige: [0, 1, 2],
     erklaerung:
-      'Zu den fünf Hauptkriterien zählen Wirtschaftszweig/Branche, Betriebsgröße, vorherrschender Produktionsfaktor, Rechtsform und Standort(-orientierung).',
+      'Folie 18 gliedert Betriebe u. a. nach Hauptleistung (Sach-/Dienstleistung), Wirtschaftszweig/Branche, Betriebsgröße, Rechtsform und Besteuerung.',
     quelle: 'Übungsblatt 1, Aufgabe 9',
+    zusatzQuelle: 'Folien vom Lehrer, Seite 18',
   },
   {
     art: 'zuordnung',
@@ -223,71 +224,6 @@ const basisFragen: QuizFrage[] = [
       'Die SBWL wird funktional (nach betrieblichen Funktionen/Tätigkeiten) oder institutionell (nach Branchen/Wirtschaftszweigen) gegliedert. Die ABWL ist demgegenüber funktions- und branchenübergreifend.',
     quelle: 'Übungsblatt 1, Aufgabe 11',
     zusatzQuelle: 'Folien vom Lehrer, Seite 22',
-  },
-  {
-    art: 'zuordnung',
-    frage: 'Von welcher Nachbarwissenschaft profitiert die BWL jeweils? Ordne Beispiel und Disziplin zu.',
-    paare: [
-      { begriff: 'Optimierung, Investitionsrechnung, Prognosen', ziel: 'Mathematik / Statistik' },
-      { begriff: 'Konsumenten- und Führungsverhalten, Motivation', ziel: 'Psychologie / Soziologie' },
-      { begriff: 'HGB, AktG, Steuerrecht, Vertragsgestaltung', ziel: 'Rechtswissenschaft' },
-    ],
-    erklaerung:
-      'Die BWL nutzt u. a. Mathematik/Statistik (Operations Research), Psychologie/Soziologie (Verhalten) und Rechtswissenschaft (Rechtsformwahl, Bilanzierung). Weitere: VWL, Informatik.',
-    quelle: 'Übungsblatt 1, Aufgabe 11',
-  },
-  {
-    art: 'multi',
-    frage: 'Ein Unternehmen ist ein offenes System mit Außenbeziehungen. Welche zählen zu den BESCHAFFUNGSmärkten? (Mehrere richtig)',
-    optionen: [
-      { text: 'Arbeitsmarkt (Personal)' },
-      { text: 'Kapitalmarkt (Geldgeber)' },
-      { text: 'Materialmarkt (Lieferanten von Roh-, Hilfs- und Betriebsstoffen)' },
-      {
-        text: 'Absatzmarkt (Kunden)',
-        warumFalsch: 'Der Absatzmarkt ist der Markt für den Output, nicht ein Beschaffungsmarkt.',
-      },
-    ],
-    richtige: [0, 1, 2],
-    erklaerung:
-      'Auf der Input-Seite stehen die Beschaffungsmärkte: Material-, Arbeits- und Kapitalmarkt. Auf der Output-Seite steht der Absatzmarkt (Kunden, Wettbewerber). Modell: Input → Transformation → Output.',
-    quelle: 'Übungsblatt 1, Aufgabe 12',
-  },
-  {
-    art: 'wahrfalsch',
-    frage: 'Kartell und Monopol – wahr oder falsch?',
-    aussagen: [
-      { text: 'Ein Kartell ist eine Absprache rechtlich selbstständig bleibender Unternehmen zur Wettbewerbsbeschränkung.', wahr: true },
-      { text: 'Kartelle sind in Deutschland grundsätzlich erlaubt.', wahr: false, warum: 'Kartelle sind grundsätzlich verboten (§ 1 GWB, Art. 101 AEUV); nur eng begrenzte Ausnahmen sind zulässig.' },
-      { text: 'Ein Monopol ist eine Marktform mit nur einem Anbieter.', wahr: true },
-      { text: 'Ein Nachfragemonopol heißt Monopson.', wahr: true },
-    ],
-    erklaerung:
-      'Kartell = wettbewerbsbeschränkende Absprache selbstständiger Unternehmen (grundsätzlich verboten). Monopol = ein Anbieter; das Nachfragependant ist das Monopson. Beide sind oft weniger problematisch als dargestellt (bestreitbare Märkte, Innovationsanreiz).',
-    quelle: 'Übungsblatt 1, Aufgabe 13',
-  },
-  {
-    art: 'single',
-    frage: 'Welches Argument spricht dafür, dass ein Monopol weniger problematisch sein kann, als oft angenommen?',
-    optionen: [
-      { text: 'Bei bestreitbaren Märkten diszipliniert die potenzielle Konkurrenz auch einen Monopolisten' },
-      {
-        text: 'Ein Monopolist senkt freiwillig immer die Preise',
-        warumFalsch: 'Ein Monopolist ist Preis-Mengen-Setzer und hat keinen direkten Anreiz, die Preise zu senken; die Disziplinierung kommt von potenzieller Konkurrenz.',
-      },
-      {
-        text: 'Monopole sind in der EU verboten',
-        warumFalsch: 'Verboten ist der Missbrauch von Marktmacht, nicht die Monopolstellung als solche; das ist zudem kein Entwarnungsargument.',
-      },
-      {
-        text: 'Ein Monopol erhöht automatisch die Produktqualität',
-        warumFalsch: 'Das ist kein anerkanntes ökonomisches Argument; eher fehlt dem Monopolisten der Wettbewerbsdruck.',
-      },
-    ],
-    richtige: 0,
-    erklaerung:
-      'Gegenargumente: bestreitbare Märkte (contestable markets), effiziente natürliche Monopole (Netze), Innovationsanreiz durch temporäre Monopole (Patente, Schumpeter) und zeitlich begrenzte Marktmacht.',
-    quelle: 'Übungsblatt 1, Aufgabe 13',
   },
 
   // =========================================================================
@@ -316,34 +252,6 @@ const basisFragen: QuizFrage[] = [
       'Sanierung = alle planvollen Maßnahmen, um ein notleidendes Unternehmen vor dem Zusammenbruch zu bewahren und seine Leistungsfähigkeit wiederherzustellen.',
     quelle: 'Übungsblatt 2, Aufgabe 14',
     zusatzQuelle: 'Folien vom Lehrer, Seite 35',
-  },
-  {
-    art: 'reihenfolge',
-    frage: 'Bringe die typischen Schritte einer Sanierung in die richtige zeitliche Reihenfolge.',
-    schritte: [
-      'Krisendiagnose / Ursachenanalyse',
-      'Sofortmaßnahmen zur Liquiditätssicherung',
-      'Sanierungskonzept / -plan',
-      'Leistungswirtschaftliche Sanierung (Restrukturierung)',
-      'Finanzwirtschaftliche Sanierung (neues EK, Schuldenerlass)',
-      'Umsetzung & Controlling',
-    ],
-    erklaerung:
-      'Erst Diagnose und Sicherung der Zahlungsfähigkeit, dann das Konzept, anschließend leistungs- und finanzwirtschaftliche Sanierung, schließlich Umsetzung und Erfolgskontrolle (kurz- → mittel- → langfristig).',
-    quelle: 'Übungsblatt 2, Aufgabe 14',
-  },
-  {
-    art: 'wahrfalsch',
-    frage: 'Sanierung – wahr oder falsch?',
-    aussagen: [
-      { text: 'Vor der Sanierung wird die Sanierungsfähigkeit und -würdigkeit geprüft.', wahr: true },
-      { text: 'Die finanzwirtschaftliche Sanierung kann Kapitalschnitt, neues Eigenkapital und einen Debt-Equity-Swap umfassen.', wahr: true },
-      { text: 'Sofortmaßnahmen dienen vor allem der Sicherung der Zahlungsfähigkeit.', wahr: true },
-      { text: 'Die leistungswirtschaftliche Sanierung besteht nur aus einer Kapitalerhöhung.', wahr: false, warum: 'Die Kapitalerhöhung gehört zur FINANZwirtschaftlichen Sanierung; leistungswirtschaftlich geht es um Produkte, Prozesse, Organisation und Personal.' },
-    ],
-    erklaerung:
-      'Leistungswirtschaftliche Sanierung = Restrukturierung von Produkten/Prozessen/Personal (Kostensenkung, Desinvestitionen). Finanzwirtschaftliche Sanierung = Kapitalmaßnahmen (neues EK, Forderungsverzicht, Debt-Equity-Swap).',
-    quelle: 'Übungsblatt 2, Aufgabe 14',
   },
 
   // =========================================================================
@@ -439,32 +347,6 @@ const basisFragen: QuizFrage[] = [
     zusatzQuelle: 'Folien vom Lehrer, Seite 70',
   },
   {
-    art: 'zuordnung',
-    frage: 'Ordne die Bilanzkennzahl ihrer Aussage/Gruppe zu.',
-    paare: [
-      { begriff: 'Eigenkapitalquote = EK / GK', ziel: 'Kapitalstruktur' },
-      { begriff: 'Anlagenintensität = AV / GK', ziel: 'Vermögensstruktur' },
-      { begriff: 'Anlagendeckung II', ziel: 'Fristenkongruenz' },
-      { begriff: 'Liquidität 2. Grades', ziel: 'Zahlungsfähigkeit' },
-    ],
-    erklaerung:
-      'EK-Quote → Kapitalstruktur (Passivseite), Anlagenintensität → Vermögensstruktur (Aktivseite), Anlagendeckung → horizontale Bilanzregeln/Fristenkongruenz, Liquiditätsgrade → kurzfristige Zahlungsfähigkeit.',
-    quelle: 'Übungsblatt 3, Aufgabe 15',
-  },
-  {
-    art: 'wahrfalsch',
-    frage: 'Goldene Bilanzregel und Anlagendeckung – wahr oder falsch?',
-    aussagen: [
-      { text: 'Die Anlagendeckung II sollte über 100 % liegen.', wahr: true },
-      { text: 'Anlagendeckung II = (EK + langfristiges FK) / Anlagevermögen × 100.', wahr: true },
-      { text: 'Die goldene Bilanzregel verlangt, langfristiges Vermögen kurzfristig zu finanzieren.', wahr: false, warum: 'Genau umgekehrt: Langfristiges (Anlage-)Vermögen soll LANGfristig finanziert werden (Fristenkongruenz).' },
-      { text: 'Die Liquidität 1. Grades setzt liquide Mittel ins Verhältnis zu kurzfristigen Verbindlichkeiten.', wahr: true },
-    ],
-    erklaerung:
-      'Goldene Bilanzregel = Fristenkongruenz: langfristiges Vermögen langfristig finanzieren → Anlagendeckung II ≥ 100 %. Liquidität 1. Grades = liquide Mittel / kurzfristige Verbindlichkeiten.',
-    quelle: 'Übungsblatt 3, Aufgabe 15',
-  },
-  {
     art: 'multi',
     frage: 'Welche Aussagen über betriebswirtschaftliche Kennzahlen treffen zu? (Mehrere richtig)',
     optionen: [
@@ -481,15 +363,6 @@ const basisFragen: QuizFrage[] = [
       'Kennzahlen sind quantitative, verdichtete Größen (absolut oder als Verhältniszahl). Einsatzgebiete: Zeit-/Periodenvergleich, Bereichsvergleich, Betriebsvergleich (Benchmarking) und Soll-Ist-Vergleich.',
     quelle: 'Übungsblatt 3, Aufgabe 16',
     zusatzQuelle: 'Folien vom Lehrer, Seite 44',
-  },
-  {
-    art: 'eingabe',
-    frage: 'Lanz GmbH: liquide Mittel (Bank 300.000 + Kasse 80.000) = 380.000 €, kurzfristige Verbindlichkeiten 600.000 €. Wie hoch ist die Liquidität 1. Grades in Prozent? (eine Nachkommastelle)',
-    loesungen: ['63,3', '63.3'],
-    toleranz: 0.5,
-    platzhalter: '% ',
-    erklaerung: 'Liquidität 1. Grades = 380.000 / 600.000 = 0,633 = 63,3 %. Solide Barliquidität.',
-    quelle: 'Übungsblatt 3, Aufgabe 17',
   },
   {
     art: 'eingabe',
@@ -538,42 +411,6 @@ const basisFragen: QuizFrage[] = [
     zusatzQuelle: 'Folien vom Lehrer, Seite 70',
   },
   {
-    art: 'single',
-    frage: 'Wie lautet die Leverage-Formel für die Eigenkapitalrentabilität?',
-    optionen: [
-      { text: 'EKR = GKR + (GKR − FK-Zins) × (FK / EK)' },
-      {
-        text: 'EKR = GKR + (FK-Zins − GKR) × (FK / EK)',
-        warumFalsch: 'Im Klammerausdruck steht (GKR − FK-Zins), nicht umgekehrt – sonst hätte ein positiver Hebel das falsche Vorzeichen.',
-      },
-      {
-        text: 'EKR = GKR × (EK / FK)',
-        warumFalsch: 'Diese Form gibt den Leverage-Effekt nicht wieder; der Hebel hängt vom Verschuldungsgrad FK/EK und der Zinsdifferenz ab.',
-      },
-      {
-        text: 'EKR = (GKR + FK-Zins) / 2',
-        warumFalsch: 'Der Leverage-Effekt ist kein einfacher Mittelwert aus GKR und FK-Zins.',
-      },
-    ],
-    richtige: 0,
-    erklaerung:
-      'EKR = GKR + (GKR − FK-Zins) × (FK/EK). Solange GKR > FK-Zins ist, hebelt steigendes Fremdkapital die EKR nach oben; bei GKR < FK-Zins wirkt der Hebel nach unten.',
-    quelle: 'Übungsblatt 3, Aufgabe 19',
-  },
-  {
-    art: 'wahrfalsch',
-    frage: 'Leverage-Effekt – wahr oder falsch?',
-    aussagen: [
-      { text: 'Solange die GKR über dem FK-Zins liegt, steigert mehr Fremdkapital die EKR.', wahr: true },
-      { text: 'Liegt die GKR unter dem FK-Zins, kann die EKR negativ werden.', wahr: true },
-      { text: 'Ein höherer Verschuldungsgrad steigert nur die Chancen, nicht das Risiko.', wahr: false, warum: 'Ein höherer Verschuldungsgrad steigert Chance UND Risiko gleichermaßen – der Hebel wirkt in beide Richtungen.' },
-      { text: 'Der Leverage-Effekt beruht auf der Differenz (GKR − FK-Zins).', wahr: true },
-    ],
-    erklaerung:
-      'Der Leverage-Effekt ist eine Hebelwirkung: Die Zinsdifferenz (GKR − FK-Zins) mal Verschuldungsgrad bestimmt den Effekt. Positiv bei GKR > FK-Zins, negativ bei GKR < FK-Zins. Chancen und Risiken steigen gemeinsam.',
-    quelle: 'Übungsblatt 3, Aufgabe 19',
-  },
-  {
     art: 'eingabe',
     frage: '„Unglück AG": Umsatz 360.000 €, Materialaufwand 144.000 €, Personalaufwand 108.000 €, Abschreibungen 90.000 €. Wie hoch ist der Kapitalgewinn (Gewinn vor FK-Zinsen) in €?',
     loesungen: ['18000', '18.000', '18000 €'],
@@ -590,29 +427,6 @@ const basisFragen: QuizFrage[] = [
     platzhalter: '% ',
     erklaerung: 'GKR = Kapitalgewinn / GK × 100 = 18.000 / 120.000 = 15 %. Mit EKR 30 % und FK-Zins 7,5 % liegt ein positiver Leverage vor.',
     quelle: 'Übungsblatt 3, Aufgabe 21',
-  },
-  {
-    art: 'single',
-    frage: '„Pleite und Co.": GKR 8 %, FK-Zins 9 %, Verschuldungsgrad 2. Wie wirkt sich das auf die Eigenkapitalrentabilität aus?',
-    optionen: [
-      { text: 'Negativer Leverage: die EKR (6 %) liegt UNTER der GKR' },
-      {
-        text: 'Positiver Leverage: die EKR liegt über der GKR',
-        warumFalsch: 'Positiver Leverage entsteht nur, wenn die GKR über dem FK-Zins liegt – hier ist der FK-Zins (9 %) höher als die GKR (8 %).',
-      },
-      {
-        text: 'Kein Effekt: EKR = GKR = 8 %',
-        warumFalsch: 'Bei Verschuldung und einer Zinsdifferenz ungleich null weicht die EKR stets von der GKR ab.',
-      },
-      {
-        text: 'Die EKR steigt auf 12 %',
-        warumFalsch: 'Mit EKR = 8 + (8 − 9) × 2 = 6 % sinkt die EKR unter die GKR.',
-      },
-    ],
-    richtige: 0,
-    erklaerung:
-      'EKR = GKR + (GKR − FK-Zins) × (FK/EK) = 8 + (8 − 9) × 2 = 6 %. Weil der FK-Zins (9 %) über der GKR (8 %) liegt, drückt die Verschuldung die EKR unter die GKR (negativer Leverage).',
-    quelle: 'Übungsblatt 3, Aufgabe 20',
   },
 
   // =========================================================================
@@ -719,29 +533,6 @@ const basisFragen: QuizFrage[] = [
     erklaerung:
       'Die UG (haftungsbeschränkt) ist eine Variante der GmbH mit nur 1 € Mindestkapital und Thesaurierungspflicht (Rücklagenbildung bis 25.000 €). Sie ist eine günstige Gründungsform mit beschränkter Haftung.',
     quelle: 'Übungsblatt 4, Aufgabe 23',
-  },
-  {
-    art: 'single',
-    frage: 'Warum sinkt in Deutschland langfristig der gewerkschaftliche Organisationsgrad? Welcher ist der zentrale ökonomische Grund?',
-    optionen: [
-      { text: 'Das Trittbrettfahrer-Problem: Tarifabschlüsse gelten faktisch auch für Nichtmitglieder' },
-      {
-        text: 'Gewerkschaften sind gesetzlich verboten',
-        warumFalsch: 'Gewerkschaften sind durch die Koalitionsfreiheit (Art. 9 GG) geschützt, keineswegs verboten.',
-      },
-      {
-        text: 'Die Zahl der Industriebetriebe steigt stark',
-        warumFalsch: 'Es ist umgekehrt: Der Rückgang industrieller Großbetriebe (klassische Hochburgen) schwächt die Gewerkschaften.',
-      },
-      {
-        text: 'Mitgliedsbeiträge werden vom Staat erstattet',
-        warumFalsch: 'Eine staatliche Beitragserstattung gibt es nicht; gerade die Beiträge sind ein Grund für das Trittbrettfahrer-Verhalten.',
-      },
-    ],
-    richtige: 0,
-    erklaerung:
-      'Der zentrale ökonomische Grund ist das Trittbrettfahrer-Problem: Wer nicht zahlt, profitiert dennoch vom Tarifabschluss. Weitere Gründe: Struktur-/Branchenwandel, atypische Beschäftigung, Wertewandel, Demografie, Globalisierung.',
-    quelle: 'Übungsblatt 4, Aufgabe 10',
   },
   {
     art: 'multi',
@@ -880,23 +671,6 @@ const basisFragen: QuizFrage[] = [
       'Die Unternehmensphilosophie ist das Wertesystem/Selbstbild eines Unternehmens, oft im Leitbild (Mission Statement) verschriftlicht. Sie ist von der tatsächlich gelebten Kultur zu unterscheiden.',
     quelle: 'Übungsblatt 5, Aufgabe 26',
     zusatzQuelle: 'Folien vom Lehrer, Seite 62',
-  },
-  {
-    art: 'multi',
-    frage: 'Welche Zwecke verfolgt die Leitung mit der Offenlegung der Unternehmensphilosophie? (Mehrere richtig)',
-    optionen: [
-      { text: 'Nach innen: Orientierung, Identifikation und Motivation der Mitarbeiter' },
-      { text: 'Nach außen: Image- und Vertrauensbildung, Legitimation' },
-      { text: 'Differenzierung im Wettbewerb und Anziehung von Mitarbeitern/Investoren' },
-      {
-        text: 'Umgehung von Steuern',
-        warumFalsch: 'Die Offenlegung eines Leitbilds hat mit Steuergestaltung nichts zu tun.',
-      },
-    ],
-    richtige: [0, 1, 2],
-    erklaerung:
-      'Nach innen: Orientierung, Identifikation, Motivation, Verhaltensrahmen. Nach außen: Image/Vertrauen, Legitimation, Differenzierung, Employer Branding. Kurz: Sinnstiftung, Integration und Legitimation.',
-    quelle: 'Übungsblatt 5, Aufgabe 26',
   },
   {
     art: 'zuordnung',
