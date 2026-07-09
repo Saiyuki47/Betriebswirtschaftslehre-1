@@ -21,6 +21,8 @@ export interface Aufgabe {
   aufgabeText: string
   tipp?: Tipps
   loesung?: string
+  /** Optionale Bild-Musterlösung(en): Dateinamen in public/material/bwl_aufgaben/. */
+  loesungBild?: string[]
   schwierigkeit: Schwierigkeit
   kategorie?: string
 }

@@ -417,3 +417,14 @@
 @media print {
   .fv-bar, .fv-select { display: none !important; }
 }
+
+/* BILD-MUSTERLÖSUNG (Übungsblätter) */
+.ub-loes-bild-link { display: block; margin-top: 10px; }
+.ub-loes-bild {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}

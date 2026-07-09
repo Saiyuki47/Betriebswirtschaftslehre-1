@@ -10,6 +10,8 @@ import { aufgabeReferenz } from '../data/aufgabeReferenz'
 import { referenzTitelById } from '../data/referenzIndex'
 import FormelText from './FormelText'
 
+const BASE = import.meta.env.BASE_URL
+
 // Chip-Reihe unter der Aufgabenstellung, die per Deep-Link (#referenz/<id>) zum
 // passenden Referenzthema springt (der Referenz-Tab öffnet + scrollt via useHashTab).
 const refLinksRow: CSSProperties = { display: 'flex', flexWrap: 'wrap', gap: '0.4rem', margin: '0.6rem 0 0' }
@@ -217,13 +219,31 @@ export default function Uebungsblaetter() {
                         )}
                       </div>
                     )}
-                    {aufgabe.loesung && (
+                    {(aufgabe.loesung || aufgabe.loesungBild) && (
                       <>
                         <button type="button" className="toggle-btn" onClick={() => toggleSolution(key)}>
                           {isOpen ? '▼ Lösung verbergen' : '▶ Lösung anzeigen'}
                         </button>
                         {isOpen && (
-                          <pre className="sql-block visible">{aufgabe.loesung}</pre>
+                          <>
+                            {aufgabe.loesung && <pre className="sql-block visible">{aufgabe.loesung}</pre>}
+                            {aufgabe.loesungBild?.map((f, i) => (
+                              <a
+                                key={i}
+                                href={`${BASE}material/bwl_aufgaben/${encodeURIComponent(f)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ub-loes-bild-link"
+                              >
+                                <img
+                                  className="ub-loes-bild"
+                                  src={`${BASE}material/bwl_aufgaben/${encodeURIComponent(f)}`}
+                                  alt={`Musterlösung Aufgabe ${task.nr}`}
+                                  loading="lazy"
+                                />
+                              </a>
+                            ))}
+                          </>
                         )}
                       </>
                     )}

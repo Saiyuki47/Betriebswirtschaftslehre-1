@@ -31,7 +31,7 @@ const basisFragen: QuizFrage[] = [
     richtige: 0,
     erklaerung:
       'Wirtschaften = Disposition über knappe Güter. Weil Bedürfnisse (nahezu) unbegrenzt, die Mittel aber knapp sind, entsteht ein Wahl-/Entscheidungszwang.',
-    quelle: 'Übungsblatt 1, Aufgabe 3',
+    quelle: '1 Grundlagen, Aufgabe 3',
     zusatzQuelle: 'Folien vom Lehrer, Seite 10',
   },
   {
@@ -57,7 +57,7 @@ const basisFragen: QuizFrage[] = [
     richtige: 0,
     erklaerung:
       'Aus der Knappheit der Mittel bei (nahezu) unbegrenzten Bedürfnissen folgt der Wahl- und Entscheidungszwang (Allokation) – also die Notwendigkeit zu wirtschaften.',
-    quelle: 'Übungsblatt 1, Aufgabe 3',
+    quelle: '1 Grundlagen, Aufgabe 3',
     zusatzQuelle: 'Folien vom Lehrer, Seite 10',
   },
   {
@@ -66,7 +66,7 @@ const basisFragen: QuizFrage[] = [
     schritte: ['Bedürfnis (Mangelzustand)', 'Bedarf (mit Kaufkraft hinterlegt)', 'Nachfrage (am Markt geäußert)'],
     erklaerung:
       'Ein Bedürfnis (Mangelempfinden) wird zum Bedarf, wenn Mittel zur Befriedigung zur Verfügung stehen; tritt der Bedarf am Markt auf, wird er zur Nachfrage.',
-    quelle: 'Übungsblatt 1, Aufgabe 3',
+    quelle: '1 Grundlagen, Aufgabe 3',
   },
   {
     art: 'kategorien',
@@ -79,7 +79,7 @@ const basisFragen: QuizFrage[] = [
     ],
     erklaerung:
       'Maximalprinzip: Mittel fix (2000 €), Ertrag (Entfernung) max. Minimalprinzip: Ziel fix (Badeurlaub), Kosten min. Extremumprinzip: beide Größen variabel → ökonomisch nicht eindeutig.',
-    quelle: 'Übungsblatt 1, Aufgabe 5',
+    quelle: '1 Grundlagen, Aufgabe 5',
     zusatzQuelle: 'Folien vom Lehrer, Seite 14',
   },
   {
@@ -103,7 +103,7 @@ const basisFragen: QuizFrage[] = [
     richtige: 0,
     erklaerung:
       'Der Mitteleinsatz (Budget 2000 €) ist fix, der Ertrag (Entfernung) wird maximiert → Maximalprinzip: „mit gegebenen Mitteln maximalen Erfolg".',
-    quelle: 'Übungsblatt 1, Aufgabe 5',
+    quelle: '1 Grundlagen, Aufgabe 5',
     zusatzQuelle: 'Folien vom Lehrer, Seite 13',
   },
   {
@@ -117,7 +117,7 @@ const basisFragen: QuizFrage[] = [
     ],
     erklaerung:
       'Die BWL ist Rationalitätslehre, weil sie den vernünftigen Mitteleinsatz untersucht. Reale Entscheidungen sind aber nur begrenzt rational. Man unterscheidet formale (Zweck-) und materiale (Wert-)Rationalität.',
-    quelle: 'Übungsblatt 1, Aufgabe 4',
+    quelle: '1 Grundlagen, Aufgabe 4',
   },
   {
     art: 'reihenfolge',
@@ -129,7 +129,7 @@ const basisFragen: QuizFrage[] = [
     ],
     erklaerung:
       'Produktivität ist rein mengenmäßig (z. B. Stück/Std.), Wirtschaftlichkeit wertmäßig (> 1 = wirtschaftlich), Rentabilität bezieht den Gewinn auf das eingesetzte Kapital. Höhere Produktivität → bessere Wirtschaftlichkeit → höhere Rentabilität.',
-    quelle: 'Übungsblatt 1, Aufgabe 6',
+    quelle: '1 Grundlagen, Aufgabe 6',
     zusatzQuelle: 'Folien vom Lehrer, Seite 15',
   },
   {
@@ -153,7 +153,7 @@ const basisFragen: QuizFrage[] = [
     richtige: 0,
     erklaerung:
       'Produktivität = Output/Input in MENGENeinheiten. Sie ist eine rein technische Ergiebigkeit ohne Geldgrößen.',
-    quelle: 'Übungsblatt 1, Aufgabe 6',
+    quelle: '1 Grundlagen, Aufgabe 6',
     zusatzQuelle: 'Folien vom Lehrer, Seite 15',
   },
   {
@@ -169,7 +169,7 @@ const basisFragen: QuizFrage[] = [
     ],
     erklaerung:
       'Entscheidend ist die Trägerschaft, nicht die Rechtsform: Die DB ist eine AG, gehört aber zu 100 % dem Bund → öffentlich. Die HS Fulda ist eine Körperschaft öffentlichen Rechts. VW ist trotz Landesbeteiligung erwerbswirtschaftlich → privat.',
-    quelle: 'Übungsblatt 1, Aufgabe 8',
+    quelle: '1 Grundlagen, Aufgabe 8',
     zusatzQuelle: 'Folien vom Lehrer, Seite 16',
   },
   {
@@ -193,7 +193,7 @@ const basisFragen: QuizFrage[] = [
     richtige: 0,
     erklaerung:
       'Rechtsform ≠ Trägerschaft. Die DB AG hat eine privatrechtliche Form (AG), steht aber im 100%igen Eigentum des Bundes und hat einen Infrastruktur-/Gemeinwohlauftrag → öffentliches Unternehmen/Mischform.',
-    quelle: 'Übungsblatt 1, Aufgabe 8',
+    quelle: '1 Grundlagen, Aufgabe 8',
   },
   {
     art: 'multi',
@@ -210,7 +210,7 @@ const basisFragen: QuizFrage[] = [
     richtige: [0, 1, 2],
     erklaerung:
       'Folie 18 gliedert Betriebe u. a. nach Hauptleistung (Sach-/Dienstleistung), Wirtschaftszweig/Branche, Betriebsgröße, Rechtsform und Besteuerung.',
-    quelle: 'Übungsblatt 1, Aufgabe 9',
+    quelle: '1 Grundlagen, Aufgabe 9',
     zusatzQuelle: 'Folien vom Lehrer, Seite 18',
   },
   {
@@ -222,7 +222,7 @@ const basisFragen: QuizFrage[] = [
     ],
     erklaerung:
       'Die SBWL wird funktional (nach betrieblichen Funktionen/Tätigkeiten) oder institutionell (nach Branchen/Wirtschaftszweigen) gegliedert. Die ABWL ist demgegenüber funktions- und branchenübergreifend.',
-    quelle: 'Übungsblatt 1, Aufgabe 11',
+    quelle: '1 Grundlagen, Aufgabe 11',
     zusatzQuelle: 'Folien vom Lehrer, Seite 22',
   },
 
@@ -250,7 +250,7 @@ const basisFragen: QuizFrage[] = [
     richtige: 0,
     erklaerung:
       'Sanierung = alle planvollen Maßnahmen, um ein notleidendes Unternehmen vor dem Zusammenbruch zu bewahren und seine Leistungsfähigkeit wiederherzustellen.',
-    quelle: 'Übungsblatt 2, Aufgabe 14',
+    quelle: '2 Betrieblicher Lebenszyklus, Aufgabe 14',
     zusatzQuelle: 'Folien vom Lehrer, Seite 35',
   },
 
@@ -278,7 +278,7 @@ const basisFragen: QuizFrage[] = [
     richtige: 0,
     erklaerung:
       'Wirtschaftlichkeit = Verhältnis von Ertrag zu Aufwand (im Aufgabenbeispiel Umsatz/Istkosten). Ein Wert > 1 bedeutet wirtschaftliches Arbeiten.',
-    quelle: 'Übungsblatt 3, Aufgabe 7',
+    quelle: '3 Mengen und Werte, Aufgabe 7',
     zusatzQuelle: 'Folien vom Lehrer, Seite 15',
   },
   {
@@ -288,7 +288,7 @@ const basisFragen: QuizFrage[] = [
     toleranz: 0.02,
     platzhalter: 'z. B. 1,07',
     erklaerung: '27 / 25,3 = 1,07. Ein Wert über 1 zeigt: B arbeitet wirtschaftlich (und im Vergleich am besten).',
-    quelle: 'Übungsblatt 3, Aufgabe 7',
+    quelle: '3 Mengen und Werte, Aufgabe 7',
   },
   {
     art: 'eingabe',
@@ -297,7 +297,7 @@ const basisFragen: QuizFrage[] = [
     toleranz: 0.3,
     platzhalter: 'PKW je MA',
     erklaerung: '3.000.000 / 270.000 = 11,1 PKW je Mitarbeiter. Arbeitsproduktivität = Output (Menge) / eingesetzte Arbeit.',
-    quelle: 'Übungsblatt 3, Aufgabe 7',
+    quelle: '3 Mengen und Werte, Aufgabe 7',
   },
   {
     art: 'single',
@@ -320,7 +320,7 @@ const basisFragen: QuizFrage[] = [
     richtige: 0,
     erklaerung:
       'Marktanteil = Umsatz des Unternehmens / Gesamtumsatz des Marktes. Nicht eindeutig, weil man wertmäßig oder mengenmäßig rechnen kann und die Marktabgrenzung strittig ist (nur PKW? inkl. Nutzfahrzeuge? welcher Raum?).',
-    quelle: 'Übungsblatt 3, Aufgabe 7',
+    quelle: '3 Mengen und Werte, Aufgabe 7',
   },
   {
     art: 'single',
@@ -343,7 +343,7 @@ const basisFragen: QuizFrage[] = [
     richtige: 0,
     erklaerung:
       'EKR = Jahresüberschuss / Eigenkapital × 100. Sie misst die Verzinsung des von den Eigentümern eingesetzten Kapitals.',
-    quelle: 'Übungsblatt 3, Aufgabe 15',
+    quelle: '3 Mengen und Werte, Aufgabe 15',
     zusatzQuelle: 'Folien vom Lehrer, Seite 70',
   },
   {
@@ -361,7 +361,7 @@ const basisFragen: QuizFrage[] = [
     richtige: [0, 1, 2],
     erklaerung:
       'Kennzahlen sind quantitative, verdichtete Größen (absolut oder als Verhältniszahl). Einsatzgebiete: Zeit-/Periodenvergleich, Bereichsvergleich, Betriebsvergleich (Benchmarking) und Soll-Ist-Vergleich.',
-    quelle: 'Übungsblatt 3, Aufgabe 16',
+    quelle: '3 Mengen und Werte, Aufgabe 16',
     zusatzQuelle: 'Folien vom Lehrer, Seite 44',
   },
   {
@@ -371,7 +371,7 @@ const basisFragen: QuizFrage[] = [
     toleranz: 0.5,
     platzhalter: '% ',
     erklaerung: 'EKR = 930.000 / 2.430.000 × 100 = 38,3 %. Hohe Rentabilität bei zugleich hoher Eigenkapitalquote (≈ 62 %).',
-    quelle: 'Übungsblatt 3, Aufgabe 17',
+    quelle: '3 Mengen und Werte, Aufgabe 17',
   },
   {
     art: 'reihenfolge',
@@ -384,7 +384,7 @@ const basisFragen: QuizFrage[] = [
     ],
     erklaerung:
       'Aus VG = FK/EK = 3 und EK + FK = 10.000 folgt 4·EK = 10.000 → EK = 2.500, FK = 7.500. Der Kapitalgewinn (vor FK-Zinsen) ist 1.250 €; nach Abzug der FK-Zinsen (750 €) bleibt ein Jahresüberschuss von 500 €.',
-    quelle: 'Übungsblatt 3, Aufgabe 18',
+    quelle: '3 Mengen und Werte, Aufgabe 18',
   },
   {
     art: 'single',
@@ -407,7 +407,7 @@ const basisFragen: QuizFrage[] = [
     richtige: 0,
     erklaerung:
       'Der Kapitalgewinn ist der Gewinn, den das gesamte Kapital erwirtschaftet hat – VOR den FK-Zinsen (Kapitalgewinn = GKR × Gesamtkapital). Erst nach Abzug der FK-Zinsen ergibt sich der Jahresüberschuss.',
-    quelle: 'Übungsblatt 3, Aufgabe 18',
+    quelle: '3 Mengen und Werte, Aufgabe 18',
     zusatzQuelle: 'Folien vom Lehrer, Seite 70',
   },
   {
@@ -417,7 +417,7 @@ const basisFragen: QuizFrage[] = [
     toleranz: 1,
     platzhalter: '€ ',
     erklaerung: 'Kapitalgewinn = 360.000 − 144.000 − 108.000 − 90.000 = 18.000 €. Erst danach werden die FK-Zinsen abgezogen (→ Jahresüberschuss 12.000 €).',
-    quelle: 'Übungsblatt 3, Aufgabe 21',
+    quelle: '3 Mengen und Werte, Aufgabe 21',
   },
   {
     art: 'eingabe',
@@ -426,7 +426,7 @@ const basisFragen: QuizFrage[] = [
     toleranz: 0.3,
     platzhalter: '% ',
     erklaerung: 'GKR = Kapitalgewinn / GK × 100 = 18.000 / 120.000 = 15 %. Mit EKR 30 % und FK-Zins 7,5 % liegt ein positiver Leverage vor.',
-    quelle: 'Übungsblatt 3, Aufgabe 21',
+    quelle: '3 Mengen und Werte, Aufgabe 21',
   },
 
   // =========================================================================
@@ -446,7 +446,7 @@ const basisFragen: QuizFrage[] = [
     ],
     erklaerung:
       'Personengesellschaften (GbR, OHG, KG) beruhen auf der persönlichen Mitarbeit/Haftung der Gesellschafter. Kapitalgesellschaften (GmbH, UG, AG) sind juristische Personen mit beschränkter Haftung auf das Gesellschaftsvermögen.',
-    quelle: 'Übungsblatt 4, Aufgabe 22',
+    quelle: '4 Rechtsformen und Mitbestimmung, Aufgabe 22',
     zusatzQuelle: 'Folien vom Lehrer, Seite 45',
   },
   {
@@ -460,7 +460,7 @@ const basisFragen: QuizFrage[] = [
     ],
     erklaerung:
       'GbR → §§ 705 ff. BGB; OHG/KG → §§ 105 ff. / 161 ff. HGB; GmbH und UG → GmbHG (UG: § 5a GmbHG); AG und KGaA → AktG. Genossenschaft → GenG.',
-    quelle: 'Übungsblatt 4, Aufgabe 22',
+    quelle: '4 Rechtsformen und Mitbestimmung, Aufgabe 22',
   },
   {
     art: 'single',
@@ -483,7 +483,7 @@ const basisFragen: QuizFrage[] = [
     richtige: 0,
     erklaerung:
       'Die GmbH braucht 25.000 € Stammkapital (bei Gründung mind. 12.500 € eingezahlt). UG: 1 €; AG: 50.000 €; EU/OHG/KG: kein Mindestkapital.',
-    quelle: 'Übungsblatt 4, Aufgabe 23',
+    quelle: '4 Rechtsformen und Mitbestimmung, Aufgabe 23',
   },
   {
     art: 'zuordnung',
@@ -496,7 +496,7 @@ const basisFragen: QuizFrage[] = [
     ],
     erklaerung:
       'UG: 1 € (Thesaurierungspflicht bis 25.000 €), GmbH: 25.000 €, AG: 50.000 €. Für Einzelunternehmen, OHG und KG gibt es kein gesetzliches Mindestkapital.',
-    quelle: 'Übungsblatt 4, Aufgabe 23',
+    quelle: '4 Rechtsformen und Mitbestimmung, Aufgabe 23',
   },
   {
     art: 'wahrfalsch',
@@ -509,7 +509,7 @@ const basisFragen: QuizFrage[] = [
     ],
     erklaerung:
       'EU und OHG: unbeschränkte persönliche Haftung. KG: Komplementär unbeschränkt, Kommanditist nur bis zur Einlage. UG/GmbH/AG: Haftung auf das Gesellschaftsvermögen beschränkt.',
-    quelle: 'Übungsblatt 4, Aufgabe 23',
+    quelle: '4 Rechtsformen und Mitbestimmung, Aufgabe 23',
   },
   {
     art: 'single',
@@ -532,7 +532,7 @@ const basisFragen: QuizFrage[] = [
     richtige: 0,
     erklaerung:
       'Die UG (haftungsbeschränkt) ist eine Variante der GmbH mit nur 1 € Mindestkapital und Thesaurierungspflicht (Rücklagenbildung bis 25.000 €). Sie ist eine günstige Gründungsform mit beschränkter Haftung.',
-    quelle: 'Übungsblatt 4, Aufgabe 23',
+    quelle: '4 Rechtsformen und Mitbestimmung, Aufgabe 23',
   },
   {
     art: 'multi',
@@ -549,7 +549,7 @@ const basisFragen: QuizFrage[] = [
     richtige: [0, 1, 2],
     erklaerung:
       'Betriebliche Mitbestimmung (Betriebsrat, BetrVG) und unternehmerische Mitbestimmung (paritätischer Aufsichtsrat nach MitbestG 1976, Arbeitsdirektor) treffen bei VW auf die VW-Gesetz-Besonderheit (Land Niedersachsen ~20 % mit Sperrminorität).',
-    quelle: 'Übungsblatt 4, Aufgabe 24',
+    quelle: '4 Rechtsformen und Mitbestimmung, Aufgabe 24',
   },
   {
     art: 'wahrfalsch',
@@ -562,7 +562,7 @@ const basisFragen: QuizFrage[] = [
     ],
     erklaerung:
       'Betriebsebene → Betriebsrat (BetrVG). Unternehmensebene → Aufsichtsrat, der den Vorstand bestellt. Ab > 2.000 Beschäftigten gilt das MitbestG 1976 mit paritätischer Besetzung des Aufsichtsrats.',
-    quelle: 'Übungsblatt 4, Aufgabe 24',
+    quelle: '4 Rechtsformen und Mitbestimmung, Aufgabe 24',
     zusatzQuelle: 'Folien vom Lehrer, Seite 51',
   },
 
@@ -583,7 +583,7 @@ const basisFragen: QuizFrage[] = [
     ],
     erklaerung:
       'Leistungsziele (Sachziele) betreffen das „Was" (Marktanteil, Qualität). Finanzziele sichern Zahlungsfähigkeit/Finanzierung (Liquidität, EK-Quote). Erfolgsziele (Formalziele) betreffen den wertmäßigen Erfolg (Gewinn, Rentabilität).',
-    quelle: 'Übungsblatt 5, Aufgabe 28',
+    quelle: '5 Ziele im Unternehmen, Aufgabe 28',
     zusatzQuelle: 'Folien vom Lehrer, Seite 67',
   },
   {
@@ -607,7 +607,7 @@ const basisFragen: QuizFrage[] = [
     richtige: 0,
     erklaerung:
       'Erfolgsziele (Formalziele) betreffen den wertmäßigen Erfolg: Gewinn, Rentabilität (EKR/GKR), Umsatzrendite, Wirtschaftlichkeit. Liquidität ist ein Finanzziel, Absatzmenge/Kundenzufriedenheit sind Leistungsziele.',
-    quelle: 'Übungsblatt 5, Aufgabe 28',
+    quelle: '5 Ziele im Unternehmen, Aufgabe 28',
     zusatzQuelle: 'Folien vom Lehrer, Seite 67',
   },
   {
@@ -621,7 +621,7 @@ const basisFragen: QuizFrage[] = [
     ],
     erklaerung:
       'Nach der Anreiz-Beitrags-Theorie (March/Simon) leistet jede Gruppe ihre Beiträge nur, solange die Anreize sie aufwiegen. Reichen die Anreize nicht, entzieht sie die Beiträge (Sanktion): Eigentümer → Kapitalabzug, Mitarbeiter → Streik, Banken → Kreditkündigung, Kunden → Boykott.',
-    quelle: 'Übungsblatt 5, Aufgabe 25',
+    quelle: '5 Ziele im Unternehmen, Aufgabe 25',
     zusatzQuelle: 'Folien vom Lehrer, Seite 71',
   },
   {
@@ -645,7 +645,7 @@ const basisFragen: QuizFrage[] = [
     richtige: 0,
     erklaerung:
       'Kernidee: Beitrag nur gegen ausreichenden Anreiz. Das Management muss die Ziele so austarieren, dass alle wichtigen Stakeholder genügend Anreize erhalten – sonst entziehen sie ihre Beiträge und gefährden den Fortbestand.',
-    quelle: 'Übungsblatt 5, Aufgabe 25',
+    quelle: '5 Ziele im Unternehmen, Aufgabe 25',
     zusatzQuelle: 'Folien vom Lehrer, Seite 71',
   },
   {
@@ -669,7 +669,7 @@ const basisFragen: QuizFrage[] = [
     richtige: 0,
     erklaerung:
       'Die Unternehmensphilosophie ist das Wertesystem/Selbstbild eines Unternehmens, oft im Leitbild (Mission Statement) verschriftlicht. Sie ist von der tatsächlich gelebten Kultur zu unterscheiden.',
-    quelle: 'Übungsblatt 5, Aufgabe 26',
+    quelle: '5 Ziele im Unternehmen, Aufgabe 26',
     zusatzQuelle: 'Folien vom Lehrer, Seite 62',
   },
   {
@@ -682,7 +682,7 @@ const basisFragen: QuizFrage[] = [
     ],
     erklaerung:
       'Klassische Zielkonflikte im Drei-Säulen-Modell der Nachhaltigkeit („magisches Dreieck"). Es gibt aber auch komplementäre Beziehungen, z. B. senkt Energieeffizienz zugleich Kosten und Umweltbelastung.',
-    quelle: 'Übungsblatt 5, Aufgabe 27',
+    quelle: '5 Ziele im Unternehmen, Aufgabe 27',
     zusatzQuelle: 'Folien vom Lehrer, Seite 66',
   },
   {
@@ -696,7 +696,7 @@ const basisFragen: QuizFrage[] = [
     ],
     erklaerung:
       'Ziele können konkurrierend (Konflikt), komplementär (sich ergänzend) oder indifferent sein. Leistungs- (Sach-) und Erfolgsziele (Formalziele) sind klar zu unterscheiden.',
-    quelle: 'Übungsblatt 5, Aufgaben 27 & 28',
+    quelle: '5 Ziele im Unternehmen, Aufgaben 27 & 28',
   },
 ]
 

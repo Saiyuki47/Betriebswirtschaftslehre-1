@@ -440,6 +440,7 @@ Vier Einsatzgebiete:
     titel: '17. Lanz GmbH – Liquidität, EKR, GKR',
     aufgabeText:
       'Die Lanz GmbH weist 2024 folgende Bilanz auf. Aktiva: Grundstücke 1.200.000, Maschinelle Anlagen 600.000, Vorräte 900.000, kurzfr. Forderungen 820.000, Bankguthaben 300.000, Kasse 80.000 (Summe 3.900.000). Passiva: Eigenkapital 2.430.000 (davon Jahresüberschuss 930.000), Rückstellungen (langfristig) 250.000, Verbindlichkeiten (langfristig) 620.000, Verbindlichkeiten (kurzfristig) 600.000 (Summe 3.900.000). Beurteilen Sie die Liquidität sowie EKR und GKR.',
+    loesungBild: ['frage 18.jpg'],
     schwierigkeit: 'schwer',
     kategorie: 'Mengen, Werte & Kennzahlen',
   },
@@ -449,6 +450,7 @@ Vier Einsatzgebiete:
     aufgabeText: `Über ein Konkurrenzunternehmen liegen vor: Bilanzsumme (= Gesamtkapital) 10.000 €, durchschnittlicher Fremdkapitalzins 10 %, Verschuldungsgrad (FK zu EK) 3, Gesamtkapitalrentabilität 12,5 %. Ermitteln Sie
 a) den Kapitalgewinn und
 b) den Jahresüberschuss.`,
+    loesungBild: ['frage 19.jpg'],
     schwierigkeit: 'schwer',
     kategorie: 'Mengen, Werte & Kennzahlen',
   },
@@ -475,6 +477,7 @@ Anmerkung: Real steigen mit wachsender Verschuldung auch die FK-Zinsen; ein
     titel: '20. „Pleite und Co." – Renditen',
     aufgabeText:
       'Das Unternehmen „Pleite und Co." hat 2024 durchschnittlich 9 % Zinsen für das Fremdkapital bezahlt. Insgesamt hat sich das Kapital mit 8 % rentiert. Es wurden 2,4 Mio. € umgesetzt. Die Bilanzsumme betrug am Jahresende 1,2 Mio. €, der Verschuldungsgrad war 2. Wie hoch waren EK-Rendite, Umsatzrendite und Kapitalgewinn?',
+    loesungBild: ['Frage 21.jpg'],
     schwierigkeit: 'schwer',
     kategorie: 'Mengen, Werte & Kennzahlen',
   },
@@ -483,6 +486,7 @@ Anmerkung: Real steigen mit wachsender Verschuldung auch die FK-Zinsen; ein
     titel: '21. „Unglück AG" – Erfolgsgrößen',
     aufgabeText:
       'Dem Jahresabschluss der „Unglück AG" sind zu entnehmen: Bilanzsumme 120.000 €, Verschuldungsgrad 2, Umsatz 360.000 €, Materialaufwand 144.000 €, Personalaufwand 108.000 €, Abschreibungen 90.000 €, gezahlte Fremdkapitalzinsen 6.000 €. Ermitteln und beurteilen Sie: Kapitalgewinn, Jahresüberschuss, Umsatzrendite, Gesamtkapitalrentabilität, Eigenkapitalrentabilität, Fremdkapitalzinssatz. (Siehe PP-Folie „Alternative Erfolgsbegriffe".)',
+    loesungBild: ['Frage 22.jpg'],
     schwierigkeit: 'schwer',
     kategorie: 'Mengen, Werte & Kennzahlen',
   },
