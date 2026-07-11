@@ -6,7 +6,7 @@ import { karteikarten } from './data/karteikarten'
 import { dateienTree } from './data/dateien'
 
 const Uebungsblaetter = lazy(() => import('./components/Uebungsblaetter'))
-const Formeln = lazy(() => import('./components/Formeln'))
+const Referenz = lazy(() => import('./components/Referenz'))
 const Drucken = lazy(() => import('./components/Drucken'))
 const Quiz = lazy(() => import('lernseiten-ui').then(m => ({ default: m.Quiz })))
 const Flashcards = lazy(() => import('lernseiten-ui').then(m => ({ default: m.Flashcards })))
@@ -48,7 +48,7 @@ function App() {
           <GlobalSearch loadIndex={() => import('./data/searchIndex').then(m => m.searchIndex)} onNavigate={t => setActiveTab(t as TabId)} />
         </div>
         <Suspense fallback={<div className="card"><p className="quiz-hint">Lädt …</p></div>}>
-          {activeTab === 'referenz' && <Formeln />}
+          {activeTab === 'referenz' && <Referenz />}
           {activeTab === 'hilfsmittel' && <Drucken />}
           {activeTab === 'quiz' && <Quiz fragen={quizFragen} />}
           {activeTab === 'uebung' && <Uebungsblaetter />}
