@@ -241,10 +241,11 @@
 }
 
 .print-page {
-  width: 210mm;
-  /* 277mm statt voller A4-297mm, damit ein Blatt auch auf US-Letter (279mm)
-     auf EINE Seite passt und die Karten nicht auf eine zweite Seite rutschen. */
-  height: 277mm;
+  /* 188×257mm: passt auf A4 UND US-Letter selbst mit den Standard-Druckrändern
+     (~10mm) noch auf EINE Seite – so verrutschen die Karten unabhängig von der
+     Rand-Einstellung im Druckdialog nicht. */
+  width: 188mm;
+  height: 257mm;
   flex-shrink: 0;
   background: #fff;
   color: #000;
@@ -258,7 +259,7 @@
 .cut-cell {
   border: 1px dashed #b4b4b4;
   display: flex;
-  padding: 7mm;
+  padding: 5mm;
   overflow: hidden;
 }
 
@@ -280,15 +281,15 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 118mm;
-  height: 82mm;
+  width: 114mm;
+  height: 78mm;
   box-sizing: border-box;
   transform: translate(-50%, -50%) rotate(-90deg);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5mm;
+  gap: 4mm;
   text-align: center;
 }
 .cut-gruppe {
