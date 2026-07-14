@@ -125,7 +125,7 @@ function LernzettelView() {
                       {formel.name}
                       {formel.kuerzel ? ` (${formel.kuerzel})` : ''}
                     </span>
-                    <span className="cut-formel">{formel.formel.split('\n')[0]}</span>
+                    <FormelText className="cut-formel" text={formel.formel.split('\n')[0]} />
                   </div>
                 </div>
               </div>
@@ -279,8 +279,8 @@ const FIG_CSS = `
 .cut-fig-bild table{border-collapse:collapse;font-size:11px;line-height:1.3;max-width:620px}
 .cut-fig-bild table caption{font-size:11px;color:#3f3f46;padding-bottom:2px}
 .cut-fig-bild th,.cut-fig-bild td{border:1px solid #94a3b8;padding:2px 5px;vertical-align:top}
-.cut-fig-cap{display:flex;flex-direction:column;align-items:center;gap:1mm;text-align:center;flex-shrink:0}
-.cut-fig-titel{font-family:var(--font-sans);font-weight:700;font-size:10pt;color:#111;line-height:1.2}
+.cut-fig-cap{display:flex;flex-direction:column;align-items:center;gap:1mm;text-align:center;flex-shrink:0;width:100%;box-sizing:border-box;padding:0 4mm}
+.cut-fig-titel{font-family:var(--font-sans);font-weight:700;font-size:10pt;color:#111;line-height:1.2;max-width:100%;overflow-wrap:break-word}
 .cut-fig-quelle{font-family:var(--font-sans);font-size:8pt;color:#666}
 /* Querformatige Abbildungen um 90° gedreht, passgenau ins Hochformat-Viertel.
    --qw/--qh werden per JS auf die vertauschten Rahmenmaße gesetzt. */

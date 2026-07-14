@@ -274,14 +274,21 @@
   overflow: hidden;
 }
 
-/* Senkrechte Formel, von unten nach oben, zentriert */
+/* Formelkarte quer (90° gedreht statt writing-mode), damit gestapelte Brüche
+   [[Zähler|Nenner]] korrekt rendern. Feste Maße = vertauschte Viertel-Maße. */
 .cut-card {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 118mm;
+  height: 82mm;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%) rotate(-90deg);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6mm;
+  justify-content: center;
+  gap: 5mm;
   text-align: center;
 }
 .cut-gruppe {
@@ -303,7 +310,9 @@
   font-family: var(--font-mono);
   font-size: 15pt;
   color: #1a1a1a;
-  white-space: nowrap;
+  /* !important, weil FormelText inline white-space:pre-line setzt – wir wollen
+     die Formel (mit Bruch) auf einer Zeile halten; fit() skaliert die Größe. */
+  white-space: nowrap !important;
 }
 
 @media print {
