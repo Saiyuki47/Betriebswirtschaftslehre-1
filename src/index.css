@@ -241,11 +241,11 @@
 }
 
 .print-page {
-  /* 188×257mm: passt auf A4 UND US-Letter selbst mit den Standard-Druckrändern
-     (~10mm) noch auf EINE Seite – so verrutschen die Karten unabhängig von der
-     Rand-Einstellung im Druckdialog nicht. */
+  /* Fest auf A4 ausgelegt: 188×274mm passt auf A4 selbst mit den Standard-
+     Druckrändern (~10mm) noch auf EINE Seite – so verrutschen die Karten
+     unabhängig von der Rand-Einstellung im Druckdialog nicht. */
   width: 188mm;
-  height: 257mm;
+  height: 274mm;
   flex-shrink: 0;
   background: #fff;
   color: #000;
@@ -281,8 +281,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 114mm;
-  height: 78mm;
+  width: 122mm;
+  height: 80mm;
   box-sizing: border-box;
   transform: translate(-50%, -50%) rotate(-90deg);
   display: flex;
@@ -317,7 +317,7 @@
 }
 
 @media print {
-  @page { margin: 0; } /* kein festes A4 → nimmt das eingelegte Papier (A4 oder Letter) */
+  @page { size: A4 portrait; margin: 0; } /* fest A4 – Ausdruck ist auf A4 ausgelegt */
   header,
   .tabs,
   .no-print { display: none !important; }
