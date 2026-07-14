@@ -242,7 +242,9 @@
 
 .print-page {
   width: 210mm;
-  height: 297mm;
+  /* 277mm statt voller A4-297mm, damit ein Blatt auch auf US-Letter (279mm)
+     auf EINE Seite passt und die Karten nicht auf eine zweite Seite rutschen. */
+  height: 277mm;
   flex-shrink: 0;
   background: #fff;
   color: #000;
@@ -305,7 +307,7 @@
 }
 
 @media print {
-  @page { size: A4 portrait; margin: 0; }
+  @page { margin: 0; } /* kein festes A4 → nimmt das eingelegte Papier (A4 oder Letter) */
   header,
   .tabs,
   .no-print { display: none !important; }
