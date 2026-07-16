@@ -12,6 +12,10 @@ import FormelText from './FormelText'
 
 const BASE = import.meta.env.BASE_URL
 
+// Alle Kapitel-Aufgaben stammen aus dem offiziellen Übungsbegleiter (2025). Es gibt
+// keine einzelnen Übungsblätter, daher verweist jedes Kapitel auf dieselbe PDF.
+const UEBUNGSBEGLEITER_PDF = 'material/folien-vom-Lehrer/Uebungsbegleiter_ABWL_I_2025.pdf'
+
 // Chip-Reihe unter der Aufgabenstellung, die per Deep-Link (#referenz/<id>) zum
 // passenden Referenzthema springt (der Referenz-Tab öffnet + scrollt via useHashTab).
 const refLinksRow: CSSProperties = { display: 'flex', flexWrap: 'wrap', gap: '0.4rem', margin: '0.6rem 0 0' }
@@ -150,6 +154,18 @@ export default function Uebungsblaetter() {
             <h3 className="ub-title">{blatt.titel ?? `Übungsblatt ${blatt.nr}`}</h3>
             {blatt.beschreibung && (
               <p className="ub-desc">{blatt.beschreibung}</p>
+            )}
+            {blatt.typ !== 'Altklausur' && (
+              <div style={refLinksRow}>
+                <a
+                  href={BASE + encodeURI(UEBUNGSBEGLEITER_PDF)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={refLinkStyle}
+                >
+                  📄 Original-Übungsbegleiter (PDF) öffnen
+                </a>
+              </div>
             )}
             {taskKeys.length > 0 && (
               <>
