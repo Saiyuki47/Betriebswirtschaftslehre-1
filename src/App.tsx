@@ -12,6 +12,19 @@ const Quiz = lazy(() => import('lernseiten-ui').then(m => ({ default: m.Quiz }))
 const Flashcards = lazy(() => import('lernseiten-ui').then(m => ({ default: m.Flashcards })))
 const Moodle = lazy(() => import('lernseiten-ui').then(m => ({ default: m.Moodle })))
 
+// Hübsche Anzeigenamen für die Moodle-Kacheln (Ordner-Pfad → Text); ohne Eintrag
+// wird der Ordnername automatisch aufgehübscht.
+const moodleLabels: Record<string, string> = {
+  'material/altklausuren': 'Altklausuren',
+  'material/bwl_aufgaben': 'BWL-Aufgaben',
+  'material/davids-unterlagen': 'Davids Unterlagen',
+  'material/folien-vom-Lehrer': 'Vorlesungsfolien',
+  'material/leons-unterlagen': 'Leons Unterlagen',
+  'material/marks-unterlagen': 'Marks Unterlagen',
+  'material/opensource-skripte': 'Open-Source-Skripte',
+  'material/unofficial-stuff': 'Inoffizielles Material',
+}
+
 // Tab-IDs, -Reihenfolge und -Icons sind über alle Lernseiten vereinheitlicht;
 // die Tab-Leiste kommt zentral aus lernseiten-ui (tabDefs).
 const TABS = STANDARD_TAB_REIHENFOLGE
@@ -52,7 +65,7 @@ function App() {
           {activeTab === 'hilfsmittel' && <Drucken />}
           {activeTab === 'quiz' && <Quiz fragen={quizFragen} />}
           {activeTab === 'uebung' && <Uebungsblaetter />}
-          {activeTab === 'moodle' && <Moodle tree={dateienTree} baseUrl={import.meta.env.BASE_URL} />}
+          {activeTab === 'moodle' && <Moodle tree={dateienTree} baseUrl={import.meta.env.BASE_URL} labels={moodleLabels} />}
           {activeTab === 'karten' && (
             <Flashcards cards={karteikarten} render={text => <FormelText text={text} />} />
           )}
