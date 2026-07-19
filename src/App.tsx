@@ -25,6 +25,21 @@ const moodleLabels: Record<string, string> = {
   'material/unofficial-stuff': 'Inoffizielles Material',
 }
 
+// Reihenfolge der Moodle-Kacheln: offizielles Material zuerst, die persönlichen
+// Unterlagen gebündelt am Ende.
+const moodleOrder = [
+  'material/folien-vom-Lehrer',
+  'material/opensource-skripte',
+  'material/bwl_aufgaben',
+  'material/altklausuren',
+  'material/unofficial-stuff',
+  'material/davids-unterlagen',
+  'material/leons-unterlagen',
+  'material/marks-unterlagen',
+]
+
+const moodleGroupTitles = { material: 'Vorlesung & Skript' }
+
 // Tab-IDs, -Reihenfolge und -Icons sind über alle Lernseiten vereinheitlicht;
 // die Tab-Leiste kommt zentral aus lernseiten-ui (tabDefs).
 const TABS = STANDARD_TAB_REIHENFOLGE
@@ -65,7 +80,15 @@ function App() {
           {activeTab === 'hilfsmittel' && <Drucken />}
           {activeTab === 'quiz' && <Quiz fragen={quizFragen} />}
           {activeTab === 'uebung' && <Uebungsblaetter />}
-          {activeTab === 'moodle' && <Moodle tree={dateienTree} baseUrl={import.meta.env.BASE_URL} labels={moodleLabels} />}
+          {activeTab === 'moodle' && (
+            <Moodle
+              tree={dateienTree}
+              baseUrl={import.meta.env.BASE_URL}
+              labels={moodleLabels}
+              order={moodleOrder}
+              groupTitles={moodleGroupTitles}
+            />
+          )}
           {activeTab === 'karten' && (
             <Flashcards cards={karteikarten} render={text => <FormelText text={text} />} />
           )}
