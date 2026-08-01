@@ -80,6 +80,32 @@ export const uebungsblaetter: Uebungsblatt[] = [
       { nr: 28, aufgabeId: 'a28' },
     ],
   },
+  // ---- Gedächtnisprotokoll der aktuellen Klausur: nur die Themen, die drankamen,
+  // KEINE Fragen/Lösungen. Die Einträge haben deshalb nur `text` und keine
+  // (auflösbare) aufgabeId – dann rendert die Karte allein den Themen-Text.
+  {
+    id: 'kl-ss2026',
+    nr: 'SS 2026',
+    typ: 'Altklausur',
+    titel: 'SS 2026 (Gedächtnisprotokoll)',
+    beschreibung:
+      'Gedächtnisprotokoll der Klausur im Sommersemester 2026 – die Nachrichten eines Kommilitonen 1:1 in seiner Original-Formulierung (Tippfehler inklusive). Nur was drankam, ohne Lösungen und ohne Gewähr auf Vollständigkeit.',
+    aufgaben: [
+      { nr: 1, aufgabeId: '', text: 'Beispiel geben von Maximum Prinzip,die zusammen mit knapp Gütern im Welt' },
+      { nr: 2, aufgabeId: '', text: 'Erklären Haltung im Kommanditgesellschaft' },
+      { nr: 3, aufgabeId: '', text: 'Rechnen EKQ,EKR Anlagequot' },
+      { nr: 4, aufgabeId: '', text: 'Was ist bechmark' },
+      { nr: 5, aufgabeId: '', text: 'Gläubigerschutz: HGB- was sagt IFRS dazu?' },
+      { nr: 6, aufgabeId: '', text: 'Schritte Sanierung und erläutern' },
+      { nr: 7, aufgabeId: '', text: '2 Sachen die ein startup als Nachteil haben kann , wenn sie ein neue Mitarbeiter nehmen statt ein Partner' },
+      { nr: 8, aufgabeId: '', text: 'Was ist ein natürliche Monopol' },
+      { nr: 9, aufgabeId: '', text: 'Erklären der montangesetzt im kapitell Mitbestimmung mit welche wurde er ersetzt, was wurde da kritisiert ?' },
+      { nr: 10, aufgabeId: '', text: 'Kennzeichen eines Ziels' },
+      { nr: 11, aufgabeId: '', text: 'Betriebswirtschaftliche Kennzahlen' },
+      { nr: 12, aufgabeId: '', text: 'Achtung: Rechnung paar Zahlen war mit Milliarde und anderen Millionen' },
+      { nr: 13, aufgabeId: '', text: 'Sowas mit Unternehmen Mutter oder sowas, habe nett gemacht' },
+    ],
+  },
   // ---- Altklausuren (eigenständig lösbar, mit Musterlösung & Erklärung) ----
   {
     id: 'kl-ss2015',
