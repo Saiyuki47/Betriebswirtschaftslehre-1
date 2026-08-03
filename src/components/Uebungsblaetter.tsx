@@ -243,9 +243,9 @@ export default function Uebungsblaetter() {
                         {isOpen && (
                           <>
                             {aufgabe.loesung && <pre className="sql-block visible">{aufgabe.loesung}</pre>}
-                            {aufgabe.loesungBild?.map((f, i) => (
+                            {aufgabe.loesungBild?.map(f => (
                               <a
-                                key={i}
+                                key={f}
                                 href={`${BASE}material/bwl_aufgaben/${encodeURIComponent(f)}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
