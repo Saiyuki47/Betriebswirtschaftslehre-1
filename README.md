@@ -6,6 +6,7 @@ Ein wiederverwendbares React-Template für interaktive Lernseiten zu beliebigen 
 
 | Tab | Beschreibung |
 |-----|-------------|
+| **Übersicht** | Standard-Tab: zeigt die selbst geschriebene [`Übersicht.md`](Übersicht.md) – wie die Seite funktioniert und woher die Inhalte kommen |
 | **Übungsblätter** | Aufgaben nach Blatt geordnet, mit optionalem Tipp und aufklappbarer Musterlösung |
 | **Aufgaben** | Alle Aufgaben nach Schwierigkeit gefiltert, ebenfalls mit Tipp & Lösung |
 | **Quiz** | Multiple-Choice-Quiz mit Fortschrittsbalken, Feedback und Ergebnisauswertung |
